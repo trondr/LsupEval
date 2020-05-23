@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <Description>Evaluate Lenovo System Update packages with respect to Dependencies and DetectInstall elements in the LSU package xml.</Description>
+    <Authors>github.com/trondr</Authors>
+    <Copyright>Copyright © github.com/trondr 2020</Copyright>
+    <PackageLicenseFile>LICENSE.TXT</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/trondr/LsupEval</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/trondr/LsupEval.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Evaluate Dependencies DetectInstall Lenovo Package</PackageTags>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.20144.0</FileVersion>
+    <Version>1.0.20144-alpha</Version>
+    <PackageReleaseNotes>1.0.20144</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.TXT">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Management" />
+  </ItemGroup>
+
+</Project>
