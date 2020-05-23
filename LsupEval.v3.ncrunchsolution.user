@@ -1,5 +1,14 @@
 ﻿<SolutionConfiguration>
   <Settings>
-    <CurrentEngineMode>Run all tests automatically [Global]</CurrentEngineMode>
+    <AutoEnable>True</AutoEnable>
+    <CurrentEngineMode>Run impacted tests automatically, others manually [Global]</CurrentEngineMode>
+    <TestsWindowGroupingStrategy>Project, Fixture, Test</TestsWindowGroupingStrategy>
+    <TestsWindowMenuOptions>
+      <VerticalSplitMenuOption>false</VerticalSplitMenuOption>
+      <ShowPassingTestsMenuOption>true</ShowPassingTestsMenuOption>
+      <ShowFailingTestsMenuOption>true</ShowFailingTestsMenuOption>
+      <ShowUnexecutedTestsMenuOption>true</ShowUnexecutedTestsMenuOption>
+      <ShowIgnoredTestsMenuOption>true</ShowIgnoredTestsMenuOption>
+    </TestsWindowMenuOptions>
   </Settings>
 </SolutionConfiguration>

@@ -1,3 +1,5 @@
 src/lib/LsupEval/obj/
 src/lib/LsupEval/bin/
 .vs/
+src/test/LsupEval.Tests/bin/
+src/test/LsupEval.Tests/obj/
