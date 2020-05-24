@@ -57,3 +57,40 @@ module ResultBuilder =
 
     let toErrorResult message (innerException: System.Exception option) =
         Result.Error (toException message innerException)
+
+    let rec getAccumulatedExceptionMessages (ex: Exception) =
+        match ex.InnerException with
+        | null -> ex.Message
+        | _ -> ex.Message + " " + (getAccumulatedExceptionMessages ex.InnerException)
+
+    let getAllExceptions (results:seq<Result<_,Exception>>) =
+            let f = fun (r:Result<_,Exception>) ->
+                match r with
+                |Error ex -> Some(getAccumulatedExceptionMessages ex)
+                |Ok v -> None
+            results 
+            |> Seq.choose f
+    
+    let getAllValues (results:seq<Result<_,Exception>>) =
+        let f = fun (r:Result<_,Exception>) ->
+            match r with
+            |Error ex -> None
+            |Ok v -> Some(v)
+        results 
+        |> Seq.choose f
+
+    let toAccumulatedResult (results:seq<Result<_,Exception>>) =
+        let resultsArray = results |> Seq.toArray        
+        
+        let allExceptionMessages = 
+                (getAllExceptions resultsArray) 
+                |> Seq.toArray
+        
+        let accumulatedResult =             
+            match allExceptionMessages.Length with
+            | 0 -> 
+                let allValues = getAllValues resultsArray
+                Result.Ok allValues
+            | _ -> 
+                toErrorResult (String.Join<string>(" ", allExceptionMessages)) None
+        accumulatedResult

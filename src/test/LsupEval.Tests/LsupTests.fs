@@ -27,7 +27,7 @@ module LsupTest =
     [<Category(TestCategory.ManualTests)>]
     let ``loadLsuPackage test`` () =
         match(result{
-            let! xDocument = Lsup.loadLsuPackageXDocument @"C:\Temp\LenovoUpdatePackagesXml\nz3gs07w_2_.xml"
+            let! xDocument = Lsup.loadLsuPackageXDocument @"E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\nz3gs07w_2_.xml"
             let! lsuPackageXElement = Lsup.loadLsuPackageXElement xDocument
             let! lsuPackage = Lsup.loadLsuPackage lsuPackageXElement
             return lsuPackage
@@ -46,4 +46,26 @@ module LsupTest =
             match p.Dependencies with
             |None -> Assert.Fail("Dependencies is None")
             |Some d -> Assert.IsTrue(d.Contains("VEN_INT&DEV_0E0C"))
+
+            Assert.AreEqual(1,p.Files.Installer.Files.Length,"Installer Files Length")
+            Assert.AreEqual("nz3gs07w.exe",p.Files.Installer.Files.[0].Name,"Installer Name")
+            Assert.AreEqual("82AA3021D239C103D6443311284CAA84665F1478C4CD00F3BB62576D986C324B",p.Files.Installer.Files.[0].Crc,"Installer Crc")
+            Assert.AreEqual(4952256,p.Files.Installer.Files.[0].Size,"Installer Size")
+
+            match(p.Files.External) with
+            |Some e -> 
+                Assert.AreEqual(1,e.Files.Length,"External Files Length")
+                Assert.AreEqual("getw10ver7.exe",e.Files.[0].Name,"External Name")
+                Assert.AreEqual("19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2",e.Files.[0].Crc,"External Crc")
+                Assert.AreEqual(159528,e.Files.[0].Size,"External Size")
+            |None -> Assert.Fail("External files expected.")
+
+
+            Assert.IsTrue(p.Files.External.IsSome,"External is missing")
+            
+            
+
+
         |Result.Error ex -> Assert.Fail(ex.Message)
+  
+         

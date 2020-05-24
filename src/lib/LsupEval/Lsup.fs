@@ -5,7 +5,59 @@ module Lsup =
     open System.Xml.Linq
 
     type LsuRebootType = Default=0|RebootForced=1|Reserved=2|RebootRequired=3|Shutdown=4|RebootDelayed=5
-        
+    type LsuSeverityType = Default=0|Critical=1|Recommended=2|Optional=3|Extra=9|Offer=10
+    type LsuBrandType = All=1|Think=2|LenovoNotebook=3|LenovoDesktop=4
+    type LsuPackageType = Others=0|Application=1|Drivers=2|Bios=3|Firmware=4
+            
+    type LsuNlsFile =
+        {
+            Id:string option
+            Name:string
+            Crc:string
+            Size:Int64
+        }
+
+    type LsuFile =
+        {            
+            Name:string
+            Crc:string
+            Size:Int64
+        }
+
+    type Installer =
+        {
+            Files:LsuFile[]
+        }
+
+    type Readme =
+        {
+            Files:LsuNlsFile[]
+        }
+    
+    type License =
+        {
+            Files:LsuNlsFile[]
+        }
+
+    type External =
+        {
+            Files:LsuFile[]
+        }
+
+    type AppIcon =
+        {
+            File:LsuFile
+        }
+
+    type LsuFiles =
+        {
+            Installer:Installer
+            Readme:Readme option
+            License:License option
+            External:External option
+            AppIcon:AppIcon option
+        }
+
     type LsuPackage = {
         Id:string
         Name:string
@@ -16,6 +68,7 @@ module Lsup =
         RebootType:LsuRebootType
         DetectInstall:string option
         Dependencies:string option
+        Files:LsuFiles
     }
 
     let loadLsuPackageXDocument (filePath:string) =
@@ -48,6 +101,8 @@ module Lsup =
     let getChildXElement (parentXElement:XElement) (elementName:string) =
         toResult (parentXElement.Element(xn elementName)) (sprintf "Element '%s' not found on parent element: '%A'" elementName parentXElement)
 
+
+
     let getOptionalChildXElement (parentXElement:XElement) (elementName:string) =
         match((getChildXElement parentXElement elementName)) with
         |Ok v -> Some v
@@ -74,6 +129,55 @@ module Lsup =
         |Some v -> Some (innerXml v)
         |None -> None
 
+    let toInteger64 (value:string) =
+        try
+            Result.Ok (Convert.ToInt64(value))
+        with
+        |ex -> Result.Error (toException (sprintf "Failed to convert %s to integer value." value) (Some ex))
+
+    let getLsuFile fileXElement =
+        result{
+            let! nameElement = getChildXElement fileXElement "Name"
+            let name = nameElement.Value
+            let! crcElement = getChildXElement fileXElement "CRC"
+            let crc = crcElement.Value
+
+            let! sizeXElement = getChildXElement fileXElement "Size"
+            let! size = toInteger64 sizeXElement.Value
+            return
+                {
+                    LsuFile.Name = name
+                    Crc = crc
+                    Size= size            
+                }
+        }
+
+    let getLsuFiles lsuPackageXElement =
+        result{
+            let! filesXElement = getChildXElement lsuPackageXElement "Files"
+            let! installerXElement = getChildXElement filesXElement "Installer"
+            let installerFilesXElements = installerXElement.Elements(xn "File")
+            let! installerFiles = installerFilesXElements|>Seq.map(fun fileXElement -> getLsuFile fileXElement) |> toAccumulatedResult
+
+            let externalXElement = getOptionalChildXElement filesXElement "External"                        
+            let external =
+                match externalXElement with
+                |None-> None
+                |Some extXElement ->                                             
+                        let externalFilesXElements = extXElement.Elements(xn "File")
+                        let externalFiles = externalFilesXElements|>Seq.map(fun fileXElement -> getLsuFile fileXElement) |> getAllValues |>Seq.toArray
+                        Some {External.Files= externalFiles}
+                    
+            return
+                {
+                    Installer = {Installer.Files = installerFiles|>Seq.toArray}
+                    Readme = None
+                    License = None
+                    External = external
+                    AppIcon = None
+                }
+        }
+
     let loadLsuPackage (lsuPackageXElement:XElement) =
         result{
             let! id = getRequiredAttribute lsuPackageXElement "id"
@@ -97,6 +201,8 @@ module Lsup =
             let dependenciesXElement = getOptionalChildXElement lsuPackageXElement "Dependencies"
             let dependencies = toOptionalInnerXml dependenciesXElement
 
+            let! files = getLsuFiles lsuPackageXElement
+
             return {
                     Id = id
                     Name = name
@@ -107,7 +213,6 @@ module Lsup =
                     RebootType=toRebootType (Convert.ToInt32(rebootType))
                     DetectInstall = detectInstall
                     Dependencies=dependencies
+                    Files=files
                 }                
         }
-
-
