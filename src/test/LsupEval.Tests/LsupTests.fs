@@ -73,6 +73,7 @@ module LsupTest =
         |Result.Error ex -> Assert.Fail(ex.Message)
   
     open LsupEval.Rules
+    open LsupEval.Bios
 
     [<Test>]
     [<Category(TestCategory.UnitTests)>]
@@ -109,3 +110,14 @@ module LsupTest =
         let actual = isBiosMatch logger bios systemInfo.BiosVersion
         Assert.AreEqual(true,actual)        
         ()
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``getCurrentBiosVersion a machine specific test on Lenovo ThinkPad P50 on 2020-05-24`` () =
+        match(result{
+            let! actual = getCurrentBiosVersion()
+            Assert.AreEqual("N1EET87W (1.60 )",actual,"BIOS version")
+            return actual
+        })with
+        |Result.Ok -> Assert.IsTrue(true)
+        |Result.Error ex -> Assert.Fail(ex.Message)        

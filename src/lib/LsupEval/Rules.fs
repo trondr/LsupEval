@@ -3,8 +3,7 @@
 module Rules =
     open System
     open Logging
-
-    type Bios = {Versions:string[]}
+    open LsupEval.Bios
 
     type ApplicabilityRule =
         |True
@@ -23,22 +22,6 @@ module Rules =
         {
             BiosVersion = "Not implemented"
         }
-
-    let toRegEx (lsuPattern:string) =
-        let pattern = lsuPattern.Replace("*",".*")
-        new System.Text.RegularExpressions.Regex(pattern)
-
-    let isBiosMatch (logger:Common.Logging.ILog) (bios:Bios) biosVersion =        
-        let v = 
-            bios.Versions 
-            |> Seq.filter (fun s -> 
-                    let isMatch = (toRegEx s).IsMatch(biosVersion)
-                    logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing bios version: '%s' with bios level '%s'. Return: %b" biosVersion s isMatch))|>ignore))
-                    isMatch
-                ) |>Seq.tryHead
-        match v with
-        |Some -> true
-        |None -> false
 
     let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo applicabilityRule =
         match applicabilityRule with
