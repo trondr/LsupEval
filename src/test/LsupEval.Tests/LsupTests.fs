@@ -60,7 +60,6 @@ module LsupTest =
                 Assert.AreEqual(159528,e.Files.[0].Size,"External Size")
             |None -> Assert.Fail("External files expected.")
 
-
             match(p.Files.Readme) with
             |Some r -> 
                 Assert.AreEqual(1,r.Files.Length,"External Files Length")
@@ -70,12 +69,43 @@ module LsupTest =
                 Assert.AreEqual(22152,r.Files.[0].Size,"External Size")
             |None -> Assert.Fail("Readme file expected.")
 
-
             Assert.IsTrue(p.Files.External.IsSome,"External is missing")
-            
-            
-
-
         |Result.Error ex -> Assert.Fail(ex.Message)
   
-         
+    open LsupEval.Rules
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isBiosMatchTest star -> return true``  () =
+        let systemInfo = { BiosVersion = "R06ET3SDE"}
+        let bios = {Versions = [|"*";|]}
+        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        Assert.AreEqual(true,actual)        
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isBiosMatchTest star and some non matching -> return true``  () =
+        let systemInfo = { BiosVersion = "R06ET3SDE"}
+        let bios = {Versions = [|"*";"R07ET*";"R08ET*";"N1HET*";"R05ET*";"N1DET*";"N1EET*";"N1KET*";"N1LET*";"R02ET*";"N1CET*";"N1GET*";"N1FET*";|]}
+        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        Assert.AreEqual(true,actual)        
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isBiosMatchTest non matching -> return false``  () =
+        let systemInfo = { BiosVersion = "R06ET3SDE"}
+        let bios = {Versions = [|"R07ET*";"R08ET*";"N1HET*";"R05ET*";"N1DET*";"N1EET*";"N1KET*";"N1LET*";"R02ET*";"N1CET*";"N1GET*";"N1FET*";|]}
+        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        Assert.AreEqual(false,actual)
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isBiosMatchTest matching -> return true``  () =
+        let systemInfo = { BiosVersion = "N1FET123456"}
+        let bios = {Versions = [|"R06ET*";"R07ET*";"R08ET*";"N1HET*";"R05ET*";"N1DET*";"N1EET*";"N1KET*";"N1LET*";"R02ET*";"N1CET*";"N1GET*";"N1FET*";|]}
+        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        Assert.AreEqual(true,actual)        
+        ()

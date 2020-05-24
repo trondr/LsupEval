@@ -20,6 +20,7 @@
   <ItemGroup>
     <Compile Include="Logging.fs" />
     <Compile Include="ResultBuilder.fs" />
+    <Compile Include="Rules.fs" />
     <Compile Include="Lsup.fs" />
   </ItemGroup>
 
