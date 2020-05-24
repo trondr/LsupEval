@@ -78,36 +78,36 @@ module LsupTest =
     [<Test>]
     [<Category(TestCategory.UnitTests)>]
     let ``isBiosMatchTest star -> return true``  () =
-        let systemInfo = { BiosVersion = "R06ET3SDE"}
+        let biosVersion = "R06ET3SDE"
         let bios = {Versions = [|"*";|]}
-        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        let actual = isBiosMatch logger bios biosVersion
         Assert.AreEqual(true,actual)        
         ()
 
     [<Test>]
     [<Category(TestCategory.UnitTests)>]
     let ``isBiosMatchTest star and some non matching -> return true``  () =
-        let systemInfo = { BiosVersion = "R06ET3SDE"}
+        let biosVersion = "R06ET3SDE"
         let bios = {Versions = [|"*";"R07ET*";"R08ET*";"N1HET*";"R05ET*";"N1DET*";"N1EET*";"N1KET*";"N1LET*";"R02ET*";"N1CET*";"N1GET*";"N1FET*";|]}
-        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        let actual = isBiosMatch logger bios biosVersion
         Assert.AreEqual(true,actual)        
         ()
 
     [<Test>]
     [<Category(TestCategory.UnitTests)>]
     let ``isBiosMatchTest non matching -> return false``  () =
-        let systemInfo = { BiosVersion = "R06ET3SDE"}
+        let biosVersion = "R06ET3SDE"
         let bios = {Versions = [|"R07ET*";"R08ET*";"N1HET*";"R05ET*";"N1DET*";"N1EET*";"N1KET*";"N1LET*";"R02ET*";"N1CET*";"N1GET*";"N1FET*";|]}
-        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        let actual = isBiosMatch logger bios biosVersion
         Assert.AreEqual(false,actual)
         ()
 
     [<Test>]
     [<Category(TestCategory.UnitTests)>]
     let ``isBiosMatchTest matching -> return true``  () =
-        let systemInfo = { BiosVersion = "N1FET123456"}
+        let biosVersion = "N1FET123456"
         let bios = {Versions = [|"R06ET*";"R07ET*";"R08ET*";"N1HET*";"R05ET*";"N1DET*";"N1EET*";"N1KET*";"N1LET*";"R02ET*";"N1CET*";"N1GET*";"N1FET*";|]}
-        let actual = isBiosMatch logger bios systemInfo.BiosVersion
+        let actual = isBiosMatch logger bios biosVersion
         Assert.AreEqual(true,actual)        
         ()
 
@@ -120,4 +120,51 @@ module LsupTest =
             return actual
         })with
         |Result.Ok -> Assert.IsTrue(true)
-        |Result.Error ex -> Assert.Fail(ex.Message)        
+        |Result.Error ex -> Assert.Fail(ex.Message)  
+        
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``getCurrentCpuAddressWidth a machine specific test on Lenovo ThinkPad P50 on 2020-05-24`` () =
+        match(result{
+            let! actual = Cpu.getCurrentCpuAddressWidth()
+            Assert.AreEqual(Cpu.CpuAddressWidth.Bit64,actual,"Cpu address width")
+            return actual
+        })with
+        |Result.Ok -> Assert.IsTrue(true)
+        |Result.Error ex -> Assert.Fail(ex.Message)  
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isCpuAddressWidthMatch matching -> return true``  () =        
+        let requiredCpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+        let currentCpuAddressWidth = Cpu.CpuAddressWidth.Bit64        
+        let actual = Cpu.isCpuAddressWidthMatch logger requiredCpuAddressWidth currentCpuAddressWidth
+        Assert.AreEqual(true,actual)        
+        ()
+
+    [<Test>]
+       [<Category(TestCategory.UnitTests)>]
+       let ``isCpuAddressWidthMatch matching 2 -> return true``  () =        
+           let requiredCpuAddressWidth = Cpu.CpuAddressWidth.Bit32
+           let currentCpuAddressWidth = Cpu.CpuAddressWidth.Bit32        
+           let actual = Cpu.isCpuAddressWidthMatch logger requiredCpuAddressWidth currentCpuAddressWidth
+           Assert.AreEqual(true,actual)        
+           ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isCpuAddressWidthMatch non matching -> return true``  () =        
+        let requiredCpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+        let currentCpuAddressWidth = Cpu.CpuAddressWidth.Bit32        
+        let actual = Cpu.isCpuAddressWidthMatch logger requiredCpuAddressWidth currentCpuAddressWidth
+        Assert.AreEqual(false,actual)
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isCpuAddressWidthMatch non matching 2-> return true``  () =        
+        let requiredCpuAddressWidth = Cpu.CpuAddressWidth.Bit32
+        let currentCpuAddressWidth = Cpu.CpuAddressWidth.Bit64        
+        let actual = Cpu.isCpuAddressWidthMatch logger requiredCpuAddressWidth currentCpuAddressWidth
+        Assert.AreEqual(false,actual)
+        ()
