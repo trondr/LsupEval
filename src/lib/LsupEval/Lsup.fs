@@ -3,6 +3,7 @@
 module Lsup =
     open System
     open System.Xml.Linq
+    let logger = Logging.getLoggerByName "Lsup"
 
     type LsuRebootType = Default=0|RebootForced=1|Reserved=2|RebootRequired=3|Shutdown=4|RebootDelayed=5
     type LsuSeverityType = Default=0|Critical=1|Recommended=2|Optional=3|Extra=9|Offer=10
@@ -11,7 +12,7 @@ module Lsup =
             
     type LsuNlsFile =
         {
-            Id:string option
+            Id:string
             Name:string
             Crc:string
             Size:Int64
@@ -31,11 +32,13 @@ module Lsup =
 
     type Readme =
         {
+            Default:string
             Files:LsuNlsFile[]
         }
     
     type License =
         {
+            Default:string
             Files:LsuNlsFile[]
         }
 
@@ -101,8 +104,6 @@ module Lsup =
     let getChildXElement (parentXElement:XElement) (elementName:string) =
         toResult (parentXElement.Element(xn elementName)) (sprintf "Element '%s' not found on parent element: '%A'" elementName parentXElement)
 
-
-
     let getOptionalChildXElement (parentXElement:XElement) (elementName:string) =
         match((getChildXElement parentXElement elementName)) with
         |Ok v -> Some v
@@ -141,7 +142,6 @@ module Lsup =
             let name = nameElement.Value
             let! crcElement = getChildXElement fileXElement "CRC"
             let crc = crcElement.Value
-
             let! sizeXElement = getChildXElement fileXElement "Size"
             let! size = toInteger64 sizeXElement.Value
             return
@@ -152,29 +152,74 @@ module Lsup =
                 }
         }
 
-    let getLsuFiles lsuPackageXElement =
+    let getLsuNlsFile fileXElement =
         result{
+            let! lsuFile = getLsuFile fileXElement
+            let! id = getRequiredAttribute fileXElement "id"
+            return
+                {
+                    LsuNlsFile.Id = id
+                    Name = lsuFile.Name
+                    Crc = lsuFile.Crc
+                    Size= lsuFile.Size     
+                }
+        }
+
+    let getOptionalLsuFiles filesXElement elementName =
+        let xElement = getOptionalChildXElement filesXElement elementName                        
+        let optionalLsuFiles =
+            match xElement with
+            |None-> None
+            |Some extXElement ->                                             
+                    let fileXElements = extXElement.Elements(xn "File")
+                    let files = fileXElements|>Seq.map(fun fileXElement -> getLsuFile fileXElement) |> getAllValues |>Seq.toArray
+                    Some files
+        optionalLsuFiles
+
+    let getOptionalLsuNlsFiles filesXElement elementName =
+        let xElement = getOptionalChildXElement filesXElement elementName                                
+        let optionalLsuFiles =
+            match xElement with
+            |None-> None
+            |Some extXElement ->                                             
+                    match(result{
+                        let! id = getRequiredAttribute extXElement "default"                                        
+                        let fileXElements = extXElement.Elements(xn "File")
+                        let files = fileXElements|>Seq.map(fun fileXElement -> getLsuNlsFile fileXElement) |> getAllValues |>Seq.toArray
+                        return Some (id,files)
+                    })with
+                    |Result.Ok v -> v
+                    |Result.Error ex -> 
+                        logger.Warn (sprintf "Failed to get %s element. %s" elementName ex.Message)
+                        None
+
+        optionalLsuFiles
+
+    let getLsuFiles lsuPackageXElement =
+        result {
             let! filesXElement = getChildXElement lsuPackageXElement "Files"
             let! installerXElement = getChildXElement filesXElement "Installer"
             let installerFilesXElements = installerXElement.Elements(xn "File")
             let! installerFiles = installerFilesXElements|>Seq.map(fun fileXElement -> getLsuFile fileXElement) |> toAccumulatedResult
 
-            let externalXElement = getOptionalChildXElement filesXElement "External"                        
             let external =
-                match externalXElement with
-                |None-> None
-                |Some extXElement ->                                             
-                        let externalFilesXElements = extXElement.Elements(xn "File")
-                        let externalFiles = externalFilesXElements|>Seq.map(fun fileXElement -> getLsuFile fileXElement) |> getAllValues |>Seq.toArray
-                        Some {External.Files= externalFiles}
-                    
+                match(getOptionalLsuFiles filesXElement "External") with
+                |Some f -> Some {External.Files= f}
+                |None -> None
+
+            let readme = 
+                match(getOptionalLsuNlsFiles filesXElement "Readme") with
+                |Some (id,f) ->                                     
+                    Some {Readme.Files= f;Default=id}
+                |None -> None
+
             return
                 {
                     Installer = {Installer.Files = installerFiles|>Seq.toArray}
-                    Readme = None
-                    License = None
+                    Readme = readme
+                    License = None //Not implemented
                     External = external
-                    AppIcon = None
+                    AppIcon = None //Not implemented
                 }
         }
 

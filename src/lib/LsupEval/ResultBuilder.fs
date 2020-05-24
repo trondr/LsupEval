@@ -5,6 +5,7 @@ namespace LsupEval
 [<AutoOpen>]
 module ResultBuilder =
     open System
+    let logger = Logging.getLoggerByName "ResultBuilder"
 
     let ofOption error = function Some s -> Ok s | None -> Error error
     
@@ -94,3 +95,10 @@ module ResultBuilder =
             | _ -> 
                 toErrorResult (String.Join<string>(" ", allExceptionMessages)) None
         accumulatedResult
+
+    let resultToOption message result =
+        match result with
+        |Result.Ok v -> Some v
+        |Result.Error (ex:Exception) ->
+            logger.Warn(message + " " + ex.Message)
+            None

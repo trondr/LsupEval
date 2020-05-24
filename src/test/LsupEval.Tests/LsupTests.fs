@@ -61,6 +61,16 @@ module LsupTest =
             |None -> Assert.Fail("External files expected.")
 
 
+            match(p.Files.Readme) with
+            |Some r -> 
+                Assert.AreEqual(1,r.Files.Length,"External Files Length")
+                Assert.AreEqual("EN",r.Default,"Readme Id")                
+                Assert.AreEqual("nz3gs07w.txt",r.Files.[0].Name,"External Name")
+                Assert.AreEqual("9DDFD6C10B149F32BFB369022CBF3AD6C5B20425753D3AF8A34F0453C68DA257",r.Files.[0].Crc,"External Crc")
+                Assert.AreEqual(22152,r.Files.[0].Size,"External Size")
+            |None -> Assert.Fail("Readme file expected.")
+
+
             Assert.IsTrue(p.Files.External.IsSome,"External is missing")
             
             
