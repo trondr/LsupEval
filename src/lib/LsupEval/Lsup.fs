@@ -2,7 +2,10 @@
 
 module Lsup =
     open System
+    open System.Xml
     open System.Xml.Linq
+    open LsupEval.Rules
+    open LsupEval.Logging
     let logger = Logging.getLoggerByName "Lsup"
 
     type LsuRebootType = Default=0|RebootForced=1|Reserved=2|RebootRequired=3|Shutdown=4|RebootDelayed=5
@@ -261,3 +264,52 @@ module Lsup =
                     Files=files
                 }                
         }
+    
+    let internal getAttribute (xElement:XElement) (attributeName:string) defaultValue =
+        let attributeValue = xElement.Attribute(xn attributeName)
+        if(attributeValue = null) then
+            defaultValue()
+        else
+            attributeValue.Value
+
+    let internal toBios (xElement:XElement) =
+        let levels = xElement.Elements(xn "Level")
+        let versions = levels|>Seq.map (fun (x:XElement) -> x.Value)|>Seq.toArray
+        ApplicabilityRule.Bios {Versions=versions}
+
+    let internal toCpuAddressWidth (xElement:XElement) =
+        let addressWidth = xElement.Element(xn "AddressWidth")
+        let cpuAddressWidth =  Convert.ToUInt16(addressWidth.Value)
+        let cpuAddressWidth: Cpu.CpuAddressWidth = LanguagePrimitives.EnumOfValue cpuAddressWidth
+        ApplicabilityRule.CpuAddressWidth cpuAddressWidth
+
+    let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
+        let nameTable = new NameTable()
+        let namespaceManager = new XmlNamespaceManager(nameTable);
+        let xmlParserContext = XmlParserContext(null,namespaceManager,null,XmlSpace.None)
+        use xmlReader = new XmlTextReader(applicabilityXml,XmlNodeType.Element,xmlParserContext)
+        let xElement = XElement.Load(xmlReader)
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Processing ApplicabilityRule element: %s" xElement.Name.LocalName))|>ignore))
+        let applicabilityRules =
+            match xElement.Name.LocalName with
+            |"_Bios" -> (toBios xElement)
+            |"_CPUAddressWidth" -> (toCpuAddressWidth xElement)
+            |"And" -> 
+                ApplicabilityRule.And (
+                    xElement.Elements()
+                    |>Seq.map (fun x -> (                                        
+                                            lsupXmlToApplicabilityRules logger (x.ToString()))
+                                )
+                    |>Seq.toArray
+                    )
+            |"Or" -> 
+                ApplicabilityRule.Or (    
+                    xElement.Elements()
+                    |>Seq.map (fun x -> (lsupXmlToApplicabilityRules logger (x.ToString())))
+                    |>Seq.toArray 
+                    )
+            |"Not" -> 
+                ApplicabilityRule.Not (lsupXmlToApplicabilityRules logger ((xElement.Descendants()|>Seq.head).ToString()))
+            |_ -> raise (new NotSupportedException(sprintf "Applicability rule for '%s' is not implemented." xElement.Name.LocalName))
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Lsup converted to ApplicabilityRule: %A" applicabilityRules))|>ignore))
+        applicabilityRules

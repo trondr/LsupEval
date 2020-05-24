@@ -143,13 +143,13 @@ module LsupTest =
         ()
 
     [<Test>]
-       [<Category(TestCategory.UnitTests)>]
-       let ``isCpuAddressWidthMatch matching 2 -> return true``  () =        
-           let requiredCpuAddressWidth = Cpu.CpuAddressWidth.Bit32
-           let currentCpuAddressWidth = Cpu.CpuAddressWidth.Bit32        
-           let actual = Cpu.isCpuAddressWidthMatch logger requiredCpuAddressWidth currentCpuAddressWidth
-           Assert.AreEqual(true,actual)        
-           ()
+    [<Category(TestCategory.UnitTests)>]
+    let ``isCpuAddressWidthMatch matching 2 -> return true``  () =        
+        let requiredCpuAddressWidth = Cpu.CpuAddressWidth.Bit32
+        let currentCpuAddressWidth = Cpu.CpuAddressWidth.Bit32        
+        let actual = Cpu.isCpuAddressWidthMatch logger requiredCpuAddressWidth currentCpuAddressWidth
+        Assert.AreEqual(true,actual)        
+        ()
 
     [<Test>]
     [<Category(TestCategory.UnitTests)>]
@@ -167,4 +167,52 @@ module LsupTest =
         let currentCpuAddressWidth = Cpu.CpuAddressWidth.Bit64        
         let actual = Cpu.isCpuAddressWidthMatch logger requiredCpuAddressWidth currentCpuAddressWidth
         Assert.AreEqual(false,actual)
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules`` () =
+        let applicabiliyRules = """<And>
+  <_Bios>    
+    <Level>N1XET*</Level>
+  </_Bios>
+  <Or>
+    <And>      
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+    <And>      
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>      
+    </And>
+    <And>      
+      <_CPUAddressWidth>
+        <AddressWidth>32</AddressWidth>
+      </_CPUAddressWidth>      
+    </And>
+  </Or>
+</And>        
+        """
+
+        let systemInformationFalse = { 
+                BiosVersion = "XYZ"
+                CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
+        printf "%A" applicabilityRule
+        let actual = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationFalse applicabilityRule 
+        let expecedFalse = false
+        Assert.AreEqual(expecedFalse,actual,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationFalse)
+
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+        }
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+
+
         ()

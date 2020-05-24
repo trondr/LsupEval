@@ -1,7 +1,7 @@
 ﻿namespace LsupEval
 
 module Rules =
-    open System
+    open System    
     open Logging
     open LsupEval.Bios
     open LsupEval.Cpu
