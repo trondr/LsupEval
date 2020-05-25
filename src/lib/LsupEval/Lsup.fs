@@ -283,6 +283,11 @@ module Lsup =
         let cpuAddressWidth: Cpu.CpuAddressWidth = LanguagePrimitives.EnumOfValue cpuAddressWidth
         ApplicabilityRule.CpuAddressWidth cpuAddressWidth
 
+    let internal toOperatingSystem (xElement:XElement) =
+        let osElements = xElement.Elements(xn "OS")
+        let osArray = osElements|>Seq.map (fun (x:XElement) -> x.Value)|>Seq.toArray
+        ApplicabilityRule.Os {OsArray=osArray}
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -294,6 +299,7 @@ module Lsup =
             match xElement.Name.LocalName with
             |"_Bios" -> (toBios xElement)
             |"_CPUAddressWidth" -> (toCpuAddressWidth xElement)
+            |"_OS" -> (toOperatingSystem xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()

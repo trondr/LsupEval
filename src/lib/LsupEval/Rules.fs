@@ -5,6 +5,7 @@ module Rules =
     open Logging
     open LsupEval.Bios
     open LsupEval.Cpu
+    open LsupEval.OperatingSystem
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -16,21 +17,25 @@ module Rules =
         |Not of ApplicabilityRule
         |Bios of Bios
         |CpuAddressWidth of CpuAddressWidth
+        |Os of Os
     
     type SystemInformation =
         {
             BiosVersion:string
             CpuAddressWidth:Cpu.CpuAddressWidth
+            Os:string
         }
 
     let getCurrentSystemInformation() =
         result{
             let! biosVersion = Bios.getCurrentBiosVersion()        
             let! cupAddressWidth = Cpu.getCurrentCpuAddressWidth()
+            let! os = OperatingSystem.getCurrentOperatingSystem()
             return 
                 {
                     BiosVersion = biosVersion
                     CpuAddressWidth = cupAddressWidth
+                    Os = os
                 }
         }
 
@@ -63,6 +68,10 @@ module Rules =
         |CpuAddressWidth cpuAddressWidth ->
             let isMatch = (isCpuAddressWidthMatch logger cpuAddressWidth systemInfo.CpuAddressWidth)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating CpuAddressWidth rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
+            isMatch
+        |Os os ->
+            let isMatch = (isOperatingSystemMatch logger os systemInfo.Os)
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating OperatingSystem rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
 
             

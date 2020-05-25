@@ -199,6 +199,7 @@ module LsupTest =
         let systemInformationFalse = { 
                 BiosVersion = "XYZ"
                 CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+                Os = "WIN10"
             }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         printf "%A" applicabilityRule
@@ -209,6 +210,7 @@ module LsupTest =
         let systemInformationTrue = { 
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
         }
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
         let expectedTrue = true

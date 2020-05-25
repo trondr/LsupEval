@@ -20,9 +20,11 @@
   <ItemGroup>
     <Compile Include="Logging.fs" />
     <Compile Include="ResultBuilder.fs" />
+    <Compile Include="F.fs" />
     <Compile Include="WmiHelper.fs" />
     <Compile Include="Bios.fs" />
     <Compile Include="Cpu.fs" />
+    <Compile Include="OperatingSystem.fs" />
     <Compile Include="Rules.fs" />
     <Compile Include="Lsup.fs" />
   </ItemGroup>

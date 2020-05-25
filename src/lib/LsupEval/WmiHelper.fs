@@ -1,6 +1,7 @@
 ﻿namespace LsupEval
 
 module WmiHelper =
+    open System
     open System.Management
 
     let getWmiPropertyValue className propertyName =
@@ -16,3 +17,15 @@ module WmiHelper =
         with
         |ex -> 
             Result.Error (toException (sprintf "Failed to get property value '%s' from class '%s'." propertyName className) (Some ex))
+
+    let objectToString (value:obj) =
+        try
+            Result.Ok (value :?> string)
+        with
+        |ex -> Result.Error ex
+
+    let objectToInt32 (value:obj) =
+        try
+            Result.Ok (value :?> Int32)
+        with
+        |ex -> Result.Error ex

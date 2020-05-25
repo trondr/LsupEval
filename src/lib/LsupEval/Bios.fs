@@ -8,14 +8,11 @@ module Bios =
 
     type Bios = {Versions:string[]}
 
-    let toRegEx (lsuPattern:string) =
-        let pattern = lsuPattern.Replace("*",".*")
-        new System.Text.RegularExpressions.Regex(pattern)
-
     let getCurrentBiosVersion () =
         result{
-            let! objectValue = getWmiPropertyValue "Win32_BIOS" "SMBIOSBIOSVersion"
-            return  objectValue :?> string
+            let! valueObject = getWmiPropertyValue "Win32_BIOS" "SMBIOSBIOSVersion"
+            let! valueString = objectToString valueObject
+            return  valueString
         }
 
     let isBiosMatch (logger:Common.Logging.ILog) (bios:Bios) biosVersion =

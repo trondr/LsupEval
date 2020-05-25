@@ -3,3 +3,4 @@ src/lib/LsupEval/bin/
 .vs/
 src/test/LsupEval.Tests/bin/
 src/test/LsupEval.Tests/obj/
+_NCrunch_LsupEval/
