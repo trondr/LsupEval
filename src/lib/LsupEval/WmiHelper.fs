@@ -29,3 +29,22 @@ module WmiHelper =
             Result.Ok (value :?> Int32)
         with
         |ex -> Result.Error ex
+
+
+    let getWmiObjects className propertyNames =
+        try
+            let properties = propertyNames |> String.concat ","
+            use searcher = new ManagementObjectSearcher(sprintf "SELECT %s FROM %s" properties className)
+            use list = searcher.Get()
+            let wmiObjects = 
+                list
+                |>Seq.cast
+                |>Seq.map(fun (x:ManagementObject) ->
+                            seq{
+                                yield! propertyNames |> Seq.map(fun pn ->(pn, x.[pn]))
+                            }
+                            |>Map.ofSeq
+                    )
+            Result.Ok wmiObjects
+        with
+        |ex -> Result.Error (toException (sprintf "Failed to get wmi object property values '%A' from class '%s'." propertyNames className) (Some ex))

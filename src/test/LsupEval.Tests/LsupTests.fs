@@ -181,6 +181,23 @@ module LsupTest =
       <_CPUAddressWidth>
         <AddressWidth>64</AddressWidth>
       </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1537]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1578]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1456]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_1022&DEV_15DF]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1486]]></HardwareID>
+          <Date>2019-05-21</Date>
+          <Version>4.10.0.0^</Version>
+    </_Driver>
     </And>
     <And>      
       <_CPUAddressWidth>
@@ -200,6 +217,7 @@ module LsupTest =
                 BiosVersion = "XYZ"
                 CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
                 Os = "WIN10"
+                Drivers= [||]
             }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         printf "%A" applicabilityRule
@@ -211,6 +229,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            Drivers= [||]
         }
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
         let expectedTrue = true

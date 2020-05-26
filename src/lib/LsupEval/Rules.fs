@@ -6,6 +6,7 @@ module Rules =
     open LsupEval.Bios
     open LsupEval.Cpu
     open LsupEval.OperatingSystem
+    open LsupEval.Driver
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -18,12 +19,14 @@ module Rules =
         |Bios of Bios
         |CpuAddressWidth of CpuAddressWidth
         |Os of Os
+        |Driver of Driver
     
     type SystemInformation =
         {
             BiosVersion:string
             CpuAddressWidth:Cpu.CpuAddressWidth
             Os:string
+            Drivers: DriverInfo[]
         }
 
     let getCurrentSystemInformation() =
@@ -31,11 +34,13 @@ module Rules =
             let! biosVersion = Bios.getCurrentBiosVersion()        
             let! cupAddressWidth = Cpu.getCurrentCpuAddressWidth()
             let! os = OperatingSystem.getCurrentOperatingSystem()
+            let! drivers = Driver.getCurrentDrivers()
             return 
                 {
                     BiosVersion = biosVersion
                     CpuAddressWidth = cupAddressWidth
                     Os = os
+                    Drivers = drivers
                 }
         }
 
@@ -73,5 +78,11 @@ module Rules =
             let isMatch = (isOperatingSystemMatch logger os systemInfo.Os)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating OperatingSystem rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
+        |Driver driver ->
+            let fileDrivers = getFileDriversFromDriverPattern driver            
+            let isMatch = (isDriverMatch logger driver (Array.append systemInfo.Drivers fileDrivers))
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating Driver rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
+            isMatch
+
 
             
