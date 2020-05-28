@@ -87,8 +87,7 @@ module Lsup =
     let loadLsuPackageXElement (lsuPackageXDocument:XDocument) =        
             Result.Ok lsuPackageXDocument.Root
      
-    let xn s = 
-        XName.Get(s)
+    
 
     let getRequiredAttribute (xElement:XElement) (attributeName:string) =
         match xElement with
@@ -288,6 +287,12 @@ module Lsup =
         let osArray = osElements|>Seq.map (fun (x:XElement) -> x.Value)|>Seq.toArray
         ApplicabilityRule.Os {OsArray=osArray}
 
+    let toDriver (driverXElement:XElement) =
+        let hardwareIds = driverXElement |> Driver.getOptionalHardwareIdElements
+        let file = driverXElement |> Driver.getOptionalFileElement
+        let driver = [|hardwareIds;file|]|>Array.choose id|>Array.head
+        ApplicabilityRule.Driver driver
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -300,6 +305,7 @@ module Lsup =
             |"_Bios" -> (toBios xElement)
             |"_CPUAddressWidth" -> (toCpuAddressWidth xElement)
             |"_OS" -> (toOperatingSystem xElement)
+            |"_Driver" -> (toDriver xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()

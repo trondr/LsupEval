@@ -4,6 +4,8 @@
 module F =
     open System.Collections.Generic
     open System.Text.RegularExpressions
+    open System.Management.Automation
+    open System.Collections.ObjectModel
 
     let toRegEx (lsuPattern:string) =
         let pattern = lsuPattern.Replace("*",".*")
@@ -28,3 +30,12 @@ module F =
         if m.Success then Some(List.tail [ for g in m.Groups -> g.Value ])
         else None
 
+    let toOption value = 
+        match value with
+        |null -> None
+        |_ -> Some value
+
+    let runPowerShell (action:PowerShell->Collection<PSObject>) =
+        use powershell = PowerShell.Create(RunspaceMode.NewRunspace)
+        action(powershell)
+        

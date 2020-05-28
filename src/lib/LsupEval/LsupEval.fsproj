@@ -22,6 +22,7 @@
     <Compile Include="ResultBuilder.fs" />
     <Compile Include="F.fs" />
     <Compile Include="WmiHelper.fs" />
+    <Compile Include="XmlHelper.fs" />
     <Compile Include="Bios.fs" />
     <Compile Include="Cpu.fs" />
     <Compile Include="OperatingSystem.fs" />
@@ -40,6 +41,8 @@
   <ItemGroup>
     <PackageReference Include="Common.Logging" Version="3.4.1" />
     <PackageReference Include="Common.Logging.Core" Version="3.4.1" />
+    <PackageReference Include="FSharpx.Extras" Version="2.4.0" />
+    <PackageReference Include="System.Management.Automation.dll" Version="10.0.10586" />
   </ItemGroup>
 
   <ItemGroup>

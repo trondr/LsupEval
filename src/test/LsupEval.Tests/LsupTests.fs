@@ -229,11 +229,32 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
-            Drivers= [||]
+            Drivers= 
+                [|
+                    Driver.DriverInfo.Hardware
+                        {
+                            HardwareIds=[|"PCI\VEN_1022&DEV_1537"|]
+                            CompatibleIds = [||]
+                            Name="Test Name"
+                            Date=(Some (new System.DateTime(2019,05,21)))
+                            Version= (Driver.Version "4.10.0.0")
+                            ProviderName="Lenovo"
+                        }
+                |]
         }
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
-
-
         ()
+
+    [<Test>]
+    [<Timeout(200000)>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``getPnpDevicesTests ``()=
+        match(Driver.getPnpDevices())with
+        |Result.Ok actual ->
+            printf "%A" actual
+            ()
+        |Result.Error ex -> 
+            Assert.Fail(ex.Message)
+        

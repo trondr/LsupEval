@@ -19,7 +19,7 @@ module Rules =
         |Bios of Bios
         |CpuAddressWidth of CpuAddressWidth
         |Os of Os
-        |Driver of Driver
+        |Driver of DriverElement
     
     type SystemInformation =
         {
