@@ -45,7 +45,7 @@ module Driver =
             HardwareIds:string[]
             CompatibleIds:string[]
             Name:string
-            Date:DateTime option
+            Date:DateTime
             Version:Version
             ProviderName:string
         }
@@ -70,36 +70,6 @@ module Driver =
             |Regex @"^(\d{4})-(\d{2})-(\d{2})$" [year;month;day] -> Some (new DateTime(Convert.ToInt32(year),Convert.ToInt32(month),Convert.ToInt32(day)))
             |_ -> raise (new ArgumentException(sprintf "Device driver date format '%s' not supported" dd))
 
-    //Get-WmiObject Win32_PnPSignedDriver| select devicename, driverversion, deviceid,driverdate
-    let getPnpDrivers() =
-        result{
-            let propertyNames = [|"DeviceName";"HardwareId";"DriverVersion";"DriverDate";"DriverProviderName"|]
-            let! wmiObjects = WmiHelper.getWmiObjects "Win32_PnPSignedDriver" propertyNames            
-            let! drivers =
-                wmiObjects
-                |>Seq.map(fun m ->   
-                    result{
-                        let! id=objectToString m.["HardwareId"]
-                        let! name = objectToString m.["DeviceName"]
-                        let! dateString = (objectToString m.["DriverDate"])
-                        let date= driverDateToDate (Some dateString)
-                        let! version= objectToString m.["DriverVersion"]
-                        let! driverProviderName = objectToString m.["DriverProviderName"]
-                        return 
-                            DriverInfo.Hardware 
-                            {
-                                HardwareIds=[|id|]
-                                CompatibleIds=[||]
-                                Name=name
-                                Date=date
-                                Version=Version version
-                                ProviderName=driverProviderName
-                            }
-                    }
-                )|>toAccumulatedResult
-            return drivers
-        }
-
     type PnPDevices =
         {
             InstanceId:string
@@ -110,12 +80,6 @@ module Driver =
             ProviderName:string
         }
     
-    type PnpInstanceIdAndDriverDate=
-        {
-            InstanceId:string
-            DriverDate:DateTime
-        }
-
     type DataType=
         |DriverVersion
         |DriverDate
@@ -168,92 +132,93 @@ module Driver =
                     )|>Seq.toArray
             let devicePropertyData =
                     deviceProperties
-                    |>Array.map(fun p -> 
-                            toDevicePropertyData p
-                        )
+                    |>Array.map toDevicePropertyData
                     |>Array.choose id
             Result.Ok devicePropertyData
         with
         |ex -> Result.Error (new Exception(sprintf "Failed to get device properties. %s" ex.Message, ex))
         
-        
+    type PnpDevice =
+        {
+            InstanceId:string
+            HardwareIds:string[]
+            CompatibleIds:string[]
+            Name:string
+        }
 
-    let getPnpDeviceDriverDate instanceId =
-        let driverDate =
-            runPowerShell(fun powershell-> 
-                    powershell                                                                        
-                        .AddCommand("Get-PnpDeviceProperty")
-                        .AddParameter("InstanceId",instanceId)
-                        .AddParameter("KeyName",[|"DEVPKEY_Device_DriverDate";"DEVPKEY_Device_DriverVersion"|])
-                        .AddCommand("Select-Object")
-                        .AddParameter("Property",[|"InstanceId";"Data"|])
-                        .Invoke()
-                    )
-                    |>Seq.filter(fun d-> (d.Properties.["InstanceId"].Value <> null) )
-                    |>Seq.filter(fun d-> (d.Properties.["Data"].Value <> null) )
-                    |>Seq.map(fun dd ->     
-                            let instanceId = dd.Properties.["InstanceId"].Value :?> string
-                            let dateTime = dd.Properties.["Data"].Value :?> DateTime
-                            let dd =
-                                {
-                                    InstanceId = instanceId
-                                    DriverDate = dateTime
-                                }
-                            printfn "%A" dd
-                            dd
-                        )
-                    |>Seq.tryHead
-        driverDate
+    let toPnpDevice (psObject:Management.Automation.PSObject) =
+        try
+            let instanceId = psObject.Properties.["InstanceId"].Value :?> string
+            let hardwareIds = psObject.Properties.["HardwareId"].Value :?> string[]
+            let compatibleIds = psObject.Properties.["CompatibleId"].Value :?> string[]
+            let name = psObject.Properties.["Name"].Value :?> string
+            Some {
+                InstanceId = instanceId
+                HardwareIds = hardwareIds
+                CompatibleIds=compatibleIds
+                Name = name                
+            }
+        with
+        |ex -> 
+            logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
+            None
 
     let getPnpDevices() =
         try
-            let pnpDevices = 
+            let psDevices =
                 runPowerShell( fun powershell-> 
                     powershell
                         .AddCommand("Get-PnpDevice")
                         .AddCommand("Select-Object")
-                        .AddParameter("Property",[|"InstanceId";"HardwareId";"Name"|])                        
+                        .AddParameter("Property",[|"InstanceId";"HardwareId";"CompatibleId";"Name"|])
                         .Invoke()
-                    )|>Seq.map(fun d->
-                        let instanceId = (d.Properties.["InstanceId"].Value :?> string)
-                        let hardwareIds = (d.Properties.["HardwareId"].Value :?> string[])
-                        {
-                            InstanceId= instanceId
-                            HardwareIds=hardwareIds
-                            CompatibleIds=  [||]//(d.Properties.["CompatibleID"].Value :?> string[])
-                            Name=(d.Properties.["Name"].Value :?> string)
-                            Version="1.0.0.0"
-                            ProviderName="Microsoft"
-                        }
                     )|>Seq.toArray
+            let pnpDevices =
+                psDevices
+                |> Array.map toPnpDevice
+                |> Array.choose id
+            Result.Ok pnpDevices
+        with
+        |ex -> Result.Error (new Exception(sprintf "Failed to get devices. %s" ex.Message, ex))
+    
+    
+    let getDriverDate (pnpDeviceProperties:PnpDevicePropertyData[]) instanceId =
+        pnpDeviceProperties
+        |>Array.filter(fun p -> p.InstanceId = instanceId)
+        |>Array.filter(fun p -> p.DataType = DataType.DriverDate)
+        |>Array.map(fun p -> p.Data :?> DateTime)
+        |>Array.head
 
-            let instanceIds = pnpDevices|>Seq.map(fun d -> d.InstanceId)|>Seq.toArray
-
-            let pnpDeviceDriverDates = instanceIds |> Array.filter (fun id -> not (String.IsNullOrWhiteSpace(id)))|> Array.map (fun id -> getPnpDeviceDriverDate id)|>Array.choose id
-
-            printfn "%A" pnpDeviceDriverDates
-
-            let devices = 
-                query{
-                    for d in pnpDevices do
-                    join dd in pnpDeviceDriverDates on
-                        (d.InstanceId = dd.InstanceId)
-                    select (
-                                DriverInfo.Hardware 
+    let getDriverVersion (pnpDeviceProperties:PnpDevicePropertyData[]) instanceId =
+        pnpDeviceProperties
+        |>Array.filter(fun p -> p.InstanceId = instanceId)
+        |>Array.filter(fun p -> p.DataType = DataType.DriverVersion)
+        |>Array.map(fun p -> p.Data :?> string)
+        |>Array.head
+    
+    let getPnpDrivers() =
+            result{
+                let! pnpDeviceProperties = getPnpDeviceProperties()
+                let! pnpDevices = getPnpDevices()
+                let pnpDevicesWithProperties =
+                    query{
+                        for d in pnpDevices do
+                        join dp in pnpDeviceProperties on
+                            (d.InstanceId = dp.InstanceId)
+                        select(
+                                DriverInfo.Hardware
                                     {
+                                        Name=d.Name
                                         HardwareIds=d.HardwareIds
                                         CompatibleIds=d.CompatibleIds
-                                        Name=d.Name
-                                        Date=Some dd.DriverDate
-                                        Version=Version d.Version
-                                        ProviderName=d.ProviderName
-                                    }
-                            )
-
-                }
-            Result.Ok (devices|>Seq.toArray)
-        with
-        |ex -> Result.Error ex
+                                        Date= getDriverDate pnpDeviceProperties d.InstanceId
+                                        Version = Version (getDriverVersion pnpDeviceProperties d.InstanceId)
+                                        ProviderName=""
+                                    }                        
+                            )                    
+                    }
+                return pnpDevicesWithProperties
+            }
 
     let getDriverFiles () =
         let driversFolder = @"c:\Windows\System32\Drivers"

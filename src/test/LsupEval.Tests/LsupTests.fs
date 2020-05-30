@@ -236,7 +236,7 @@ module LsupTest =
                             HardwareIds=[|"PCI\VEN_1022&DEV_1537"|]
                             CompatibleIds = [||]
                             Name="Test Name"
-                            Date=(Some (new System.DateTime(2019,05,21)))
+                            Date=(new System.DateTime(2019,05,21))
                             Version= (Driver.Version "4.10.0.0")
                             ProviderName="Lenovo"
                         }
@@ -250,8 +250,8 @@ module LsupTest =
     [<Test>]
     [<Timeout(2000000)>]
     [<Category(TestCategory.ManualTests)>]
-    let ``getPnpDevicesTests ``()=
-        match(Driver.getPnpDevices())with
+    let ``getPnpDriversTests ``()=
+        match(Driver.getPnpDrivers())with
         |Result.Ok actual ->
             printf "%A" actual
             ()
