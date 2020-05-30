@@ -248,7 +248,7 @@ module LsupTest =
         ()
 
     [<Test>]
-    [<Timeout(200000)>]
+    [<Timeout(2000000)>]
     [<Category(TestCategory.ManualTests)>]
     let ``getPnpDevicesTests ``()=
         match(Driver.getPnpDevices())with
@@ -256,5 +256,17 @@ module LsupTest =
             printf "%A" actual
             ()
         |Result.Error ex -> 
-            Assert.Fail(ex.Message)
+            Assert.Fail(ex.ToString())
+
+
+    [<Test>]
+    [<Timeout(2000000)>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``getPnpDevicePropertiesTests ``()=
+        match(Driver.getPnpDeviceProperties())with
+        |Result.Ok actual ->
+            printf "%A" actual
+            ()
+        |Result.Error ex -> 
+            Assert.Fail(ex.ToString())
         

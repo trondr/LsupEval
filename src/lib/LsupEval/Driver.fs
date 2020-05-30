@@ -5,6 +5,8 @@ module Driver =
     open System.Diagnostics
     open System.Xml.Linq
     open LsupEval.WmiHelper
+    open LsupEval.Logging
+    let logger = getLoggerByName "LsupEval.Driver"
     
     type VersionOrLevelElement =
         |VersionElement of string
@@ -113,6 +115,68 @@ module Driver =
             InstanceId:string
             DriverDate:DateTime
         }
+
+    type DataType=
+        |DriverVersion
+        |DriverDate
+
+    type PnpDevicePropertyData =
+        {
+            InstanceId:string
+            DeviceId:string
+            DataType:DataType
+            KeyName:string
+            Data:obj
+        }
+
+    let toDataType dataType =
+        match dataType with
+        |"FileTime" -> DataType.DriverDate
+        |"String" -> DataType.DriverVersion
+        |_ -> raise (new Exception(sprintf "Data type '%s' not supported" dataType))
+
+    let toDevicePropertyData (psObject:Management.Automation.PSObject) =
+        try
+            let instanceId = psObject.Properties.["InstanceId"].Value :?> string
+            let deviceId = psObject.Properties.["DeviceID"].Value :?> string
+            let dataType = psObject.Properties.["Type"].Value.ToString()
+            let keyName = psObject.Properties.["KeyName"].Value :?> string
+            let data = psObject.Properties.["Data"].Value
+            Some {
+                InstanceId = instanceId
+                DeviceId = deviceId
+                DataType = toDataType dataType
+                KeyName = keyName
+                Data = data
+            }
+        with
+        |ex -> 
+            logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
+            None
+
+    let getPnpDeviceProperties () =
+        try
+            let deviceProperties =
+                runPowerShell(fun powershell ->
+                    powershell
+                        .AddCommand("Get-PnpDevice")                        
+                        .AddCommand("Get-PnpDeviceProperty")
+                        .AddParameter("KeyName",[|"DEVPKEY_Device_DriverDate";"DEVPKEY_Device_DriverVersion"|])
+                        .AddCommand("Select-Object")
+                        .AddParameter("Property",[|"InstanceId";"DeviceId";"Type";"KeyName";"Data"|])
+                        .Invoke()
+                    )|>Seq.toArray
+            let devicePropertyData =
+                    deviceProperties
+                    |>Array.map(fun p -> 
+                            toDevicePropertyData p
+                        )
+                    |>Array.choose id
+            Result.Ok devicePropertyData
+        with
+        |ex -> Result.Error (new Exception(sprintf "Failed to get device properties. %s" ex.Message, ex))
+        
+        
 
     let getPnpDeviceDriverDate instanceId =
         let driverDate =
