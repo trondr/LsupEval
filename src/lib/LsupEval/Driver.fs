@@ -115,23 +115,31 @@ module Driver =
         }
 
     let getPnpDeviceDriverDate instanceId =
-        runPowerShell(fun powershell-> 
-            powershell                                                                        
-                .AddCommand("Get-PnpDeviceProperty")
-                .AddParameter("InstanceId",instanceId)
-                .AddParameter("KeyName","DEVPKEY_Device_DriverDate")
-                .AddCommand("Select-Object")
-                .AddParameter("Property",[|"InstanceId";"Data"|])
-                .Invoke()
-            )
-            |>Seq.map(fun dd ->     
-                let instanceId = dd.Properties.["InstanceId"].Value :?> string
-                let dateTime = dd.Properties.["Data"].Value :?> DateTime
-                {
-                    InstanceId = instanceId
-                    DriverDate = dateTime
-                }
-                )|>Seq.head
+        let driverDate =
+            runPowerShell(fun powershell-> 
+                    powershell                                                                        
+                        .AddCommand("Get-PnpDeviceProperty")
+                        .AddParameter("InstanceId",instanceId)
+                        .AddParameter("KeyName",[|"DEVPKEY_Device_DriverDate";"DEVPKEY_Device_DriverVersion"|])
+                        .AddCommand("Select-Object")
+                        .AddParameter("Property",[|"InstanceId";"Data"|])
+                        .Invoke()
+                    )
+                    |>Seq.filter(fun d-> (d.Properties.["InstanceId"].Value <> null) )
+                    |>Seq.filter(fun d-> (d.Properties.["Data"].Value <> null) )
+                    |>Seq.map(fun dd ->     
+                            let instanceId = dd.Properties.["InstanceId"].Value :?> string
+                            let dateTime = dd.Properties.["Data"].Value :?> DateTime
+                            let dd =
+                                {
+                                    InstanceId = instanceId
+                                    DriverDate = dateTime
+                                }
+                            printfn "%A" dd
+                            dd
+                        )
+                    |>Seq.tryHead
+        driverDate
 
     let getPnpDevices() =
         try
@@ -155,26 +163,9 @@ module Driver =
                         }
                     )|>Seq.toArray
 
-            let instanceIds = pnpDevices|>Seq.map(fun d -> d.InstanceId)|>Seq.toArray|>Array.head
+            let instanceIds = pnpDevices|>Seq.map(fun d -> d.InstanceId)|>Seq.toArray
 
-            let pnpDeviceDriverDates =
-                    runPowerShell(fun powershell-> 
-                                        powershell                                                                        
-                                            .AddCommand("Get-PnpDeviceProperty")
-                                            .AddParameter("InstanceId",instanceIds)
-                                            .AddParameter("KeyName","DEVPKEY_Device_DriverDate")
-                                            .AddCommand("Select-Object")
-                                            .AddParameter("Property",[|"InstanceId";"Data"|])
-                                            .Invoke()
-                                  )
-                                  |>Seq.map(fun dd ->     
-                                                let instanceId = dd.Properties.["InstanceId"].Value :?> string
-                                                let dateTime = dd.Properties.["Data"].Value :?> DateTime
-                                                {
-                                                    InstanceId = instanceId
-                                                    DriverDate = dateTime
-                                                }
-                                  )|>Seq.toArray
+            let pnpDeviceDriverDates = instanceIds |> Array.filter (fun id -> not (String.IsNullOrWhiteSpace(id)))|> Array.map (fun id -> getPnpDeviceDriverDate id)|>Array.choose id
 
             printfn "%A" pnpDeviceDriverDates
 
