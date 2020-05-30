@@ -3,8 +3,7 @@
 module Driver = 
     open System
     open System.Diagnostics
-    open System.Xml.Linq
-    open LsupEval.WmiHelper
+    open System.Xml.Linq    
     open LsupEval.Logging
     let logger = getLoggerByName "LsupEval.Driver"
     
@@ -70,16 +69,6 @@ module Driver =
             |Regex @"^(\d{4})-(\d{2})-(\d{2})$" [year;month;day] -> Some (new DateTime(Convert.ToInt32(year),Convert.ToInt32(month),Convert.ToInt32(day)))
             |_ -> raise (new ArgumentException(sprintf "Device driver date format '%s' not supported" dd))
 
-    type PnPDevices =
-        {
-            InstanceId:string
-            HardwareIds:string[]
-            CompatibleIds:string[]
-            Name:string            
-            Version:string
-            ProviderName:string
-        }
-    
     type DataType=
         |DriverVersion
         |DriverDate
