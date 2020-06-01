@@ -318,27 +318,31 @@ module Driver =
         regex.IsMatch(hardwareId)
 
     let isDriverDateMatch (hardwareInfoDriverDate:DateTime) (hardwareIdElementDriverDate:DateTime option) =
-        match hardwareIdElementDriverDate with
-        |None -> true
-        |Some d ->         
-            hardwareInfoDriverDate < d
+        let isMatch =
+            match hardwareIdElementDriverDate with
+            |None -> true
+            |Some date ->         
+                hardwareInfoDriverDate < date
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver  date: '%A' with driver date pattern '%A'. Return: %b" hardwareInfoDriverDate hardwareIdElementDriverDate isMatch))|>ignore))
+        isMatch
 
     let isDriverVersionMatch currentDriverVersion newDriverVersion =
-        logger.Warn("Version compare not implemented!")
-        match(result{
-            let! currentVersion = LsupEval.Version.version currentDriverVersion
-            let! versionPattern = LsupEval.Version.versionPattern newDriverVersion
-            let isMatch = LsupEval.Version.isVersionPatternMatch currentVersion versionPattern
-            return isMatch
-        }) with
-        |Result.Ok isMatch -> isMatch
-        |Result.Error ex -> 
-            logger.Error(sprintf "Failed to match version '%s' with pattern '%s'." currentDriverVersion newDriverVersion)
-            false
+        let isMatch =
+            match(result{
+                let! currentVersion = LsupEval.Version.version currentDriverVersion
+                let! versionPattern = LsupEval.Version.versionPattern newDriverVersion
+                let isMatch = LsupEval.Version.isVersionPatternMatch currentVersion versionPattern
+                return isMatch
+            }) with
+            |Result.Ok isMatch -> isMatch
+            |Result.Error ex -> 
+                logger.Error(sprintf "Failed to match version '%s' with pattern '%s'." currentDriverVersion newDriverVersion)
+                false
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver version: '%A' with driver version pattern '%A'. Return: %b" currentDriverVersion newDriverVersion isMatch))|>ignore))
+        isMatch
 
 
-    let isHardwareMatch (driverElement:HardwareIdElements) (hardwareInfo:HardwareInfo) =
-        logger.Warn("isHardwareMatch: Not Implemented")
+    let isHardwareMatch (driverElement:HardwareIdElements) (hardwareInfo:HardwareInfo) =        
         let hardwareIdIsMatch = hardwareInfo.HardwareIds|>Seq.filter(fun s -> (any (isHardwareIdMatch s) driverElement.HardwareIds))|>Seq.tryHead|>toBoolean
         let dateIsMatch = isDriverDateMatch hardwareInfo.Date driverElement.Date
         
@@ -350,8 +354,9 @@ module Driver =
             |VersionElement v -> v
             |LevelElement l -> l            
         let versionIsMatch = isDriverVersionMatch (cv hardwareInfo.Version) (nv driverElement.Version)
-
-        hardwareIdIsMatch && dateIsMatch && versionIsMatch
+        let isMatch = hardwareIdIsMatch && dateIsMatch && versionIsMatch
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware: '%A' with hardware pattern '%A'. (HardwareIdIsMatch=%b && DateIsMatch=%b && VersionIsMatch=%b) Return: %b" hardwareInfo driverElement hardwareIdIsMatch dateIsMatch versionIsMatch isMatch))|>ignore))
+        isMatch
 
     let isDriverMatch (logger:Common.Logging.ILog) driver (drivers:seq<DriverInfo>) =
         match driver with
@@ -367,8 +372,7 @@ module Driver =
                 |>Seq.filter (fun h -> isHardwareMatch hw h)
                 |>Seq.tryHead |> toBoolean
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" drivers hw isMatch))|>ignore))
-            isMatch
-            //raise (new NotImplementedException("Evaluation of HardwareIdElements"))
+            isMatch            
         |FileElement f -> 
             raise (new NotImplementedException("Evaluation of FileElement"))
         |ServiceNameElement s ->
