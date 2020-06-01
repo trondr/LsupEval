@@ -19,6 +19,21 @@ module Version =
 
     type LsupVersion = private LsupVersion of VersionBlock[]
 
+    type LsupVersionCompareOption =
+        |LowerOrEqual
+        |HigherorEqual
+        |Equal
+
+    type LsupVersionPattern = 
+        {
+            Version:LsupVersion
+            CompareOption:LsupVersionCompareOption
+        }
+
+    type LenovoVersion = 
+        |Version of LsupVersion
+        |VersionPattern of LsupVersionPattern
+
     let private ifTrueThen success =
         function
         |true -> Some success
@@ -27,6 +42,20 @@ module Version =
     let private (|NullOrEmpty|_|) =
         String.IsNullOrWhiteSpace 
         >> ifTrueThen NullOrEmpty
+
+    let isVersionPattern (version:string) =
+        version.StartsWith("^") || version.EndsWith("^")
+
+    let private (|IsVersionPattern|_|) =
+        isVersionPattern 
+        >> ifTrueThen IsVersionPattern
+
+    let isInvalidVersionPattern (version:string) =
+        (version.StartsWith("^") && version.EndsWith("^"))
+
+    let private (|IsInvalidVersionPattern|_|) =
+        isInvalidVersionPattern 
+        >> ifTrueThen IsInvalidVersionPattern
 
     let isNumericChar (c:char) =        
         if (c >= '0') then
@@ -64,11 +93,40 @@ module Version =
         match version with
         |null -> Result.Error (new InvalidVersionException("","Version cannot be null.") :> Exception)
         |NullOrEmpty -> Result.Error (new InvalidVersionException("","Version cannot be empty.") :> Exception)
+        |IsVersionPattern -> Result.Error (new InvalidVersionException(version,"Version cannot be a pattern.") :> Exception)        
         |v -> 
             result{
                 let! versionBlocks = toVersionBlocks v            
                 return (LsupVersion versionBlocks)
             }
+
+    let versionPattern versionPattern =
+        match versionPattern with
+        |null -> Result.Error (new InvalidVersionException("","Version cannot be null.") :> Exception)
+        |NullOrEmpty -> Result.Error (new InvalidVersionException("","Version cannot be empty.") :> Exception)
+        |IsInvalidVersionPattern -> Result.Error (new InvalidVersionException(versionPattern,"Version pattern is invalid. Pattern must either start with ^ OR end with ^.") :> Exception)
+        |vp ->
+            result {
+                let! version = version (vp.Trim('^'))
+                let versionPattern =
+                    if(vp.StartsWith("^")) then
+                        {
+                            Version = version
+                            LsupVersionPattern.CompareOption =  LsupVersionCompareOption.LowerOrEqual
+                        }
+                    elif (vp.EndsWith("^")) then
+                        {
+                            Version = version
+                            LsupVersionPattern.CompareOption =  LsupVersionCompareOption.HigherorEqual
+                        }
+                    else
+                        {
+                            Version = version
+                            LsupVersionPattern.CompareOption =  LsupVersionCompareOption.Equal
+                        }
+                return versionPattern
+            }
+
         
     let min size1 size2 =
         if(size1 < size2) then
@@ -111,3 +169,13 @@ module Version =
         match firstNonEqualVersionBlocks with
         |Some (v1,v2) -> compareVersionBlock v1 v2
         |None -> 0
+
+    let isVersionPatternMatch (version:LsupVersion) (versionPattern:LsupVersionPattern) =
+        let compareResult = compare version versionPattern.Version
+        match versionPattern.CompareOption with
+        |HigherorEqual ->             
+            (compareResult >= 0)            
+        |LowerOrEqual ->            
+            (compareResult <= 0)
+        |Equal ->
+            (compareResult = 0)

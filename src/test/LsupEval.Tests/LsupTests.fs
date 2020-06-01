@@ -282,6 +282,7 @@ module LsupTest =
         [<TestCase("Invalid version null -> true",null,false)>]
         [<TestCase("Invalid version 1.0.0. -> true","1.0.0.",false)>]
         [<TestCase("Invalid version 1.0..0 -> true","1.0.0.",false)>]
+        [<TestCase("Invalid version ^1.0..0 -> true","^1.0.0.",false)>]
 
     let ``version `` (description:string,version:string,expectedSuccess:bool) =
         match(result{
@@ -319,6 +320,9 @@ module LsupTest =
     [<TestCase("4 tupple numeric and alphanumeric -> Less Than (-1)","2.0.0.0","2.0.0.1-alpha",-1)>]
     [<TestCase("4 tupple numeric and alphanumeric -> Less Than (-1)","2.0.0.0-alpha","2.0.0.1-beta",-1)>]
 
+    [<TestCase("2 and 4 tupple numeric and alphanumeric -> Less Than (0)","2.0","2.0.0.1-beta",0)>]
+    [<TestCase("4 and 2 tupple numeric and alphanumeric -> Less Than (0)","2.0.0.1-beta","2.0",0)>]
+
     let ``compare Version tests `` (description:string,version1:string,version2:string, expected:int32) =
         match(result{
             let! lsupVersion1 = LsupEval.Version.version version1
@@ -349,3 +353,43 @@ module LsupTest =
     let `` isNumericChar Tests`` (description:string,ch:char, expected:bool) =
         let actual = LsupEval.Version.isNumericChar ch
         Assert.AreEqual(expected,actual,description)
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]    
+    [<TestCase("Valid version pattern ^1.0.0 -> true","^1.0.0",true)>]
+    [<TestCase("Valid version pattern ^1.0.0 -> true","^1.0.0^",false)>]
+    [<TestCase("Valid version pattern ^1.0.0 -> true","1.0.0^",true)>]
+    [<TestCase("Valid version pattern ^1.0.0 -> true","1.0.0",true)>]
+    let ``versionPattern test`` (description:string,versionPattern:string,expectedSuccess:bool) =
+        match(result{
+            let! actual = LsupEval.Version.versionPattern versionPattern
+            return actual
+        })with
+        |Result.Ok v -> Assert.IsTrue(expectedSuccess,"Did not expect success")
+        |Result.Error ex -> Assert.False(expectedSuccess,"Did expect success" + ex.ToString())
+
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]    
+    [<TestCase("LowerOrEqual - No match","^1.0.0","2.0.0",false,true)>]
+    [<TestCase("LowerOrEqual - match","^1.0.0","1.0.0",true,true)>]
+    [<TestCase("LowerOrEqual - match","^1.0.0","0.2.0",true,true)>]
+
+    [<TestCase("HigherOrEqual - match","1.0.0^","2.0.0",true,true)>]
+    [<TestCase("HigherOrEqual - match","1.0.0^","1.0.0",true,true)>]
+    [<TestCase("HigherOrEqual - match","1.0.0^","0.2.0",false,true)>]
+
+    [<TestCase("Equal - match","1.0.0","2.0.0",false,true)>]
+    [<TestCase("Equal - match","1.0.0","1.0.0",true,true)>]
+    [<TestCase("Equal - match","1.0.0","0.2.0",false,true)>]
+
+    let ``isVersionPatternMatch test`` (description:string,versionPattern:string,version:string,expected:bool, epectedSuccess:bool) =
+        match(result{
+            let! version = LsupEval.Version.version version
+            let! versionPattern = LsupEval.Version.versionPattern versionPattern
+            let actual = LsupEval.Version.isVersionPatternMatch version versionPattern
+            Assert.AreEqual(expected,actual,"Version match not expected.")
+            return actual
+        })with
+        |Result.Ok v -> Assert.IsTrue(epectedSuccess,"Did not expect success")
+        |Result.Error ex -> Assert.False(epectedSuccess,"Did expect success" + ex.ToString())
