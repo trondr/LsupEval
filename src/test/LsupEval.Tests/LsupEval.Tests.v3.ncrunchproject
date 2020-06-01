@@ -1,3 +1,54 @@
 ﻿<ProjectConfiguration>
-  <Settings />
+  <Settings>
+    <IgnoredTests>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.loadLsuPackage test</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.loadLsuPackageXDocument xml file does not exists return Error</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.loadLsuPackageXDocument xml file exists return OK</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isBiosMatchTest star -&gt; return true</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isBiosMatchTest star and some non matching -&gt; return true</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isBiosMatchTest non matching -&gt; return false</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isBiosMatchTest matching -&gt; return true</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.getCurrentBiosVersion a machine specific test on Lenovo ThinkPad P50 on 2020-05-24</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.getCurrentCpuAddressWidth a machine specific test on Lenovo ThinkPad P50 on 2020-05-24</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isCpuAddressWidthMatch non matching -&gt; return true</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isCpuAddressWidthMatch matching -&gt; return true</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isCpuAddressWidthMatch matching 2 -&gt; return true</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.isCpuAddressWidthMatch non matching 2-&gt; return true</TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.getPnpDevicesTests </TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.getPnpDevicePropertiesTests </TestName>
+      </NamedTestSelector>
+      <NamedTestSelector>
+        <TestName>LsupEval.Tests.LsupTest.getPnpDriversTests </TestName>
+      </NamedTestSelector>
+    </IgnoredTests>
+  </Settings>
 </ProjectConfiguration>
