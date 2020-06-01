@@ -292,6 +292,56 @@ module LsupTest =
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 
+    let applicabiliyRules2 = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <And>      
+            <_CPUAddressWidth>
+                <AddressWidth>64</AddressWidth>
+            </_CPUAddressWidth>
+            <_OS>
+                <OS>WIN10</OS>
+                <OS>WIN10.*</OS>
+                <OS>WIN10-ENT</OS>
+                <OS>WIN10-ENT.*</OS>
+                <OS>WIN10-PRO</OS>
+                <OS>WIN10-PRO.*</OS>
+            </_OS>
+            <_Driver>
+                <File>%Windows%\System32\drivers\ibtusb.sys</File>
+                <Date>2019-05-21</Date>
+                <Version>4.10.0.0^</Version>
+            </_Driver>
+        </And>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on driver file version and is matching on date`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= 
+                [|                   
+                    Driver.DriverInfo.File
+                        {
+                            FilePath="C:\\Windows\\System32\\drivers\\ibtusb.sys"
+                            Date=(new System.DateTime(2019,04,21))
+                            Version="4.10.0.0"                            
+                        }
+                |]
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules2
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+
     [<Test>]
     [<Timeout(2000000)>]
     [<Category(TestCategory.ManualTests)>]

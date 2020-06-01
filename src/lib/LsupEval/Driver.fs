@@ -244,14 +244,38 @@ module Driver =
             return drivers
         }
 
+    let windowsFolder =
+        System.Environment.GetFolderPath(System.Environment.SpecialFolder.Windows)
+    let systemFolder =
+        System.Environment.GetFolderPath(System.Environment.SpecialFolder.System)
+    let tempFolder =
+        System.IO.Path.GetTempPath()
+    let packagePath () =
+        System.Environment.CurrentDirectory
+    let regex1 = new System.Text.RegularExpressions.Regex("%WINDOWS%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
+    let regex2 = new System.Text.RegularExpressions.Regex("%SYSTEM%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
+    let regex3 = new System.Text.RegularExpressions.Regex("%TEMP%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
+    let regex4 = new System.Text.RegularExpressions.Regex("%PACKAGEPATH%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
+    
+    let resolveFilePath (filePath:string) =                
+        let regExArray = [|(regex1,windowsFolder);(regex2,systemFolder);(regex3,tempFolder);(regex4,packagePath())|]
+        let replace (text:string) (regex:System.Text.RegularExpressions.Regex,replacementText:string) =
+            regex.Replace(text,replacementText)                
+        let resolvedFilePath = Array.fold (fun fp (r,t)-> replace fp (r,t)) filePath regExArray
+        resolvedFilePath
+
     let getFileDriversFromDriverPattern driver = 
         match driver with
         |DriverElement.FileElement f -> 
-            [|DriverInfo.File {
-                FilePath = f.FilePath
-                Date = getFileModifiedTime f.FilePath
-                Version = getFileVersion f.FilePath
-            }|]
+            let filePath = resolveFilePath f.FilePath //Replace %WINDOWS% -> C:\Windows, etc.
+            if(System.IO.File.Exists(filePath)) then
+                [|DriverInfo.File {
+                    FilePath = filePath
+                    Date = getFileModifiedTime filePath
+                    Version = getFileVersion filePath
+                }|]
+            else
+                [||]
         |DriverElement.HardwareIdElements _ -> [||]
         |DriverElement.ServiceNameElement _ -> [||]
 
@@ -277,8 +301,8 @@ module Driver =
         match(driverXElement.Element(xn "File") |> toOption) with         
         |None -> None
         |Some x -> 
-                let version = toDriverVersion x
-                let date = toDriverDate x
+                let version = toDriverVersion driverXElement
+                let date = toDriverDate driverXElement
                 Some (  FileElement         
                             {
                                 FilePath=x.Value
@@ -358,11 +382,24 @@ module Driver =
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware: '%A' with hardware pattern '%A'. (HardwareIdIsMatch=%b && DateIsMatch=%b && VersionIsMatch=%b) Return: %b" hardwareInfo driverElement hardwareIdIsMatch dateIsMatch versionIsMatch isMatch))|>ignore))
         isMatch
 
-    let isDriverMatch (logger:Common.Logging.ILog) driver (drivers:seq<DriverInfo>) =
+    let isDriverFileMatch (patternFile:FileElement) (infoFile:FileInfo) =
+        let filePath = resolveFilePath patternFile.FilePath
+        let isFilePathMatch = (filePath.ToUpper() = infoFile.FilePath.ToUpper())
+        let isVersionMatch = 
+            match patternFile.Version with
+            |VersionOrLevelElement.VersionElement v ->
+                isDriverVersionMatch infoFile.Version v
+            |VersionOrLevelElement.LevelElement l -> 
+                raise (new NotImplementedException("isDriverFileMatch: Evaluation of VersionOrLevelElement.LevelElement"))
+        let isDriverDateMatch = isDriverDateMatch infoFile.Date patternFile.Date
+        let isMatch = isFilePathMatch && isVersionMatch && isDriverDateMatch
+        isMatch
+
+    let isDriverMatch (logger:Common.Logging.ILog) driver (installedDrivers:seq<DriverInfo>) =
         match driver with
         |HardwareIdElements hw ->                        
             let isMatch =
-                drivers
+                installedDrivers
                 |>Seq.map(fun d -> 
                     match d with
                     |DriverInfo.Hardware h -> Some h
@@ -371,9 +408,20 @@ module Driver =
                 |>Seq.choose id
                 |>Seq.filter (fun h -> isHardwareMatch hw h)
                 |>Seq.tryHead |> toBoolean
-            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" drivers hw isMatch))|>ignore))
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" installedDrivers hw isMatch))|>ignore))
             isMatch            
-        |FileElement f -> 
-            raise (new NotImplementedException("Evaluation of FileElement"))
+        |FileElement fileElement -> 
+            let isMatch =
+                installedDrivers
+                |>Seq.map(fun d -> 
+                    match d with
+                    |DriverInfo.Hardware _ -> None
+                    |DriverInfo.File f -> Some f
+                    )
+                |>Seq.choose id
+                |>Seq.filter (fun file -> (isDriverFileMatch fileElement file))
+                |>Seq.tryHead |> toBoolean
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver file version: '%A' with driver file pattern '%A'. Return: %b" installedDrivers fileElement isMatch))|>ignore))
+            isMatch            
         |ServiceNameElement s ->
             raise (new NotImplementedException("Evaluation of ServiceNameElement"))
