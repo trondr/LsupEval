@@ -269,4 +269,83 @@ module LsupTest =
             ()
         |Result.Error ex -> 
             Assert.Fail(ex.ToString())
-        
+    
+    
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+        [<TestCase("Valid version 1 -> true","1",true)>]
+        [<TestCase("Valid version 1.0 -> true","1.0",true)>]
+        [<TestCase("Valid version 1.0.0 -> true","1.0.0",true)>]
+        [<TestCase("Valid version 1.0.0.0 -> true","1.0.0.0",true)>]
+        [<TestCase("Valid version 1.0.0.0.0 -> true","1.0.0.0.0",true)>]
+        [<TestCase("Invalid version '' -> true","",false)>]
+        [<TestCase("Invalid version null -> true",null,false)>]
+        [<TestCase("Invalid version 1.0.0. -> true","1.0.0.",false)>]
+        [<TestCase("Invalid version 1.0..0 -> true","1.0.0.",false)>]
+
+    let ``version `` (description:string,version:string,expectedSuccess:bool) =
+        match(result{
+            let! actual = LsupEval.Version.version version
+            return actual
+        })with
+        |Result.Ok v -> Assert.IsTrue(expectedSuccess,"Did not expect success")
+        |Result.Error ex -> Assert.False(expectedSuccess,"Did expect success" + ex.ToString())
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    [<TestCase("1 tupple numeric -> Equal (0)","1","1",0)>]
+    [<TestCase("1 tupple numeric -> Greater Than (1)","2","1",1)>]
+    [<TestCase("1 tupple numeric -> Less Than (-1)","1","2",-1)>]
+
+    [<TestCase("2 tupple numeric -> Equal (0)","1.0","1.0",0)>]
+    [<TestCase("2 tupple numeric -> Greater Than (1)","2.0","1.0",1)>]
+    [<TestCase("2 tupple numeric -> Less Than (-1)","1.0","2.0",-1)>]
+
+    [<TestCase("3 tupple numeric -> Equal (0)","1.0.0","1.0.0",0)>]
+    [<TestCase("3 tupple numeric -> Greater Than (1)","2.0.0","1.0.0",1)>]
+    [<TestCase("3 tupple numeric -> Less Than (-1)","1.0.0","2.0.0",-1)>]
+
+    [<TestCase("4 tupple numeric -> Equal (0)","2.0.0.1","2.0.0.1",0)>]
+    [<TestCase("4 tupple numeric -> Greater Than (1)","2.0.0.1","2.0.0.0",1)>]
+    [<TestCase("4 tupple numeric -> Less Than (-1)","2.0.0.0","2.0.0.1",-1)>]
+
+    [<TestCase("4 tupple numeric and alphanumeric -> Equal (0)","1.0.0.1-alpha","1.0.0.1-alpha",0)>]
+    [<TestCase("4 tupple numeric and alphanumeric -> Greater Than (1)","2.0.0.1-alpha","2.0.0.1",1)>]
+    [<TestCase("4 tupple numeric and alphanumeric -> Less Than (-1)","2.0.0.0","2.0.0.0-alpha",-1)>]
+
+    [<TestCase("4 tupple numeric and alphanumeric -> Equal (0)","1.0.0.1-beta","1.0.0.1-beta",0)>]
+    [<TestCase("4 tupple numeric and alphanumeric -> Greater Than (1)","2.0.0.1-beta","2.0.0.1",1)>]
+    [<TestCase("4 tupple numeric and alphanumeric -> Greater Than (1)","2.0.0.1-beta","2.0.0.1-alpha",1)>]
+    [<TestCase("4 tupple numeric and alphanumeric -> Less Than (-1)","2.0.0.0","2.0.0.1-alpha",-1)>]
+    [<TestCase("4 tupple numeric and alphanumeric -> Less Than (-1)","2.0.0.0-alpha","2.0.0.1-beta",-1)>]
+
+    let ``compare Version tests `` (description:string,version1:string,version2:string, expected:int32) =
+        match(result{
+            let! lsupVersion1 = LsupEval.Version.version version1
+            let! lsupVersion2 = LsupEval.Version.version version2
+            let res = LsupEval.Version.compare lsupVersion1 lsupVersion2
+            return res
+        })with
+        |Result.Ok v -> 
+            Assert.AreEqual(expected,v)
+        |Result.Error ex ->
+            Assert.Fail(ex.ToString())
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    [<TestCase("Char 0  -> true",'0',true)>]
+    [<TestCase("Char 1  -> true",'1',true)>]
+    [<TestCase("Char 2  -> true",'2',true)>]
+    [<TestCase("Char 3  -> true",'3',true)>]
+    [<TestCase("Char 4  -> true",'4',true)>]
+    [<TestCase("Char 5  -> true",'5',true)>]
+    [<TestCase("Char 6  -> true",'6',true)>]
+    [<TestCase("Char 7  -> true",'7',true)>]
+    [<TestCase("Char 8  -> true",'8',true)>]
+    [<TestCase("Char 9  -> true",'9',true)>]
+    [<TestCase("Char a  -> false",'a',false)>]
+    [<TestCase("Char z  -> false",'z',false)>]
+    [<TestCase("Char ''  -> false","",false)>]
+    let `` isNumericChar Tests`` (description:string,ch:char, expected:bool) =
+        let actual = LsupEval.Version.isNumericChar ch
+        Assert.AreEqual(expected,actual,description)

@@ -23,6 +23,7 @@
     <Compile Include="F.fs" />
     <Compile Include="WmiHelper.fs" />
     <Compile Include="XmlHelper.fs" />
+    <Compile Include="Version.fs" />
     <Compile Include="Bios.fs" />
     <Compile Include="Cpu.fs" />
     <Compile Include="OperatingSystem.fs" />
