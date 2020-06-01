@@ -169,50 +169,38 @@ module LsupTest =
         Assert.AreEqual(false,actual)
         ()
 
+    let applicabiliyRules = """
+<And>
+    <_Bios>
+        <Level>N1XET*</Level>
+    </_Bios>
+    <And>      
+        <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+        </_CPUAddressWidth>
+        <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+        </_OS>
+        <_Driver>
+            <HardwareID><![CDATA[PCI\VEN_1022&DEV_1537]]></HardwareID>
+            <HardwareID><![CDATA[PCI\VEN_1022&DEV_1578]]></HardwareID>
+            <HardwareID><![CDATA[PCI\VEN_1022&DEV_1456]]></HardwareID>
+            <HardwareID><![CDATA[PCI\VEN_1022&DEV_15DF]]></HardwareID>
+            <HardwareID><![CDATA[PCI\VEN_1022&DEV_1486]]></HardwareID>
+            <Date>2019-05-21</Date>
+            <Version>4.10.0.0^</Version>
+        </_Driver>
+    </And>        
+</And>        
+          """
     [<Test>]
     [<Category(TestCategory.UnitTests)>]
-    let ``lsupXmlToApplicabilityRules`` () =
-        let applicabiliyRules = """<And>
-  <_Bios>    
-    <Level>N1XET*</Level>
-  </_Bios>
-  <Or>
-    <And>      
-      <_CPUAddressWidth>
-        <AddressWidth>64</AddressWidth>
-      </_CPUAddressWidth>
-      <_OS>
-        <OS>WIN10</OS>
-        <OS>WIN10.*</OS>
-        <OS>WIN10-ENT</OS>
-        <OS>WIN10-ENT.*</OS>
-        <OS>WIN10-PRO</OS>
-        <OS>WIN10-PRO.*</OS>
-      </_OS>
-      <_Driver>
-          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1537]]></HardwareID>
-          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1578]]></HardwareID>
-          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1456]]></HardwareID>
-          <HardwareID><![CDATA[PCI\VEN_1022&DEV_15DF]]></HardwareID>
-          <HardwareID><![CDATA[PCI\VEN_1022&DEV_1486]]></HardwareID>
-          <Date>2019-05-21</Date>
-          <Version>4.10.0.0^</Version>
-    </_Driver>
-    </And>
-    <And>      
-      <_CPUAddressWidth>
-        <AddressWidth>64</AddressWidth>
-      </_CPUAddressWidth>      
-    </And>
-    <And>      
-      <_CPUAddressWidth>
-        <AddressWidth>32</AddressWidth>
-      </_CPUAddressWidth>      
-    </And>
-  </Or>
-</And>        
-        """
-
+    let ``lsupXmlToApplicabilityRules Non-Matching`` () =
         let systemInformationFalse = { 
                 BiosVersion = "XYZ"
                 CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
@@ -225,6 +213,36 @@ module LsupTest =
         let expecedFalse = false
         Assert.AreEqual(expecedFalse,actual,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationFalse)
 
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware but is Non-Matching on driver version`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= 
+                [|
+                    Driver.DriverInfo.Hardware
+                        {
+                            HardwareIds=[|"PCI\VEN_1022&DEV_1537"|]
+                            CompatibleIds = [||]
+                            Name="Test Name"
+                            Date=(new System.DateTime(2019,05,21))
+                            Version= (Driver.Version "4.8.0.0")
+                            ProviderName="Lenovo"
+                        }
+                |]
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = false
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on driver version but is not matching on date`` () =
         let systemInformationTrue = { 
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
@@ -242,8 +260,35 @@ module LsupTest =
                         }
                 |]
         }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
-        let expectedTrue = true
+        let expectedTrue = false
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on driver version and is matching on date`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= 
+                [|
+                    Driver.DriverInfo.Hardware
+                        {
+                            HardwareIds=[|"PCI\VEN_1022&DEV_1537"|]
+                            CompatibleIds = [||]
+                            Name="Test Name"
+                            Date=(new System.DateTime(2019,04,21))
+                            Version= (Driver.Version "4.10.0.0")
+                            ProviderName="Lenovo"
+                        }
+                |]
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 

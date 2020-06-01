@@ -8,7 +8,7 @@ module F =
     open System.Collections.ObjectModel
 
     let toRegEx (lsuPattern:string) =
-        let pattern = lsuPattern.Replace("*",".*")
+        let pattern = lsuPattern.Replace("*",".*").Replace(@"\",@"\\")
         new System.Text.RegularExpressions.Regex(pattern)
 
 

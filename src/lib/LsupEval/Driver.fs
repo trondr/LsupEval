@@ -305,11 +305,70 @@ module Driver =
                             Version = VersionElement version
                         }
                 )
+    let toBoolean option =
+        match option with
+        |Some v -> true
+        |None -> false
 
-    let isDriverMatch logger driver drivers =
+    let any predicate source =
+        source|>Seq.filter predicate|>Seq.tryHead|>toBoolean
+
+    let isHardwareIdMatch hardwareId hardwareIdPattern =
+        let regex = toRegEx hardwareIdPattern
+        regex.IsMatch(hardwareId)
+
+    let isDriverDateMatch (hardwareInfoDriverDate:DateTime) (hardwareIdElementDriverDate:DateTime option) =
+        match hardwareIdElementDriverDate with
+        |None -> true
+        |Some d ->         
+            hardwareInfoDriverDate < d
+
+    let isDriverVersionMatch currentDriverVersion newDriverVersion =
+        logger.Warn("Version compare not implemented!")
+        match(result{
+            let! currentVersion = LsupEval.Version.version currentDriverVersion
+            let! versionPattern = LsupEval.Version.versionPattern newDriverVersion
+            let isMatch = LsupEval.Version.isVersionPatternMatch currentVersion versionPattern
+            return isMatch
+        }) with
+        |Result.Ok isMatch -> isMatch
+        |Result.Error ex -> 
+            logger.Error(sprintf "Failed to match version '%s' with pattern '%s'." currentDriverVersion newDriverVersion)
+            false
+
+
+    let isHardwareMatch (driverElement:HardwareIdElements) (hardwareInfo:HardwareInfo) =
+        logger.Warn("isHardwareMatch: Not Implemented")
+        let hardwareIdIsMatch = hardwareInfo.HardwareIds|>Seq.filter(fun s -> (any (isHardwareIdMatch s) driverElement.HardwareIds))|>Seq.tryHead|>toBoolean
+        let dateIsMatch = isDriverDateMatch hardwareInfo.Date driverElement.Date
+        
+        let cv (Version version) =
+            version
+
+        let nv (version:VersionOrLevelElement) =
+            match version with
+            |VersionElement v -> v
+            |LevelElement l -> l            
+        let versionIsMatch = isDriverVersionMatch (cv hardwareInfo.Version) (nv driverElement.Version)
+
+        hardwareIdIsMatch && dateIsMatch && versionIsMatch
+
+    let isDriverMatch (logger:Common.Logging.ILog) driver (drivers:seq<DriverInfo>) =
         match driver with
         |HardwareIdElements hw ->                        
-            raise (new NotImplementedException("Evaluation of HardwareIdElements"))
+            let isMatch =
+                drivers
+                |>Seq.map(fun d -> 
+                    match d with
+                    |DriverInfo.Hardware h -> Some h
+                    |DriverInfo.File _ -> None
+                    )
+                |>Seq.choose id
+                |>Seq.filter (fun h -> isHardwareMatch hw h)
+                |>Seq.tryHead |> toBoolean
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" drivers hw isMatch))|>ignore))
+            isMatch
+            //raise (new NotImplementedException("Evaluation of HardwareIdElements"))
         |FileElement f -> 
             raise (new NotImplementedException("Evaluation of FileElement"))
         |ServiceNameElement s ->
