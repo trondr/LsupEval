@@ -25,6 +25,7 @@
     <Compile Include="XmlHelper.fs" />
     <Compile Include="Version.fs" />
     <Compile Include="Bios.fs" />
+    <Compile Include="EmbeddedController.fs" />
     <Compile Include="Cpu.fs" />
     <Compile Include="OperatingSystem.fs" />
     <Compile Include="Driver.fs" />

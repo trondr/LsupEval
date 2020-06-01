@@ -488,3 +488,9 @@ module LsupTest =
         })with
         |Result.Ok v -> Assert.IsTrue(epectedSuccess,"Did not expect success")
         |Result.Error ex -> Assert.False(epectedSuccess,"Did expect success" + ex.ToString())
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``getEmbeddedControllerVersion test`` () =
+        let actual = LsupEval.EmbeddedController.getCurrentEmbeddedControllerVersion()
+        Assert.IsTrue(not (System.String.IsNullOrEmpty(actual)),"Embedded Controller version is null")
