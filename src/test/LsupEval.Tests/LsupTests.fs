@@ -288,7 +288,7 @@ module LsupTest =
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
-        let expectedTrue = false
+        let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 
