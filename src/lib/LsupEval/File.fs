@@ -91,7 +91,7 @@ module File =
         
     let isFileVersionMatch (logger:Common.Logging.ILog) (fileversionPattern:FileVersionPattern) (fileVersion:FileVersion) =
         let filePathPattern = resolveFilePath fileversionPattern.FilePath
-        let isSameFile = (filePathPattern.ToUpper() = fileVersion.FileStatus.FilePath) 
+        let isSameFile = (filePathPattern.ToUpper() = fileVersion.FileStatus.FilePath.ToUpper()) 
         let fileExists = fileVersion.FileStatus.Exists
         let isVersionMatch = LsupEval.Version.isVersionPatternMatch fileVersion.Version fileversionPattern.VersionPattern
         let isMatch = isSameFile && fileExists && isVersionMatch
