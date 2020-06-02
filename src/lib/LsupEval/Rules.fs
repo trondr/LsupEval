@@ -31,6 +31,7 @@ module Rules =
             BiosVersion:string
             CpuAddressWidth:Cpu.CpuAddressWidth
             Os:string
+            OsLang:string
             Drivers: DriverInfo[]
             EmbeddedControllerVersion:string
         }
@@ -42,11 +43,13 @@ module Rules =
             let! os = OperatingSystem.getCurrentOperatingSystem()
             let! drivers = Driver.getCurrentDrivers()
             let! embeddedControllerVersion = getCurrentEmbeddedControllerVersion()
+            let! osLang = LsupEval.OperatingSystem.getCurrentOsLanguage()
             return 
                 {
                     BiosVersion = biosVersion
                     CpuAddressWidth = cupAddressWidth
                     Os = os
+                    OsLang=osLang
                     Drivers = drivers
                     EmbeddedControllerVersion = embeddedControllerVersion
                 }

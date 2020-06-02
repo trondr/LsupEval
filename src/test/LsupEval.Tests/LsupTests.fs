@@ -205,6 +205,7 @@ module LsupTest =
                 BiosVersion = "XYZ"
                 CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
                 Os = "WIN10"
+                OsLang="JP"
                 Drivers= [||]
                 EmbeddedControllerVersion="1.17"
             }
@@ -222,6 +223,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= 
                 [|
                     Driver.DriverInfo.Hardware
@@ -249,6 +251,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= 
                 [|
                     Driver.DriverInfo.Hardware
@@ -276,6 +279,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= 
                 [|
                     Driver.DriverInfo.Hardware
@@ -329,6 +333,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= 
                 [|                   
                     Driver.DriverInfo.File
@@ -364,6 +369,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
         }
@@ -380,6 +386,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.17"
         }
@@ -405,6 +412,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
         }
@@ -430,6 +438,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
         }
@@ -458,6 +467,7 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
         }
@@ -486,12 +496,41 @@ module LsupTest =
             BiosVersion = "N1XET1234567"
             CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
             Os = "WIN10"
+            OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
         let expectedTrue = false
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    let applicabiliyRulesFileVersion = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <_OSLang>
+            <Lang>JP</Lang>
+        </_OSLang>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on OS lang`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            OsLang="JP"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"            
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 

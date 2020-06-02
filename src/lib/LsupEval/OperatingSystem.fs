@@ -1,6 +1,7 @@
 ﻿namespace LsupEval
 
 module OperatingSystem =
+    open System.Management.Automation
     open LsupEval.WmiHelper
     open LsupEval.Logging
 
@@ -41,3 +42,29 @@ module OperatingSystem =
         match v with
         |Some -> true
         |None -> false
+
+    let toOsLang (psObject:PSObject) =
+        try
+            let osLanguage = psObject.Properties.["OsLanguage"].Value :?> string            
+            let osLang = osLanguage.Substring(0,2).ToUpper()
+            osLang            
+        with
+        |ex -> 
+            logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
+            reraise()
+
+    let getCurrentOsLanguage() =
+        try
+            let osLang =
+                runPowerShell( fun powershell-> 
+                    powershell
+                        .AddCommand("Get-ComputerInfo")
+                        .AddCommand("Select-Object")
+                        .AddParameter("Property",[|"OsLanguage"|])
+                        .Invoke()
+                    )
+                    |>Seq.head 
+                    |> toOsLang
+            Result.Ok osLang
+        with
+        |ex -> Result.Error (toException "Failed to get os language." (Some ex))
