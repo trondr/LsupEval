@@ -329,10 +329,6 @@ module Driver =
                             Version = VersionElement version
                         }
                 )
-    let toBoolean option =
-        match option with
-        |Some v -> true
-        |None -> false
 
     let any predicate source =
         source|>Seq.filter predicate|>Seq.tryHead|>toBoolean

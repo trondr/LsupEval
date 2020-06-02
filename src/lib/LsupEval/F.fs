@@ -38,4 +38,9 @@ module F =
     let runPowerShell (action:PowerShell->Collection<PSObject>) =
         use powershell = PowerShell.Create(RunspaceMode.NewRunspace)
         action(powershell)
+
+    let toBoolean option =
+        match option with
+        |Some v -> true
+        |None -> false
         
