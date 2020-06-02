@@ -8,6 +8,7 @@ module Rules =
     open LsupEval.OperatingSystem
     open LsupEval.Driver
     open LsupEval.EmbeddedController
+    open LsupEval.File
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -22,6 +23,7 @@ module Rules =
         |Os of Os
         |Driver of DriverElement
         |EmbeddedControllerVersion of EmbeddedControllerVersionElement
+        |FileExists of FileExistsElement
     
     type SystemInformation =
         {
@@ -92,6 +94,12 @@ module Rules =
             let isMatch = (isEmbeddedControllerVersionMatch logger embeddedControllerVersion systemInfo.EmbeddedControllerVersion)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating EmbeddedControllerVersion rule: '%A' with '%s'. Return: %b" applicabilityRule systemInfo.EmbeddedControllerVersion isMatch))|>ignore))
             isMatch
+        |FileExists fileExistsElement ->
+            let files = LsupEval.File.getFilesFromFileExistPattern fileExistsElement
+            let isMatch = (LsupEval.File.isFileExistsMatch logger fileExistsElement files)
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileExists rule: '%A' with '%A'. Return: %b" applicabilityRule files isMatch))|>ignore))
+            isMatch
+
 
 
             

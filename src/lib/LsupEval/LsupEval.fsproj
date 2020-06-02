@@ -24,6 +24,7 @@
     <Compile Include="WmiHelper.fs" />
     <Compile Include="XmlHelper.fs" />
     <Compile Include="Version.fs" />
+    <Compile Include="File.fs" />
     <Compile Include="Bios.fs" />
     <Compile Include="EmbeddedController.fs" />
     <Compile Include="Cpu.fs" />

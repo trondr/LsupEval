@@ -298,6 +298,10 @@ module Lsup =
         let versionArray = versions|>Seq.map(fun (x:XElement) -> x.Value) |> Seq.toArray
         ApplicabilityRule.EmbeddedControllerVersion {Versions=versionArray}
 
+    let toFileExists (fileExistsXElement:XElement) =
+        let filePath = fileExistsXElement.Value
+        ApplicabilityRule.FileExists {FilePath=filePath}
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -312,6 +316,7 @@ module Lsup =
             |"_OS" -> (toOperatingSystem xElement)
             |"_Driver" -> (toDriver xElement)
             |"_EmbeddedControllerVersion" -> (toEmbeddedControllerVersion xElement)
+            |"_FileExists" -> (toFileExists  xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()

@@ -389,6 +389,55 @@ module LsupTest =
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 
+    let applicabiliyRulesFileExists = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <_FileExists>%WINDOWS%\notepad.exe</_FileExists>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on file exists`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    let applicabiliyRulesFileExists2 = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <_FileExists>%WINDOWS%\notepad32.exe</_FileExists>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is not Matching on file exists`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists2
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = false
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
 
     [<Test>]
     [<Timeout(2000000)>]

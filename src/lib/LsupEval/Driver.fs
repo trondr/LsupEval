@@ -244,30 +244,10 @@ module Driver =
             return drivers
         }
 
-    let windowsFolder =
-        System.Environment.GetFolderPath(System.Environment.SpecialFolder.Windows)
-    let systemFolder =
-        System.Environment.GetFolderPath(System.Environment.SpecialFolder.System)
-    let tempFolder =
-        System.IO.Path.GetTempPath()
-    let packagePath () =
-        System.Environment.CurrentDirectory
-    let regex1 = new System.Text.RegularExpressions.Regex("%WINDOWS%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
-    let regex2 = new System.Text.RegularExpressions.Regex("%SYSTEM%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
-    let regex3 = new System.Text.RegularExpressions.Regex("%TEMP%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
-    let regex4 = new System.Text.RegularExpressions.Regex("%PACKAGEPATH%", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
-    
-    let resolveFilePath (filePath:string) =                
-        let regExArray = [|(regex1,windowsFolder);(regex2,systemFolder);(regex3,tempFolder);(regex4,packagePath())|]
-        let replace (text:string) (regex:System.Text.RegularExpressions.Regex,replacementText:string) =
-            regex.Replace(text,replacementText)                
-        let resolvedFilePath = Array.fold (fun fp (r,t)-> replace fp (r,t)) filePath regExArray
-        resolvedFilePath
-
     let getFileDriversFromDriverPattern driver = 
         match driver with
         |DriverElement.FileElement f -> 
-            let filePath = resolveFilePath f.FilePath //Replace %WINDOWS% -> C:\Windows, etc.
+            let filePath = LsupEval.File.resolveFilePath f.FilePath
             if(System.IO.File.Exists(filePath)) then
                 [|DriverInfo.File {
                     FilePath = filePath
@@ -379,7 +359,7 @@ module Driver =
         isMatch
 
     let isDriverFileMatch (patternFile:FileElement) (infoFile:FileInfo) =
-        let filePath = resolveFilePath patternFile.FilePath
+        let filePath = LsupEval.File.resolveFilePath patternFile.FilePath
         let isFilePathMatch = (filePath.ToUpper() = infoFile.FilePath.ToUpper())
         let isVersionMatch = 
             match patternFile.Version with
