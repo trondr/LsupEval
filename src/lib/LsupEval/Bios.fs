@@ -4,7 +4,7 @@ module Bios =
     open System.Management
     open LsupEval.Logging
     open LsupEval.WmiHelper
-    let logger = getLoggerByName "Bios"
+    let logger = getLoggerByName "LsupEval.Bios"
 
     type Bios = {Versions:string[]}
 
