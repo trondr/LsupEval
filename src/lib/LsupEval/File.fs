@@ -48,9 +48,13 @@ module File =
             Exists=fileExists filePath
         }
 
+    let isFilePathMatch (filePath1:string) (filePath2:string) =
+        filePath1.ToUpper() = filePath2.ToUpper()
+
     let isFileExistsMatch (logger:Common.Logging.ILog) (fileExistsElement:FileExistsElement) (file:FileStatus) =
         let filePath = resolveFilePath fileExistsElement.FilePath
-        let isMatch = (filePath.ToUpper() = file.FilePath.ToUpper()) && file.Exists
+        let isMatch = 
+            (isFilePathMatch filePath file.FilePath) && file.Exists            
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing file exist status: '%A' with file exists pattern '%A'. Return: %b" file fileExistsElement isMatch))|>ignore))
         isMatch
 
@@ -91,7 +95,7 @@ module File =
         
     let isFileVersionMatch (logger:Common.Logging.ILog) (fileversionPattern:FileVersionPattern) (fileVersion:FileVersion) =
         let filePathPattern = resolveFilePath fileversionPattern.FilePath
-        let isSameFile = (filePathPattern.ToUpper() = fileVersion.FileStatus.FilePath.ToUpper()) 
+        let isSameFile = isFilePathMatch filePathPattern fileVersion.FileStatus.FilePath 
         let fileExists = fileVersion.FileStatus.Exists
         let isVersionMatch = LsupEval.Version.isVersionPatternMatch fileVersion.Version fileversionPattern.VersionPattern
         let isMatch = isSameFile && fileExists && isVersionMatch

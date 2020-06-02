@@ -356,7 +356,7 @@ module Driver =
 
     let isDriverFileMatch (patternFile:FileElement) (infoFile:FileInfo) =
         let filePath = LsupEval.File.resolveFilePath patternFile.FilePath
-        let isFilePathMatch = (filePath.ToUpper() = infoFile.FilePath.ToUpper())
+        let isFilePathMatch = LsupEval.File.isFilePathMatch filePath infoFile.FilePath
         let isVersionMatch = 
             match patternFile.Version with
             |VersionOrLevelElement.VersionElement v ->
