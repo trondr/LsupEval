@@ -206,6 +206,7 @@ module LsupTest =
                 CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
                 Os = "WIN10"
                 Drivers= [||]
+                EmbeddedControllerVersion="1.17"
             }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         printf "%A" applicabilityRule
@@ -233,6 +234,7 @@ module LsupTest =
                             ProviderName="Lenovo"
                         }
                 |]
+            EmbeddedControllerVersion="1.17"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -259,6 +261,7 @@ module LsupTest =
                             ProviderName="Lenovo"
                         }
                 |]
+            EmbeddedControllerVersion="1.17"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -285,6 +288,7 @@ module LsupTest =
                             ProviderName="Lenovo"
                         }
                 |]
+            EmbeddedControllerVersion="1.17"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -334,10 +338,54 @@ module LsupTest =
                             Version="4.10.0.0"                            
                         }
                 |]
+            EmbeddedControllerVersion="1.17"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
         let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    let applicabiliyRules3 = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <_EmbeddedControllerVersion>
+            <Version>1.20^</Version>
+        </_EmbeddedControllerVersion>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on Embedded Controller version`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Non-Matching on Embedded Controller version`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.17"
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 
@@ -492,5 +540,11 @@ module LsupTest =
     [<Test>]
     [<Category(TestCategory.ManualTests)>]
     let ``getEmbeddedControllerVersion test`` () =
-        let actual = LsupEval.EmbeddedController.getCurrentEmbeddedControllerVersion()
-        Assert.IsTrue(not (System.String.IsNullOrEmpty(actual)),"Embedded Controller version is null")
+        match(result{
+            let! actual = LsupEval.EmbeddedController.getCurrentEmbeddedControllerVersion()        
+            Assert.IsTrue(not (System.String.IsNullOrEmpty(actual)),"Embedded Controller version is null")
+            return actual
+        })with
+        |Result.Ok v -> Assert.IsTrue(true,"Did not expect success")
+        |Result.Error ex -> Assert.IsTrue(false,"Did expect success" + ex.ToString())
+        

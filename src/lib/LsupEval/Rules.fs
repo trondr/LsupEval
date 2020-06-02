@@ -7,6 +7,7 @@ module Rules =
     open LsupEval.Cpu
     open LsupEval.OperatingSystem
     open LsupEval.Driver
+    open LsupEval.EmbeddedController
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -20,6 +21,7 @@ module Rules =
         |CpuAddressWidth of CpuAddressWidth
         |Os of Os
         |Driver of DriverElement
+        |EmbeddedControllerVersion of EmbeddedControllerVersionElement
     
     type SystemInformation =
         {
@@ -27,6 +29,7 @@ module Rules =
             CpuAddressWidth:Cpu.CpuAddressWidth
             Os:string
             Drivers: DriverInfo[]
+            EmbeddedControllerVersion:string
         }
 
     let getCurrentSystemInformation() =
@@ -35,12 +38,14 @@ module Rules =
             let! cupAddressWidth = Cpu.getCurrentCpuAddressWidth()
             let! os = OperatingSystem.getCurrentOperatingSystem()
             let! drivers = Driver.getCurrentDrivers()
+            let! embeddedControllerVersion = getCurrentEmbeddedControllerVersion()
             return 
                 {
                     BiosVersion = biosVersion
                     CpuAddressWidth = cupAddressWidth
                     Os = os
                     Drivers = drivers
+                    EmbeddedControllerVersion = embeddedControllerVersion
                 }
         }
 
@@ -82,6 +87,10 @@ module Rules =
             let fileDrivers = getFileDriversFromDriverPattern driver            
             let isMatch = (isDriverMatch logger driver (Array.append systemInfo.Drivers fileDrivers))
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating Driver rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
+            isMatch
+        |EmbeddedControllerVersion embeddedControllerVersion ->
+            let isMatch = (isEmbeddedControllerVersionMatch logger embeddedControllerVersion systemInfo.EmbeddedControllerVersion)
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating EmbeddedControllerVersion rule: '%A' with '%s'. Return: %b" applicabilityRule systemInfo.EmbeddedControllerVersion isMatch))|>ignore))
             isMatch
 
 

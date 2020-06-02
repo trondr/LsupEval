@@ -293,6 +293,11 @@ module Lsup =
         let driver = [|hardwareIds;file|]|>Array.choose id|>Array.head
         ApplicabilityRule.Driver driver
 
+    let toEmbeddedControllerVersion (embeddedControllerVersionXElement:XElement) =
+        let versions = embeddedControllerVersionXElement.Elements(xn "Version")
+        let versionArray = versions|>Seq.map(fun (x:XElement) -> x.Value) |> Seq.toArray
+        ApplicabilityRule.EmbeddedControllerVersion {Versions=versionArray}
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -306,6 +311,7 @@ module Lsup =
             |"_CPUAddressWidth" -> (toCpuAddressWidth xElement)
             |"_OS" -> (toOperatingSystem xElement)
             |"_Driver" -> (toDriver xElement)
+            |"_EmbeddedControllerVersion" -> (toEmbeddedControllerVersion xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()

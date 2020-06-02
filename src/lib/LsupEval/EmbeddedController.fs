@@ -2,8 +2,11 @@
 
 module EmbeddedController =
     open LsupEval.Logging
+    open LsupEval.Version
     open System.Management.Automation
     let logger = getLoggerByName "LsupEval.EmbeddedController"
+
+    type EmbeddedControllerVersionElement = {Versions:string[]}
 
     let toEmbeddedControllerVersion (psObject:PSObject) =
         try
@@ -16,16 +19,37 @@ module EmbeddedController =
             reraise()
 
     let getCurrentEmbeddedControllerVersion () =        
-        let embeddedControllerVersion =
-            runPowerShell( fun powershell-> 
-                powershell
-                    .AddCommand("Get-ComputerInfo")
-                    .AddCommand("Select-Object")
-                    .AddParameter("Property",[|"BiosEmbeddedControllerMajorVersion";"BiosEmbeddedControllerMinorVersion"|])
-                    .Invoke()
-                )
-                |>Seq.head 
-                |> toEmbeddedControllerVersion
-        embeddedControllerVersion
+        try
+            let embeddedControllerVersion =
+                runPowerShell( fun powershell-> 
+                    powershell
+                        .AddCommand("Get-ComputerInfo")
+                        .AddCommand("Select-Object")
+                        .AddParameter("Property",[|"BiosEmbeddedControllerMajorVersion";"BiosEmbeddedControllerMinorVersion"|])
+                        .Invoke()
+                    )
+                    |>Seq.head 
+                    |> toEmbeddedControllerVersion
+            Result.Ok embeddedControllerVersion
+        with
+        |ex -> Result.Error (toException "Failed to get embedded controller version." (Some ex))
 
-
+    let isEmbeddedControllerVersionMatch (logger:Common.Logging.ILog) (embeddedControllerVersion:EmbeddedControllerVersionElement) systemInfoEmbeddedControllerVersion =        
+        match(result{
+            let! lsupVersionPatterns =
+                embeddedControllerVersion.Versions
+                |>Seq.map(fun v -> LsupEval.Version.versionPattern v)
+                |>toAccumulatedResult    
+            let! lsupVersion = (version systemInfoEmbeddedControllerVersion)
+            let isMatch =
+                lsupVersionPatterns
+                |>Seq.filter(fun vp -> 
+                        let isMatch = isVersionPatternMatch lsupVersion vp
+                        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing embedded controller version: '%A' with embedded controller pattern '%A'. Return: %b" systemInfoEmbeddedControllerVersion vp isMatch))|>ignore))
+                        isMatch
+                    )
+                |>Seq.tryHead|>toBoolean
+            return isMatch
+        })with
+        |Result.Ok isMatch -> isMatch
+        |Result.Error ex -> raise ex
