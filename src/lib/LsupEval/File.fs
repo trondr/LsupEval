@@ -2,6 +2,7 @@
 
 module File =
     open LsupEval.Logging
+    open System.Diagnostics
 
     type FileExistsElement =
         {
@@ -35,13 +36,16 @@ module File =
         let replace (text:string) (regex:System.Text.RegularExpressions.Regex,replacementText:string) =
             regex.Replace(text,replacementText)                
         let resolvedFilePath = Array.fold (fun fp (r,t)-> replace fp (r,t)) filePath regExArray
-        resolvedFilePath
+        System.Environment.ExpandEnvironmentVariables(resolvedFilePath)
+
+    let fileExists filePath =
+        System.IO.File.Exists(filePath)
 
     let getFilesFromFileExistPattern (fileExistsElement:FileExistsElement) =
         let filePath = resolveFilePath fileExistsElement.FilePath
         {
             FilePath= filePath
-            Exists=System.IO.File.Exists(filePath)
+            Exists=fileExists filePath
         }
 
     let isFileExistsMatch (logger:Common.Logging.ILog) (fileExistsElement:FileExistsElement) (file:FileStatus) =
@@ -49,6 +53,53 @@ module File =
         let isMatch = (filePath.ToUpper() = file.FilePath.ToUpper()) && file.Exists
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing file exist status: '%A' with file exists pattern '%A'. Return: %b" file fileExistsElement isMatch))|>ignore))
         isMatch
+
+    let getFileVersion filePath =
+        let fileVersion = FileVersionInfo.GetVersionInfo(filePath);
+        (sprintf "%d.%d.%d.%d" fileVersion.FileMajorPart fileVersion.FileMinorPart fileVersion.FileBuildPart fileVersion.FilePrivatePart)
+
+    type FileVersionPattern=
+        {
+            FilePath:string
+            VersionPattern:LsupEval.Version.LsupVersionPattern        
+        }
+
+    type FileVersion =
+        {
+            FileStatus:FileStatus
+            Version:LsupEval.Version.LsupVersion
+        }
+
+    let getFileVersionFromFileVersionPattern (fileversionPattern:FileVersionPattern) =
+        match(result{
+            let filePath = resolveFilePath fileversionPattern.FilePath
+            let fileExists = fileExists filePath            
+            let fileVersion = getFileVersion filePath
+            let! version = LsupEval.Version.version fileVersion
+            return
+                {            
+                    FileStatus=
+                        {
+                            FilePath=filePath
+                            Exists=fileExists
+                        }
+                    Version=version
+                }
+        })with
+        |Result.Ok ver -> ver
+        |Result.Error ex -> raise ex
+        
+    let isFileVersionMatch (logger:Common.Logging.ILog) (fileversionPattern:FileVersionPattern) (fileVersion:FileVersion) =
+        let filePathPattern = resolveFilePath fileversionPattern.FilePath
+        let isSameFile = (filePathPattern.ToUpper() = fileVersion.FileStatus.FilePath) 
+        let fileExists = fileVersion.FileStatus.Exists
+        let isVersionMatch = LsupEval.Version.isVersionPatternMatch fileVersion.Version fileversionPattern.VersionPattern
+        let isMatch = isSameFile && fileExists && isVersionMatch
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing file version: '%A' with file version pattern '%A'. Return: %b" fileVersion fileversionPattern isMatch))|>ignore))
+        isMatch
+
+        
+        
         
         
 

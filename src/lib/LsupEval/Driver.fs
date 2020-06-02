@@ -216,10 +216,6 @@ module Driver =
         with
         |ex -> Result.Error (toException (sprintf "Failed to get files from drivers folder '%s'" driversFolder) (Some ex))
     
-    let getFileVersion filePath =
-        let fileVersion = FileVersionInfo.GetVersionInfo(filePath);
-        (sprintf "%d.%d.%d.%d" fileVersion.FileMajorPart fileVersion.FileMinorPart fileVersion.FileBuildPart fileVersion.FilePrivatePart)
-        
     let getFileModifiedTime filePath =
         let fileInfo = new System.IO.FileInfo(filePath)
         fileInfo.LastWriteTime
@@ -230,7 +226,7 @@ module Driver =
                 DriverInfo.File {
                    FilePath = f
                    Date = getFileModifiedTime f
-                   Version = getFileVersion f
+                   Version = LsupEval.File.getFileVersion f
                 })
 
     let getCurrentDrivers () =
@@ -252,7 +248,7 @@ module Driver =
                 [|DriverInfo.File {
                     FilePath = filePath
                     Date = getFileModifiedTime filePath
-                    Version = getFileVersion filePath
+                    Version = LsupEval.File.getFileVersion filePath
                 }|]
             else
                 [||]

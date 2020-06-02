@@ -24,6 +24,7 @@ module Rules =
         |Driver of DriverElement
         |EmbeddedControllerVersion of EmbeddedControllerVersionElement
         |FileExists of FileExistsElement
+        |FileVersion of FileVersionPattern
     
     type SystemInformation =
         {
@@ -98,6 +99,11 @@ module Rules =
             let files = LsupEval.File.getFilesFromFileExistPattern fileExistsElement
             let isMatch = (LsupEval.File.isFileExistsMatch logger fileExistsElement files)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileExists rule: '%A' with '%A'. Return: %b" applicabilityRule files isMatch))|>ignore))
+            isMatch
+        |FileVersion fileversionPattern ->
+            let fileVersion = LsupEval.File.getFileVersionFromFileVersionPattern fileversionPattern
+            let isMatch = (LsupEval.File.isFileVersionMatch logger fileversionPattern fileVersion)
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileVersion rule: '%A' with '%A'. Return: %b" applicabilityRule fileVersion isMatch))|>ignore))
             isMatch
 
 

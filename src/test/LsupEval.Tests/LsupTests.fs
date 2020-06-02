@@ -439,6 +439,62 @@ module LsupTest =
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 
+    let applicabiliyRulesFileVersion = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <_FileVersion>
+        <File>%ProgramFiles(x86)%\Microsoft\Edge\Application\msedge.exe</File>
+        <Version>6.2.0.1239^</Version>
+    </_FileVersion>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on file version`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    let applicabiliyRulesFileVersion2 = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <_FileVersion>
+        <File>%ProgramFiles(x86)%\Microsoft\Edge\Application\msedge.exe</File>
+        <Version>90.2.0.1239^</Version>
+    </_FileVersion>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is not Matching on file version`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion2
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = false
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
     [<Test>]
     [<Timeout(2000000)>]
     [<Category(TestCategory.ManualTests)>]

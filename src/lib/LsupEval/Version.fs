@@ -100,6 +100,12 @@ module Version =
                 return (LsupVersion versionBlocks)
             }
 
+    let versionUnsafe versionString =
+        let ver = version versionString
+        match ver with
+        |Result.Ok v -> v
+        |Result.Error ex -> raise ex
+
     let versionPattern versionPattern =
         match versionPattern with
         |null -> Result.Error (new InvalidVersionException("","Version cannot be null.") :> Exception)
@@ -127,6 +133,11 @@ module Version =
                 return versionPattern
             }
 
+    let versionPatternUnsafe versionPatternString =
+        let verPat = versionPattern versionPatternString
+        match verPat with
+        |Result.Ok vp -> vp
+        |Result.Error ex -> raise ex
         
     let min size1 size2 =
         if(size1 < size2) then

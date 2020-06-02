@@ -302,6 +302,15 @@ module Lsup =
         let filePath = fileExistsXElement.Value
         ApplicabilityRule.FileExists {FilePath=filePath}
 
+    let toFileVersion (xElement:XElement) =
+        let fileElement = xElement.Element(xn "File")
+        let versionElement = xElement.Element(xn "Version")        
+        ApplicabilityRule.FileVersion
+            {
+                FilePath=fileElement.Value
+                VersionPattern=LsupEval.Version.versionPatternUnsafe versionElement.Value
+            }
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -317,6 +326,7 @@ module Lsup =
             |"_Driver" -> (toDriver xElement)
             |"_EmbeddedControllerVersion" -> (toEmbeddedControllerVersion xElement)
             |"_FileExists" -> (toFileExists  xElement)
+            |"_FileVersion" -> (toFileVersion xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()
