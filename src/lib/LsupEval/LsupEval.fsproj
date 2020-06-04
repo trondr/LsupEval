@@ -26,6 +26,7 @@
     <Compile Include="Version.fs" />
     <Compile Include="Language.fs" />
     <Compile Include="File.fs" />
+    <Compile Include="Registry.fs" />
     <Compile Include="Bios.fs" />
     <Compile Include="EmbeddedController.fs" />
     <Compile Include="Cpu.fs" />

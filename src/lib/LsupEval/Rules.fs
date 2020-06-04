@@ -9,6 +9,7 @@ module Rules =
     open LsupEval.Driver
     open LsupEval.EmbeddedController
     open LsupEval.File
+    open LsupEval.Registry
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -26,6 +27,7 @@ module Rules =
         |EmbeddedControllerVersion of EmbeddedControllerVersionElement
         |FileExists of FileExistsElement
         |FileVersion of FileVersionPattern
+        |RegistryKeyExists of RegistryKeyExistPattern
     
     type SystemInformation =
         {
@@ -113,6 +115,12 @@ module Rules =
             let isMatch = (LsupEval.File.isFileVersionMatch logger fileversionPattern fileVersion)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileVersion rule: '%A' with '%A'. Return: %b" applicabilityRule fileVersion isMatch))|>ignore))
             isMatch
+        |RegistryKeyExists registryKeyExistsPattern ->
+            let registryKeyStatuses = LsupEval.Registry.getRegistryKeyStatusesFromRegistryKeyExistPattern registryKeyExistsPattern
+            let isMatch = (LsupEval.Registry.isRegistryKeyMatch logger registryKeyExistsPattern registryKeyStatuses)
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating registry exists rule: '%A' with '%A'. Return: %b" applicabilityRule registryKeyStatuses isMatch))|>ignore))
+            isMatch
+
 
 
 

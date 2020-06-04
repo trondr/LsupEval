@@ -318,6 +318,14 @@ module Lsup =
             {
                 Languages = osLangArray
             }
+
+    let toRegistryKey (xElement:XElement) =
+        let registryKeyElements = xElement.Elements(xn "Key")
+        let registryKeys = registryKeyElements |> Seq.map(fun (x:XElement) -> LsupEval.Registry.registryKeyUnsafe x.Value)|>Seq.toArray
+        ApplicabilityRule.RegistryKeyExists
+            {
+                RegistryKeys=registryKeys
+            }
             
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
@@ -336,6 +344,7 @@ module Lsup =
             |"_EmbeddedControllerVersion" -> (toEmbeddedControllerVersion xElement)
             |"_FileExists" -> (toFileExists  xElement)
             |"_FileVersion" -> (toFileVersion xElement)
+            |"_RegistryKey" -> (toRegistryKey xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()
