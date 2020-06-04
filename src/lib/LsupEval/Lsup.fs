@@ -311,6 +311,14 @@ module Lsup =
                 VersionPattern=LsupEval.Version.versionPatternUnsafe versionElement.Value
             }
 
+    let toOsLanguage (xElement:XElement) =
+        let langElements = xElement.Elements(xn "Lang")
+        let osLangArray = langElements|>Seq.map (fun (x:XElement) -> LsupEval.Language.languageUnsafe x.Value)|>Seq.toArray
+        ApplicabilityRule.OsLang
+            {
+                Languages = osLangArray
+            }
+            
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -323,6 +331,7 @@ module Lsup =
             |"_Bios" -> (toBios xElement)
             |"_CPUAddressWidth" -> (toCpuAddressWidth xElement)
             |"_OS" -> (toOperatingSystem xElement)
+            |"_OSLang" -> (toOsLanguage xElement)
             |"_Driver" -> (toDriver xElement)
             |"_EmbeddedControllerVersion" -> (toEmbeddedControllerVersion xElement)
             |"_FileExists" -> (toFileExists  xElement)

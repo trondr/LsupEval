@@ -506,7 +506,7 @@ module LsupTest =
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 
-    let applicabiliyRulesFileVersion = """
+    let applicabiliyRulesOsLang = """
     <And>
         <_Bios>
             <Level>N1XET*</Level>
@@ -528,9 +528,37 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"            
         }
-        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
         let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    let applicabiliyRulesOsLang2 = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <_OSLang>
+            <Lang>JP</Lang>
+        </_OSLang>        
+    </And>        
+              """
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is non-matching on OS lang`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            OsLang="NO"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"            
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang2
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
 

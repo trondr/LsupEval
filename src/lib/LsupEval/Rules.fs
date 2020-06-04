@@ -21,6 +21,7 @@ module Rules =
         |Bios of Bios
         |CpuAddressWidth of CpuAddressWidth
         |Os of Os
+        |OsLang of OsLang
         |Driver of DriverElement
         |EmbeddedControllerVersion of EmbeddedControllerVersionElement
         |FileExists of FileExistsElement
@@ -88,6 +89,10 @@ module Rules =
         |Os os ->
             let isMatch = (isOperatingSystemMatch logger os systemInfo.Os)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating OperatingSystem rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
+            isMatch
+        |OsLang osLang ->
+            let isMatch = (isOsLanguageMatch logger osLang.Languages systemInfo.OsLang)
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating OperatingSystem language rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |Driver driver ->
             let fileDrivers = getFileDriversFromDriverPattern driver            

@@ -4,8 +4,14 @@ module OperatingSystem =
     open System.Management.Automation
     open LsupEval.WmiHelper
     open LsupEval.Logging
+    open LsupEval.Language
 
     type Os = {OsArray:string[]}
+
+    type OsLang = 
+        {
+            Languages:LanguagePattern[]
+        }
 
     let getCurrentProductType () =
         result{
@@ -68,3 +74,20 @@ module OperatingSystem =
             Result.Ok osLang
         with
         |ex -> Result.Error (toException "Failed to get os language." (Some ex))
+
+    let isLanguageMatch (languagePattern:LanguagePattern) languageCode =
+        let regEx = toRegEx languagePattern.LanguageCode
+        let isMatch = regEx.IsMatch(languageCode)
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing language code: '%s' with language pattern '%s'. Return: %b" languageCode languagePattern.LanguageCode isMatch))|>ignore))
+        isMatch
+
+    let isOsLanguageMatch logger (osLangPatterns:LanguagePattern[]) osLang =
+        match(result{
+            let! language = language osLang
+            let isMatch = osLangPatterns|>Array.filter(fun lp -> isLanguageMatch lp language.LanguageCode)|>Array.tryHead |> toBoolean
+            return isMatch
+        })with
+        |Result.Ok v -> v
+        |Result.Error ex -> raise ex
+        
+
