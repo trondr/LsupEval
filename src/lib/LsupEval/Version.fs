@@ -34,15 +34,6 @@ module Version =
         |Version of LsupVersion
         |VersionPattern of LsupVersionPattern
 
-    let private ifTrueThen success =
-        function
-        |true -> Some success
-        |false -> None
-
-    let private (|NullOrEmpty|_|) =
-        String.IsNullOrWhiteSpace 
-        >> ifTrueThen NullOrEmpty
-
     let isVersionPattern (version:string) =
         version.StartsWith("^") || version.EndsWith("^")
 

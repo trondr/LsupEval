@@ -2,6 +2,7 @@
 
 [<AutoOpen>]
 module F =
+    open System
     open System.Collections.Generic
     open System.Text.RegularExpressions
     open System.Management.Automation
@@ -44,3 +45,11 @@ module F =
         |Some v -> true
         |None -> false
         
+    let ifTrueThen success =
+        function
+        |true -> Some success
+        |false -> None
+
+    let (|NullOrEmpty|_|) =
+        String.IsNullOrWhiteSpace 
+        >> ifTrueThen NullOrEmpty

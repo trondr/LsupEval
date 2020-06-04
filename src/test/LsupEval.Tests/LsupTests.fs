@@ -691,4 +691,46 @@ module LsupTest =
         })with
         |Result.Ok v -> Assert.IsTrue(true,"Did not expect success")
         |Result.Error ex -> Assert.IsTrue(false,"Did expect success" + ex.ToString())
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    [<TestCase("Valid","EN",true)>]
+    [<TestCase("Valid","En",true)>]
+    [<TestCase("Valid","fr",true)>]
+    [<TestCase("Valid","iT",true)>]
+    [<TestCase("Valid","DE",true)>]
+    [<TestCase("Valid","ES",true)>]
+    [<TestCase("Valid","NO",true)>]
+    [<TestCase("Valid","SV",true)>]
+    [<TestCase("Valid","Fi",true)>]
+    [<TestCase("Valid","Da",true)>]
+    [<TestCase("Valid","NL",true)>]
+    [<TestCase("Valid","Ptb",true)>]
+    [<TestCase("Valid","AR",true)>]
+    [<TestCase("Valid","CS",true)>]
+    [<TestCase("Valid","EL",true)>]
+    [<TestCase("Valid","HE",true)>]
+    [<TestCase("Valid","HU",true)>]
+    [<TestCase("Valid","PL",true)>]
+    [<TestCase("Valid","RU",true)>]
+    [<TestCase("Valid","Tr",true)>]
+    [<TestCase("Valid","JP",true)>]
+    [<TestCase("Valid","KO",true)>]
+    [<TestCase("Valid","CHs",true)>]
+    [<TestCase("Valid","CHt",true)>]
+    [<TestCase("Valid","*",true)>]
+    [<TestCase("Valid","XYZ",false)>]
+    let ``language tests`` (description:string,languageCodeString:string,expectedSuccess:bool) =
+        match(result{
+            let! actual = LsupEval.Language.language languageCodeString
+            let testAssert =
+                if(expectedSuccess) then
+                    Assert.AreEqual(languageCodeString,actual.LanguageCode,sprintf "Language code %A" actual)
+            return actual
+        })with
+        |Result.Ok v -> Assert.IsTrue(expectedSuccess,"Did not expect success")
+        |Result.Error ex -> Assert.IsFalse(expectedSuccess,"Did expect success" + ex.ToString())
+        
+
+        ()
         
