@@ -30,7 +30,8 @@ module Rules =
         |FileVersion of FileVersionPattern
         |RegistryKeyExists of RegistryKeyExistPattern
         |PnPId of PnPIdPattern
-    
+        |RegistryKeyValue of RegistryKeyValuePattern
+            
     type SystemInformation =
         {
             BiosVersion:string
@@ -129,7 +130,11 @@ module Rules =
             let isMatch = LsupEval.PnPId.isPnPIdMatch logger pnPIdPattern systemInfo.PnPIds
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating PnPId rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
-
+        |RegistryKeyValue registryKeyValuePattern ->
+            let registryKeyValueStatuses = LsupEval.Registry.getRegistryKeyValueStatuses registryKeyValuePattern
+            let isMatch = LsupEval.Registry.isRegistryKeyValueMatch logger registryKeyValuePattern registryKeyValueStatuses
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating registry key value rule: '%A' with '%A'. Return: %b" applicabilityRule registryKeyValueStatuses isMatch))|>ignore))
+            isMatch
 
 
 

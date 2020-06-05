@@ -26,6 +26,37 @@ module Registry=
             Exists: bool        
         }
 
+    type ValuePattern =
+        |Value of string
+        |Version of string
+        |Level of string
+
+    let (|RegSZ|RegBinarY|RegDworD|) (regType:string)=
+        if(regType = "REG_SZ") then RegSZ
+        elif(regType = "REG_BINARY") then RegBinarY
+        elif(regType = "REG_DWORD") then RegDworD
+        else
+            RegSZ
+
+    type RegValueKind =
+        |RegSz
+        |RegBinary
+        |RegDword
+
+    let toRegistryValueKind (regKeyType:string) =
+        match regKeyType with
+        |RegSZ -> RegSz
+        |RegBinarY -> RegSz
+        |RegDworD -> RegDword
+
+    type RegistryKeyValuePattern =
+        {
+            Key:RegistryKey
+            ValueKind:RegValueKind
+            ValueName:string
+            Value:ValuePattern
+        }
+
     let (|HKLM|HKCU|HKCR|HKU|HKCC|) (registryKeyPath:string) =
         if (registryKeyPath.StartsWith("HKEY_LOCAL_MACHINE") || registryKeyPath.StartsWith("HKLM")) then 
             HKLM
@@ -108,3 +139,9 @@ module Registry=
         match lc with
         |Result.Ok c -> c
         |Result.Error ex -> raise ex
+
+    let getRegistryKeyValueStatuses registryKeyValuePattern =
+        failwith "Not implemented"
+
+    let isRegistryKeyValueMatch logger registryKeyValuePattern registryKeyValueStatuses =
+        failwith "Not implemented"

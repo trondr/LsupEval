@@ -6,6 +6,7 @@ module Lsup =
     open System.Xml.Linq
     open LsupEval.Rules
     open LsupEval.Logging
+    open LsupEval.Registry
     let logger = Logging.getLoggerByName "Lsup"
 
     type LsuRebootType = Default=0|RebootForced=1|Reserved=2|RebootRequired=3|Shutdown=4|RebootDelayed=5
@@ -333,6 +334,57 @@ module Lsup =
                 PnPId =pnpIdXElement.Value
             }
 
+    let toRegistryKeyValue (xElement:XElement) =
+        match(result{
+            let! regType = getRequiredAttribute xElement "type"
+            let keyXElement = xElement.Element(xn "Key")
+            let valueNameXElement = xElement.Element(xn "KeyName")
+            let versionXElement = getOptionalChildXElement xElement "Version"
+            let valueXElement = getOptionalChildXElement xElement  "KeyValue"
+            let levelXElement = getOptionalChildXElement xElement  "Level"
+            return
+                match versionXElement with
+                |Some vx -> 
+                    {
+                        Key =
+                            {
+                                KeyPath = keyXElement.Value
+                            }
+                        ValueName = valueNameXElement.Value
+                        ValueKind = (LsupEval.Registry.toRegistryValueKind regType)
+                        Value = LsupEval.Registry.ValuePattern.Version vx.Value
+                    }
+                |None->
+                    match valueXElement with
+                    |Some vx -> 
+                        {
+                            Key =
+                                {
+                                    KeyPath = keyXElement.Value
+                                }
+                            ValueName = valueNameXElement.Value
+                            ValueKind = (LsupEval.Registry.toRegistryValueKind regType)
+                            Value = LsupEval.Registry.ValuePattern.Value vx.Value
+                        }
+                    |None -> 
+                        match levelXElement with
+                        |Some lx ->
+                            {
+                                Key =
+                                    {
+                                        KeyPath = keyXElement.Value
+                                    }
+                                ValueName = valueNameXElement.Value
+                                ValueKind = (LsupEval.Registry.toRegistryValueKind regType)
+                                Value = LsupEval.Registry.ValuePattern.Level lx.Value
+                            }
+                        |None -> failwith "Invalid RegistryKeyValue element. Missing either KeyName, Version or Level"
+        })with
+        |Result.Ok rv -> ApplicabilityRule.RegistryKeyValue rv
+        |Result.Error ex -> raise ex
+        
+        
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -352,6 +404,7 @@ module Lsup =
             |"_FileVersion" -> (toFileVersion xElement)
             |"_RegistryKey" -> (toRegistryKey xElement)
             |"_PnPID" -> (toPnPId xElement)
+            |"_RegistryKeyValue" -> (toRegistryKeyValue xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()

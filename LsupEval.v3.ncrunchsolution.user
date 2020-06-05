@@ -16,6 +16,7 @@
         <Width>974</Width>
       </Column>
     </HotSpotsTestsWindowTreeLayout>
+    <HotSpotsWindowSplitterDistance>397</HotSpotsWindowSplitterDistance>
     <TestsWindowGroupingStrategy>Project, Fixture, Test</TestsWindowGroupingStrategy>
     <TestsWindowMenuOptions>
       <VerticalSplitMenuOption>false</VerticalSplitMenuOption>
@@ -24,7 +25,7 @@
       <ShowUnexecutedTestsMenuOption>true</ShowUnexecutedTestsMenuOption>
       <ShowIgnoredTestsMenuOption>false</ShowIgnoredTestsMenuOption>
     </TestsWindowMenuOptions>
-    <TestsWindowSplitterDistance>230</TestsWindowSplitterDistance>
+    <TestsWindowSplitterDistance>388</TestsWindowSplitterDistance>
     <TestsWindowTreeLayout>
       <Column>
         <Name>Name</Name>
