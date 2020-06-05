@@ -14,7 +14,7 @@ Implemented detection rules
 | Or                         | &#x2714;    |
 | Not                        | &#x2714;    |
 
-7 of 23 detection rules are supported
+8 of 23 detection rules are supported
 
 | Base Applicability Rule | Status      |
 |-------------------------|-------------|
@@ -25,7 +25,7 @@ Implemented detection rules
 | _Driver                 | &#x26A0;    |
 | _EmbeddedControllerVersion | &#x2714; |
 | _ExternalDetection      | &#x274C;    |
-| _FileVersion            | &#x274C;    |
+| _FileVersion            | &#x2714;    |
 | _FileDate               | &#x274C;    |
 | _FileExists             | &#x2714;    |
 | _FreeSpace              | &#x274C;    |
