@@ -326,7 +326,13 @@ module Lsup =
             {
                 RegistryKeys=registryKeys
             }
-            
+    
+    let toPnPId (pnpIdXElement:XElement) = 
+        ApplicabilityRule.PnPId
+            {
+                PnPId =pnpIdXElement.Value
+            }
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -345,6 +351,7 @@ module Lsup =
             |"_FileExists" -> (toFileExists  xElement)
             |"_FileVersion" -> (toFileVersion xElement)
             |"_RegistryKey" -> (toRegistryKey xElement)
+            |"_PnPID" -> (toPnPId xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()

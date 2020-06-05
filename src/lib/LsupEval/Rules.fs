@@ -10,6 +10,7 @@ module Rules =
     open LsupEval.EmbeddedController
     open LsupEval.File
     open LsupEval.Registry
+    open LsupEval.PnPId
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -28,6 +29,7 @@ module Rules =
         |FileExists of FileExistsElement
         |FileVersion of FileVersionPattern
         |RegistryKeyExists of RegistryKeyExistPattern
+        |PnPId of PnPIdPattern
     
     type SystemInformation =
         {
@@ -37,6 +39,7 @@ module Rules =
             OsLang:string
             Drivers: DriverInfo[]
             EmbeddedControllerVersion:string
+            PnPIds:string[]
         }
 
     let getCurrentSystemInformation() =
@@ -47,6 +50,7 @@ module Rules =
             let! drivers = Driver.getCurrentDrivers()
             let! embeddedControllerVersion = getCurrentEmbeddedControllerVersion()
             let! osLang = LsupEval.OperatingSystem.getCurrentOsLanguage()
+            let pnpIds = LsupEval.PnPId.getCurrentPnpIds drivers
             return 
                 {
                     BiosVersion = biosVersion
@@ -55,6 +59,7 @@ module Rules =
                     OsLang=osLang
                     Drivers = drivers
                     EmbeddedControllerVersion = embeddedControllerVersion
+                    PnPIds = pnpIds
                 }
         }
 
@@ -120,6 +125,11 @@ module Rules =
             let isMatch = (LsupEval.Registry.isRegistryKeyMatch logger registryKeyExistsPattern registryKeyStatuses)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating registry exists rule: '%A' with '%A'. Return: %b" applicabilityRule registryKeyStatuses isMatch))|>ignore))
             isMatch
+        |PnPId pnPIdPattern ->                        
+            let isMatch = LsupEval.PnPId.isPnPIdMatch logger pnPIdPattern systemInfo.PnPIds
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating PnPId rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
+            isMatch
+
 
 
 

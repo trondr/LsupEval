@@ -32,6 +32,7 @@
     <Compile Include="Cpu.fs" />
     <Compile Include="OperatingSystem.fs" />
     <Compile Include="Driver.fs" />
+    <Compile Include="PnPId.fs" />
     <Compile Include="Rules.fs" />
     <Compile Include="Lsup.fs" />
   </ItemGroup>

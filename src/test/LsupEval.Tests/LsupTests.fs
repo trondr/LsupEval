@@ -208,6 +208,7 @@ module LsupTest =
                 OsLang="JP"
                 Drivers= [||]
                 EmbeddedControllerVersion="1.17"
+                PnPIds = [||]
             }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         printf "%A" applicabilityRule
@@ -237,6 +238,7 @@ module LsupTest =
                         }
                 |]
             EmbeddedControllerVersion="1.17"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -265,6 +267,7 @@ module LsupTest =
                         }
                 |]
             EmbeddedControllerVersion="1.17"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -293,6 +296,7 @@ module LsupTest =
                         }
                 |]
             EmbeddedControllerVersion="1.17"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -344,6 +348,7 @@ module LsupTest =
                         }
                 |]
             EmbeddedControllerVersion="1.17"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -372,6 +377,7 @@ module LsupTest =
             OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -389,6 +395,7 @@ module LsupTest =
             OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.17"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -415,6 +422,7 @@ module LsupTest =
             OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -441,6 +449,7 @@ module LsupTest =
             OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -470,6 +479,7 @@ module LsupTest =
             OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -499,6 +509,7 @@ module LsupTest =
             OsLang="JP"
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -526,7 +537,8 @@ module LsupTest =
             Os = "WIN10"
             OsLang="JP"
             Drivers= [||]
-            EmbeddedControllerVersion="1.21"            
+            EmbeddedControllerVersion="1.21"      
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -554,7 +566,8 @@ module LsupTest =
             Os = "WIN10"
             OsLang="NO"
             Drivers= [||]
-            EmbeddedControllerVersion="1.21"            
+            EmbeddedControllerVersion="1.21"   
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -575,7 +588,7 @@ module LsupTest =
               """
 
     [<Test>]
-    [<Category(TestCategory.ManualTests)>]
+    [<Category(TestCategory.UnitTests)>]
     let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on Registry exists`` () =
         let systemInformationTrue = { 
             BiosVersion = "N1XET1234567"
@@ -583,7 +596,8 @@ module LsupTest =
             Os = "WIN10"
             OsLang="JP"
             Drivers= [||]
-            EmbeddedControllerVersion="1.21"            
+            EmbeddedControllerVersion="1.21"        
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyExist
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
@@ -604,7 +618,7 @@ module LsupTest =
               """
 
     [<Test>]
-    [<Category(TestCategory.ManualTests)>]
+    [<Category(TestCategory.UnitTests)>]
     let ``lsupXmlToApplicabilityRules Has the Hardware and is non-matching on registry key exists`` () =
         let systemInformationTrue = { 
             BiosVersion = "N1XET1234567"
@@ -612,9 +626,71 @@ module LsupTest =
             Os = "WIN10"
             OsLang="NO"
             Drivers= [||]
-            EmbeddedControllerVersion="1.21"            
+            EmbeddedControllerVersion="1.21"
+            PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyExist2
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = false
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+
+    let applicabiliyRulesPnPIds = """
+       <And>
+           <_Bios>
+               <Level>N1XET*</Level>
+           </_Bios>
+           <Or>
+               <_PnPID><![CDATA[PCI\VEN_8086&DEV_2826&CC_0104]]></_PnPID>
+               <_PnPID><![CDATA[PCI\VEN_8086&DEV_2826]]></_PnPID>
+               <_PnPID><![CDATA[PCI\VEN_8086&DEV_201D]]></_PnPID>
+            </Or>
+       </And>        
+                 """
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is Matching on pnp ids exists`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            OsLang="JP"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"        
+            PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesPnPIds
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
+        let expectedTrue = true
+        Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
+        ()
+
+    let applicabiliyRulesPnPIds2 = """
+    <And>
+        <_Bios>
+            <Level>N1XET*</Level>
+        </_Bios>
+        <Or>
+            <_PnPID><![CDATA[PCI\VEN_8086&DEV_2826&CC_0104]]></_PnPID>            
+        </Or>
+    </And>        
+                """
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``lsupXmlToApplicabilityRules Has the Hardware and is non-matching on pnp ids exists`` () =
+        let systemInformationTrue = { 
+            BiosVersion = "N1XET1234567"
+            CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+            Os = "WIN10"
+            OsLang="NO"
+            Drivers= [||]
+            EmbeddedControllerVersion="1.21"
+            PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+        }
+        let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesPnPIds
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
