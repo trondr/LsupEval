@@ -77,8 +77,22 @@ module Registry=
             )
         |>Seq.toArray
         
-    let isRegistryKeyMatch logger registryKeyExistsPattern (registryKeyStatuses:RegistryKeyStatus[]) =
-        failwith "Not implemented"
+    let isRegistryKeyMatch logger (registryKeyExistsPattern:RegistryKeyExistPattern) (registryKeyStatuses:RegistryKeyStatus[]) =
+        let isMatch =
+            registryKeyExistsPattern.RegistryKeys
+            |>Array.filter(fun r -> 
+                    let exists =
+                        registryKeyStatuses
+                        |>Array.filter(fun rs -> rs.Key.KeyPath.ToUpper() = r.KeyPath.ToUpper())
+                        |>Array.filter(fun rs -> rs.Exists)
+                        |>Array.tryHead
+                        |>toBoolean
+                    exists
+                )
+            |>Array.tryHead
+            |>toBoolean
+        isMatch
+
 
     let registryKey (registryKeyPath:string) =
         match registryKeyPath with
