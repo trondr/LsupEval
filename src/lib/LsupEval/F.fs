@@ -53,3 +53,6 @@ module F =
     let (|NullOrEmpty|_|) =
         String.IsNullOrWhiteSpace 
         >> ifTrueThen NullOrEmpty
+
+    let any predicate source =
+        source|>Seq.filter predicate|>Seq.tryHead|>toBoolean

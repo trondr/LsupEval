@@ -306,9 +306,6 @@ module Driver =
                         }
                 )
 
-    let any predicate source =
-        source|>Seq.filter predicate|>Seq.tryHead|>toBoolean
-
     let isHardwareIdMatch hardwareId hardwareIdPattern =
         let regex = toRegEx hardwareIdPattern
         regex.IsMatch(hardwareId)
