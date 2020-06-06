@@ -346,10 +346,7 @@ module Lsup =
                 match versionXElement with
                 |Some vx -> 
                     {
-                        Key =
-                            {
-                                KeyPath = keyXElement.Value
-                            }
+                        Key = LsupEval.Registry.toRegistryKey keyXElement.Value                            
                         ValueName = valueNameXElement.Value
                         ValueKind = (LsupEval.Registry.toRegistryValueKind regType)
                         Value = LsupEval.Registry.ValuePattern.Version vx.Value
@@ -358,10 +355,7 @@ module Lsup =
                     match valueXElement with
                     |Some vx -> 
                         {
-                            Key =
-                                {
-                                    KeyPath = keyXElement.Value
-                                }
+                            Key = LsupEval.Registry.toRegistryKey keyXElement.Value
                             ValueName = valueNameXElement.Value
                             ValueKind = (LsupEval.Registry.toRegistryValueKind regType)
                             Value = LsupEval.Registry.ValuePattern.Value vx.Value
@@ -370,10 +364,7 @@ module Lsup =
                         match levelXElement with
                         |Some lx ->
                             {
-                                Key =
-                                    {
-                                        KeyPath = keyXElement.Value
-                                    }
+                                Key = LsupEval.Registry.toRegistryKey keyXElement.Value
                                 ValueName = valueNameXElement.Value
                                 ValueKind = (LsupEval.Registry.toRegistryValueKind regType)
                                 Value = LsupEval.Registry.ValuePattern.Level lx.Value
