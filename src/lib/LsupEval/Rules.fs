@@ -11,6 +11,7 @@ module Rules =
     open LsupEval.File
     open LsupEval.Registry
     open LsupEval.PnPId
+    open LsupEval.ExternalDetection
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -31,6 +32,7 @@ module Rules =
         |RegistryKeyExists of RegistryKeyExistPattern
         |PnPId of PnPIdPattern
         |RegistryKeyValue of RegistryKeyValuePattern
+        |ExternalDetection of ExternalDetection
             
     type SystemInformation =
         {
@@ -135,6 +137,10 @@ module Rules =
             let isMatch = LsupEval.Registry.isRegistryKeyValueMatch logger registryKeyValuePattern registryKeyValueStatuses
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating registry key value rule: '%A' with '%A'. Return: %b" applicabilityRule registryKeyValueStatuses isMatch))|>ignore))
             isMatch
+        |ExternalDetection externalDetection ->
+            //1. Execute command line
+            //2. Check return codes
+            failwith "Not implemented: ExternalDetection match"
 
 
 

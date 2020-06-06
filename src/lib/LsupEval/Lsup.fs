@@ -374,7 +374,8 @@ module Lsup =
         |Result.Ok rv -> ApplicabilityRule.RegistryKeyValue rv
         |Result.Error ex -> raise ex
         
-        
+    let toExternalDetection (xElement:XElement) =
+        failwith "Not implemented: toExternalDetection"
 
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
@@ -396,6 +397,7 @@ module Lsup =
             |"_RegistryKey" -> (toRegistryKey xElement)
             |"_PnPID" -> (toPnPId xElement)
             |"_RegistryKeyValue" -> (toRegistryKeyValue xElement)
+            |"_ExternalDetection" -> (toExternalDetection xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()
