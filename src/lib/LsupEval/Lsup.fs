@@ -373,9 +373,35 @@ module Lsup =
         })with
         |Result.Ok rv -> ApplicabilityRule.RegistryKeyValue rv
         |Result.Error ex -> raise ex
-        
+       
+    let toInt32 (integerString:string) =
+        try
+            Some (Convert.ToInt32(integerString))
+        with
+        |ex -> None
+
+    let toIntArray (stringOfInts:string) =
+        let intArray = 
+            stringOfInts.Split(',')
+            |>Array.map(fun s-> s.Trim())
+            |>Array.map(fun s-> toInt32 s)
+            |>Array.choose id
+        intArray
+
     let toExternalDetection (xElement:XElement) =
-        failwith "Not implemented: toExternalDetection"
+        match(result{
+            let! returnCodesString = getRequiredAttribute xElement "rc"
+            let commandLine = xElement.Value
+            let returnCodes = toIntArray returnCodesString
+            let externalDetection =                    
+                        {
+                            LsupEval.ExternalDetection.ExternalDetection.CommandLine = commandLine
+                            LsupEval.ExternalDetection.ExternalDetection.ReturnCodes = returnCodes
+                        }
+            return externalDetection
+        })with
+        |Result.Ok ed -> ApplicabilityRule.ExternalDetection ed
+        |Result.Error ex -> raise ex
 
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
