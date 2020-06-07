@@ -27,4 +27,19 @@ module CommandLineExtensions=
                     Result.Ok args
                 finally
                     Marshal.FreeHGlobal(argv)
-        
+    
+    let toCmdAndArguments commandLine =
+        result{
+            let! args = (commandLineToArgs commandLine)
+            let argsList = args|> Array.toList
+            let! res =
+                match argsList with
+                |[] -> Result.Error (toException (sprintf "Empty command line %s" commandLine) None)        
+                |cmd::argumentsList -> 
+                    let arguments = 
+                        match argumentsList with
+                        |[] -> None
+                        |_ -> Some (argumentsList |> String.concat " ")
+                    Result.Ok (cmd, arguments)
+            return res
+        }
