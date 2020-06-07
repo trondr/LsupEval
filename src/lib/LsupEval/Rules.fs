@@ -66,7 +66,7 @@ module Rules =
                 }
         }
 
-    let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo applicabilityRule =
+    let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo workingDirectory applicabilityRule =
         match applicabilityRule with
         |True -> 
             let isMatch = true
@@ -77,15 +77,15 @@ module Rules =
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating False rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |And al -> 
-            let isMatch = al |> Seq.forall (evaluateApplicabilityRule logger systemInfo)
+            let isMatch = al |> Seq.forall (evaluateApplicabilityRule logger systemInfo workingDirectory)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating And rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |Or al -> 
-            let isMatch = al |> Seq.exists (evaluateApplicabilityRule logger systemInfo)
+            let isMatch = al |> Seq.exists (evaluateApplicabilityRule logger systemInfo workingDirectory)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating Or rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |Not al -> 
-            let isMatch = not (evaluateApplicabilityRule logger systemInfo al)
+            let isMatch = not (evaluateApplicabilityRule logger systemInfo workingDirectory al)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating Not rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |Bios bios ->
@@ -139,8 +139,11 @@ module Rules =
             isMatch
         |ExternalDetection externalDetection ->
             //1. Execute command line
+            let rc = LsupEval.ExternalDetection.executeCommandLine externalDetection.CommandLine workingDirectory
             //2. Check return codes
-            failwith "Not implemented: ExternalDetection match"
+            let isMatch = LsupEval.ExternalDetection.returnCodeIsMatch rc externalDetection.ReturnCodes
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating external detection rule: '%A' with '%A'. Return: %b" applicabilityRule externalDetection isMatch))|>ignore))
+            isMatch
 
 
 

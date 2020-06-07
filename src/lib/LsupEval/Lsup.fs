@@ -378,7 +378,9 @@ module Lsup =
         try
             Some (Convert.ToInt32(integerString))
         with
-        |ex -> None
+        |ex -> 
+            logger.Warn(sprintf "Failed to convert '%s' to integer due to: %s" integerString ex.Message)
+            None
 
     let toIntArray (stringOfInts:string) =
         let intArray = 
