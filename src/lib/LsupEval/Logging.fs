@@ -1,7 +1,7 @@
 ﻿
 namespace LsupEval
 
-module internal Logging=
+module Logging=
     
     open Common.Logging
 

@@ -445,3 +445,11 @@ module Lsup =
             |_ -> raise (new NotSupportedException(sprintf "Applicability rule for '%s' is not implemented." xElement.Name.LocalName))
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Lsup converted to ApplicabilityRule: %A" applicabilityRules))|>ignore))
         applicabilityRules
+
+    let loadLsuPackageFromFile (file:string) : Result<LsuPackage,Exception> =
+        result{
+            let! xDocument = loadLsuPackageXDocument file
+            let! xElement = loadLsuPackageXElement xDocument
+            let! lsuPackage = loadLsuPackage xElement
+            return lsuPackage
+        }        

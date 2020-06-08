@@ -5,6 +5,8 @@ module LsupTest =
     open NUnit.Framework
     open LsupEval;
 
+    let logger = LsupEval.Logging.getLoggerByName "Rules"
+    
     [<Test>]
     [<Category(TestCategory.ManualTests)>]
     let ``loadLsuPackageXDocument xml file exists return OK`` () =
@@ -1110,3 +1112,32 @@ module LsupTest =
 
         ()
         
+    let testDataFolder = @"E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\Updates"
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let ``load all Lsu Packages from Folder and evaluate depencies and detect install `` () =
+        match(result{
+            let lsupFiles = System.IO.Directory.GetFiles(testDataFolder,"*.xml")
+            let! actual = 
+                lsupFiles
+                |>Array.map(fun f -> 
+                    LsupEval.Lsup.loadLsuPackageFromFile(f)
+                )
+                |> toAccumulatedResult                
+            let! systemInfo = LsupEval.Rules.getCurrentSystemInformation()
+            let dependendUpdates =
+                actual
+                |>Seq.toArray
+                |>Seq.filter(fun p -> 
+                        match p.Dependencies with
+                        |Some d ->                    
+                            let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
+                            let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger systemInfo "c:\\temp" detectionRule
+                            isMatch
+                        |None -> false
+                    )
+            return dependendUpdates|>Seq.toArray
+        })with
+        |Result.Ok v -> Assert.IsTrue((v|>Array.length > 0),"Did not expect success")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())

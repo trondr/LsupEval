@@ -16,7 +16,7 @@ module OperatingSystem =
     let getCurrentProductType () =
         result{
             let! valueObject = getWmiPropertyValue "Win32_OperatingSystem" "OperatingSystemSKU"
-            let! valueInteger = objectToInt32 valueObject
+            let! valueInteger = objectToUInt32 valueObject
             return  valueInteger
         }
     
@@ -31,8 +31,8 @@ module OperatingSystem =
                 match (osVersionMajor,osVersionMinor) with
                 |(10,0) -> 
                     match productType with
-                    |4|27|70 -> Result.Ok "WIN10-ENT"
-                    |48|49|69|103-> Result.Ok "WIN10-PRO"
+                    |4u|27u|70u -> Result.Ok "WIN10-ENT"
+                    |48u|49u|69u|103u-> Result.Ok "WIN10-PRO"
                     |_ -> Result.Ok "WIN10"
                 |_ -> Result.Error (toException ("Only Windows 10 is supported.") None)
         }

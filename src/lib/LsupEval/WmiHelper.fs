@@ -30,6 +30,12 @@ module WmiHelper =
         with
         |ex -> Result.Error ex
 
+    let objectToUInt32 (value:obj) =
+        try
+            Result.Ok (value :?> UInt32)
+        with
+        |ex -> Result.Error ex
+
 
     let getWmiObjects className propertyNames =
         try
