@@ -41,7 +41,7 @@ module Driver =
 
     type HardwareInfo =
         {
-            HardwareIds:string[]
+            HardwareIds:string[] option
             CompatibleIds:string[]
             Name:string
             Date:DateTime
@@ -130,7 +130,7 @@ module Driver =
     type PnpDevice =
         {
             InstanceId:string
-            HardwareIds:string[]
+            HardwareIds:string[] option
             CompatibleIds:string[]
             Name:string
         }
@@ -143,7 +143,10 @@ module Driver =
             let name = psObject.Properties.["Name"].Value :?> string
             Some {
                 InstanceId = instanceId
-                HardwareIds = hardwareIds
+                HardwareIds = 
+                    match hardwareIds with
+                    |null -> None
+                    |_ -> Some hardwareIds
                 CompatibleIds=compatibleIds
                 Name = name                
             }
@@ -206,7 +209,7 @@ module Driver =
                                     }                        
                             )                    
                     }
-                return pnpDevicesWithProperties
+                return pnpDevicesWithProperties |> Seq.toArray
             }
 
     let getDriverFiles () =
@@ -336,7 +339,12 @@ module Driver =
 
 
     let isHardwareMatch (driverElement:HardwareIdElements) (hardwareInfo:HardwareInfo) =        
-        let hardwareIdIsMatch = hardwareInfo.HardwareIds|>Seq.filter(fun s -> (any (isHardwareIdMatch s) driverElement.HardwareIds))|>Seq.tryHead|>toBoolean
+        let hardwareIdIsMatch = 
+            match hardwareInfo.HardwareIds with
+            |Some hwids ->            
+                hwids
+                |> Seq.filter(fun s -> (any (isHardwareIdMatch s) driverElement.HardwareIds))|>Seq.tryHead|>toBoolean
+            |None -> false
         let dateIsMatch = isDriverDateMatch hardwareInfo.Date driverElement.Date
         
         let cv (Version version) =

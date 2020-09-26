@@ -18,9 +18,10 @@ module PnPId =
                     match i with
                     |Hardware hw -> Some hw
                     |File f -> None
-                )
+                )            
             |>Seq.choose id
             |>Seq.map(fun i -> i.HardwareIds)
+            |>Seq.choose id
             |>Seq.concat
             |>Seq.toArray
         pnpIds

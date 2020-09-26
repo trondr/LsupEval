@@ -232,7 +232,7 @@ module LsupTest =
                 [|
                     Driver.DriverInfo.Hardware
                         {
-                            HardwareIds=[|"PCI\VEN_1022&DEV_1537"|]
+                            HardwareIds=Some [|"PCI\VEN_1022&DEV_1537"|]
                             CompatibleIds = [||]
                             Name="Test Name"
                             Date=(new System.DateTime(2019,05,21))
@@ -261,7 +261,7 @@ module LsupTest =
                 [|
                     Driver.DriverInfo.Hardware
                         {
-                            HardwareIds=[|"PCI\VEN_1022&DEV_1537"|]
+                            HardwareIds=Some [|"PCI\VEN_1022&DEV_1537"|]
                             CompatibleIds = [||]
                             Name="Test Name"
                             Date=(new System.DateTime(2019,05,21))
@@ -290,7 +290,7 @@ module LsupTest =
                 [|
                     Driver.DriverInfo.Hardware
                         {
-                            HardwareIds=[|"PCI\VEN_1022&DEV_1537"|]
+                            HardwareIds=Some [|"PCI\VEN_1022&DEV_1537"|]
                             CompatibleIds = [||]
                             Name="Test Name"
                             Date=(new System.DateTime(2019,04,21))
