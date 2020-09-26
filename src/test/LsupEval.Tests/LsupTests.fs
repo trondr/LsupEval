@@ -12,7 +12,7 @@ module LsupTest =
     let ``loadLsuPackageXDocument xml file exists return OK`` () =
         let actual = Lsup.loadLsuPackageXDocument @"C:\Temp\LenovoUpdatePackagesXml\nz3gs07w_2_.xml"
         match actual with
-        |Result.Ok -> Assert.IsTrue(true)
+        |Result.Ok _ -> Assert.IsTrue(true)
         |Result.Error ex -> Assert.Fail(ex.Message)
 
 
@@ -21,7 +21,7 @@ module LsupTest =
     let ``loadLsuPackageXDocument xml file does not exists return Error`` () =
         let actual = Lsup.loadLsuPackageXDocument @"C:\Temp\LenovoUpdatePackagesXml\nz3gs07w_2_Does_Not_Exist.xml"
         match actual with
-        |Result.Ok -> Assert.IsTrue(false, "Expected error result")
+        |Result.Ok _ -> Assert.IsTrue(false, "Expected error result")
         |Result.Error ex -> Assert.AreEqual("Failed to load 'C:\\Temp\\LenovoUpdatePackagesXml\\nz3gs07w_2_Does_Not_Exist.xml'. Could not find file 'C:\\Temp\\LenovoUpdatePackagesXml\\nz3gs07w_2_Does_Not_Exist.xml'.",ex.Message)
 
 
@@ -121,7 +121,7 @@ module LsupTest =
             Assert.AreEqual("N1EET87W (1.60 )",actual,"BIOS version")
             return actual
         })with
-        |Result.Ok -> Assert.IsTrue(true)
+        |Result.Ok _ -> Assert.IsTrue(true)
         |Result.Error ex -> Assert.Fail(ex.Message)  
         
     [<Test>]
@@ -132,7 +132,7 @@ module LsupTest =
             Assert.AreEqual(Cpu.CpuAddressWidth.Bit64,actual,"Cpu address width")
             return actual
         })with
-        |Result.Ok -> Assert.IsTrue(true)
+        |Result.Ok _ -> Assert.IsTrue(true)
         |Result.Error ex -> Assert.Fail(ex.Message)  
 
     [<Test>]

@@ -24,6 +24,6 @@ module Bios =
                     isMatch
                 ) |>Seq.tryHead
         match v with
-        |Some -> true
+        |Some _ -> true
         |None -> false
 
