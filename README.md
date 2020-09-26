@@ -24,7 +24,7 @@ Implemented detection rules
 | _CpuAddressWidth        | &#x2714;    |
 | _Driver                 | &#x26A0;    |
 | _EmbeddedControllerVersion | &#x2714; |
-| _ExternalDetection      | &#x274C;    |
+| _ExternalDetection      | &#x2714;    |
 | _FileVersion            | &#x2714;    |
 | _FileDate               | &#x274C;    |
 | _FileExists             | &#x2714;    |
