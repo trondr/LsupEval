@@ -1,6 +1,6 @@
 ﻿namespace LsupEval
 
-module OperatingSystem =
+module OperatingSystem =    
     open System.Management.Automation
     open LsupEval.WmiHelper
     open LsupEval.Logging
@@ -19,16 +19,34 @@ module OperatingSystem =
             let! valueInteger = objectToUInt32 valueObject
             return  valueInteger
         }
+
+    type OsVersion = { MajorVersion:int;MinorVersion:int;BuildNumber:int}
+
+    let toOsVersion osVersionString =
+        match osVersionString with        
+        |Regex @"^(\d+)\.(\d+)\.(\d+)$" [majorVersion;minorVersion;buildNumber] -> 
+            Result.Ok {
+                MajorVersion = System.Convert.ToInt32(majorVersion)
+                MinorVersion = System.Convert.ToInt32(minorVersion)
+                BuildNumber = System.Convert.ToInt32(buildNumber)
+            } 
+        |_ -> Result.Error (toException (sprintf "Os version format not supported: '%s'" osVersionString) None)
+
+    let getCurrentOperatingSystemVersion () =
+        result{
+            let! valueObject = getWmiPropertyValue "Win32_OperatingSystem" "Version"
+            let! valueString = objectToString valueObject
+            let! version = toOsVersion valueString
+            return version
+        }
     
     //Reference: https://techontip.wordpress.com/tag/operatingsystemsku/
     let getCurrentOperatingSystem () =
         result{
-            let osVersion = System.Environment.OSVersion
-            let osVersionMajor = osVersion.Version.Major
-            let osVersionMinor = osVersion.Version.Minor
+            let! osVersion = getCurrentOperatingSystemVersion()
             let! productType = getCurrentProductType()
             return!
-                match (osVersionMajor,osVersionMinor) with
+                match (osVersion.MajorVersion,osVersion.MinorVersion) with
                 |(10,0) -> 
                     match productType with
                     |4u|27u|70u -> Result.Ok "WIN10-ENT"
@@ -46,7 +64,7 @@ module OperatingSystem =
                     isMatch
                 ) |>Seq.tryHead
         match v with
-        |Some -> true
+        |Some _ -> true
         |None -> false
 
     let toOsLang (psObject:PSObject) =
