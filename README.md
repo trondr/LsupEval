@@ -41,3 +41,4 @@ Implemented detection rules
 | _SystemVendor           | &#x274C;    |
 | _Ioctl                  | &#x274C;    |
 | _OpticalDriveDetection  | &#x274C;    |
+| _Coreq                  | &#x274C;    |
