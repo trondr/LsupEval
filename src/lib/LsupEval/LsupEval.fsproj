@@ -34,6 +34,7 @@
     <Compile Include="Driver.fs" />
     <Compile Include="PnPId.fs" />
     <Compile Include="CommandLineExtensions.fs" />
+    <Compile Include="ProcessOperations.fs" />
     <Compile Include="ExternalDetection.fs" />
     <Compile Include="Rules.fs" />
     <Compile Include="Lsup.fs" />
@@ -49,6 +50,7 @@
   <ItemGroup>
     <PackageReference Include="Common.Logging" Version="3.4.1" />
     <PackageReference Include="Common.Logging.Core" Version="3.4.1" />
+    <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.1.3" />
     <PackageReference Include="FSharpx.Extras" Version="2.4.0" />
     <PackageReference Include="System.Management.Automation.dll" Version="10.0.10586" />
   </ItemGroup>

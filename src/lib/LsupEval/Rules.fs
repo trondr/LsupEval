@@ -139,9 +139,11 @@ module Rules =
             isMatch
         |ExternalDetection externalDetection ->
             //1. Execute command line
-            let rc = LsupEval.ExternalDetection.executeCommandLine externalDetection.CommandLine workingDirectory
+            let processExitData = LsupEval.ExternalDetection.executeCommandLine externalDetection.CommandLine workingDirectory
+            logger.Info(new Msg(fun m -> m.Invoke( (sprintf "External detection executed and exited with:\n'%A'" processExitData))|>ignore))
+
             //2. Check return codes
-            let isMatch = LsupEval.ExternalDetection.returnCodeIsMatch rc externalDetection.ReturnCodes
+            let isMatch = LsupEval.ExternalDetection.returnCodeIsMatch processExitData.ExitCode externalDetection.ReturnCodes
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating external detection rule: '%A' with '%A'. Return: %b" applicabilityRule externalDetection isMatch))|>ignore))
             isMatch
 

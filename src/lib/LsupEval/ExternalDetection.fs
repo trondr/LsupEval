@@ -1,8 +1,10 @@
 ﻿namespace LsupEval
 
 module ExternalDetection =
+    open System
     open System.Diagnostics
     open LsupEval.CommandLineExtensions
+    open LsupEval.ProcessOperations
 
     type ExternalDetection =
         {
@@ -10,29 +12,45 @@ module ExternalDetection =
             ReturnCodes:int[]
         }
 
+    let isExeFile (fileName:string) =
+        fileName.ToLower().EndsWith(".exe")
+
+    type TemporaryWorkingDirectory(workingDirectory) =
+        let workingDirectory = workingDirectory
+        let previousWorkingDirectory = Environment.CurrentDirectory
+        do      
+            System.Environment.CurrentDirectory <- workingDirectory
+            ()
+        interface IDisposable with
+            member x.Dispose() =
+                System.Environment.CurrentDirectory <- previousWorkingDirectory
+
     let executeCommandLine commandLine workingDirectory =        
+        use temporaryWorkingDirectory = new TemporaryWorkingDirectory(workingDirectory)
+        let resolvedCommandLine = LsupEval.File.resolveFilePath commandLine
         match(result{
-            let! (cmd,arguments) = toCmdAndArguments commandLine
-            let processStartInfo =
-                match arguments with
-                |None -> new System.Diagnostics.ProcessStartInfo(cmd)
-                |Some a -> new System.Diagnostics.ProcessStartInfo(cmd,a)
-            processStartInfo.WorkingDirectory <- workingDirectory
-            processStartInfo.WindowStyle <- ProcessWindowStyle.Hidden
-            processStartInfo.CreateNoWindow <- true
-            processStartInfo.UseShellExecute <-
-                match (cmd.ToLower().EndsWith(".exe")) with
-                |true -> false
-                |false-> true
-            let tmpInstFolder = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Windows).ToLower(), "TempInst")
-            processStartInfo.EnvironmentVariables.["TMP"] <- tmpInstFolder
-            let proc = Process.Start(processStartInfo)
-            proc.WaitForExit()
-            let rc = proc.ExitCode            
-            return rc
+            let! (cmd,arguments) = toCmdAndArguments resolvedCommandLine
+            let tempInstFolder = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Windows).ToLower(), "TempInst")            
+            let processStartData =
+                {
+                    FileName = LsupEval.File.resolveFilePath cmd
+                    Arguments = arguments
+                    WorkingDirectory = Some workingDirectory
+                    WindowStyle = ProcessWindowStyle.Hidden
+                    InputData = None
+                    TimeOut = None
+                    CreateNoWindow = true
+                    UseShellExecute =
+                        match (isExeFile cmd) with
+                        |true -> false
+                        |false-> true
+                    EnvironmentVariables = Some (Map["TMP", tempInstFolder])
+                }            
+            let! processExitData = startConsoleProcess processStartData
+            return processExitData
         }) with
         |Result.Ok v -> v
-        |Result.Error ex -> raise ex
+        |Result.Error ex -> raise (toException (sprintf "Failed to execute external detection command '%s'. It is required that the file to be executed is present in the working directory '%s'" resolvedCommandLine workingDirectory) (Some ex))
 
     let returnCodeIsMatch rc returnCodes =
         returnCodes 
