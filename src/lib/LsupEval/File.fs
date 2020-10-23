@@ -74,12 +74,22 @@ module File =
             Version:LsupEval.Version.LsupVersion
         }
 
+    let getLsupVersion filePath =
+        let exists = fileExists filePath
+        match exists with
+        | true ->
+            let fileVersion = getFileVersion filePath
+            result{
+                let! version = LsupEval.Version.version fileVersion
+                return version
+            }
+        | false -> (LsupEval.Version.version "0.0.0.0")
+
     let getFileVersionFromFileVersionPattern (fileversionPattern:FileVersionPattern) =
         match(result{
             let filePath = resolveFilePath fileversionPattern.FilePath
             let fileExists = fileExists filePath            
-            let fileVersion = getFileVersion filePath
-            let! version = LsupEval.Version.version fileVersion
+            let! version = getLsupVersion filePath
             return
                 {            
                     FileStatus=
