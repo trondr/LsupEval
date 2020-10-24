@@ -15,7 +15,7 @@ module Version =
 
     type VersionBlock =
         |Numeric of int16
-        |AlphaNumeric of string
+        |AlphaNumeric of string        
 
     type LsupVersion = private LsupVersion of VersionBlock[]
 
@@ -151,13 +151,13 @@ module Version =
             |VersionBlock.Numeric n2 -> 
                 compareInt n1 n2
             |VersionBlock.AlphaNumeric s2 ->
-                String.Compare(n1.ToString(),s2)
+                String.Compare(n1.ToString(),s2)            
         |VersionBlock.AlphaNumeric s1 -> 
             match versionBlock2 with
             |VersionBlock.Numeric n2 -> 
                 String.Compare(s1,n2.ToString())
             |VersionBlock.AlphaNumeric s2 ->
-                String.Compare(s1,s2)
+                String.Compare(s1,s2)        
 
     let compare (LsupVersion versionBlocks1) (LsupVersion versionBlocks2) =
         let numberOfBlocksToCompare = min versionBlocks1.Length versionBlocks2.Length
