@@ -9,6 +9,7 @@
     <Compile Include="TestCategory.fs" />
     <Compile Include="CommandLineExtensionTests.fs" />
     <Compile Include="LsupTests.fs" />
+    <Compile Include="EvaluateApplicabilityRuleTests.fs" />
   </ItemGroup>
 
   <ItemGroup>
