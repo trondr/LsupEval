@@ -50,7 +50,7 @@ module ExternalDetection =
             return processExitData
         }) with
         |Result.Ok v -> v
-        |Result.Error ex -> raise (toException (sprintf "Failed to execute external detection command '%s'. It is required that the file to be executed is present in the working directory '%s'" resolvedCommandLine workingDirectory) (Some ex))
+        |Result.Error ex -> raise (toException (sprintf "Failed to execute external detection command '%s'. It is required that the file to be executed is present in the working directory '%s' and if required that the process is started elevated." resolvedCommandLine workingDirectory) (Some ex))
 
     let returnCodeIsMatch rc returnCodes =
         returnCodes 
