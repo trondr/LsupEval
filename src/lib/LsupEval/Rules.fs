@@ -119,10 +119,16 @@ module Rules =
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileExists rule: '%A' with '%A'. Return: %b" applicabilityRule files isMatch))|>ignore))
             isMatch
         |FileVersion fileversionPattern ->
-            let fileVersion = LsupEval.File.getFileVersionFromFileVersionPattern fileversionPattern
-            let isMatch = (LsupEval.File.isFileVersionMatch logger fileversionPattern fileVersion)
-            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileVersion rule: '%A' with '%A'. Return: %b" applicabilityRule fileVersion isMatch))|>ignore))
-            isMatch
+            let fileVersionExists = fileExists fileversionPattern.FilePath
+            match fileVersionExists with
+            | true ->
+                let fileVersion = LsupEval.File.getFileVersionFromFileVersionPattern fileversionPattern
+                let isMatch = (LsupEval.File.isFileVersionMatch logger fileversionPattern fileVersion)
+                logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileVersion rule: '%A' with '%A'. Return: %b" applicabilityRule fileVersion isMatch))|>ignore))
+                isMatch
+            |false -> 
+                logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Warning. File does not exist. Evaluating FileVersion rule: '%A'. Return: %b" applicabilityRule false))|>ignore))
+                false
         |RegistryKeyExists registryKeyExistsPattern ->
             let registryKeyStatuses = LsupEval.Registry.getRegistryKeyStatusesFromRegistryKeyExistPattern registryKeyExistsPattern
             let isMatch = (LsupEval.Registry.isRegistryKeyMatch logger registryKeyExistsPattern registryKeyStatuses)

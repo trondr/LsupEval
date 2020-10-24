@@ -105,10 +105,10 @@ module File =
         
     let isFileVersionMatch (logger:Common.Logging.ILog) (fileversionPattern:FileVersionPattern) (fileVersion:FileVersion) =
         let filePathPattern = resolveFilePath fileversionPattern.FilePath
-        let isSameFile = isFilePathMatch filePathPattern fileVersion.FileStatus.FilePath 
-        let fileExists = fileVersion.FileStatus.Exists
-        let isVersionMatch = LsupEval.Version.isVersionPatternMatch fileVersion.Version fileversionPattern.VersionPattern
-        let isMatch = isSameFile && fileExists && isVersionMatch
+        let fileExists = lazy (fileVersion.FileStatus.Exists)
+        let isSameFile = lazy (isFilePathMatch filePathPattern fileVersion.FileStatus.FilePath)        
+        let isVersionMatch = lazy (LsupEval.Version.isVersionPatternMatch fileVersion.Version fileversionPattern.VersionPattern)
+        let isMatch = fileExists.Force() && isSameFile.Force() && isVersionMatch.Force()
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing file version: '%A' with file version pattern '%A'. Return: %b" fileVersion fileversionPattern isMatch))|>ignore))
         isMatch
 
