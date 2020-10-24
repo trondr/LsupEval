@@ -7,8 +7,16 @@ module EvaluateApplicabilityRuleTests =
 
     open LsupEval;
 
-    let assemblyFile = new System.IO.FileInfo((new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath)
-    let testDataFolderPath = System.IO.Path.Combine(assemblyFile.Directory.Parent.Parent.Parent.FullName,"TestData")
+    //How to get update info for use as test data? Answer:
+    //Use debug version of DriverTool.exe to download update info. Command line: DriverTool.exe DownloadLenovUpdatePackageXmls
+    //DriverTool.exe will download to: C:\Temp\LenovoUpdatePackagesXml2
+    //Move downloaded update info to respective subfolders under LsupEval.Tests\TestData\...
+
+    //let assemblyFile = new System.IO.FileInfo((new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath)
+    //let testDataFolderPath = System.IO.Path.Combine(assemblyFile.Directory.Parent.Parent.Parent.FullName,"TestData")
+    let testDataFolderPath = @"E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData"
+    let externalFilesFolder = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\ExternalFiles")
+    let systemInfo = LsupEval.Rules.getCurrentSystemInformation()
     type internal TestData ={FileName:string}
     let internal testData =
         let updatesDirectory = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\Updates")
@@ -19,8 +27,6 @@ module EvaluateApplicabilityRuleTests =
                 yield 
                     {FileName = fileinfo.Name}
         |]
-    let systemInfo = LsupEval.Rules.getCurrentSystemInformation()
-    let externalFilesFolder = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\ExternalFiles")
 
     [<Test>]
     [<Timeout(60000000)>]
