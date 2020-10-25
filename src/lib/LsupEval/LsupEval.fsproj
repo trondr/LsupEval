@@ -33,6 +33,7 @@
     <Compile Include="OperatingSystem.fs" />
     <Compile Include="Driver.fs" />
     <Compile Include="PnPId.fs" />
+    <Compile Include="Coreq.fs" />
     <Compile Include="CommandLineExtensions.fs" />
     <Compile Include="ProcessOperations.fs" />
     <Compile Include="ExternalDetection.fs" />

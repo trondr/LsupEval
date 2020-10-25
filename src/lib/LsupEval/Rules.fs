@@ -12,6 +12,7 @@ module Rules =
     open LsupEval.Registry
     open LsupEval.PnPId
     open LsupEval.ExternalDetection
+    open LsupEval.Coreq
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -33,6 +34,7 @@ module Rules =
         |PnPId of PnPIdPattern
         |RegistryKeyValue of RegistryKeyValuePattern
         |ExternalDetection of ExternalDetection
+        |Coreq of CoreqElement
             
     type SystemInformation =
         {
@@ -153,7 +155,8 @@ module Rules =
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating external detection rule: '%A' with '%A'. Return: %b" applicabilityRule externalDetection isMatch))|>ignore))
             isMatch
 
-
-
-
+        |Coreq coreqElement ->
+            let isMatch = false
+            logger.Error(new Msg(fun m -> m.Invoke( (sprintf "Coreq rule evaluation not implemented: '%A' with '%A'. Return: %b" applicabilityRule coreqElement isMatch))|>ignore))
+            isMatch
             

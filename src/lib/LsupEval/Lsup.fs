@@ -407,6 +407,31 @@ module Lsup =
         |Result.Ok ed -> ApplicabilityRule.ExternalDetection ed
         |Result.Error ex -> raise ex
 
+    //Example:
+    //<_Coreq name="PMD_WIN10X64">
+    //   <Version>0.1^</Version>
+    //</_Coreq>
+    let toCoreq (xElement:XElement) =
+        match(result{
+            let! name = getRequiredAttribute xElement "name"
+            let versionElement = getOptionalChildXElement xElement "Version"
+            let levelXElement = getOptionalChildXElement xElement  "Level"
+            let coreq : Coreq.CoreqElement =                  
+                    {
+                        Name = name
+                        Version =                             
+                                match versionElement with
+                                |Some v -> LsupEval.Driver.VersionOrLevelElement.VersionElement v.Value
+                                |None ->
+                                    match levelXElement with
+                                    |Some l -> LsupEval.Driver.VersionOrLevelElement.LevelElement l.Value
+                                    |None-> raise (toException "_Coreq element must contain either a Version element or a Level element." None)
+                    }
+            return coreq
+        })with
+        |Result.Ok cr -> ApplicabilityRule.Coreq cr
+        |Result.Error ex -> raise ex
+        
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
@@ -428,6 +453,7 @@ module Lsup =
             |"_PnPID" -> (toPnPId xElement)
             |"_RegistryKeyValue" -> (toRegistryKeyValue xElement)
             |"_ExternalDetection" -> (toExternalDetection xElement)
+            |"_Coreq" -> (toCoreq xElement)
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()
