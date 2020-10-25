@@ -87,9 +87,7 @@ module Lsup =
 
     let loadLsuPackageXElement (lsuPackageXDocument:XDocument) =        
             Result.Ok lsuPackageXDocument.Root
-     
     
-
     let getRequiredAttribute (xElement:XElement) (attributeName:string) =
         match xElement with
         | null -> Result.Error (new Exception(sprintf "Element is null. Failed to get attribute name '%s'" attributeName))
@@ -130,7 +128,11 @@ module Lsup =
 
     let toOptionalInnerXml (xElement:XElement option) =
         match xElement with
-        |Some v -> Some (innerXml v)
+        |Some v -> 
+            let xml = innerXml v
+            match(System.String.IsNullOrWhiteSpace(xml)) with
+            |true -> None
+            |false -> Some xml
         |None -> None
 
     let toInteger64 (value:string) =
