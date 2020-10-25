@@ -14,7 +14,7 @@ module Version =
             )
 
     type VersionBlock =
-        |Numeric of int16
+        |Numeric of uint16
         |AlphaNumeric of string        
 
     type LsupVersion = private LsupVersion of VersionBlock[]
@@ -68,7 +68,7 @@ module Version =
 
     let toVersionBlock (versionBlock:string) =
         if(isNumericString versionBlock) then
-            VersionBlock.Numeric (Convert.ToInt16(versionBlock))
+            VersionBlock.Numeric (Convert.ToUInt16(versionBlock))
         else
             VersionBlock.AlphaNumeric versionBlock
 
