@@ -29,10 +29,10 @@ module EvaluateApplicabilityRuleTests =
         |]
 
     [<Test>]
-    [<Timeout(60000000)>]
+    [<Timeout(3600000)>] //Allow 1 hour run time as it is approx 3000 tests.
     [<Category(TestCategory.ManualTests)>]
     [<TestCaseSource("testData")>]
-    let ``load Lsu Package evaluate depencies and detect install `` (testDataObject:obj) =
+    let ``load Lsu Package evaluate depencies `` (testDataObject:obj) =
         let testResult = 
             result{
                 let testData = (testDataObject:?>TestData)
@@ -49,5 +49,30 @@ module EvaluateApplicabilityRuleTests =
                 return isMatch
             }
         match testResult with        
-        |Result.Ok v -> Assert.IsTrue(v,"Did not expect success")
+        |Result.Ok v -> Assert.IsTrue(v,"No errors.")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
+
+
+    [<Test>]
+    [<Timeout(3600000)>] //Allow 1 hour run time as it is approx 3000 tests.
+    [<Category(TestCategory.ManualTests)>]
+    [<TestCaseSource("testData")>]
+    let ``load Lsu Package evaluate detect install `` (testDataObject:obj) =
+        let testResult = 
+            result{
+                let testData = (testDataObject:?>TestData)
+                let lsuPackageFilePath = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\Updates",testData.FileName)
+                let! lsuPackage = LsupEval.Lsup.loadLsuPackageFromFile(lsuPackageFilePath)
+                let! sysInfo = systemInfo
+                let isMatch =
+                    match lsuPackage.DetectInstall with                
+                    |Some d ->                    
+                        let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
+                        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo externalFilesFolder detectionRule
+                        isMatch
+                    |None -> false
+                return isMatch
+            }
+        match testResult with        
+        |Result.Ok v -> Assert.IsTrue(v,"No errors.")
         |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
