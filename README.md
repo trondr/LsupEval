@@ -18,29 +18,29 @@ Implemented detection rules
 
 | Base Applicability Rule | Status      |  Comment    |
 |-------------------------|-------------|-------------|
-| _AddRemovePrograms      | &#x274C;    | Not in use by any known lenovo update packages (2020-10-24)|
+| _AddRemovePrograms      | &#x274C;    | Not in use by any known Lenovo update packages (2020-10-24)|
 | _Bios			              | &#x2714;    ||
-| _BiosDate               | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
+| _BiosDate               | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _CpuAddressWidth        | &#x2714;    ||
 | _Driver                 | &#x2714;    ||
 | _EmbeddedControllerVersion | &#x2714; ||
 | _ExternalDetection      | &#x2714;    ||
 | _FileVersion            | &#x2714;    ||
-| _FileDate               | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
+| _FileDate               | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _FileExists             | &#x2714;    ||
-| _FreeSpace              | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
-| _HDD                    | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
-| _MemDetect              | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
+| _FreeSpace              | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
+| _HDD                    | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
+| _MemDetect              | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _OS                     | &#x2714;    ||
 | _OSLang                 | &#x2714;    ||
-| _OSNLang                | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
+| _OSNLang                | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _PnPID                  | &#x2714;    ||
 | _RegistryKey            | &#x2714;    ||
 | _RegistryKeyValue       | &#x2714;    ||
-| _SupportedSystems       | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
-| _SystemVendor           | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
-| _Ioctl                  | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
-| _OpticalDriveDetection  | &#x274C;    |Not in use by any known lenovo update packages (2020-10-24)|
+| _SupportedSystems       | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
+| _SystemVendor           | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
+| _Ioctl                  | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
+| _OpticalDriveDetection  | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _Coreq                  | &#x274C;    |Not implemented. Implementation started (2020-10-24)|
 
 # Usage example
