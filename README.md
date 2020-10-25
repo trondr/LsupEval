@@ -41,7 +41,7 @@ Implemented detection rules
 | _SystemVendor           | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _Ioctl                  | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _OpticalDriveDetection  | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
-| _Coreq                  | &#x274C;    |Not implemented. Implementation started (2020-10-24)|
+| _Coreq                  | &#x274C;    |Not implemented. Currently returning false when evaluated (2020-10-14).|
 
 # Usage example
 See unit tests:
