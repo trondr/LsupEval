@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IDPTFW_N1OHD" id="n1ohd06w" version="8.3.10208.5644" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Dynamic Platform And Thermal Framework - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_224317AA]]></_PnPID>
+    <_PnPID><![CDATA[ACPI\INT3403]]></_PnPID>
+    <_PnPID><![CDATA[ACPI\INT3400]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_224317AA]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\INT3403]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\INT3400]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1ohd06w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-12-05</ReleaseDate>
+  <DiskSpaceNeeded>24179041</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="2,3,259" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPInst.exe /sa /se /sw /sh /c</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPInst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_224317AA]]></HardwareID>
+      <HardwareID><![CDATA[ACPI\INT3403]]></HardwareID>
+      <HardwareID><![CDATA[ACPI\INT3400]]></HardwareID>
+      <Date>2017-11-27</Date>
+      <Version>8.3.10208.5644^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_224317AA]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\INT3403]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\INT3400]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1OET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1ohd06w.exe</Name>
+        <CRC>CEBA61BECB8EB5F59B7D059135F93B0F21BF4B830DC401CDF20E79DECC09213F</CRC>
+        <Size>3967480</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1ohd06w.txt</Name>
+        <CRC>A8AC94532DF86EF431CD0723C83A3316D3AA39139F4DB9B65D208D59821EFEAF</CRC>
+        <Size>7232</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Xm4mbnvL/ZmlHyuhwpqdAjJiPmQ=</DigestValue></Reference></SignedInfo><SignatureValue>IlVFiAQ0VtaxU3nMckYoLN1qTj52nB1npVAkeMjeRO+MwCbc+YpJH5kT5MLRzussUAVhv4WQK/wf0SmiaD6Z7bFh8a74YuUGx9pX0X/TML2R2lVJZQOSYqdnEqQQu4wpGH0W82BQ1V8nT9FKuQgTHOyYCdMnoK+LcQ57PbOXXlpsofMOXRsYKP92zpRTKhXGWSQz1/o2CyCjjiIN5Fc6Ca81XxF6ellLdj5j7AtjqZx68vKIKxxgazQcd23xe5PsbBT4C8dJby5ORXlb5gbTtpjzPTEZ/Huj+RTdUDwiyjzCCFBUt8NmXMWZXTD0aDEkG4xi4GMPz8HG/JMHGgQe+w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

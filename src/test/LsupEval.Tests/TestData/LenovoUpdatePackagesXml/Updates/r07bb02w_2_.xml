@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BCBT_R07B" id="r07bb02w" version="12.0.1.750" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Broadcom Bluetooth Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\bcbtums.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\bcbtums.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r07bb02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-12-30</ReleaseDate>
+  <DiskSpaceNeeded>245001962</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\bcbtums.sys</File>
+      <Version>12.0.1.410^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_640E]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r07bb02w.exe</Name>
+        <CRC>3E5F743DD4DD1CB4E40C5B0AA4AB75DF4A324522</CRC>
+        <Size>81616408</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r07bb02w.txt</Name>
+        <CRC>739D74F28541EBD335072720BE5EFAEDECDA7EC6</CRC>
+        <Size>6541</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WWAN_GRWP" id="grwp05ww" version="8.2.5.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Ericsson N5321gw/H5321gw/C5621gw Mobile Broadband Driver (Windows 10 Version 1607 or Later) - 10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{47786bea-6a7b-4d85-9b51-d1db1d022f0a}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{47786bea-6a7b-4d85-9b51-d1db1d022f0a}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>grwp05ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-05-12</ReleaseDate>
+  <DiskSpaceNeeded>4000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{47786bea-6a7b-4d85-9b51-d1db1d022f0a}</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>8.2.5.0^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0BDB&PID_193e]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDB&PID_193f]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0bdb&PID_1926]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0bdb&PID_1927]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDB&PID_1936]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDB&PID_1937]]></_PnPID>
+      </Or>
+      <Not>
+        <_ExternalDetection rc="0">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>grwp05ww.exe</Name>
+        <CRC>2AC6B072863EF265519F2F475697B2EA030DDEA58100204EBB6F68E78ACCFA25</CRC>
+        <Size>2503248</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>grwp05ww.txt</Name>
+        <CRC>4B90110A0083CBC6C27648F8B93CD4184FF3FCE5D056A8DBDF76709CD6A08E8F</CRC>
+        <Size>8676</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Y2E39elNJQbj6OfNksQxNGMrIKk=</DigestValue></Reference></SignedInfo><SignatureValue>d1uBgsAxAeJyOBRWurBK9FvDLt6BzQfoOtfJQnbZ6vhDgiTjGmqr6eUukWoUfz6Nm4t1/npRzPSQ8bn5pF6uzYMbZ2MOkrdljrfIjBHupBk9dJEs+PIlcltA742kMrf7Zl+n0FPMgQJoZijbi/RQDh97SRndluUSktpilXNaQWAW5QEuFIItBArjVQZ1GHJQtqkk9cfDMrR5Cn4akQMyPJizD0cvcvzgJDC/RKR6vh4nqDWgsVrMayg16OolpOqMRlYKWuaw5jKQUrHDzPQ22E1h8FVasto7dZAmrT0+sdJBYIrsQHWlhxfh3rJiWqlZ1xdk1iCCnoKApA449hdQFg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BLACKSILK_KYBEA2" id="l68ea2a4_a" version="1.6.13.0724" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Black Silk USB keyboard - 7 [32,64]/8.1[32,64]/10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B266E062-D6C5-485B-B426-51B152B041A6}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B266E062-D6C5-485B-B426-51B152B041A6}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B266E062-D6C5-485B-B426-51B152B041A6}</Key>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B266E062-D6C5-485B-B426-51B152B041A6}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>l68ea2a4_a.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-08-31</ReleaseDate>
+  <DiskSpaceNeeded>3776384</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B266E062-D6C5-485B-B426-51B152B041A6}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.6.13.0724^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B266E062-D6C5-485B-B426-51B152B041A6}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.6.13.0724^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[HID\VID_17EF&PID_602D]]></_PnPID>
+      </Or>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <_OS>
+          <OS>WIN81</OS>
+          <OS>WIN81-ENT</OS>
+          <OS>WIN81-PRO</OS>
+        </_OS>
+        <_OS>
+          <OS>WIN10</OS>
+          <OS>WIN10.*</OS>
+          <OS>WIN10-ENT</OS>
+          <OS>WIN10-ENT.*</OS>
+          <OS>WIN10-PRO</OS>
+          <OS>WIN10-PRO.*</OS>
+        </_OS>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>l68ea2a4_a.exe</Name>
+        <CRC>F7AE464D354D83A589B286F8209389C0D09C33DF</CRC>
+        <Size>1886816</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>l68ea2a4_a.txt</Name>
+        <CRC>0BA8AB42C60E8CF586615F2486BCD2E0361FBCEF</CRC>
+        <Size>1376</Size>
+      </File>
+    </Readme>
+    <AppIcon>
+      <File>
+        <Name>drivericon.png</Name>
+        <CRC>7EC2C0DE763C66C681583B38CD897DAD5709701B</CRC>
+        <Size>8415</Size>
+      </File>
+    </AppIcon>
+  </Files>
+</Package>

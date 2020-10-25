@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="EDGEUSBKB_L68E_1064" id="l68eg1a4" version="1.11" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Edge USB keyboard(Calc) Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{494D80C4-3557-4D73-A153-65FE4B3ECDC3}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{494D80C4-3557-4D73-A153-65FE4B3ECDC3}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>l68eg1a4.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-06</ReleaseDate>
+  <DiskSpaceNeeded>25000000</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s /v/qn</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{494D80C4-3557-4D73-A153-65FE4B3ECDC3}</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>1.11^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[HID\VID_17EF&PID_6018]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>l68eg1a4.exe</Name>
+        <CRC>E9D1EB922EEA43676C0E67BABECA8AFDDCB63728</CRC>
+        <Size>5353960</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>l68eg1a4.txt</Name>
+        <CRC>9CA2DD28B87579572DBC3E85C9B8E9CB64ED4C63</CRC>
+        <Size>1562</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="MONITOR_R05M1" id="r05m102w" version="6.1.0.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Monitor File - 7/8 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[MONITOR\LEN4090]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4094]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40A9]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40AA]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40A0]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40E6]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40BA]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40BD]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[MONITOR\LEN4090]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4094]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40A9]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40AA]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40A0]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40E6]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40BA]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40BD]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r05m102w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-10-30</ReleaseDate>
+  <DiskSpaceNeeded>632813</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0" type="inf" default="EN">
+    <INFCmd id="EN">
+      <INFfile>TPLCD.INF</INFfile>
+      <Mfg>%Lenovo%</Mfg>
+      <DeviceDesc>%TPWHD%</DeviceDesc>
+      <DeviceDesc>%TPWFHDF%</DeviceDesc>
+      <DeviceDesc>%TPWQHDF%</DeviceDesc>
+      <DeviceDesc>%TPWUHDF%</DeviceDesc>
+    </INFCmd>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[MONITOR\LEN4090]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4094]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40A9]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40AA]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40A0]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40E6]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40BA]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40BD]]></HardwareID>
+      <Date>2015-05-17</Date>
+      <Version>6.1.0.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[MONITOR\LEN4090]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4094]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40A9]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40AA]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40A0]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40E6]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40BA]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40BD]]></_PnPID>
+      </Or>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+          <OS>WIN8.*</OS>
+          <OS>WIN8-ENT.*</OS>
+          <OS>WIN8-PRO.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r05m102w.exe</Name>
+        <CRC>5006E9D5C4B61E13B87B9E91F39BF8AE8945627B4CA470174BEEB94EC3BE3CB0</CRC>
+        <Size>325368</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r05m102w.txt</Name>
+        <CRC>891261915B3EEC66F359DF0E44E74CAADA1D02B381E2D084723286FE3861005B</CRC>
+        <Size>6756</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>d+fyKdbQ7DB0AAA/pmnm8gXMgR0=</DigestValue></Reference></SignedInfo><SignatureValue>mr3BfKMxnCjRmJcLGRe0Qhj7/AF018/KPx1CC8FEa+7kmi/PVclsCRu26GzON2Yu/Qm6GTV5usQrIyqwXQ0eiyrln3z+XWsiFqZd18L2/EatReedzOSEVh9TjULu2kuMpVGl6fkDaoaAtKIWiH1dg1VkPCu/U0g0hBmUO3IgKG5SynXwsK8iPY+d1PuNSohG3Y32v4fy0VaJ+mKBD1MRog8BmDTDcsZJ/0KGT3JnLUnX9HH2wa2wwMcViIGvpkxFZb4+tGafs3svQZI5PwMxBh0UHdtvy+HtCNvEYxNZDnL3xNTvApDkfgBqh3lCQdYM4DomcXvVn2iLCmcdzKcdhw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

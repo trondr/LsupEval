@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="DPRF_N1OWD" id="n1owd05w" version="1.0.1.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Dynamic Power Reduction - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E5F18DBC-F1FC-4691-9105-D7B9FABA963D}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E5F18DBC-F1FC-4691-9105-D7B9FABA963D}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1owd05w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-03-01</ReleaseDate>
+  <DiskSpaceNeeded>2865024</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPR_Setup.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPR_Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{Dynamic Power Reduction Utility}_is1</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>1.0.1.1^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_1199&PID_9079]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1OET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1owd05w.exe</Name>
+        <CRC>E94C1905AD9572237B0A8BFA8E873A2EEAF2277A222BF408A98620EFA5B717A4</CRC>
+        <Size>1430936</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1owd05w.txt</Name>
+        <CRC>F55245638557317BF1EF29EABA955488B1F731180097A9DBD094DBA5FB1619F3</CRC>
+        <Size>6143</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>0oeyKMp4jgt++FPmJVm3mYeyxSg=</DigestValue></Reference></SignedInfo><SignatureValue>p+ooDo4hA4C4byXp7/54rIVTi5cOuJ1H4weHLs9kZecddPqiUppmSUZCIZARevTTK5y7Yb1tf+gfZNinqP08XmIu/qnLjiPk8VlCdvqD1IEbIuZFAz5e7x6Md2YotXK+gpbxkiWdIswqua3XMmiflLW5O/IG4ZO4/idDIgejlFU6cXde9BcTOFabNJHtDp69UiCcv3Iqz+v553aXFRcjKR+cVThjS5FJURJdpfD0ykuIrkqouxP97PCHmaXPuW5aiqOMuC69TkZQxf6zaSczC8yxP1Nc8MnC8LYsltlkK8VZ0fTom7l1X30RkrPqva0vlPWSwmk0GNCeruj8f5M+2Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAMERA_J2CA_AVC" id="u2cam05us14avc" version="10.0.10586.11203" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Camera Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\RtsUVC.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\RtsUVC.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u2cam05us14avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-09-05</ReleaseDate>
+  <DiskSpaceNeeded>65000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\RtsUVC.sys</File>
+      <Version>10.0.10586.11203^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_174F&PID_175D&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_0679&MI_00]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u2cam05us14avc.exe</Name>
+        <CRC>C07EAC110D90495A305FE72E15286BDE009EDB25</CRC>
+        <Size>12550272</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u2cam05us14avc.txt</Name>
+        <CRC>067E6BBDC6730AB07135DD6626E8B413BDC71F44</CRC>
+        <Size>3085</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

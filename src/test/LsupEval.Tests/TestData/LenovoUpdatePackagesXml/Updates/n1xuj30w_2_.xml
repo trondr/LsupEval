@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BIOS_N1XUJ_US" id="n1xuj30w" version="1.47" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad BIOS Update - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1xuj30w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-15</ReleaseDate>
+  <DiskSpaceNeeded>30989563</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\winuptp.exe -r</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Bios>
+        <Level>N1XET69*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>1.47^</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+      <_Bios>
+        <Level>N1XET0*</Level>
+        <Level>N1XET1*</Level>
+        <Level>N1XET2*</Level>
+        <Level>N1XET3*</Level>
+        <Level>N1XET4*</Level>
+        <Level>N1XET5*</Level>
+        <Level>N1XET61*</Level>
+        <Level>N1XET63*</Level>
+        <Level>N1XET64*</Level>
+        <Level>N1XET65*</Level>
+        <Level>N1XET66*</Level>
+        <Level>N1XET67*</Level>
+        <Level>N1XET68*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>^1.46</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1xuj30w.exe</Name>
+        <CRC>E49284E352096BB94A0CE21F490EDF769D1C1CC184BC4A398DC3A40B8A7EA2D1</CRC>
+        <Size>8777976</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1xuj30w.txt</Name>
+        <CRC>9BF57432F93CF26659971F586E9E1C0108C410E4E5F441FCF50EB3C7C31B77BC</CRC>
+        <Size>30473</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>qn2RPQqNLbDETOs3lcCePkCoVxY=</DigestValue></Reference></SignedInfo><SignatureValue>RoHanZO8NmjjzzRktOSXlU+7s9jWykHNb3Gig4KTujkukIgPZABOu3nmBLRbAlIGRLYrH0P5J0UGR+BGGllb0T13cL4Wu6vC+RwMq/KBx6uvpslhPozqn61i/5BIV5S9w10JoZVt2OTb8jnarAqq/sOoTBtweS3DwfA3OwmMi85EDvxP1TC3KnhGA8UYg4w8bwPNeIp7A9dzsrFm0NnjSIpK0DLOo9qGs+gBcNSHVpQJGZlU+JGot9EZpxzGYBeUWQwKJDVO3eElqFk8iNhvTKu4K+U+V8UhlTgk0NcC5HV2TttI/MjGOiRwIBx8udSSTPOigEcbZwwlXbZIjBPSew==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="NXP_NFC_N23WA_RS3" id="n23wa02w" version="12.0.2.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">NXP NFC Driver(Windows 10 Version 1709) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[ACPI\VEN_NXP&DEV_1001]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\VEN_NXP&DEV_1001]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n23wa02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-11-12</ReleaseDate>
+  <DiskSpaceNeeded>7111318</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1,256,1073741825,1073742080" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe /s /sa</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[ACPI\VEN_NXP&DEV_1001]]></HardwareID>
+      <Date>2017-10-06</Date>
+      <Version>12.0.2.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[ACPI\VEN_NXP&DEV_1001]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N23ET*</Level>
+      </_Bios>
+      <_ExternalDetection rc="3">%PACKAGEPATH%\getw10ver5.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n23wa02w.exe</Name>
+        <CRC>77CD4B7E6C306B651F7C5CA50DBF5FF12D9B68131398AA8E6DF4A72223A6F866</CRC>
+        <Size>1649120</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n23wa02w.txt</Name>
+        <CRC>BA455C32FC85EF559E15D31485616D95E9BB2D061146B67095940DFE1AE7A563</CRC>
+        <Size>7087</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver5.exe</Name>
+        <CRC>129F082A273AF100BBC6F50A5B825E921C715F2B5D5D354F064EE29FD1575E80</CRC>
+        <Size>159080</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>FJKIUVkePF2yhUdKEc+AvlibKsY=</DigestValue></Reference></SignedInfo><SignatureValue>l4lsearwzV3cs/wzKZD0BE3bAxgu0HhkD+Tf2tz/zKxkTkqX1qNxQ/CueIv5Fg8r1djLfJ9sT12G/0YgsW0whSz5LURhyeJcE7zFQCaCuMKBI6bk7H/mW12s0fr5Op5LqMr4Sr39MFJNa87Y9XgL+GJMs42jbdQmfsD5CLvkgnrTW4dv9vxrux75y0Krpsa/cwTpCtpMjfakvYn6BJrgl8+1KLdCdRBskPNUzC9sYnKvR74XwWZm/fQVzwY6OK1PzjNs0ABKRHNikldyIVU5W0C/yLxotzxlV7DTxguDnqhul89NrPVsJSm1/PkVW6zime8rqZUku4HLjcMDGe1RRg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

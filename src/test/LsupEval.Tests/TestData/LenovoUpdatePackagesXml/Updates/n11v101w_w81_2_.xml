@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="SCREADER_N11V_8164" id="n11v101w_w81" version="1.7.37.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Alcor Smart Card Reader Driver - 8.1 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84237}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84237}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n11v101w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-07-20</ReleaseDate>
+  <DiskSpaceNeeded>10259579</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84237}</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>1.7.37.0^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_058F&PID_9540]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n11v101w.exe</Name>
+        <CRC>66D6861FD74CF5DD38659E355C9C280A788238C5</CRC>
+        <Size>3834560</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n11v101w.txt</Name>
+        <CRC>228F99D5C68743957F92BD7CD2A7D18BD12E7D11</CRC>
+        <Size>7006</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

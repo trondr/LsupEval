@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WWAN_N19W_W7" id="n19wo03w" version="1.6.10513.4153" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Sierra EM7345 Wireless WAN Driver - 7 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\5F6DBA48903005740926E1E8D450DFF0\InstallProperties</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\5F6DBA48903005740926E1E8D450DFF0\InstallProperties</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n19wo03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2014-12-15</ReleaseDate>
+  <DiskSpaceNeeded>83000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">msiexec /i %PACKAGEPATH%\SierraEM7345.msi /quiet</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SierraEM7345.msi</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\S-1-5-18\Products\5F6DBA48903005740926E1E8D450DFF0\InstallProperties</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>1.6.10513.4153^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_1199&PID_A001]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n19wo03w.exe</Name>
+        <CRC>CD9BE99296A9323A27B37EC5F9F7B819191846F0</CRC>
+        <Size>40416184</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n19wo03w.txt</Name>
+        <CRC>B3831A302BF4EA9BDFE4A05C0A029F74B3290829</CRC>
+        <Size>11323</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

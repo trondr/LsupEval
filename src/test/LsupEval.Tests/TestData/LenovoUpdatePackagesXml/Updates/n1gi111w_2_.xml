@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IRST_N1GI1" id="n1gi111w" version="14.8.4.1046" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Rapid Storage Technology Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\iaStorA.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\iaStorA.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1gi111w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-08-09</ReleaseDate>
+  <DiskSpaceNeeded>5974303</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1073741825" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s /sa</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\iaStorA.sys</File>
+      <Version>14.8.4.1046^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D03]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1gi111w.exe</Name>
+        <CRC>A3E1451B9C6AA05BF72675B0BA89A1C94ACF98E1</CRC>
+        <Size>1683536</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1gi111w.txt</Name>
+        <CRC>6946FA15D0651594519A2F36E08977C1E20D97DF</CRC>
+        <Size>6844</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

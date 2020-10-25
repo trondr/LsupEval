@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="VDO_JHDK_W10" id="jhdk12ww" version="20.19.15.4549" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel HD Graphics Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_161E&SUBSYS_504517AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_161E&SUBSYS_504517AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jhdk12ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-12-29</ReleaseDate>
+  <DiskSpaceNeeded>679962309</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <PackageType type="2" />
+  <Install rc="0,14,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s -nosc -overwrite</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_161E&SUBSYS_504517AA]]></HardwareID>
+      <Date>2016-11-10</Date>
+      <Version>20.19.15.4549^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_161E&SUBSYS_504517AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>JHET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jhdk12ww.exe</Name>
+        <CRC>ED1BB15D2BC76CD5F24F8A624A84D074584EC208</CRC>
+        <Size>109389904</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jhdk12ww.txt</Name>
+        <CRC>C5075E769E8E100C1AA90B688BB16F0874F3176C</CRC>
+        <Size>9865</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>/34PfA98Mk1t/feFScQztTu7h+8=</DigestValue></Reference></SignedInfo><SignatureValue>f+GErNhSxlqdSS4rF0fMQKnlX+yK6thbQwXMGq2eQEHlHLo2HnhNeekNtnig7SKaqgF+K1imBHWM+I8gcg4BdG4I55iw08wcvGc2kVi9oFbJ2YNXbvDrpbYGlQ5zrOWg3GwpMr3WnGy6GD8pOOXCOiR9lEwjP0RU0Ur5POr3eBbmz2I7gYWVl07aNed/iIapLAQZmlXB+s6L5p3QdmK7uX5Jm5ctDsTveZgd3GB6uX8LHjWu1Cl083cm+OL3QhVY2/6syNg5d9DdqcQkhrJCP+AUwil7A61fwz/iWVnBhsP7ZEC3cjIaLLjHQkIyiwkF300KhWS1jGthYsWp291r+w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIE9jCCA96gAwIBAgIQVxYYDbfUmJ3EoXCD3Pp1ZzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxMDAuBgNVBAMTJ1N5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2lnbmluZyBDQTAeFw0xNTAxMTMwMDAwMDBaFw0xODAxMTIyMzU5NTlaMF4xCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBxMLTW9ycmlzdmlsbGUxDzANBgNVBAoUBkxFTk9WTzEPMA0GA1UEAxQGTEVOT1ZPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwVWMufFrSa68v9h+qMIEPTNZrZcxPzdiOoDfdTuX4A51yhSpbcySu9MbeXsu4Zg8f29nQMYnYsxSVfAUpaed3Sjjnff2k6/WHpSfoGzf5oDWrzY3Nss64VrE2/C3FZ0XVlp/xRAOO51MyRQ14Pz0KVOggw4LXgjQ8Tyy379Fi9CiDdBLmSFBt2rDoGVPfiiu0XPg6H6r/jw4U3sQ2iw1eyFWXa+tKqHm4uJKvWzWZWd5Wsls4iWx5RhHgT7+O3fLRc1FPf8oXl5QdVer/1UHGHN4wRbEJDDJWKhCUCbpzLxCkd1FIxMPQgojbiz9TkBBLi35zYzhHeRABHm1DX/BQIDAQABo4IBjTCCAYkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCB4AwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL3N2LnN5bWNiLmNvbS9zdi5jcmwwZgYDVR0gBF8wXTBbBgtghkgBhvhFAQcXAzBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTATBgNVHSUEDDAKBggrBgEFBQcDAzBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9zdi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zdi5zeW1jYi5jb20vc3YuY3J0MB8GA1UdIwQYMBaAFJY7U/B5M5evfYPvLivMyreGHnJmMB0GA1UdDgQWBBRSMmHtmvK1hUveuxeoJ/Jwj5J18jARBglghkgBhvhCAQEEBAMCBBAwFgYKKwYBBAGCNwIBGwQIMAYBAQABAf8wDQYJKoZIhvcNAQELBQADggEBAHW49q6GgSXkLVnqgvw2Zpsz7mqr3TOb9OXM4KOnGQWUpfYnT/HaJbHOpH46LlgOwBd9hVyOI5ON6S0JSe6gcp49NZ2aoYvyIqq+k6xsr0QxVqHzPD0gOotwWBXKhg0+CMyxIuKYAjXNxvnzBqeAmyRbZoGvFdPeqbGpm+kvS+MeMTdy8gmXMZCj9f2KhDNjm2gYjKAVEeyodrs/LqrYsAMB4+ie099pA5++gBM892Z4DEREh14Y1Ydv/sLsAtOrkNeGlRgnoTklzFVqaHHm55T/c6VzHjKabNHb/t8Wt3psevQUnN4KqxyHrk1oQp8V3wzJNNum4tA4+Dc5w9uUgRc=</X509Certificate></X509Data></KeyInfo></Signature></Package>

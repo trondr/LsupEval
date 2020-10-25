@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RTKCR_N17XS" id="n17xs02w" version="10.0.10125.21277" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Media Card Reader Driver - 10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\RtsPer.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n17xs02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-08-25</ReleaseDate>
+  <DiskSpaceNeeded>39000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\RtsPer.sys</File>
+      <Version>10.0.10125.21277^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5227]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n17xs02w.exe</Name>
+        <CRC>2D019E5E03A6E8F13873974C8B8F5911CEC587E2</CRC>
+        <Size>6347712</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n17xs02w.txt</Name>
+        <CRC>00781B5EC0E5992B5B88BA88470DF57E3992CE5D</CRC>
+        <Size>6092</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

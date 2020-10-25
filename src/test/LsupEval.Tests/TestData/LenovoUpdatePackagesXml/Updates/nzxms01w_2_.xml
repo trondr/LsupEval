@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IRST_ROLLBACK_NZXMS" id="nzxms01w" version="1.0.0.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Driver Rollback Tool for Intel NVMe SSD - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>nzxms01w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-03-26</ReleaseDate>
+  <DiskSpaceNeeded>733656</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="0" />
+  <Install rc="1,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\UpdateNVME.exe -n</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\UpdateNVME.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_F1A6]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\detectnvme.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>nzxms01w.exe</Name>
+        <CRC>CD6F6AB75FC3B1D7B768F642D91504C6C994588C8487317F534DB116A5A77B99</CRC>
+        <Size>387648</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>nzxms01w.txt</Name>
+        <CRC>0267D1082BE24DBD8E4058C4CA0ACC304536076A9DB9F996D567BD5AECBD62A9</CRC>
+        <Size>6002</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>detectnvme.exe</Name>
+        <CRC>61327558992254058F2F7663C40B86897B9AB555DA625D206D3660379003ADB8</CRC>
+        <Size>102184</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>p15HPOMpGUAuNZRme714OsLb5lc=</DigestValue></Reference></SignedInfo><SignatureValue>FEEYy5Mbsaz9eGLt+LatPbB/+bCT3gMB/xzzP5zWeHOcfISpx0gB+VTc//IDnYEcFfU/OB83au1Hc45KQ8dq6lntgWFzwCesN3DAMl10nna3fc3VK3ftArl+VCe6ip5ACtsYfNXCSTQWGF2PTa0icpA/SCUZbJRFg764Xmh1LNjjqIS4TDsJ15cYZF8hEL6QlEdtT/y8iQseRhsRnTfiNwAXyFpHdHMH3bFmTbLqOFlIxecNvGfHmBcdc2haUFRATt5juG4bOkJetAHIID0IrB3lsYkdoLq2M63wDONKNRfS16H95ENjCs1/l6wT6UoxfNm3ms3KsHGYxwvmusGBBQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

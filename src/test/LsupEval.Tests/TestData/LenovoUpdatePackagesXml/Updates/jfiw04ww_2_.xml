@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AHCI_JFIW_W10" id="jfiw04ww" version="14.5.0.1081" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel SATA Controller AHCI Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\DRIVERS\iaStorA.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\DRIVERS\iaStorA.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jfiw04ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-30</ReleaseDate>
+  <DiskSpaceNeeded>2435102</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="inf" default="EN">
+    <INFCmd id="EN">
+      <INFfile>iaAHCIC.inf</INFfile>
+      <Mfg>%INTEL%</Mfg>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C02&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C03&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C82&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C83&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C02&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C03&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C82&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C83&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9D03&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_A102&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_A103&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8D02&amp;CC_0106.DeviceDesc%</DeviceDesc>
+    </INFCmd>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\DRIVERS\iaStorA.sys</File>
+      <Version>14.5.0.1081^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C83]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jfiw04ww.exe</Name>
+        <CRC>28FE4422583BE0F3B905640B62FCD1C53D8D4E20</CRC>
+        <Size>787080</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jfiw04ww.txt</Name>
+        <CRC>E0AD81FD480C87C2506E25C6F32EE5336E4D96A1</CRC>
+        <Size>6320</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

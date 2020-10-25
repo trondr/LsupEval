@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FW_USI_PTN" id="usi002_ptn3392_f4" version="1.43" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Basic Dock PTN Firmware - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>usi002_ptn3392_f4.exe /VERYSILENT /DIR=%PACKAGEPATH%</ExtractCommand>
+  <ReleaseDate>2015-08-31</ReleaseDate>
+  <DiskSpaceNeeded>2775568</DiskSpaceNeeded>
+  <Reboot type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /verysilent</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_1013]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\chk_ver.exe /hwid F4_PTN3392</_ExternalDetection>
+      <Or>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>usi002_ptn3392_f4.exe</Name>
+        <CRC>F620D819DBEDB481730609F478B43616E2B51A43</CRC>
+        <Size>1392880</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>usi002_ptn3392_f4.txt</Name>
+        <CRC>75B25E3FF6577E58C58A428EDC447502D87CE74A</CRC>
+        <Size>7125</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>chk_ver.exe</Name>
+        <CRC>7BA98B702EE95F7057CDFA045DF4F7FF6D8125D1</CRC>
+        <Size>198976</Size>
+      </File>
+    </External>
+  </Files>
+</Package>

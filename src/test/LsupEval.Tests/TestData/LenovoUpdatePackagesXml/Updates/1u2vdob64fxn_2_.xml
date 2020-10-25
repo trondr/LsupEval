@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="VGA_1U2VDO_FXN" id="1u2vdob64fxn" version="27.20.1020.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD Discrete Graphics Driver (Windows 10 Version 2004) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_1002&DEV_6981]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_1002&DEV_6981]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>1u2vdob64fxn.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-08-07</ReleaseDate>
+  <DiskSpaceNeeded>1708157840</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_1002&DEV_6981]]></HardwareID>
+      <Date>2020-05-19</Date>
+      <Version>27.20.1020.1^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6981]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>S03KT*</Level>
+        <Level>S04KT*</Level>
+        <Level>S05KT*</Level>
+        <Level>*</Level>
+      </_Bios>
+      <_ExternalDetection rc="8">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>1u2vdob64fxn.exe</Name>
+        <CRC>AB89A586435C897C59BF052F016B859558B7CCDBA9FE18A135DDDA0671384824</CRC>
+        <Size>446089536</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>1u2vdob64fxn.txt</Name>
+        <CRC>DB6DC4B95958A70E343D13194B256A4FFDC4B7622D8834B4602F13FEF7F014AA</CRC>
+        <Size>4887</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>5uvprJZo7dyzdj3dV/4oYjFd5jk=</DigestValue></Reference></SignedInfo><SignatureValue>QvBsTTLaL5Zp6/K9FgFnifB6u8gGVQMeyW9HMRhf8PAMas/7N4ihB/TD9vsdlMhsbgUv8GWT4PfC5cYBQ0uaQSf7lcu2GHigO04mkgq0jZ5IpCaIm6k2JfMW5asWxir+BqnZz6/74cDK5Y8Re26yELG9Mpw1R+5o6f7k2EHUW930tK8hcEDmeHFDv15RZQyz/zzL+4BOwp5JPilJIEh27kEUkVcnNi4P58wFklJu09Y8MF66K1J+7FqsOWBtPxcRCs/OBe+Lx3+ihf9FZAxI6REZK7rYLixjksnjcGxZTXPahXv88RxnHjCBxt/JhBdB+gr/XfZKjfkwge6ojxcGLQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

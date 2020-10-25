@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IME_R0LMK" id="r0lmk13w" version="1952.14.0.1470" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Management Engine Interface Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_506517AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_506517AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0lmk13w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-06-10</ReleaseDate>
+  <DiskSpaceNeeded>155892246</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,14,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_506517AA]]></HardwareID>
+      <Date>2019-12-25</Date>
+      <Version>1952.14.0.1470^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_506517AA]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_OS>
+          <OS>WIN81</OS>
+          <OS>WIN81-ENT</OS>
+          <OS>WIN81-PRO</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+          <Not>
+            <_ExternalDetection rc="0">%PACKAGEPATH%getw10ver8.exe</_ExternalDetection>
+          </Not>
+          <Or>
+            <_RegistryKeyValue type="REG_SZ">
+              <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_for_RollupFix~31bf3856ad364e35~amd64~~18362.175.1.6</Key>
+              <KeyName>InstallName</KeyName>
+              <Version>Package_for_RollupFix~31bf3856ad364e35~amd64~~18362.175.1.6.mum</Version>
+            </_RegistryKeyValue>
+            <Not>
+              <_ExternalDetection rc="6">%PACKAGEPATH%getw10ver8.exe</_ExternalDetection>
+            </Not>
+          </Or>
+        </And>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0KET*</Level>
+        <Level>R0LET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0lmk13w.exe</Name>
+        <CRC>2BFC0790935CE715F3966A45B2CB685A5E102F896EBFEAD65F6FC71A2D6710A8</CRC>
+        <Size>38489920</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0lmk13w.txt</Name>
+        <CRC>A832612DC0ED663C2A63A11E70D47A307A03B3FE7F962E0D2FBB54D749E2495D</CRC>
+        <Size>7674</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>gM4I8GwoicsnHRGbt3xD3nsipTg=</DigestValue></Reference></SignedInfo><SignatureValue>aEiBJY+JDWOweGLVnPZW9fT3ABanepyyOQMx/HwcutR6QM0Sv1ZMMK3Z5KYnaorPud2W72+AVIL81OzD1UDLZs1/ukN2ruhX4PhOzdvbjADt07PwZJaVxwVpP41QCD6D0yWplSp9yb0BvhiL4SKBsWya1mqshf2Pf4c2uz7fa910tBAA3vnYt8UbGDx/yoQSgSlGKrmpIxIFe1JoTXSSwH+JceKgxR1F9W+6xqfq9uSNMBi5WRYC4rJZUcaxuA9Cs3ro4T/JCLG/NIa7P9081P+qA45vheOhxRBG50W75vusxXf/fzVvp4F7wSXnK+jMf1elG/rmRiYzbKJ2+SJWJQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

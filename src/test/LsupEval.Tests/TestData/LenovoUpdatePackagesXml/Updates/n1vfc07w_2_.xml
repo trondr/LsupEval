@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_CAMERA_N1VFC" id="n1vfc07w" version="0024" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated IR Camera Device Firmware for Chicony/CKFGE14 - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf" show="False">
+    <_PnPID><![CDATA[USB\VID_04F2&PID_B5AC&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1vfc07w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-10-25</ReleaseDate>
+  <DiskSpaceNeeded>4241235</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\FWUpdate.exe /forcerestart</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_ExternalDetection rc="0">n1vfc07w_version.exe /versiontable n1vfc07w_spcfwversions.config</_ExternalDetection>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_04F2&PID_B5AC&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1vfc07w.exe</Name>
+        <CRC>B56BC30C93FF23CF2913B2F537A890D82EEFE5E62F4048D3FFB66BCDEBE34D53</CRC>
+        <Size>1189144</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1vfc07w.txt</Name>
+        <CRC>AFA1472276E0392420599A6044BC09D2557697C16A31B67072E008777F2B0AAF</CRC>
+        <Size>5868</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>n1vfc07w_spcfwversions.config</Name>
+        <CRC>D7375A697B306924D822DD3B14C6B468D00CF62CD8BDE2D5079803A3CF354584</CRC>
+        <Size>332</Size>
+      </File>
+      <File>
+        <Name>n1vfc07w_version.exe</Name>
+        <CRC>2AC2EEA91DFC755AB5BAFB330EA8506ECDCCFDF8831DB17C4267313BBEC87185</CRC>
+        <Size>329000</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>2BA+YkVYyJqDBJH7Zc0+ZfO54oo=</DigestValue></Reference></SignedInfo><SignatureValue>YHADfUQh1OAT7Tu18qUHNF5d48Lwl2ZrV9iM1Su9/OyODLrMh6hN5PYImTTuTJrOu3xiQ0Y8Y8DfuR0doYls2LvuHS02hM0I1xdUrwprLprrYgzTry7eh5L//kiGjLgd1WwI/4+tXZ1VUrREibe8AmFF/t5sUjv5FLU3gE14njuL4k3EI8cuH/H571iDxEzCT0eKAbtRZr7OkfdEY8H3QPm2Iku/lg7ZYXjhyajj88bGNC0IkuHcYoVaZdjDVk3rdfvFfHuoHJteiXpAVlzPDV2VNpSgp+Vdz0M6eTXjDtlWKdih+H4TlNiV4ANwyz9sQzRTFSZh9H8toPERWzZB2Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

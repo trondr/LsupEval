@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="ACPI_u1ac_1064" id="u1acpd1us14" version="1.0.0.8" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo ACPI Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\wow6432node\Microsoft\Windows\CurrentVersion\Uninstall\{C5C91B7B-38A6-40B7-84D6-E44885E44B13}_is1</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\wow6432node\Microsoft\Windows\CurrentVersion\Uninstall\{C5C91B7B-38A6-40B7-84D6-E44885E44B13}_is1</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1acpd1us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-09</ReleaseDate>
+  <DiskSpaceNeeded>2000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="1" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\LBAIWWA03.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\LBAIWWA03.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\wow6432node\Microsoft\Windows\CurrentVersion\Uninstall\{C5C91B7B-38A6-40B7-84D6-E44885E44B13}_is1</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>1.0.0.9^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[ACPI\LEN4001]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\LBA0001]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1acpd1us14.exe</Name>
+        <CRC>8B37E54110571F0CB9221FB682E4602FD5B22117</CRC>
+        <Size>902704</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1acpd1us14.txt</Name>
+        <CRC>B5C12C31546CEA3A1AB461CBC5EC005F7F217854</CRC>
+        <Size>247</Size>
+      </File>
+    </Readme>
+    <AppIcon>
+      <File>
+        <Name>drivericon.png</Name>
+        <CRC>7EC2C0DE763C66C681583B38CD897DAD5709701B</CRC>
+        <Size>8415</Size>
+      </File>
+    </AppIcon>
+  </Files>
+</Package>

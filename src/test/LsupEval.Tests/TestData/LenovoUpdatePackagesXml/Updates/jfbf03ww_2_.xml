@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INT_BT_JFBF_W10" id="jfbf03ww" version="17.1.1525.1443" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Bluetooth Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\DRIVERS\ibtusb.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\DRIVERS\ibtusb.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jfbf03ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-30</ReleaseDate>
+  <DiskSpaceNeeded>553446329</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win10\setup.exe /qn</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win10\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\DRIVERS\ibtusb.sys</File>
+      <Version>17.1.1525.1443^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0A2A]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jfbf03ww.exe</Name>
+        <CRC>3D941D5C056CF9A38D2F87449A071AA783D16D34</CRC>
+        <Size>77202360</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jfbf03ww.txt</Name>
+        <CRC>ADBE8CB759C67D05227E19C1BE5949EBF152453B</CRC>
+        <Size>6907</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

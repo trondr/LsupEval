@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="ISIO_N1WLI" id="n1wli08w" version="30.100.1823.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Serial IO Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf" show="False">
+    <_PnPID><![CDATA[ACPI\VEN_INT&DEV_344B]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D60&SUBSYS_224B17AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <And>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D60&SUBSYS_224B17AA]]></HardwareID>
+          <Version>0.1^</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[ACPI\VEN_INT&DEV_344B]]></HardwareID>
+          <Version>0.1^</Version>
+        </_Driver>
+      </And>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1wli08w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-08-07</ReleaseDate>
+  <DiskSpaceNeeded>3191443</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n1wli08w.exe /verysilent /DIR=%PACKAGEPATH%\tmp</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n1wli08w.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D60&SUBSYS_224B17AA]]></HardwareID>
+        <Date>2018-06-05</Date>
+        <Version>30.100.1823.1^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\VEN_INT&DEV_344B]]></HardwareID>
+        <Date>2018-06-05</Date>
+        <Version>30.100.1823.1^</Version>
+      </_Driver>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[ACPI\VEN_INT&DEV_344B]]></_PnPID>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D60&SUBSYS_224B17AA]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1WET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1wli08w.exe</Name>
+        <CRC>EEA79CB8F78513E7B62D6B1B1F404EDF4B04CADED06ED24D45DA652D5D377688</CRC>
+        <Size>1267568</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1wli08w.txt</Name>
+        <CRC>18F060D3595301F918D31A4A1E05CBABEC8AE9D139B0BD772F3768D41B84238C</CRC>
+        <Size>7796</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>cy9U1D8SGkCLEO/sG5qpDTey4oA=</DigestValue></Reference></SignedInfo><SignatureValue>SUwh17ZLuadA3jVV9vd89t3k/UrQRAWD9XyXGgGPgudiPxhrcyQIC3kvEi/iv0QMwGnIvRBQC/7OCXgixqBQfp1+h1nB1T9W/wfvuShPW1WGMVgAzEvUVRc/CJffLxDU2k9b8c5VkzKC/DI3PVkKlxZeXwIKIarUClEiQfjQeNRr+N+KchYUARHtWw5Xlds2setwgJntRb+C9k5ZfAnMMW6z7aE/J3QhmCT7CWcytNh+Mme6al32yTALHLGqnjna8FxA4r56W/+jdmxUG0GkaavRsfp7EH9iNeExvPNcRcu96SHy5XUx8ei5Llqo/Hj95DYESG5pk8xg98a4l2J3yA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WLAN_J3W12_AVC_1064" id="j3wlg24us17avc" version="12.0.0.448" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ILiteon NFA 435A/344A WiFi Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA&REV_32]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&CC_028000]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&CC_0280]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA&REV_31]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&CC_028000]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&CC_0280]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA&REV_32]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&CC_028000]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&CC_0280]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA&REV_31]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&CC_028000]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&CC_0280]]></HardwareID>
+        <Version>0.01^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>j3wlg24us17avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2017-12-13</ReleaseDate>
+  <DiskSpaceNeeded>71300000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA&REV_32]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&CC_028000]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_003E&CC_0280]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA&REV_31]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&CC_028000]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_168C&DEV_0042&CC_0280]]></HardwareID>
+      <Date>2017-11-01</Date>
+      <Version>12.0.0.448^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&SUBSYS_082717AA&REV_32]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&CC_028000]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_003E&CC_0280]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&SUBSYS_090117AA&REV_31]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&CC_028000]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_168C&DEV_0042&CC_0280]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>j3wlg24us17avc.exe</Name>
+        <CRC>AD371EB57C81811DE703C946FF44A2F626EDF14AE1A3FAF6FB9A59A4DA77DB1C</CRC>
+        <Size>30934848</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>j3wlg24us17avc.txt</Name>
+        <CRC>CB5E45E0742C49EE301BB54614AA71F135DF16295C6738D00F3EDB52F00D778A</CRC>
+        <Size>4242</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>xzLzgoYAkXQDhQQOORDdW/Wh6RI=</DigestValue></Reference></SignedInfo><SignatureValue>bVxI+qaRl1Gknw5kYeIzE9du/BMWK7B3JwNg4QRFK+ZFcRULpApM+r8VS8J/xgB0Kpz6LApNHlp7HMPHb7sxFYeQ/eQ8OLe+j/9sIKhbnQy07/jyWllUjjARNFtYTnSqMY3G2MUOweURyFmz3MJUrCPEyaMurY1ahsnL20a16vsKMW+iW4R4Ur/CQXH40UennKXYzu8w+funqF7nyPhonob1SPipesXATDLiE8jJ53rjB2wkcuXOoJkTKjylw2bRNXJ4BS4SEGAgDKYI5AAXlh7zWHceQE0BrjNwFY3iYENZs7hoSBGVO3KwvXzhRd0zoiT8d4ImoE304xttb/e2lA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIE9jCCA96gAwIBAgIQVxYYDbfUmJ3EoXCD3Pp1ZzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxMDAuBgNVBAMTJ1N5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2lnbmluZyBDQTAeFw0xNTAxMTMwMDAwMDBaFw0xODAxMTIyMzU5NTlaMF4xCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBxMLTW9ycmlzdmlsbGUxDzANBgNVBAoUBkxFTk9WTzEPMA0GA1UEAxQGTEVOT1ZPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwVWMufFrSa68v9h+qMIEPTNZrZcxPzdiOoDfdTuX4A51yhSpbcySu9MbeXsu4Zg8f29nQMYnYsxSVfAUpaed3Sjjnff2k6/WHpSfoGzf5oDWrzY3Nss64VrE2/C3FZ0XVlp/xRAOO51MyRQ14Pz0KVOggw4LXgjQ8Tyy379Fi9CiDdBLmSFBt2rDoGVPfiiu0XPg6H6r/jw4U3sQ2iw1eyFWXa+tKqHm4uJKvWzWZWd5Wsls4iWx5RhHgT7+O3fLRc1FPf8oXl5QdVer/1UHGHN4wRbEJDDJWKhCUCbpzLxCkd1FIxMPQgojbiz9TkBBLi35zYzhHeRABHm1DX/BQIDAQABo4IBjTCCAYkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCB4AwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL3N2LnN5bWNiLmNvbS9zdi5jcmwwZgYDVR0gBF8wXTBbBgtghkgBhvhFAQcXAzBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTATBgNVHSUEDDAKBggrBgEFBQcDAzBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9zdi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zdi5zeW1jYi5jb20vc3YuY3J0MB8GA1UdIwQYMBaAFJY7U/B5M5evfYPvLivMyreGHnJmMB0GA1UdDgQWBBRSMmHtmvK1hUveuxeoJ/Jwj5J18jARBglghkgBhvhCAQEEBAMCBBAwFgYKKwYBBAGCNwIBGwQIMAYBAQABAf8wDQYJKoZIhvcNAQELBQADggEBAHW49q6GgSXkLVnqgvw2Zpsz7mqr3TOb9OXM4KOnGQWUpfYnT/HaJbHOpH46LlgOwBd9hVyOI5ON6S0JSe6gcp49NZ2aoYvyIqq+k6xsr0QxVqHzPD0gOotwWBXKhg0+CMyxIuKYAjXNxvnzBqeAmyRbZoGvFdPeqbGpm+kvS+MeMTdy8gmXMZCj9f2KhDNjm2gYjKAVEeyodrs/LqrYsAMB4+ie099pA5++gBM892Z4DEREh14Y1Ydv/sLsAtOrkNeGlRgnoTklzFVqaHHm55T/c6VzHjKabNHb/t8Wt3psevQUnN4KqxyHrk1oQp8V3wzJNNum4tA4+Dc5w9uUgRc=</X509Certificate></X509Data></KeyInfo></Signature></Package>

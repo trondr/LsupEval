@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CARDREADER_N19X_8164" id="n19xa03w" version="6.3.9600.21260" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek RTS5227 Card Reader Driver - 8.1 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5BC2B5AB-80DE-4E83-B8CF-426902051D0A}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5BC2B5AB-80DE-4E83-B8CF-426902051D0A}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n19xa03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2014-12-15</ReleaseDate>
+  <DiskSpaceNeeded>33000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5BC2B5AB-80DE-4E83-B8CF-426902051D0A}</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>6.3.9600.21260^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5227]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n19xa03w.exe</Name>
+        <CRC>C30A864F6B41EBBFDF7F3A198812624E55830A08</CRC>
+        <Size>5192824</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n19xa03w.txt</Name>
+        <CRC>0E43AB30A13FFA3D6ADA64D2800EAC6211B53DA4</CRC>
+        <Size>7485</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

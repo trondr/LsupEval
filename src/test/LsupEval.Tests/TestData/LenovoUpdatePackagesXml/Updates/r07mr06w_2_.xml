@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CARDREADER_R07MR" id="r07mr06w" version="10.0.14393.21295" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek PCIE Card Reader Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505117AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505617AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505617AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r07mr06w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-03</ReleaseDate>
+  <DiskSpaceNeeded>43183728</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /q /se</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505117AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505617AA]]></HardwareID>
+      <Date>2017-01-06</Date>
+      <Version>10.0.14393.21295^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505117AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_505617AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R08ET*</Level>
+        <Level>R07ET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r07mr06w.exe</Name>
+        <CRC>52F558A1425C8800D1C3743CD1B2C29063B9E4225C37202801CB041FA8A34DA0</CRC>
+        <Size>2861000</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r07mr06w.txt</Name>
+        <CRC>25E64743B054E7E31036047F429D1E816ABB0FA0306099998F298845D408116C</CRC>
+        <Size>8431</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>DZGbXwsQ2os2Ge0b+mMJIezX738=</DigestValue></Reference></SignedInfo><SignatureValue>NOzn5G4ANDcWj5SSZrxb0BdbfU3tm7eJZYFCbFLBWQXWE27b7oahf7u726jiiFZ0PhGk6uHlKICpUBXaeC+qppaqZqtB58Qzji9XWn0AnLuSLKsFnehsl6Bh+X/34xf5ZNmTqpoHA0sOW5NteVbCuihjqOk45YDh6/R/fDX6DFdAzltFz4PwtHZi2Oy0pAagjHIsfig2sqJe3ZGFzhjWxX2feBgjMJQNv40BS0zJAFRjPC29TKE7pEcaSp8KaHuQ0AGwtOMzh+VZFY831ewHeX11JG7jqOuI7fscSQ3VhJbw+ZTk7CnHZKykvk8aD1+z1DqfHBo+ZV0oVjOkSuJZQQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

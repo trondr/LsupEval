@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="SIO_U1SIO_AVC" id="u1sio03us14avc" version="30.63.1519.7" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel SIO Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\iaLPSS2_UART2.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\iaLPSS2_UART2.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1sio03us14avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-06</ReleaseDate>
+  <DiskSpaceNeeded>8995744</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1,3010,1641" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupSerialIO.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupSerialIO.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\drivers\iaLPSS2_UART2.sys</File>
+        <Version>30.63.1519.7^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A127]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\INT345D]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1sio03us14avc.exe</Name>
+        <CRC>812F1AF1AF6775B7C99B8A24DEDAD5813BD88FD8</CRC>
+        <Size>4453776</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1sio03us14avc.txt</Name>
+        <CRC>111DF45079CE64576B2ECB925C8C43AF8ECA131C</CRC>
+        <Size>44096</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

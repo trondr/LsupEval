@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BIOS_R0LUJ" id="r0luj18ww" version="1.19" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad BIOS Update - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0luj18ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-12-03</ReleaseDate>
+  <DiskSpaceNeeded>30034361</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\winuptp.exe -r</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Bios>
+        <Level>R0LET34*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>1.05^</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>R0LET33*</Level>
+        <Level>R0LET32*</Level>
+        <Level>R0LET31*</Level>
+        <Level>R0LET30*</Level>
+        <Level>R0LET29*</Level>
+        <Level>R0LET28*</Level>
+        <Level>R0LET27*</Level>
+        <Level>R0LET26*</Level>
+        <Level>R0LET25*</Level>
+        <Level>R0LET24*</Level>
+        <Level>R0LET23*</Level>
+        <Level>R0LET22*</Level>
+        <Level>R0LET21*</Level>
+        <Level>R0LET20*</Level>
+        <Level>R0LET19*</Level>
+        <Level>R0LET18*</Level>
+        <Level>R0LET17*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>^1.04</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0luj18ww.exe</Name>
+        <CRC>4CD614415415657FDE973BE01A832416F648E5813CC59D662567E88F677D614B</CRC>
+        <Size>8371328</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0luj18ww.txt</Name>
+        <CRC>7710AD5F06AF160A5C03A6161E85CBE18201F9E94FCEF38B497A981BCE92A290</CRC>
+        <Size>11593</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>K+Wx97zHtC/cR+gIZteedkeKv8M=</DigestValue></Reference></SignedInfo><SignatureValue>iypl5FWTbBHhe9h/TdjWYHDC9xhasVbQZ+FNJ9CiY2eXm9xTiT/YWQmndp8mDXXzivBNjHDr6ADU9pPI4Y100ORExnjLUdvVz4Ss1oxn3BMgx3PHlluYYevkIgD8mQCCmDt65D1jFRpBrVUhY3nPj1itO6V9a3Y0JGR/6bvPtMFZho4L9vQofmHURHtNF121nOiU1HY+ltyYisDH662fkcLKRvYHQpmTzGkMCqZLfYjeemwKI1Mqu+0br7tybPtd5VPLmutyXb1bHIrZmg7nzMP3V13sLB9Mf3f8O6GQKh+ImeYURVsnKsF7dzd7EBhBl1uU1O+y9PsJXanSh+rxlA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

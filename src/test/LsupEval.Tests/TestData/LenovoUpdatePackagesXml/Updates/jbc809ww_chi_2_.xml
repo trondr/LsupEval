@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAMERA_JBC8_CHI" id="jbc809ww_chi" version="10.0.10586.11183" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated Camera Driver for Chicony - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E399A5B3-ED53-4DEA-AF04-8011E1EB1EAC}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E399A5B3-ED53-4DEA-AF04-8011E1EB1EAC}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jbc809ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-04-29</ReleaseDate>
+  <DiskSpaceNeeded>67665920</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Chicony\10.0.10586.11183\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Chicony\10.0.10586.11183\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E399A5B3-ED53-4DEA-AF04-8011E1EB1EAC}</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>10.0.10586.11183^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B449]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jbc809ww.exe</Name>
+        <CRC>AC4F6BEE75E522A242A6258DFDE937C05A3B99FF</CRC>
+        <Size>17098112</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jbc809ww.txt</Name>
+        <CRC>FC255965DC51CE00621213DEFD51DB3E2118AC2C</CRC>
+        <Size>8051</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

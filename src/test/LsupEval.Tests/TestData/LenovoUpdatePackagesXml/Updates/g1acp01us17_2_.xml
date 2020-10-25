@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="G1ACP01US17" id="g1acp01us17" version="1.0.0.9" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo ACPI - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C5C91B7B-38A6-40B7-84D6-E44885E44B13}_is1</Key>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\wow6432node\Microsoft\Windows\CurrentVersion\Uninstall\{C5C91B7B-38A6-40B7-84D6-E44885E44B13}_is1</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>g1acp01us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-01-06</ReleaseDate>
+  <DiskSpaceNeeded>5000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010,1641" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\LBAIWWA05.exe /SP /VERYSILENT /NORESTART /SUPPRESSMSGBOXES</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\LBAIWWA05.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\wow6432node\Microsoft\Windows\CurrentVersion\Uninstall\{C5C91B7B-38A6-40B7-84D6-E44885E44B13}_is1</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.0.0.9^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C5C91B7B-38A6-40B7-84D6-E44885E44B13}_is1</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.0.0.9^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+          <_OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+        </And>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[ACPI\LEN4001]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\LBA0001]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>g1acp01us17.exe</Name>
+        <CRC>607C7B4FEF83F58724A777A8C073BE54CDC37A5C</CRC>
+        <Size>913144</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>g1acp01us17.txt</Name>
+        <CRC>F1FB4E47EBB1F6B4552A29F49679EEB5EB91A722</CRC>
+        <Size>1463</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

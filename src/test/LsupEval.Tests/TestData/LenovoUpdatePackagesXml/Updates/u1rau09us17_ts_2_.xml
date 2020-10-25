@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="TS_U1RAU_P3_W10" id="u1rau09us17_ts" version="14.5.0.1081" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel RST Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\IRST</Key>
+      <ValueName>Version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\IRST</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1rau09us17_ts.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-15</ReleaseDate>
+  <DiskSpaceNeeded>29588060</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010,1641" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupRST.exe -s -notray</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupRST.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\IRST</Key>
+      <KeyName>Version</KeyName>
+      <Version>14.5.0.1081^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C02&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C03&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C82&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C83&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C02&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C03&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C82&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C83&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D03&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A103&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8D02&CC_0106]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1rau09us17_ts.exe</Name>
+        <CRC>1A7284EDA3DDA741DE564476F5CFA2F1EE29ECDD</CRC>
+        <Size>11830784</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1rau09us17_ts.txt</Name>
+        <CRC>1B5470BD309B25A333125E314FC651BA7001C58F</CRC>
+        <Size>70716</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RTK_BT_U4BL" id="u4blt04us17_rtl64" version="1.3.868.3" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek BT - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\System32\drivers\RtkBtfilter.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\System32\drivers\RtkBtfilter.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u4blt04us17_rtl64.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-16</ReleaseDate>
+  <DiskSpaceNeeded>23339062</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1073807364" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%Windows%\System32\drivers\RtkBtfilter.sys</File>
+        <Version>1.3.868.3^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0821]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_B728]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_8A61]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u4blt04us17_rtl64.exe</Name>
+        <CRC>ED93D7183F23A401BABE88EA70DF464FE4219792</CRC>
+        <Size>11666088</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u4blt04us17_rtl64.txt</Name>
+        <CRC>AD8109F6DBE3DC4C2512EC8C9FDFD78370AEBD19</CRC>
+        <Size>3443</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BOIS_S06JY" id="s06jy55usa" version="S06KT55A" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Flash BIOS Updates for ThinkStation P320 - 7/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>s06jy55usa.exe  /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-10-16</ReleaseDate>
+  <DiskSpaceNeeded>15000000</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="3" />
+  <Install rc="0,1073807364" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Flash.cmd /quiet</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Bios>
+        <Level>S06KT55*</Level>
+      </_Bios>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_Bios>
+        <Level>S06KT1*</Level>
+        <Level>S06KT2*</Level>
+        <Level>S06KT3*</Level>
+        <Level>S06KT4*</Level>
+        <Level>S06KT50*</Level>
+        <Level>S06KT51*</Level>
+        <Level>S06KT52*</Level>
+        <Level>S06KT53*</Level>
+        <Level>S06KT54*</Level>
+      </_Bios>
+      <Or>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_114_for_KB3033929~31bf3856ad364e35~amd64~~6.1.1.1</Key>
+          </_RegistryKey>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>s06jy55usa.exe</Name>
+        <CRC>D13321A2CF5D99033E1077A67953EF6C5D12C6169077B2E8889433F32E5D9533</CRC>
+        <Size>6576976</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>s06jy55usa.txt</Name>
+        <CRC>7B99F4C47E41640B6A0E2740A498877D14A326D75E2858B7875231533092D30C</CRC>
+        <Size>13032</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>yBdWwLovDdwcb31FIhIvlz5rPNw=</DigestValue></Reference></SignedInfo><SignatureValue>mqyU7ANp4Y8XwZQpR8tL0c26PiRJvjHyrztovtZxj0K2lRu66X81wh9tG4VVEjsjQaY53qSsNVV83W913wUfIvHl42er9H7H/Zm3iy8zqie7MuFd5meammirRvwS3lG3MVZmadrZ/wV38Nb9R2X+zxKxnAYs8THShx+RFSpJkaCuLv0zMo0rRTaNhnqM+HMQRf0t4kQSP1QtYihOLWxdFOkWMa4WoheBGZuTAj0pA9kPuUywuSBr3c8lErLatE5/ObzSFEL//Em2FUHLcucVHsOVY6OD7Kr9fXldxgVd+XBw/4psPGvag03H4o0mgh2PAeSLoz7mJnypr2z+fIQRNQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

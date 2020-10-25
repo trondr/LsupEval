@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<fwutil>
+<!-- This part is for FW utility software specific usage, please do not change this version -->
+	<config version="1.0.0.0" />
+
+<!-- The sample below is taken from Camera FW versioning -->
+	<devices>
+		<device>
+			<!-- Format: <INTERFACE>\<VENDOR DEVICE ID>.-->
+			<hw_id>USB\VID_5986_PID_113D</hw_id>
+			<fwversions>
+				<!-- Add more fw version here if more than 1 fws has already been released to public.-->
+				<!-- New FW version should not be listed in this file.-->
+				<version>5461</version>
+				<version>5464</version>
+                                <version>5466</version>
+				<version>5467</version>
+			</fwversions>
+		</device>
+	</devices>
+</fwutil>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RTK_ETN12" id="u4etn12us14" version="10.1.505.2015" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Lan Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\RT640x64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\RT640x64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u4etn12us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-10-14</ReleaseDate>
+  <DiskSpaceNeeded>12517868</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\drivers\RT640x64.sys</File>
+        <Version>10.1.505.2015^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_8168]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u4etn12us14.exe</Name>
+        <CRC>F3676A9EDBA326E1E8F29A075DC88B5725786791</CRC>
+        <Size>6258624</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u4etn12us14.txt</Name>
+        <CRC>AC5AF30BB50D3F1657E6803F1354ADCFC92E0DC0</CRC>
+        <Size>310</Size>
+      </File>
+    </Readme>
+    <AppIcon>
+      <File>
+        <Name>drivericon.png</Name>
+        <CRC>7EC2C0DE763C66C681583B38CD897DAD5709701B</CRC>
+        <Size>8415</Size>
+      </File>
+    </AppIcon>
+  </Files>
+</Package>

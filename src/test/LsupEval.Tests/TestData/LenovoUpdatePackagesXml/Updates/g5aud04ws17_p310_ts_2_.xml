@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="ADO_G5AU_P310_W10_TS" id="g5aud04ws17_p310_ts" version="6.0.102.37" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Creative Audio Card Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\cthdb.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\cthdb.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>g5aud04ws17_p310_ts.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-12-09</ReleaseDate>
+  <DiskSpaceNeeded>365369682</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Audio\Setup.exe /s /v/qn</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Audio\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\cthdb.sys</File>
+      <Version>6.0.102.0037^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_1102&DEV_0011&SUBSYS_11020027]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>g5aud04ws17_p310_ts.exe</Name>
+        <CRC>958541D80E3044F59290A7F9510B25BBBAFE90B1</CRC>
+        <Size>81103280</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>g5aud04ws17_p310_ts.txt</Name>
+        <CRC>0DCE8F6CA796EC54EA2AEB4F2B451483B7538BAB</CRC>
+        <Size>905</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

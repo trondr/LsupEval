@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IMEI_N1HRT" id="n1hrt22w" version="2024.14.0.1655" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Management Engine Interface Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA&REV_21]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_078000]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_0780]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA&REV_21]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_078000]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_0780]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1hrt22w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-08-07</ReleaseDate>
+  <DiskSpaceNeeded>198818448</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1641,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA&REV_21]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_078000]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_0780]]></HardwareID>
+      <Date>2020-03-24</Date>
+      <Version>2013.14.0.1529^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA&REV_21]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&SUBSYS_222C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_078000]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A&CC_0780]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1HET*</Level>
+      </_Bios>
+      <Or>
+        <Not>
+          <_ExternalDetection rc="6">%PACKAGEPATH%getw10ver8.exe</_ExternalDetection>
+        </Not>
+        <And>
+          <_ExternalDetection rc="6">%PACKAGEPATH%getw10ver8.exe</_ExternalDetection>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_for_RollupFix~31bf3856ad364e35~amd64~~18362.175.1.6</Key>
+            <KeyName>InstallName</KeyName>
+            <KeyValue>Package_for_RollupFix~31bf3856ad364e35~amd64~~18362.175.1.6.mum</KeyValue>
+          </_RegistryKeyValue>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1hrt22w.exe</Name>
+        <CRC>C237225C6364278D750FB0338F8DC022D93CE3C3F07F63BD8C5D3E5CC6B01256</CRC>
+        <Size>88414632</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1hrt22w.txt</Name>
+        <CRC>4CD3FBEE5F791328CD35B57E70382F8C3F31054C2D1D6B75390D94D25EAD8375</CRC>
+        <Size>15177</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Q81JTVx5btVZFWSggiWHy+zBDNY=</DigestValue></Reference></SignedInfo><SignatureValue>bYbromBMaP5lJpuMZG2P14terjNMV+4PajPTTZjZIKu6rt1nXSdOWtvwEVf/jEEpha72ZcaITJyf5/JrIdnnmFZnpfy+iHO2x4WwuFAaSXOoKg1tyHRNoUwfvSR0BzQ3DGvisofHm3fA5C5n0N3OzdLwL3eqobt5CD8NlqlT0d7NkRvEuZFwd/9o+aEc0TvpxPWTlXd1jSMDw+K4admcYWHgncVWQ41VVo5CgvIFZYsvjeHbBNzeHDL8jGe9EKB4o+mdL7Gpy+C78Y+6aGhVW17zFH3lbfssXLYNXEYrGyVgva4A5tflTZrOjHR8f3YOvmTc32InMDMX3hINbmcktg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

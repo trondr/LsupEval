@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="TS_K1CAR_P3_W10" id="k1car03us17_ts" version="10.0.10240.31217" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek USB2.0 Card Reader Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      <ValueName>version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k1car03us17_ts.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-20</ReleaseDate>
+  <DiskSpaceNeeded>39099911</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s /f2"c:\windows\mylog.log"</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      <KeyName>version</KeyName>
+      <Version>10.0.10240.31217^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0157]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0184]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1car03us17_ts.exe</Name>
+        <CRC>3B00B4E96825432CC2ECF271FB9C1C0B95B435C0</CRC>
+        <Size>6159584</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1car03us17_ts.txt</Name>
+        <CRC>066ED256D426EB7BA3F027B1DBC70CBFE47C8B55</CRC>
+        <Size>3257</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

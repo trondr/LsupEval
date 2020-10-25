@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="DPR_N1AWA_W10" id="n1awa01w" version="1.0.3.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">DPR Utility - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{6F870ACD-EBDA-40D3-BEA5-484E026E3101}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{6F870ACD-EBDA-40D3-BEA5-484E026E3101}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1awa01w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-04-14</ReleaseDate>
+  <DiskSpaceNeeded>49466424</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{6F870ACD-EBDA-40D3-BEA5-484E026E3101}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.0.3.1^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\Vid_0bdb&Pid_193e]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_1199&PID_A001&REV_1729]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_1199&PID_A000&REV_1729]]></_PnPID>
+      </Or>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\igdkmd64lp.sys</_FileExists>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1awa01w.exe</Name>
+        <CRC>A4708EA0D29B37A9542B61B4C55BDFD0DAA687F6</CRC>
+        <Size>23318912</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1awa01w.txt</Name>
+        <CRC>7148AAB8DCA21ABB1CA1CB573F7113436C3CA9AF</CRC>
+        <Size>7844</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

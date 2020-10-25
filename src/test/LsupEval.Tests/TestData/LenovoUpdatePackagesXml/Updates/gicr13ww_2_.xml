@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAMERA_GICR_KOME" id="gicr13ww" version="6.2.9200.10252" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Integrated Camera Driver - 7 [32,64]/8/8.1 [64]/10[32,64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{E0A7ED39-8CD6-4351-93C3-69CCA00D12B4}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E0A7ED39-8CD6-4351-93C3-69CCA00D12B4}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_RegistryKey>
+          <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{E0A7ED39-8CD6-4351-93C3-69CCA00D12B4}</Key>
+        </_RegistryKey>
+        <_RegistryKey>
+          <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E0A7ED39-8CD6-4351-93C3-69CCA00D12B4}</Key>
+        </_RegistryKey>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>gicr13ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-04</ReleaseDate>
+  <DiskSpaceNeeded>76000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{E0A7ED39-8CD6-4351-93C3-69CCA00D12B4}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>6.2.9200.10252^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E0A7ED39-8CD6-4351-93C3-69CCA00D12B4}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>6.2.9200.10252^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <Not>
+        <And>
+          <_OS>
+            <OS>WIN8.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+            <OS>WIN8-ENT.*</OS>
+            <OS>WIN8-PRO.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>32</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Not>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B39B]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B3F5]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_7036]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>GRET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>gicr13ww.exe</Name>
+        <CRC>21BA30335D2774E0F03F8E843624F26F438D2EA4</CRC>
+        <Size>8691864</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>gicr13ww.txt</Name>
+        <CRC>5CC1791D2993F72A8999C08B86ABD374142A2ABA</CRC>
+        <Size>8874</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_TOUCH_N1CGF" id="n1cgf02w" version="0301.0500.0000.0008" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Touch Screen Firmware Update - 7/10 [32,64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1cgf02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-11-01</ReleaseDate>
+  <DiskSpaceNeeded>7885194</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\FwUpdateUtility.exe /forcerestart</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+      </_OS>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\n1cgf02w_version.exe /hwid USB\VID_1FD2&amp;PID_5003 /fw 0301.0500.0000.0008</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1cgf02w.exe</Name>
+        <CRC>066C0529832B7DA25F2945CA86555E7323AA7201</CRC>
+        <Size>2029192</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1cgf02w.txt</Name>
+        <CRC>9DD79E181FA5FE95CB9D0EEFBA20F8D442EAFA1E</CRC>
+        <Size>4465</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>n1cgf02w_version.exe</Name>
+        <CRC>66E26565F197BFBD9F357D330A672FE1327864E5</CRC>
+        <Size>522320</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>uT7Gu38XQs0rPXKZzRYSRuy06Tk=</DigestValue></Reference></SignedInfo><SignatureValue>noq2TcitKSoIg2X/3TURfxffuxEnHtmlnpYapOSEP1aX3C8nV8Z691FQxd1gfTBSBNn2yiFgirYEn1RckGtRhY0fcpGNsEYTgUtOhzd/YMoBiLGiPokQcgYemj1tEKM4vOxVMYSs46ZbkKkdlBQ5vHozIv5IOyif03zrmPSDqqNeI4TVW436R++7tR4YYcbHWbRRj0yBDEhtMuocD7LZBolRaYL0sSAM0n5aD7ioJyjpodByc20+uFBfAB5pXypdfofc8/5D6IAtU68b58gLm283YTgKa1ww9BFKTHoG3QUTz2uvFZS2P1k1cj7who2vWCkRQWhJyUI2JOTDitKRTg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIE9jCCA96gAwIBAgIQVxYYDbfUmJ3EoXCD3Pp1ZzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxMDAuBgNVBAMTJ1N5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2lnbmluZyBDQTAeFw0xNTAxMTMwMDAwMDBaFw0xODAxMTIyMzU5NTlaMF4xCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBxMLTW9ycmlzdmlsbGUxDzANBgNVBAoUBkxFTk9WTzEPMA0GA1UEAxQGTEVOT1ZPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwVWMufFrSa68v9h+qMIEPTNZrZcxPzdiOoDfdTuX4A51yhSpbcySu9MbeXsu4Zg8f29nQMYnYsxSVfAUpaed3Sjjnff2k6/WHpSfoGzf5oDWrzY3Nss64VrE2/C3FZ0XVlp/xRAOO51MyRQ14Pz0KVOggw4LXgjQ8Tyy379Fi9CiDdBLmSFBt2rDoGVPfiiu0XPg6H6r/jw4U3sQ2iw1eyFWXa+tKqHm4uJKvWzWZWd5Wsls4iWx5RhHgT7+O3fLRc1FPf8oXl5QdVer/1UHGHN4wRbEJDDJWKhCUCbpzLxCkd1FIxMPQgojbiz9TkBBLi35zYzhHeRABHm1DX/BQIDAQABo4IBjTCCAYkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCB4AwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL3N2LnN5bWNiLmNvbS9zdi5jcmwwZgYDVR0gBF8wXTBbBgtghkgBhvhFAQcXAzBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTATBgNVHSUEDDAKBggrBgEFBQcDAzBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9zdi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zdi5zeW1jYi5jb20vc3YuY3J0MB8GA1UdIwQYMBaAFJY7U/B5M5evfYPvLivMyreGHnJmMB0GA1UdDgQWBBRSMmHtmvK1hUveuxeoJ/Jwj5J18jARBglghkgBhvhCAQEEBAMCBBAwFgYKKwYBBAGCNwIBGwQIMAYBAQABAf8wDQYJKoZIhvcNAQELBQADggEBAHW49q6GgSXkLVnqgvw2Zpsz7mqr3TOb9OXM4KOnGQWUpfYnT/HaJbHOpH46LlgOwBd9hVyOI5ON6S0JSe6gcp49NZ2aoYvyIqq+k6xsr0QxVqHzPD0gOotwWBXKhg0+CMyxIuKYAjXNxvnzBqeAmyRbZoGvFdPeqbGpm+kvS+MeMTdy8gmXMZCj9f2KhDNjm2gYjKAVEeyodrs/LqrYsAMB4+ie099pA5++gBM892Z4DEREh14Y1Ydv/sLsAtOrkNeGlRgnoTklzFVqaHHm55T/c6VzHjKabNHb/t8Wt3psevQUnN4KqxyHrk1oQp8V3wzJNNum4tA4+Dc5w9uUgRc=</X509Certificate></X509Data></KeyInfo></Signature></Package>

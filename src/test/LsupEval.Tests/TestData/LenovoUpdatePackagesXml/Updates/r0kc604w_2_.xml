@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAMERA_R0KC6" id="r0kc604w" version="3.5.7.5801/10.0.15063.11288" hide="False">
+  <Title default="EN">
+    <Desc id="EN">1.0M Integrated Camera Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf" show="False">
+    <_PnPID><![CDATA[USB\VID_5986&PID_070C&REV_4903&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_0BDA&PID_57E9&REV_1002&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_04F2&PID_B55D&REV_0003&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_5986&PID_070C&REV_4903&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_0BDA&PID_57E9&REV_1002&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_04F2&PID_B55D&REV_0003&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0kc604w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-05-29</ReleaseDate>
+  <DiskSpaceNeeded>35635741</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1,1793,1281" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /SH /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_5986&PID_070C&REV_4903&MI_00]]></HardwareID>
+        <Date>2017-07-12</Date>
+        <Version>3.5.7.5801^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_0BDA&PID_57E9&REV_1002&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_04F2&PID_B55D&REV_0003&MI_00]]></HardwareID>
+        <Date>2017-08-15</Date>
+        <Version>10.0.15063.11288^</Version>
+      </_Driver>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_5986&PID_070C&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_57E9&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B55D&MI_00]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0kc604w.exe</Name>
+        <CRC>615BD6A793E0CE59CA0DE51346FD61889B37BADF31005B77514F88B5827B53AF</CRC>
+        <Size>6527296</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0kc604w.txt</Name>
+        <CRC>BE8BBF37B91D3215A657404D15A5DB87FCD142177897C991983D19C66C8A28B1</CRC>
+        <Size>7878</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>FRyg1kAQfR84N9ei1wDHcMNRHy4=</DigestValue></Reference></SignedInfo><SignatureValue>j3H1aJlTpuGdGtsj8u4qFAm4c1kfpa5xM+hLgpIyU0oC27illhhosiFu0Y5Jwj13JoFwuLX31cWejT/MJ+6DFeQkjWtuJWaB3ZYB5L+RMHlQKOb1TLZkLxNJ+kG+RYLXlRkbn+ZTWrQdaYCxmxT3QdIdCUPDbdwDejc5RvwAPFStjgimDmosOWwws4zjejK/NuFthMT12ecwrVmNJXX64y//vV3GrS7vyxOtuzR6sBByuKnhrHrNVuBnn9W3JqMOly5zqhvYdxXGNyfMOOUYX2mGhV5Ndk/Vcb2RJTwnxf2PqKQ6T4Fb2AX2/KoTT4vUiSZy8p5/1Huhoiq+RpJgmA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CARDREADER_JFS2_W10" id="jfs202ww" version="2.2.2.1076" hide="False">
+  <Title default="EN">
+    <Desc id="EN">O2Micro Media Card Reader Driver - 10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\DRIVERS\O2FJ2x64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jfs202ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-30</ReleaseDate>
+  <DiskSpaceNeeded>20980649</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\DRIVERS\O2FJ2x64.sys</File>
+        <Version>1.2.2.1076^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1217&DEV_8620]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jfs202ww.exe</Name>
+        <CRC>F8CFD9A01DA1FEA989923F0C68B2AF6A296EDB20</CRC>
+        <Size>4816864</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jfs202ww.txt</Name>
+        <CRC>E33BA84C06E50E64A842CA37753459C1F3606834</CRC>
+        <Size>6571</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

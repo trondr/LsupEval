@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTE_N2EIO" id="n2eio07w" version="17.0.0.1072" hide="False">
+  <Title default="EN">
+    <Desc id="EN"> Intel(R) Rapid Storage Technology Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A352]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A353]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A352]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A353]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_2822]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2eio07w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-03-12</ReleaseDate>
+  <DiskSpaceNeeded>14180309</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="2,257,512,1073741826,1073742081,1073742336" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPInst.exe /s /sa</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A352]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A353]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_2822]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+      <Date>2018-12-20</Date>
+      <Version>17.0.0.1072^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A352]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A353]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2EET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2eio07w.exe</Name>
+        <CRC>6F3292F296B6683E04FB273C74FF2DDB6B316DAF840F09A60F5D252E3B617CE0</CRC>
+        <Size>3060120</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2eio07w.txt</Name>
+        <CRC>7F4AA783C28ADBB34334363F4D1F678142A85AB534F6B193F988B16BC5C5D1B3</CRC>
+        <Size>8695</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>piGhHCqctON4SzEkFhCczlkxd14=</DigestValue></Reference></SignedInfo><SignatureValue>bF3JjmATs0zHqs3nBetMHiHGafSC4h9OcYS4FA9uMqL1U85e+zHljUC80b4cQ3j0JgstP2roDiaaWtKbjHZkGBtCAjoosTPEfNnLGls7l6rfo2rppeg6wGYYZQ/kWgcm8ESub+Wm+1SuVzBuHJ6dEW1WBdKJ9PfdkB5YEzsf3p3txs87MGKuWar8sEKxzxxrdZB/xTT90wQGE04MDrWAlnpSL6knsC7rKc8sOhDuI5V2hsqloCjTXBB4p65/yPCXNFZ9/KNBJbx6WuvtYLbOi7c/Gwdw8FQtHpJzQsGw/vpy7MgGE842CHZ1Y0dN5q2nTaTQg83VCInznJLzcfPfdA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

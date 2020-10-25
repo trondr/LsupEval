@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTEL_VGA_N19DT" id="n19dt13w" version="20.19.15.5126" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel HD Graphics Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_503E17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222917AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222817AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_503E17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222917AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222817AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_503E17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222917AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222817AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_503E17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222917AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222817AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n19dt13w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-05-14</ReleaseDate>
+  <DiskSpaceNeeded>684497536</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,14,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe -nosc -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_503E17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222917AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222817AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_503E17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222917AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222817AA]]></HardwareID>
+      <Date>2020-01-21</Date>
+      <Version>20.19.15.5126^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_503E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222917AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_222817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_503E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222917AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_222817AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N19ET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n19dt13w.exe</Name>
+        <CRC>FEC5827270A39FE25D7859549A1BCF5DEF1D84F1735D5063E28AA74D04796AB4</CRC>
+        <Size>109044240</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n19dt13w.txt</Name>
+        <CRC>9A8FB3C392507AB8EA400DF21135019503A2C01E91070B26339E713784390B82</CRC>
+        <Size>8630</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>GbLazEPRg+wnpGojUA3YEVKEmb8=</DigestValue></Reference></SignedInfo><SignatureValue>PuCr4Qeatt6Ho1mZgECbK2NZaKytd1iJSJSYcQzCwl3B6PSBOzE8y6APSN4jMpPHph5P5JFSLhvjrvM8YNP4lRMsvNNveRvjZQ+utdVGGA1Xn3/35riphbEfZWY8QvQwOyogQZUafFZL/OYsGm41xLQSioWZqevAEzS+HCIvZWe+tueo7TjU2tW4Uq7H1s8Bs0obcluAsrUWCGirezMZ7iSBKyj3/8Wum5nNA2+s8MSFkBi47rVEuTLNyX0SMsF6d9UQfo8UZFKLapAaBzyk2+uc88uhuLudo7imdto+lrSN+DzP5F0DScbusczsC5qzrqNx+QvIsceI3y6quMgTQQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

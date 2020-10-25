@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="TMF_R0EMI" id="r0emi02w" version="6.3.0.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Monitor File - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[MONITOR\LEN40A0]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40A9]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40A6]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40B0]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40BA]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40B7]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[MONITOR\LEN40A0]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40A9]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40A6]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40B0]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40BA]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40B7]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0emi02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-09-04</ReleaseDate>
+  <DiskSpaceNeeded>2480109</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[MONITOR\LEN40A0]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40A9]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40A6]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40B0]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40BA]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40B7]]></HardwareID>
+      <Date>2016-08-19</Date>
+      <Version>6.3.0.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[MONITOR\LEN40A0]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40A9]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40A6]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40B0]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40BA]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40B7]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0emi02w.exe</Name>
+        <CRC>31E7E01854906577595AD897BC0705B8B49F987AC42CB6D676022B38D8DDE88B</CRC>
+        <Size>781672</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0emi02w.txt</Name>
+        <CRC>3EFEF4F2C9E5EA4F092E21935CB14A4CA815E116C2A46A29C427CF96AE2E3F91</CRC>
+        <Size>6106</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Il4hSdLwampB5Yvb5q2utFtnhPc=</DigestValue></Reference></SignedInfo><SignatureValue>d7DiOw35shlqgilgKkpWM77/1mw3NxaPrvUo61QoZXVMAFWVY/Pf4BSHNGGOeP4a1wCN7wGMUoW7x7FBLg1EKJW5KgbjWVfg28XeeWNp+S8phPWkPdOXC+MVR+JmlHBv5rluGo275xAE2Ampan05dhoGkvVDpFJLIX894K34UEXGYKllz/FbWi60MkBRfmlazPdiJkLLzqv+1nhTq0N8GKcLcbytD0KaCLyB36HQEmZV/QT2sqIpDQkumukl9bZg5+/KzOrDumEAItnYrwj9giYcZDZVI2jMHm4hGIABtTChp61E44csSXktpTdYuh9sQDf4kYd7ACtaKfzdDQiEBw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIPSET_R00CH" id="r00ch09w" version="10.1.5.2" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) Chipset Device Software - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D23&SUBSYS_504817AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D23&SUBSYS_504917AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r00ch09w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-09-02</ReleaseDate>
+  <DiskSpaceNeeded>22915578</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -s -norestart</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D23&SUBSYS_504817AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D23&SUBSYS_504917AA]]></HardwareID>
+      <Version>10.1.5.2^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D23&SUBSYS_504817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D23&SUBSYS_504917AA]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0,1">inboxdrivercheck.exe r00ch09w_2_.xml</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r00ch09w.exe</Name>
+        <CRC>04739DD9A35205205AFB734F5EDFFAE5DB17EF73FDECDAAF11DD19A3D4BF601D</CRC>
+        <Size>4915640</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r00ch09w.txt</Name>
+        <CRC>11FAFE30415CDE6EB1817A9750C6336DF12FC7AFE98A98CFBF9006C9427F8C53</CRC>
+        <Size>7472</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>yp8+9BGqwoNq3lUHtGly4G409mo=</DigestValue></Reference></SignedInfo><SignatureValue>q0zp+v/Og4j6DzptSrJwwBnmdBxPb0WzFyrsl0dZTLL1mIdxCjzIrlfs3PAclrQA1t/ii/bz6B8xw7+E1IltePJG3pNQdxCaOTrYzhbJMuSjEFGmIGYJdJCO7rt8sNVeqVVZltWgtUmgoqHrwCuPoxGx2IDlWZ4nRexZE3A7C45fmRufvEYPj15pi98EoMDezM9DoMqFtnTrTd3/DkUnYp/NjEwzkfokarmO5hmPnMdtM+Sa0G98nOHlPjmfe+Y63+V6NK7xCQfZP9FDIwId5Oeo2DeCUYNFaB2X2EvBmKRxcw5kVPzPztliM4YSSId9ialtztbX0cp/dQS2yKcMLg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="22">
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/8awt16ww_2_.xml</location>
+    <category>Networking Wireless WAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1a5fc983843b3b3a7532aa3390ea2d8ea02d85424df7c851d6f8deba5a20af08</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/g8uj35us_g8_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e692194330fb69af3bb5d4aafbd60ef16a55b7260b0024fa5813abf2f99fb2cd</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/g8uj35us_g9_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">48407c92b0a7fdbc8afee5a8e9e0be1caf5a04d76d50b742b94ee93fe773f722</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/hmdi10ww_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">eb2c6ea2744db00bf25a4e9579df2910447326d049217d8e71823a68e189278e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4wq07ww_832_u_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">21cc1f4345ab1ca6fb92903a3e977d09a57648cb42d79d293c330c616e24aafc</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4wq07ww_864_i_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">30cf9cf6024af77ab59c2c597e4908295a97d242e65fac310056c3cda16b9598</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4wq07ww_864_u_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">dce689dc5e8dfabcc494633d853dc0077ba5b6a540d83bb30c1535269951082b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4wq07ww_832_i_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e032e69b2f1de26797439b1a0b8e889ab0307a5e1e4f32bf5fab16b6018a6c44</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/h4sg02ww_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6095824ee80c84818cbdd49d36c3793f635c08a8620e1f223a8a6a8ef86cbcac</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/h4mf05ww_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">fb627b2daeec9542d763e8f75ae2d499b3c584862bb47f59243f2cabb3a62c18</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4id03ww_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7198664f2097eced6fa934da1e0145e5f3094ea4655efefbffa9fac642d11882</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4dl11ww_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b91631f5c6f81d46354dbf823eaa1b30ba90cf185739aac62088ff6832ccdf57</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4dk11ww_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">818010d33b8fb444f6ddc24b746a3a02faaf0a0fd45b3a847c4356f93d697024</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/h4w407ww_2_.xml</location>
+    <category>Networking Wireless WAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">43c51a0b195fc40e13740541590b172e13e61e2346ca5e5074212cf99c572f04</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/g7wt13ww_2_.xml</location>
+    <category>Networking Wireless WAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a272535fbed30d6bd9c016566650282efafa4c7c05abbecef41851ff943a49b3</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/hlud10ww_rs_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ec48e5916237523302b56e40396a714ccb1ceae31d862d3e25d2ddc2600266c5</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/gggr07ww_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">929c328ccd6c6426d7bda7281d5305d5f856cc5694be7dbc0da8094085f89751</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/h4ds01ww_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">97de10df11ce9a1f186f4a331a68810df6f8d851f8b4a48aab6502016ba5c634</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/h4dp01ww_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f1173673638c2174266b08baa9ecd00c1aa3976e90768a50da3ed6df8cd248bb</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/r0yvu32w_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">db4b369b3b5214d2a2f914d464338b18c84a53e408afb1f3c3067fc453cd6841</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/n1fup88w_2_.xml</location>
+    <category>Power Management</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">34af13ec286d0d0fbeeeba876d35b261a2fec7e316716bb97bfe140c67be5e35</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+</packages>

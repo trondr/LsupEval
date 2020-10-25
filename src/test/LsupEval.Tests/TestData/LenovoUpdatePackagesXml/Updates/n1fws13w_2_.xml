@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTEL_WLAN_N1FWS_10" id="n1fws13w" version="2.6.1.102" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Wireless Gigabit Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\WiGigSdk.dll</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\WiGigSdk.dll</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1fws13w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-08-16</ReleaseDate>
+  <DiskSpaceNeeded>132748786</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetUp.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetUp.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\WiGigSdk.dll</File>
+        <Version>2.6.1.102^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_093C&SUBSYS_21818086]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_093C&SUBSYS_21918086]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_093C&SUBSYS_30118086]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1fws13w.exe</Name>
+        <CRC>52C683E19B0B19972DC9D7F8893FE3C6D1D5F66B</CRC>
+        <Size>52285384</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1fws13w.txt</Name>
+        <CRC>9E64BF741DD2E486ED272AC0A2BB0DA14CB8972A</CRC>
+        <Size>9066</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

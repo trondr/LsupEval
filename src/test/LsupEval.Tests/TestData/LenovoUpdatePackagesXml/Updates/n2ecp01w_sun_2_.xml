@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAME_N2ECP_SUN" id="n2ecp01w_sun" version="3.5.18.32" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated Camera Driver for Sunplus(Windows 10 Version 1703 or earlier) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_04F2&PID_B614&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_04F2&PID_B615&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_2123&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_04F2&PID_B614&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_04F2&PID_B615&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_2123&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2ecp01w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-12-06</ReleaseDate>
+  <DiskSpaceNeeded>44052453</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1,1073743105,1281,4353,1793,6402" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_04F2&PID_B614&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_04F2&PID_B615&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_2123&MI_00]]></HardwareID>
+      <Date>2018-03-16</Date>
+      <Version>3.5.18.32^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B614&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B615&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_2123&MI_00]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0,1,2">%PACKAGEPATH%\getw10ver4.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2ecp01w.exe</Name>
+        <CRC>5B0EF7B5371BB35D8D823A83A435BB51832D9C9F32D437A697CC470A26760DC6</CRC>
+        <Size>7190496</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2ecp01w.txt</Name>
+        <CRC>E65A332273B403959E21B5765D993639C119CE13FB104BA66C3CF46992BC0029</CRC>
+        <Size>7115</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver4.exe</Name>
+        <CRC>FD6910AFA3522622C4F3C2E4A0C819AB47189FE98C3F71B668EC5CA8E732473A</CRC>
+        <Size>136040</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>W7IvDj9ymug/yYWsyFHVUzkmLlM=</DigestValue></Reference></SignedInfo><SignatureValue>ExKOqB9F/C2ggXIbhS+ylG4PFM6k6QhOjed8b2sPfkOsbmgi9YRL/OK2teUP25FoSzhwgfpEotGMgaYzlpfslIvkGtxmMZd3tTNEMiEq70Rhotvqw1Y8TC++kt6rUdwEMCdQlKEGkQW73k7c8+bOBFpwwhgyXAE8Ifj58UimHjvO02CE/I7UNKuYzU1t2/ZgvWcXOOsH1djKlxJ0ktZ9B3YGi66g487FNJjp8FBUOQ/Q3i4hOkxmTC71H0QM6DmCSHxsZsR1TPuOmJ+BAYAs0AKgeIK7Zk1jevlEKFwyRjxO1BskMVvUDh00P2m5EwOZQfZ/dNXZNMRe+MQbpahPJA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

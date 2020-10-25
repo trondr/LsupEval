@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="19">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdo02us17wis_10_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3c1cc8f21e2e0fa039b073a22d3047d10910ef959c6477b346f6dc39d52d1717</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1amt02us17wis_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b38d9f3ef4a900a2e54cd18e29e944b59ca7b78c162734de205d73d1fc7a506f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1car02us17wis_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">db51845fafb7fffef56b4bce2dff778b43f521279285f7e5d390acfdaa267f87</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1acp01us17wis_10_2_.xml</location>
+    <category>Power Management</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f392a84bca7f8a7ebf69404a87522c1d5403baa50e7cdf0067f7d01eba6d30fb</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3blt03us14wis_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9347263d0c79b377695687de2b057140fd6e09ea267ae5ce196ae57235527708</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m1cjy43usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">eea752f5d51a8c043ae07a5680d1ceccf0f9188c23e0c72fa14857d534da8981</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4etn02us14wis_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ef44f3fe3c35d64a2210a95db35294ba0b049f3fd8bdb7ed6a52155238a4c298</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u1amt02us14wis_2_.xml</location>
+    <category>Management Module IMM IMM2 AMM CMM SMM</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e01a3129f2fce47e2d4ca2b70ce970859331fb6bac508ed9879b1bcc6588aead</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u3blt05us14wis_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0c572f0256e49ce53bb44d6747335a85cedf01a6f53a16a006f159620580d1ef</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u3wlg09us14wis_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6144a10f01865d35e826a3e919784a5582c6ab55231b279b19faede6efcba2bd</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j2wlg04us17wis_1064_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6cb169162bba4a53d99e6ccff8179a659f7caaef34309df9384d277dbbb41a1a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/lenovovisionguard_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">13a487d61478ab2f360ad4609e9f990863ac0609fd9255ec27277c8e2ceb73b9</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg12us14wis_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">36975ca43af21822d6975d1733dd787b5014389043694f4f58b28afea3a6e2ad</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u1rau80us17_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ad21b81e5cb47092d4b2b07a0ac7331e1fced1b90c28c990cc9cf329c2f5a981</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k7aud26us17wis_m810z_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">81bc72d88cf3462b6d7c7c7df42a25623960f972dff0bfbfb83ab1e256934cc6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1rad18us14wis_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b5d75a13397f7fddeb3fb7ddd82be1cdf28bd69b6e01b6c7cfa2a1a0ef2f66b6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1chp17us14wis_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5f46b5d6429791f6a84c0dc067f27f18b787c8245e94b099a47c943ffb7f0012</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u2vdo27us14wis_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">da5f60cf85cbec8647cf2a104d7445e6a52a3b002ff17384e57a8d65667dff43</checksum>
+  </package>
+</packages>

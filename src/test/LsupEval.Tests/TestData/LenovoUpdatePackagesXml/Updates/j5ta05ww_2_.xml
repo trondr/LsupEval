@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="UITA_J5TA" id="j5ta05ww" version="1.0.0.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Technology Access Software Uninstaller - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>j5ta05ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-09-02</ReleaseDate>
+  <DiskSpaceNeeded>360240</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\ItaUninstaller.exe</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\ItaUninstaller.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Not>
+      <Or>
+        <_FileExists>%PROGRAMFILES%\Intel Corporation\Intel(R) Technology Access\IntelTechnologyAccessService.exe</_FileExists>
+      </Or>
+    </Not>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <And>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+        </And>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+      </Or>
+      <Or>
+        <_FileExists>%PROGRAMFILES%\Intel Corporation\Intel(R) Technology Access\IntelTechnologyAccessService.exe</_FileExists>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>j5ta05ww.exe</Name>
+        <CRC>4C254B16DB7EF9A0A9ABE6824372835CBB08062B</CRC>
+        <Size>320872</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>j5ta05ww.txt</Name>
+        <CRC>0B31870802FE6762C1C365F0B8C36323869C9CB8</CRC>
+        <Size>8148</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

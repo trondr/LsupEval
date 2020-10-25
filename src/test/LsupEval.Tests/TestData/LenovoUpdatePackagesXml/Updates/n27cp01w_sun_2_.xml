@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAMERA_N27CP_SUN" id="n27cp01w_sun" version="3.5.18.32" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated Camera Driver for Sunplus(Windows 10 Build 1703) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_04F2&PID_B613&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_13D3&PID_5619&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_13D3&PID_56B2&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_04F2&PID_B613&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_13D3&PID_5619&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_13D3&PID_56B2&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n27cp01w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-12-06</ReleaseDate>
+  <DiskSpaceNeeded>39824217</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1,1073743105,1281,770,4098,1026" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_04F2&PID_B613&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_13D3&PID_5619&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_13D3&PID_56B2&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></HardwareID>
+      <Date>2018-03-16</Date>
+      <Version>3.5.18.32^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B613&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_13D3&PID_5619&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_13D3&PID_56B2&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_2115&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="2">%PACKAGEPATH%\getw10ver4.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n27cp01w.exe</Name>
+        <CRC>5738D50887EF84D77CE6764BFA0FFF9FF886B0E50813E35B13E00DFBCBF2A620</CRC>
+        <Size>6884264</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n27cp01w.txt</Name>
+        <CRC>4EC546A2C407243885D6EC04DEB710084AE2C536261258F74E8A996871970F5B</CRC>
+        <Size>7246</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver4.exe</Name>
+        <CRC>FD6910AFA3522622C4F3C2E4A0C819AB47189FE98C3F71B668EC5CA8E732473A</CRC>
+        <Size>136040</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Ee3pguwOj1qmHlJNo+ktUBIDP84=</DigestValue></Reference></SignedInfo><SignatureValue>LLzhdpLfwXPb5Ur4ZvGKFgzam12o/WVRg/XT/VoEIWb4O+CwPQIskKWYZUBb/dGu0XIF1dhsTr8YL7VaXoarR8AqgbbdqPMuS4O14WFWnDO8Ijbj/vTbATRms0ReDekj54WO0hmXlegcVBpRJYmBt3LlbY8Cu+AMqMeMlVOwLDioWeg9bZPOE0bROk7F8nCHEQzq2LhPaxrIhz2ugn+WQNs5lRXAhkce+yCsAwG+HcDumCAx24qTXIu+00a/+kDSZscYEQrfMZrPu2bPDEy+YQwrv4XxrCQxLtva/1KQtQAFMYfUdbeqWIkjm8X1E77tCidGM8+awmBwx0vWtutxCA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

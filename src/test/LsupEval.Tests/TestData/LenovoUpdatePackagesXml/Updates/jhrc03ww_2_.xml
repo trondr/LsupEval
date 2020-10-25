@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RTK_LAN_JHRC_W10" id="jhrc03ww" version="10.1.505.2015" hide="False">
+  <Title default="EN">
+    <Desc id="EN">RealTek LAN Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\rt640x64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\rt640x64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jhrc03ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-04</ReleaseDate>
+  <DiskSpaceNeeded>28450406</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\rt640x64.sys</File>
+      <Version>10.1.505.2015^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_8168&SUBSYS_504617AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_8168&SUBSYS_504517AA]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jhrc03ww.exe</Name>
+        <CRC>A762FBF7FF9CA7EBB3D65485B6CD87A6E4082B75</CRC>
+        <Size>6453968</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jhrc03ww.txt</Name>
+        <CRC>D3F55139921F28829AB29669105B24B113A4899E</CRC>
+        <Size>7237</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

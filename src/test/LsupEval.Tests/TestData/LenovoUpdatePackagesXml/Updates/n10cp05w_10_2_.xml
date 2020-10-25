@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CPPC_N10C_10" id="n10cp05w_10" version="1.0.0.1018" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Collaborative Processor Performance Control (CPPC) driver - 10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\System32\drivers\IntelPcc.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\System32\drivers\IntelPcc.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n10cp05w.exe /VERYSILENT /SP- /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-02</ReleaseDate>
+  <DiskSpaceNeeded>5484544</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%Windows%\System32\drivers\IntelPcc.sys</File>
+      <Version>1.0.0.1018^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[ACPI\VEN_INT&DEV_340F]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n10cp05w.exe</Name>
+        <CRC>637F09FD459436F3D341EF3D9BB2057A76DAD23C</CRC>
+        <Size>1132096</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n10cp05w.txt</Name>
+        <CRC>0191095CEF99E4DA604721FE23C0CF36CC5F374F</CRC>
+        <Size>7715</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

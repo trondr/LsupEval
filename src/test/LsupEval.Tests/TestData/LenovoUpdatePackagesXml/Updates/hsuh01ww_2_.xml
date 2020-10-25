@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AMD_USB_HSUH" id="hsuh01ww" version="2.0.10.273" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD USB Filter Driver - 8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\usbfilter.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\usbfilter.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>hsuh01ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-05</ReleaseDate>
+  <DiskSpaceNeeded>65100000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\usbfilter.sys</File>
+      <Version>2.0.10.273^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN10</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1022&DEV_7814&SUBSYS_510C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1022&DEV_7814&SUBSYS_221917AA]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>hsuh01ww.exe</Name>
+        <CRC>3E3B6CCD97F65A433626092A84DE2428AE2C38EF</CRC>
+        <Size>8799872</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>hsuh01ww.txt</Name>
+        <CRC>206C3AFC839FF6FCF357626A37D4DC370C87DFE5</CRC>
+        <Size>6643</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

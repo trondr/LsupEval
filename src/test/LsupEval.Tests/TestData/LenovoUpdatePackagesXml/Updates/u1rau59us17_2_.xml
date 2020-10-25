@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTELRST_U1RA_1064" id="u1rau59us17" version="15.9.4.1041" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel RST Driver - 8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822&CC_0104]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A&CC_0104]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D07&CC_0104]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A107&CC_0104]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A106&CC_0104]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A28E&CC_0104]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A286&CC_0104]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102&CC_0106]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A103&CC_0106]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_8D02&CC_0106]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1rau59us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-05-21</ReleaseDate>
+  <DiskSpaceNeeded>30000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,1641,1603" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupRST.exe -s -notray</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupRST.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_2822&CC_0104]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A&CC_0104]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D07&CC_0104]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A107&CC_0104]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A106&CC_0104]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A28E&CC_0104]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A286&CC_0104]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A102&CC_0106]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A103&CC_0106]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_8D02&CC_0106]]></HardwareID>
+      <Date>2018-03-20</Date>
+      <Version>15.9.4.1041^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A103&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8D02&CC_0106]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A&CC_0104]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822&CC_0104]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D07&CC_0104]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A107&CC_0104]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A106&CC_0104]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A28E&CC_0104]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A286&CC_0104]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>M05KT*</Level>
+      </_Bios>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client</Key>
+        <KeyName>Version</KeyName>
+        <Version>4.6.0^</Version>
+      </_RegistryKeyValue>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1rau59us17.exe</Name>
+        <CRC>6C6E977B2219C6F4E119DF91BD11C4DDC1000C9A60B816F4B77B3E836E77B463</CRC>
+        <Size>18199088</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1rau59us17.txt</Name>
+        <CRC>CCF2085477593E9E6352789912E4519634B1DF5617195EE77151AC83D55E806D</CRC>
+        <Size>76542</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>m10XkulKH3g7xXQE6VahrkBnsTk=</DigestValue></Reference></SignedInfo><SignatureValue>FiNTCsNzA19HeYJPgiRSGNiESnow2WFxiA4YoCvzOLpLSt+/ALo89B/QTDEvbhhWQkfuQUweP/7RIr7M6j2HEWNA7/0G03P76MGF4Th1BYbXDfO923Fzu3B61QTKiIgUF/1VbYDK0lEgEonB2gGwjRezaQ7h28lAM5zfA/zjBqP0yHxxU2eqVRT3LcfSHheLqiULrLvOBg4iU1vxPE6j9LbVd9SfRamZiHuS/utHbC13fNPrGxcU64G4QPjEfoi48vzw8/uZ3omK3pkSITvB+jBJYhQNzzVia1+YIXud7Xvz18O+iGXIETL76UyyrogDgurre1yyuPzGiiFBrOWtUQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

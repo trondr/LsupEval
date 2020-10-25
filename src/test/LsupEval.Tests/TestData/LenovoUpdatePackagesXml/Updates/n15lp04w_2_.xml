@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="GPIO_N15LP" id="n15lp04w" version="604.10135.1001.55518" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel GPIO Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\system32\DRIVERS\iaiogpioe.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\system32\DRIVERS\iaiogpioe.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n15lp04w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-04</ReleaseDate>
+  <DiskSpaceNeeded>2100000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="inf" default="EN">
+    <INFCmd id="EN">
+      <INFfile>iaiogpioe.inf</INFfile>
+      <Mfg>%INTEL%</Mfg>
+      <DeviceDesc>%GPIO.DeviceDesc1%</DeviceDesc>
+    </INFCmd>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%Windows%\system32\DRIVERS\iaiogpioe.sys</File>
+      <Version>604.10135.1001.55518^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[ACPI\VEN_INT&DEV_33FC]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n15lp04w.exe</Name>
+        <CRC>5256950944FDCB8A3A28D35B80243C4DE98B2656</CRC>
+        <Size>335368</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n15lp04w.txt</Name>
+        <CRC>22EB3B8EEBDC4BA8DE62C8D7D4254C9E6466C6C9</CRC>
+        <Size>7631</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

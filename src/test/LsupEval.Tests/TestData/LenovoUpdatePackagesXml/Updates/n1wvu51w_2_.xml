@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="HOTKEYPACK4_W10" id="n1wvu51w" version="9.0.0.10" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Hotkey Features Integration Package Setup - 10 [64]</Desc>
+    <Desc id="JP">ThinkPad　ホットキー機能統合　セットアップ</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1wvu51w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-04-16</ReleaseDate>
+  <DiskSpaceNeeded>50265324</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="1" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></HardwareID>
+      <Date>2018-01-26</Date>
+      <Version>9.0.0.10^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_Coreq name="PMD_WIN10">
+          <Version>0.1^</Version>
+        </_Coreq>
+        <_Driver>
+          <HardwareID><![CDATA[ACPI\VEN_IBM&DEV_0055]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_IBM&DEV_0068]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0068]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0168]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0268]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\LEN0068]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\LEN0168]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\LEN0268]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\IBM0055]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\IBM0068]]></HardwareID>
+          <Version>0.1^</Version>
+        </_Driver>
+      </Or>
+      <Or>
+        <Or>
+          <Not>
+            <_Bios>
+              <Level>GDET*</Level>
+            </_Bios>
+          </Not>
+        </Or>
+        <Or>
+          <And>
+            <_Bios>
+              <Level>GDET*</Level>
+            </_Bios>
+            <Or>
+              <_Coreq name="BIOS_GDUJ">
+                <Version>1.07.1.07^</Version>
+              </_Coreq>
+              <Not>
+                <_Bios>
+                  <Level>GDET0*</Level>
+                  <Level>GDET1*</Level>
+                  <Level>GDET2*</Level>
+                  <Level>GDET30*</Level>
+                  <Level>GDET31*</Level>
+                  <Level>GDET32*</Level>
+                  <Level>GDET33*</Level>
+                  <Level>GDET34*</Level>
+                  <Level>GDET35*</Level>
+                  <Level>GDET36*</Level>
+                </_Bios>
+              </Not>
+            </Or>
+          </And>
+        </Or>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1EET*</Level>
+        <Level>N1KET*</Level>
+        <Level>GQET*</Level>
+        <Level>B0ET*</Level>
+        <Level>N19ET*</Level>
+        <Level>GJET*</Level>
+        <Level>N1LET*</Level>
+        <Level>N14ET*</Level>
+        <Level>GRET*</Level>
+        <Level>N1FET*</Level>
+        <Level>G6ET*</Level>
+        <Level>G8ET*</Level>
+        <Level>G9ET*</Level>
+        <Level>GIET*</Level>
+        <Level>N15ET*</Level>
+        <Level>JHET*</Level>
+        <Level>N1GET*</Level>
+        <Level>N1DET*</Level>
+        <Level>N1HET*</Level>
+        <Level>JBET*</Level>
+        <Level>GNET*</Level>
+        <Level>GSET*</Level>
+        <Level>N10ET*</Level>
+        <Level>GMET*</Level>
+        <Level>R02ET*</Level>
+        <Level>N1CET*</Level>
+        <Level>N11ET*</Level>
+        <Level>R0IET*</Level>
+        <Level>N1QET*</Level>
+        <Level>N1VET*</Level>
+        <Level>GLET*</Level>
+        <Level>N1XET*</Level>
+        <Level>N1MET*</Level>
+        <Level>N23ET*</Level>
+        <Level>N20ET*</Level>
+        <Level>N25ET*</Level>
+        <Level>N27ET*</Level>
+        <Level>N24ET*</Level>
+        <Level>N22ET*</Level>
+        <Level>R0SET*</Level>
+        <Level>N1ZET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1wvu51w.exe</Name>
+        <CRC>B0F5E87681D9E7895298AD38C28EC322B432AA51701B79CA56532F75E8C9BD11</CRC>
+        <Size>14286512</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1wvu51w.txt</Name>
+        <CRC>67CFB19B62BDC1504717F724F05CFC03FB5131D3704DBE61E3BD3811DB356AED</CRC>
+        <Size>32372</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>74emz9s7n0D0onIsyrKiY5Mw68A=</DigestValue></Reference></SignedInfo><SignatureValue>Klng/KMEan6w1XJKFR++Nb5WtyxdLw1BqXbz7+88RSQTl59dw5qKOFWRP3sibS7AbFyVigJ6/c4Lwvtfxygid5WvriRkBwXYeqwuBd1ccTOdd0/rqlpF/qT2oWi9HLVWt2W2uCTkkCWuUzbnBEPztwQKCkPQ7jkpnfgsgHRNvvI2p9HG5c1yPZlBztxWrtbT7rfOwuiEx68WjoHDVmT91DxiiGyEFVvPsmb44UR7W/iGKSRCCXe2xnAp6V0VRtjKBDooMFPU+l6zCVV2dpGaYVgOkonXRtmzIxYyrWFWhXsnHL+LQSLg4gVts0qtDonTalcBiXAU1A2lJimOzYzjTA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

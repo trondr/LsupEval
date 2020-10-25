@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="I2C_N15LT" id="n15lt04w" version="604.10135.1001.53001" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel I2C Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\system32\DRIVERS\iaioi2ce.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\system32\DRIVERS\iaioi2ce.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n15lt04w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-04</ReleaseDate>
+  <DiskSpaceNeeded>2100000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="inf" default="EN">
+    <INFCmd id="EN">
+      <INFfile>iaioi2ce.inf</INFfile>
+      <Mfg>%INTEL%</Mfg>
+      <DeviceDesc>%i2c.DeviceDesc.0502%</DeviceDesc>
+      <DeviceDesc>%i2c.DeviceDesc.0503%</DeviceDesc>
+      <DeviceDesc>%i2c.DeviceDesc.0504%</DeviceDesc>
+      <DeviceDesc>%i2c.DeviceDesc.0505%</DeviceDesc>
+    </INFCmd>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%Windows%\system32\DRIVERS\iaioi2ce.sys</File>
+      <Version>604.10135.1001.53001^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[ACPI\VEN_8086&DEV_0F41]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n15lt04w.exe</Name>
+        <CRC>94D28A67D6D5205CAB64C9BB6A88C78B84D3CAE5</CRC>
+        <Size>349432</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n15lt04w.txt</Name>
+        <CRC>9E8F9DA0BD98098D7FE7EBC4626F6D048057CED6</CRC>
+        <Size>7724</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

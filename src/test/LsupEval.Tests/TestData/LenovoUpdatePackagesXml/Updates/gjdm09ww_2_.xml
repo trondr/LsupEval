@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="NV_GJDM" id="gjdm09ww" version="9.18.13.5324" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Video Features (NVIDIA GT 720M/730M, Quadro K1100M/K2100M Optimus) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\nvlddmkm.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\nvlddmkm.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>gjdm09ww.exe /VERYSILENT /SP- /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-02</ReleaseDate>
+  <DiskSpaceNeeded>1513922560</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.bat -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.bat</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\nvlddmkm.sys</File>
+      <Version>9.18.13.5324^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1290&SUBSYS_221F17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1290&SUBSYS_221D17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1290&SUBSYS_221E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1140&SUBSYS_222017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_11FC&SUBSYS_221E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FF6&SUBSYS_221E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FF6&SUBSYS_221A17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_11FC&SUBSYS_221A17AA]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>gjdm09ww.exe</Name>
+        <CRC>8B81D0B8C72143F69DC453EE19A36AB6E4168172</CRC>
+        <Size>422383936</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>gjdm09ww.txt</Name>
+        <CRC>D16A65603489CB5A82303A39170EF99ED39E2B35</CRC>
+        <Size>15340</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

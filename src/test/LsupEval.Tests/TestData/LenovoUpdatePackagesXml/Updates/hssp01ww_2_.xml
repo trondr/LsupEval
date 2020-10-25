@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CARDREADER_REAL_HSSP" id="hssp01ww" version="6.2.9200.29069" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Card Reader Driver - 8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      <ValueName>version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>hssp01ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-05</ReleaseDate>
+  <DiskSpaceNeeded>37700000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      <KeyName>version</KeyName>
+      <Version>6.2.9200.29069^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN10</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5229&SUBSYS_510C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5229&SUBSYS_221917AA]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>hssp01ww.exe</Name>
+        <CRC>DEB51DFB04B4B9DE0DC3684A8D916CAFCC44F95A</CRC>
+        <Size>6364040</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>hssp01ww.txt</Name>
+        <CRC>2F119088403DC7E864DDB78CC9D533EC5B8E2946</CRC>
+        <Size>6357</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

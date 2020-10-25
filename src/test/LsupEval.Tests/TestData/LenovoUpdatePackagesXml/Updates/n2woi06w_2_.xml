@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="TMF_N2WOI" id="n2woi06w" version="6.14.6.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Monitor File (Windows 10 Version 1809 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[MONITOR\LEN40A9]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40AA]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4060]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4061]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4067]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4068]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40AD]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40A3]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4162]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4167]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4168]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40BA]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4094]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4098]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4090]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN6067]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN6068]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4169]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4180]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4181]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[MONITOR\LEN40A9]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40AA]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4060]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4061]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4067]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4068]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40AD]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40A3]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4162]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4167]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4168]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40BA]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4094]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4098]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4090]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN6067]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN6068]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4169]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4180]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4181]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2woi06w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-16</ReleaseDate>
+  <DiskSpaceNeeded>1469428</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n2woi06w.exe /verysilent /DIR=%PACKAGEPATH%\TMP</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n2woi06w.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[MONITOR\LEN40A9]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40AA]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4060]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4061]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4067]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4068]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40AD]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40A3]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4162]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4167]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4168]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40BA]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4094]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4098]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4090]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN6067]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN6068]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4169]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4180]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4181]]></HardwareID>
+      <Date>2020-06-15</Date>
+      <Version>6.14.6.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[MONITOR\LEN40A9]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40AA]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4060]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4061]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4067]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4068]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40AD]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40A3]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4162]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4167]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4168]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40BA]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4094]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4098]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4090]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN6067]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN6068]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4169]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4180]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4181]]></_PnPID>
+      </Or>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3,4">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      </Not>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2XET*</Level>
+        <Level>N2YET*</Level>
+        <Level>N2WET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2woi06w.exe</Name>
+        <CRC>B874696C0A96925FE6E940AD9B626CBD39AD6165C5BFFA38E157A7891E46EFD3</CRC>
+        <Size>992512</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2woi06w.txt</Name>
+        <CRC>993E12839A9779782A61CDF83AAFC504B9E070590558FEDDFEFC4AFEC6BEEB5C</CRC>
+        <Size>7484</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>gl2lq4Eeghu6qCiDjsgDWSKsmOM=</DigestValue></Reference></SignedInfo><SignatureValue>B47ZrsTAsok+5/azlTqpY+on9GCjj3+aZQa8V8+wdCNfgSjxxKUWBu6LSV3rvMQl+5lvB6iPzTz6wZhMBdtfLHmv0PDdc8c+GUw8xkYLYob4czvORnekTOAsc4pcoozJcbokLpcv/2bpwhHGnzsCsQXMM9rDXbQrmpkvC0e4XVmQr07iw0HImSf1U+5otUsPOmrI6o++D1pDOWKuxGpyaT1grW/aia8cxTjQdS+OpxOFrHwTi3CKSlfsRrSeEqG/W/4zHf2AycU9ntqdDOjEvrGG1ziuOLlCmUM1ehtoTYARBdueFAdy5EKZGmbc72AjQgm7Ao3vDP7Noi0zdw52vw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

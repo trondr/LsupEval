@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<!-- LPS version 3.13b -->
+<Package name="FWU_LNVBFU_N20FU" id="n20fu04w" version="1.18" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Battery Firmware Update Utility - 10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n20fu04w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-11-11</ReleaseDate>
+  <DiskSpaceNeeded>3721764</DiskSpaceNeeded>
+  <Reboot type="5" />
+  <Brand type="2" />
+  <PackageType type="4" />
+  <Preload />
+  <Install rc="130" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\LnvBFU.exe -Ss -NoShutdown</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\IBM0055]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\IBM0068]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\LEN0068]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\LEN0168]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\LEN0268]]></HardwareID>
+        <Version>1.60^</Version>
+      </_Driver>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <Not>
+          <_Bios>
+            <Level>R0XET*</Level>
+          </_Bios>
+        </Not>
+        <And>
+          <_Bios>
+            <Level>R0XET*</Level>
+          </_Bios>
+          <Not>
+            <_Bios>
+              <Level>R0XET0*</Level>
+              <Level>R0XET1*</Level>
+              <Level>R0XET2*</Level>
+              <Level>R0XET30*</Level>
+              <Level>R0XET31*</Level>
+              <Level>R0XET32*</Level>
+              <Level>R0XET33*</Level>
+              <Level>R0XET34*</Level>
+              <Level>R0XET35*</Level>
+              <Level>R0XET36*</Level>
+              <Level>R0XET37*</Level>
+              <Level>R0XET38*</Level>
+            </_Bios>
+          </Not>
+          <_EmbeddedControllerVersion>
+            <Version>1.16^</Version>
+          </_EmbeddedControllerVersion>
+        </And>
+      </Or>
+      <_ExternalDetection rc="150">%PACKAGEPATH%\bfudet.exe %PACKAGEPATH%\bfut_silent.ini</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n20fu04w.exe</Name>
+        <CRC>193135024549CDA2902EECB8B9CBA7E0BEC9B8991A5A656EC188FF0200FD806D</CRC>
+        <Size>1922296</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n20fu04w.txt</Name>
+        <CRC>9224134140FB997D2C8E2D3F72D33F6F2CFA21F0D10D694E1DC33908E02A6B48</CRC>
+        <Size>9347</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>bfudet.exe</Name>
+        <CRC>6821ADF63419B7A0F2CED98CD156E8CA150348B32C352D1B6FB3673876B8E615</CRC>
+        <Size>70672</Size>
+      </File>
+      <File>
+        <Name>bfut_silent.ini</Name>
+        <CRC>3267DAC2F5812DC26EC3E8E3655F9D66930BA2C01609BEB16DA835A3BF3B9CF6</CRC>
+        <Size>394</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>W5PaeueXQ2beZy1YGskzGJ+1MQY=</DigestValue></Reference></SignedInfo><SignatureValue>r/YcGgEs6yFqVgU221xYDlPAiHcSDz/puy0TKR3gqr8GVdZmhJytidbCoEN7Aog8ZyjiSSewaQ69KnDCMD1YMNO4Lb39A06FPBDuFOT77hEf9WdJwMqI/XNQMkVqKBm1Raj2DSqgtsYMLNAz8+p5Ufs8HSFmm3CpIgL92va13ueIloSmrQEOZa6AFoFIb31tbg3gSpSJFISvZVzbsS6yxc1KIgXpB1QHI3YFUw7k6xjPib9u9WHQ9vgs/a9iwoD2BsY68Jn0KHklb8hPbWHmhUOz1+xhLKMgGFopxLr2usMm2e474Vp799ipTA/zKZOoWkhxANs5di4UBQNUMcESVg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

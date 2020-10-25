@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AMD_GRP_HSD8_W10" id="hsd801ww" version="15.200.1045.0000" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD Graphic Device Software - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <ValueName>ProductVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>hsd801ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-08</ReleaseDate>
+  <DiskSpaceNeeded>790641013</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <KeyName>ProductVersion</KeyName>
+      <Version>15.200.1045.0000^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9832&SUBSYS_221917AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9838&SUBSYS_221917AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9832&SUBSYS_510C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9838&SUBSYS_510C17AA]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>hsd801ww.exe</Name>
+        <CRC>E1D9EBE5C2D00EBD2BE0782E89B2BF3E7AEFAD59</CRC>
+        <Size>263459328</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>hsd801ww.txt</Name>
+        <CRC>95B444CF4E28243FCA9C9FFB9A168B4BD6756062</CRC>
+        <Size>7904</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHP_U1CHP21_AVC_1064" id="u1chp23us14avc" version="10.1.16.5" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Chipset Driver(Windwos10 Version1803 AND 1809) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA&REV_10]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C0500]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C05]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_313117AA&REV_10]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_313117AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="3">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C05]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1chp23us14avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-07-25</ReleaseDate>
+  <DiskSpaceNeeded>19000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="2" />
+  <Install rc="0,14,3010,1641" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -norestart -silent</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA&REV_10]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C0500]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C05]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_313117AA&REV_10]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_313117AA]]></HardwareID>
+      <Version>10.1.16.5^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA&REV_10]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C0500]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C05]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_313117AA&REV_10]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_313117AA]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="4,5">%PACKAGEPATH%\getw10ver4.exe</_ExternalDetection>
+      <_Bios>
+        <Level>*</Level>
+        <Level>M1UKT*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1chp23us14avc.exe</Name>
+        <CRC>4A153A1BF32EF46B5EFB93D821A80D5FC6217C5D05AF7125134EB32922B90035</CRC>
+        <Size>5759976</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1chp23us14avc.txt</Name>
+        <CRC>47DB5DC43DE5B80E92BC79AFD76CDD1B7B3E7E04478CAA0F5AB1A0A24B0B76DB</CRC>
+        <Size>29940</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver4.exe</Name>
+        <CRC>FD6910AFA3522622C4F3C2E4A0C819AB47189FE98C3F71B668EC5CA8E732473A</CRC>
+        <Size>136040</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>kT8h94T7rYA0hmnmrn89AERSm/w=</DigestValue></Reference></SignedInfo><SignatureValue>Qe2y4kkiblqGZFqQNvIcg2SjfbnqNcHnuBALj/GiQ0LBAYlLWc3psLpIcpwomdN0i/Ljo3EZrrTvafwVPbGYHi+bzwN5qAp4CNtqlASV8JUFCwUJkm1ug2x9jo+orfTZiP4uFSXXj4fqlmwgg2kfGvI3n1RkWfPiIiF/d75gpzO7dtWjGeY1kadQselwwNYbOTmF/WBTr3cKsr2h8ktythcqI1a2Lo5dkUmc0dfppwaBeFrVefMuEg4OK1cn1Q/WMr8S/u4SIBw+9jLfQjEGzTFMdQ7xaUjPqjeZzUprp1n0Wb718tDOBob0W3i5n03eIy52HaqPPmZzEw+yskEVqA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="DOCK_ACCO" id="acconelink02gw" version="1.08.36" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad OneLink Docks Driver - 7/8/8.1/10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{8E1CACF5-2493-4950-9AD5-189903FE57E7}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{8E1CACF5-2493-4950-9AD5-189903FE57E7}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_RegistryKey>
+          <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{8E1CACF5-2493-4950-9AD5-189903FE57E7}</Key>
+        </_RegistryKey>
+        <_RegistryKey>
+          <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{8E1CACF5-2493-4950-9AD5-189903FE57E7}</Key>
+        </_RegistryKey>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>acconelink02gw.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-08-12</ReleaseDate>
+  <DiskSpaceNeeded>31000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup_OneLink_Dock_Lenovo_v1.08.36.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup_OneLink_Dock_Lenovo_v1.08.36.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{8E1CACF5-2493-4950-9AD5-189903FE57E7}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.08.36^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{8E1CACF5-2493-4950-9AD5-189903FE57E7}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.08.36^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_3049]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_304B]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_304E]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_304F]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>GRET*</Level>
+        <Level>N14ET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>acconelink02gw.exe</Name>
+        <CRC>FE7E469E26027E8064902F554F72FF682BA4861F</CRC>
+        <Size>12283264</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>acconelink02gw.txt</Name>
+        <CRC>1118055FFD5BBC7F71204EEC0BEA026682D30FEB</CRC>
+        <Size>4398</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

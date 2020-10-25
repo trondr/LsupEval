@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAM_N1LCD_W10" id="n1lcd03w" version="2.1.24.9476" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Realsense 3D Camera Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\RSSDK\Components\dcmservice_r200</Key>
+      <ValueName>Version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\RSSDK\Components\dcmservice_r200</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1lcd03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-05-16</ReleaseDate>
+  <DiskSpaceNeeded>363510400</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\intel_rs_dcm_r200_2.1.24.9476.exe --silent --no-progress --acceptlicense=yes --update-fw=yes</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\intel_rs_dcm_r200_2.1.24.9476.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\RSSDK\Components\dcmservice_r200</Key>
+        <KeyName>Version</KeyName>
+        <Version>2.1.24.9476^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A80]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1lcd03w.exe</Name>
+        <CRC>5F7843070AEFB9CD2B5EC5BD25E41A9F8790B331</CRC>
+        <Size>111660608</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1lcd03w.txt</Name>
+        <CRC>30433FCBDE0964F537476A3B3EB9987EC9E864B3</CRC>
+        <Size>7176</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

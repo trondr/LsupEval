@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="TS_D1VDO33_P3_W10" id="d1vdo33us17ws_p300" version="15.20.1045" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD Discrete VGA Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <ValueName>ProductVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>d1vdo33us17ws_p300.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-15</ReleaseDate>
+  <DiskSpaceNeeded>1116022450</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <KeyName>ProductVersion</KeyName>
+      <Version>15.20.1045^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_68F2&SUBSYS_01261002]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6608&SUBSYS_21201002]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_682C&SUBSYS_2B1E1002]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6649&SUBSYS_230C1002]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>d1vdo33us17ws_p300.exe</Name>
+        <CRC>C1B3D9E4ED72DEBB23409198C8609230AD2E93B4</CRC>
+        <Size>335539696</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>d1vdo33us17ws_p300.txt</Name>
+        <CRC>498BD5D3E2CA2C38CB046CCF3B6F1491CB94F081</CRC>
+        <Size>8572</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="TS_K8AMT_P3_W10" id="k8amtc0us17_ts" version="11.0.0.1146" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel AMT Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\DriverStore\FileRepository\heci.inf_amd64_59ae5df2c8ff72f8\x64\TeeDriverx64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\DriverStore\FileRepository\heci.inf_amd64_59ae5df2c8ff72f8\x64\TeeDriverx64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k8amtc0us17_ts.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-15</ReleaseDate>
+  <DiskSpaceNeeded>186708655</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupME.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupME.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\DriverStore\FileRepository\heci.inf_amd64_59ae5df2c8ff72f8\x64\TeeDriverx64.sys</File>
+      <Version>11.0.0.1146^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C3A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C3D]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k8amtc0us17_ts.exe</Name>
+        <CRC>D6797AD24A5F6999403F508DC9AC2F237E026093</CRC>
+        <Size>73833760</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k8amtc0us17_ts.txt</Name>
+        <CRC>2ACC70B4C6DFC645CB94FF82B0C2DD4C0E4E1832</CRC>
+        <Size>4008</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

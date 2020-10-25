@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AMD_GRAPHIC_HMDI" id="hmdi10ww" version="9.012.0.0000" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD Graphic Device Software - 8 [32,64]/8.1 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <ValueName>ProductVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0000-000-001-001-001-00-00</Key>
+      <ValueName>ProductVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0000-000-001-001-001-00-00</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>hmdi10ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2013-11-11</ReleaseDate>
+  <DiskSpaceNeeded>477100000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0000-000-001-001-001-00-00</Key>
+        <KeyName>ProductVersion</KeyName>
+        <Version>9.012.0.0000^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+        <KeyName>ProductVersion</KeyName>
+        <Version>9.012.0.0000^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+      </_OS>
+      <Not>
+        <And>
+          <_CPUAddressWidth>
+            <AddressWidth>32</AddressWidth>
+          </_CPUAddressWidth>
+          <_OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+        </And>
+      </Not>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9802&SUBSYS_21FD17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9802&SUBSYS_510517AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9809&SUBSYS_21FD17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9808&SUBSYS_21FD17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9809&SUBSYS_510517AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_9808&SUBSYS_510517AA]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>hmdi10ww.exe</Name>
+        <CRC>2A0B4015569CC37C55EB052F95C33220E9E8B898</CRC>
+        <Size>187539872</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>hmdi10ww.txt</Name>
+        <CRC>A83D5DFE55B58DB5C05E23881862299FDE8851F0</CRC>
+        <Size>7204</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

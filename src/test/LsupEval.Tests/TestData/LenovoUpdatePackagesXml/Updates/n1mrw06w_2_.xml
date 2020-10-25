@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="LAN_N1MRW" id="n1mrw06w" version="12.18.9.8" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel PRO/1000 LAN Adapter Software (Windows 10 Version 1809 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D7]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D8]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_156F]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1570]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D7]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D8]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_156F]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1570]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1mrw06w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-04-14</ReleaseDate>
+  <DiskSpaceNeeded>3677229</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s /se /sa /sw</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D7]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D8]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1570]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_156F]]></HardwareID>
+      <Date>2019-06-06</Date>
+      <Version>12.18.9.8^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D7]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D8]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_156F]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1570]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1MET*</Level>
+        <Level>N1NET*</Level>
+      </_Bios>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3,4">%PACKAGEPATH%\getw10ver6.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1mrw06w.exe</Name>
+        <CRC>DC58F5C70E2E464E27FE9CB1E85534F0D8FD32808F6D526290F5EB0ACCC48037</CRC>
+        <Size>1490856</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1mrw06w.txt</Name>
+        <CRC>75DD735EEFD827F0AED54848464075582438055CFE0A2821E3B725968EED5342</CRC>
+        <Size>8653</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver6.exe</Name>
+        <CRC>D983A6376977C6B578D05232FEE0BDFA2C66538FDB2B35CA41694A900A2DEB6A</CRC>
+        <Size>159048</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>hrZUSyT3thZ9rnoNzcLAW8NaoM8=</DigestValue></Reference></SignedInfo><SignatureValue>W6Zk3N2a9fXqkC8DLI9LfUxfaPsGzdhrHEdgZmaOC/FkNsx4lQm6Sj9zZWAajilnvuIpsZreNp5vmC7X83EkDWQ4riCVWRnQ9kT3Qy/glSLaSBbgETLOSjpFdQ2IscKxTBWr23fcP7BovqdHfuVoC5E7WwwDeHqaptGsVYdnzjaKro51Z51diX6es8h1jn2m8f9BlFeD+NlzU/hc57V7/IXCmMkyumEfiZiPEicnVBPp9El5o0ABUmaWIy9iaOnbeCz90m5p+MmMAuIEsuY5H5vcRu2CqPffUBX6Yu+7TmG+KLUka5fmrDChXZDjRY5RBtq33Xl/px+HK7WBSWMY8g==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

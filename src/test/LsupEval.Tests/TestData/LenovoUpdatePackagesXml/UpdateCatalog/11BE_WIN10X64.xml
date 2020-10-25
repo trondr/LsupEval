@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="31">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m30jy19usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">37d0bd3b92cb033e32944666089481f44342a661236c8ca235408289f5aa7d07</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdos01dus14fxn_m720e_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d4852c86e4f529abebf4f4a8f794776ab08cc1d95808b9e9b57c101fede717a6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/3u3vdo03us14fxn_m720e_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">8462019dda7473a7ff868258d9018ee130d3da49c0c8ab03a9a21ba2f605b4ac</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/3u6vdo03us14fxn_m720e_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">064daa60c7f4fc31036a3b826a1cd972a94d93c90abd425c1fa3f8728bee83a3</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/3u1chp02us14fxn_m720e_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">2682ac4ee6f9622c03202adf401d4deb76a60edd9c342ed4d10de18eecd0f7f0</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/3u1rad04us14fxn_m720e_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1471476ab408a674ac5f9a17ebee3ef5d0a8c7e282bddc98292a518aeb055a28</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/3u2blt02us14fxn_m720e_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">41abf1d324ce78aaea58f0e2bccaffde62220247de8fad1e3f0b1cd1b2b6306f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/3u2vdo06us14fxn_v1_m720e_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9cb7c63098e10372a6eed06954a1c037a2ba58ebb71531a167ac040788194fad</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/3u2wlg02us14fxn_m720e_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">c7d1e2af629fa880504c05ae8b51544e998d93c6b9b5754ae8f8cac3c59fc21b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/3u4etn02us14fxn_m720e_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ebded87222cf2858079c0a41bd7dac0a1c12edb4658144736f112f9237adbe85</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/3u4wlg01us14fxn_m720e_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6f2ab706cbc3bd31314139822956de6d1e88d610c3c967a6297484af00338953</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/3u7aud02us14fxn_m720e_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">c9ae3049d897e982bdf6925fcb9af71a71055c37bed2f0ab5dd9dfe8e23add75</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/3u8amt01us14fxn_m720e_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1390a4162f16b03d2da94f388a284aca8610caa070be184ed2d8fbb1eff9d73f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u1car05us14fxn_m720e_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d1e1d767ad3d6a2712d4dbc7ac8d1abdb699d44549cfa436148c8c74bb15d6d7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u2car05us14fxn_m720e_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7db57d2853a0df3e0e2410a84ca10b04888087c266c11e6b522908353f08ff3f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u4blt07us14fxn_m720e_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">92433d48ac49465b6382d8baf43741ba0a5ecc258afa8cf7e8331e5f33c82e95</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u4blt02us14fxn_m720e_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e37aaac9e3a304910b30923c1eecce4e217ccc81b60d0e3bec5145307acbf489</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/4u1car01us14fxn_m720e_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5ff607bf48452f101514655af46d812440bf9aa5adcb1f13b8a8f06d9ccf0955</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/4u4etn04us14fxn_m720e_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">48c30b718a9cdaab6da203d5d8437e158c71afd8b63e0f262e0711acd7731765</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/4u4wlg04us14fxn_m720e_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">423f399c31ade81ec866ad27bbd2f4ec48cc8cf809bb87cdce816d20c918762b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/4u7aud05us14fxn_m720e_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4dab63ee831991d2794477a192fbdd920f77a2bc5f52d3526022243ef313fe44</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/4u2car01us14fxn_m720e_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">8b3489db4d8ed00a471e84fec7e1803e454e5cf973900e17d0ad71465ef1749a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u1chp05us14fxn_m720e_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">8e03074b8df730d5482b830d52a7a118817975d3da5ca75aaec91d905ea77d47</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u1rad06us14fxn_m720e_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">43bdaa512ba153db63429d3ed768c2d124aced7e3c6ac5bace196e998cd5a55b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u2blt04us14fxn_m720e_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3834f084be78477ca81c01bc4555ae47751217bbcefd28d3ba74a2413d99df52</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u2vdo07us14fxn_m720e_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6cc3b0aeaa563ace3d56045ccb6fd949727aeb213efe95e359928df4e194773e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u2wlg04us14fxn_m720e_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">34cf681708dfcf588be8051925d71537407cb4be591fdbdbffa3e98e5fdfadf1</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u3vdo03us14fxn_m720e_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ffb5b9f2aed8b7d1cddbca1092b8cd64c89a7cf92961b3442a69615d83ebdcec</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u6vdo03us14fxn_m720e_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">daaf091bdd99de4ae6c75e6cde3b5cd564d1b832ddd00cbfddfd9b06d7b1da3d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/4u8amt07us14fxn_m720e_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3bb8dc43dbb3a560df03e718aeeb0d611f338150f96cdfe069f3b33704e57ea1</checksum>
+  </package>
+</packages>

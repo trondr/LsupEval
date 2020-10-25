@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="SDV40_G1TBT_1064" id="k1tbt04ws17_1064" version="15.2.32.6" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Thunderbolt Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\tbt81x.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\tbt81x.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k1tbt04ws17.exe /VERYSILENT /DIR=%PACKAGEPATH%</ExtractCommand>
+  <ReleaseDate>2015-11-24</ReleaseDate>
+  <DiskSpaceNeeded>51975609</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">msiexec.exe /i %PACKAGEPATH%\setup.msi /quiet /norestart /lv* log.txt</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.msi</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\tbt81x.sys</File>
+      <Version>15.2.32.6^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_156A]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1tbt04ws17.exe</Name>
+        <CRC>94D2C272E1BC9A675D03A2E313E399BD06D13AC7</CRC>
+        <Size>2110704</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1tbt04ws17.txt</Name>
+        <CRC>D8254A801743647B5B343C557BD78D7609C4259A</CRC>
+        <Size>6494</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

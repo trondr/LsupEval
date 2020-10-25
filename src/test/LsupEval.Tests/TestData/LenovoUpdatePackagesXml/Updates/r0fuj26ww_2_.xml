@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BIOS_R0FUJ" id="r0fuj26ww" version="1.33" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad BIOS Update - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0fuj26ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-21</ReleaseDate>
+  <DiskSpaceNeeded>18900000</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\winuptp.exe -r</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Bios>
+        <Level>R0FET53*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>1.05^</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_Bios>
+        <Level>R0FET52*</Level>
+        <Level>R0FET51*</Level>
+        <Level>R0FET50*</Level>
+        <Level>R0FET49*</Level>
+        <Level>R0FET48*</Level>
+        <Level>R0FET47*</Level>
+        <Level>R0FET44*</Level>
+        <Level>R0FET43*</Level>
+        <Level>R0FET42*</Level>
+        <Level>R0FET41*</Level>
+        <Level>R0FET40*</Level>
+        <Level>R0FET39*</Level>
+        <Level>R0FET37*</Level>
+        <Level>R0FET36*</Level>
+        <Level>R0FET35*</Level>
+        <Level>R0FET34*</Level>
+        <Level>R0FET33*</Level>
+        <Level>R0FET32*</Level>
+        <Level>R0FET31*</Level>
+        <Level>R0FET30*</Level>
+        <Level>R0FET29*</Level>
+        <Level>R0FET28*</Level>
+        <Level>R0FET27*</Level>
+        <Level>R0FET26*</Level>
+        <Level>R0FET25*</Level>
+        <Level>R0FET24*</Level>
+      </_Bios>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_EmbeddedControllerVersion>
+        <Version>^1.05</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0fuj26ww.exe</Name>
+        <CRC>D8ADCA71A6A36AA29C01A07EA3DCDDEB928F4C9F7DAA6636A0DCD61F6D9BC8D7</CRC>
+        <Size>9140936</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0fuj26ww.txt</Name>
+        <CRC>08B9F3F09EBAB32B2D7033195FDA1C946E862A31C925EEF1FAFFB3E45537382A</CRC>
+        <Size>26014</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>KFP4F+WwUACZpRHDXSTn3rSed1s=</DigestValue></Reference></SignedInfo><SignatureValue>Dh3062QDmdcDq2UTRSYcAP5Xxo8iJdwAZhbdLv2MbBbVe6zwPnUQYIQ7mmy0gVrnp0eZPQx/a/IyxbPB/JVOqXr14EVnWM6SoRutJhCkHJdYzznF6DG6PcMsMW/6wQXb/99z8Xz1/sb3t9wqLZ5Uqor5/kCSLUO2MTF3xTxekgp8oU8HzaHiTzzLL+eJXXbLyTx/MUgPoC+DnV0SEjQKar/VTL1f6GNmid6Qomj5VTOwV6f2fY6BxVugJkn52Dl+/OjqTTxprbQMQLWjzIuR1LaZuCYbqFDDqZMDCIpw30d8syKN4dXOHz6jw1AhvNYlFFSwmGCbqU/0k2gBbxMGUg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

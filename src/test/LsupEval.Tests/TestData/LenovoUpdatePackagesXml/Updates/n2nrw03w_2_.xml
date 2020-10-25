@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IPLAS_N2NRW" id="n2nrw03w" version="12.18.9.8" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel PRO/1000 LAN Adapter Software (Windows 10 Version 1903 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229717AA]]></_PnPID>
+    <_PnPID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229717AA]]></_PnPID>
+    <_PnPID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229B17AA]]></_PnPID>
+    <_PnPID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229B17AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229717AA]]></HardwareID>
+        <HardwareID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229717AA]]></HardwareID>
+        <HardwareID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229B17AA]]></HardwareID>
+        <HardwareID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229B17AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2nrw03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-04-23</ReleaseDate>
+  <DiskSpaceNeeded>4323234</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /q /se</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229717AA]]></HardwareID>
+      <HardwareID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229717AA]]></HardwareID>
+      <HardwareID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229B17AA]]></HardwareID>
+      <HardwareID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229B17AA]]></HardwareID>
+      <Date>2019-06-06</Date>
+      <Version>12.18.9.8^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229717AA]]></_PnPID>
+        <_PnPID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229717AA]]></_PnPID>
+        <_PnPID><![CDATA[\VEN_8086&DEV_15BB&SUBSYS_229B17AA]]></_PnPID>
+        <_PnPID><![CDATA[\VEN_8086&DEV_15BC&SUBSYS_229B17AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2NET*</Level>
+      </_Bios>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3,4,5">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2nrw03w.exe</Name>
+        <CRC>D42E186C6D54DE648DFA2E68BE9DB211317216DF9469D2EEC095F3E38100E79C</CRC>
+        <Size>1604760</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2nrw03w.txt</Name>
+        <CRC>3F11B88AB8B24056C3AA452FD45B461493D91FC8566591766638DF09143E3431</CRC>
+        <Size>7537</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>zITuf/qGW7dhGxW5B30XUZyvpgg=</DigestValue></Reference></SignedInfo><SignatureValue>DBqw+vybJDIavTBvBUVHu92jFk3HS7eoqRCQK1pClQVIOhl/kKDUVVxJ18itxufwqHNY12Q3yjSEboOJ9NaCmanpOvyLvM4pJ2PosdC30tZeRvFzIvW3id73/nDgKP7kzDWeiuBxljdL702l9Yfw0Q1wKKz1xNSBto7hIIy65pSYVP3eJxovTml5PoZlJzYmxhBqTXQ2pXezvSFzZcFkznKLILnokvCaw4VmLu3unKP+I3of4Cli1YYJXch3mAtq8n0QI7j9Q+oxYqRbd3LymYZ1Jowc5pH/PXg/rZUdDN5FUnqGAZ/FMr5HI8Ix4C/f7SoRP2mo7WqocrmfyLMmWQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

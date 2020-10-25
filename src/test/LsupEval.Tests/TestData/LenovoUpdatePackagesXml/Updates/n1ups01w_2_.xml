@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIPSET_N1UPS" id="n1ups01w" version="10.1.1.45" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) Chipset Device Software - 10 [64]/7 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D48]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D21]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D23]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D31]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1ups01w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-02</ReleaseDate>
+  <DiskSpaceNeeded>9108415</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -s -norestart</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1911]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D48]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D21]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D23]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D31]]></HardwareID>
+      <Version>10.1.1.45^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1UET*</Level>
+      </_Bios>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D48]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D21]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D23]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D31]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0,1">inboxdrivercheck.exe n1ups01w_2_.xml</_ExternalDetection>
+      <Or>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC</OS>
+            <OS>WIN7-HOMEBASIC.SP1</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</Key>
+            <KeyName>Version</KeyName>
+            <Version>4.6.2^</Version>
+          </_RegistryKeyValue>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB4474419~31bf3856ad364e35~amd64~~6.1.3.2</Key>
+            <KeyName>InstallName</KeyName>
+            <KeyValue>Package_1_for_KB4474419~31bf3856ad364e35~amd64~~6.1.3.2.mum</KeyValue>
+          </_RegistryKeyValue>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB2685811~31bf3856ad364e35~amd64~~6.1.1.11</Key>
+            <KeyName>InstallName</KeyName>
+            <KeyValue>Package_1_for_KB2685811~31bf3856ad364e35~amd64~~6.1.1.11.mum</KeyValue>
+          </_RegistryKeyValue>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB2534111~31bf3856ad364e35~amd64~~6.1.1.0</Key>
+          </_RegistryKey>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB976902~31bf3856ad364e35~amd64~~6.1.1.17514</Key>
+          </_RegistryKey>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_2_for_KB4490628~31bf3856ad364e35~amd64~~6.1.1.2</Key>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\ApplicabilityEvaluationCache\Package_for_KB4490628~31bf3856ad364e35~amd64~~6.1.1.2</Key>
+          </_RegistryKey>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1ups01w.exe</Name>
+        <CRC>27A03B551C7C407968F5E864FF8B21EAC7A898B55379F89B80041C7BD33F80B8</CRC>
+        <Size>5043416</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1ups01w.txt</Name>
+        <CRC>1AE97342E09AE6B88D0CD08A8D84D70D525214154D8E81C45996D95E1C84B5C3</CRC>
+        <Size>7650</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>cQclLSVI9X3Meo8DNhGi3ato24M=</DigestValue></Reference></SignedInfo><SignatureValue>FoI/ctKu69E63Q8mhuC+xU9w58Y9jsW1NOYWyb9+2YWwfMNDmNZpkiJBsQ5cgVQ/YkFgxETCv+88lAGXdCZmulLmC/U+LjTxxlrCbl5QsLLs7OEHUqkXHiTngrTvvPzdeoZak30XcxhDFbTW1Xq68P5pg7ahNNJp37pq80+FHSnpuWsR4YmGpPPMJm/3PGxoNtG9lkF9Oa33pW9E+LPqBlMCbIcMCBg93BiyNDbvbZliHY/2VUdKVeZxSUFRx6xReNVzSGkT0lg4YKnv6JXLJmHVzVf3Vw4RonD9DHXEbnOVLU75C9JcSh1iMuxNZVsjDEfxFrgzN0+G2fuMU1hCkw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

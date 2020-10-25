@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IO_G05S" id="g05si02w" version="30.63.1519.7" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Serial IO Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[ACPI\INT344B]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D27]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\INT344B]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D27]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>g05si02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-08-24</ReleaseDate>
+  <DiskSpaceNeeded>8579481</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupSerialIO.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupSerialIO.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[ACPI\INT344B]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D27]]></HardwareID>
+      <Date>2015-05-04</Date>
+      <Version>30.63.1519.7^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[ACPI\INT344B]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D27]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>g05si02w.exe</Name>
+        <CRC>E30097A9110BA67EAAAAED55EEE3142CC9CC5414</CRC>
+        <Size>3688680</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>g05si02w.txt</Name>
+        <CRC>5AD8B18C8315BA5E07241B998D028D5A395FD5F1</CRC>
+        <Size>7185</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

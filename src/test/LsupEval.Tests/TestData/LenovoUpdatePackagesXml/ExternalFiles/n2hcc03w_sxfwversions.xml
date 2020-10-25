@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<fwutil>
+	<config version="1.0.0.0" >
+	</config>
+	<devices>		
+  		<device>
+  			<hw_id>VID_04F2_PID_B67D</hw_id> 
+    			<fwversions> 
+					<version>0406</version>
+    			</fwversions> 
+  		</device>
+	</devices>
+</fwutil>

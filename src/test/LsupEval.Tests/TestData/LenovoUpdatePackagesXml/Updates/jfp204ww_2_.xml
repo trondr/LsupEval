@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WINTAB_JFP2_W10" id="jfp204ww" version="7.3.1.4" hide="False">
+  <Title default="EN">
+    <Desc id="EN">WinTab Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\wachidrouter_isd.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\wachidrouter_isd.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jfp204ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-23</ReleaseDate>
+  <DiskSpaceNeeded>42806447</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,2" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\wachidrouter_isd.sys</File>
+      <Version>7.3.1.4^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_056A&PID_501C]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_502B]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5055]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5056]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jfp204ww.exe</Name>
+        <CRC>821796FBF650844F86213E51D60593162DB431C1</CRC>
+        <Size>9742536</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jfp204ww.txt</Name>
+        <CRC>07D013C63D0F6416B6D033CFBDBE4EC6E9574292</CRC>
+        <Size>6915</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

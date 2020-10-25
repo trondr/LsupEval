@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WLAN_JEWG_W10" id="jewg09ww" version="19.51.8.2" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Stone Peak 7265/7265BN Wireless LAN Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&CC_028000]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&CC_0280]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&CC_028000]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&CC_0280]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jewg09ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-01-12</ReleaseDate>
+  <DiskSpaceNeeded>509222432</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win7Plus\Win64\Install\Setup.exe -q</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win7Plus\Win64\Install\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&CC_028000]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&CC_0280]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></HardwareID>
+      <Date>2017-10-25</Date>
+      <Version>19.51.8.2^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&CC_028000]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&CC_0280]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>*</Level>
+        <Level>JEET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jewg09ww.exe</Name>
+        <CRC>83A24BF12AF826557D84F76E93337DAF3A8C57CE7E29D9EB74E1143C85C03245</CRC>
+        <Size>180425752</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jewg09ww.txt</Name>
+        <CRC>E1CDE046100DD5B9C1863A1BC4421F4CD946B3F8BA4E74A507E9AD719F6364F2</CRC>
+        <Size>9818</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>5MwD01l97gTal6FC8W0TYnrBUIw=</DigestValue></Reference></SignedInfo><SignatureValue>UzaVJzGda/Yd+UYwJ6IJeGzynsAtLROkCcsht6L5nYjS2swgZflQ++VAeSyDD/HXkglBKOApxNJseJ+ri7r1ZZNuAeG7pEGhdhGcbvbsd4AAn03Qoz7fPkNSDYFGVWYeuliqo7Oa74Ivamr+H0J3VoMUz5zAVyJqGdV7F1N6B44JSLlFVp/AxbEDe4FltBXjJ3sLQ2R0BiV28QojMpM8HoO0VXJS97vm9PCbmVFt+dfdJat0F3u8Kn5SUbaWVSXN4aNo8qAZUit6fMeJBuFtbBxzus6hesSNc0bXTzbVYALusq2oJVMyRZBIJ3lcGoMbESJcKA9WP6n4s8228zIa7g==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

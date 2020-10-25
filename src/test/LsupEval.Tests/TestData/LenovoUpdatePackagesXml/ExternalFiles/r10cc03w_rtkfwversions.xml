@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<fwutil>
+<!-- This part is for FW utility software specific usage, please do not change this version -->
+	<config version="1.0.0.0" />
+
+<!-- The sample below is taken from Camera FW versioning -->
+	<devices>
+		<device>
+			<!-- Format: <INTERFACE>\<VENDOR DEVICE ID>.-->
+			<hw_id>SCSI\SAMSUNG_MZNTE128HMGR-000</hw_id>
+			<fwversions>
+				<!-- Add more fw version here if more than 1 fws has already been released to public.-->
+				<!-- New FW version should not be listed in this file.-->
+				<version>EXT26L0Q</version>
+				<version>EXT26L0R</version>
+				<version>EXT26L0S</version>
+				<version>EXT26L0T</version>
+			</fwversions>
+		</device>
+		<device>
+			<!-- Format: <INTERFACE>\<VENDOR DEVICE ID>.-->
+			<hw_id>SCSI\__LITEONIT_L8T-256L9G__</hw_id>
+			<fwversions>
+				<!-- Add more fw version here if more than 1 fws has already been released to public.-->
+				<!-- New FW version should not be listed in this file.-->
+				<version>68879TA</version>
+				<version>68879TB</version>
+				<version>68879TC</version>
+				<version>68879TD</version>
+			</fwversions>
+		</device>
+		<device>
+			<!-- Format: <INTERFACE>\<VENDOR DEVICE ID>.-->
+			<hw_id>USB\VID_0BDA_PID_5840</hw_id>
+			<fwversions>
+				<!-- Add more fw version here if more than 1 fws has already been released to public.-->
+				<!-- New FW version should not be listed in this file.-->
+				<version>5801</version>
+			</fwversions>
+		</device>
+		<device>
+			<!-- Format: <INTERFACE>\<VENDOR DEVICE ID>.-->
+			<hw_id>USB\VID_0BDA_PID_5843</hw_id>
+			<fwversions>
+				<!-- Add more fw version here if more than 1 fws has already been released to public.-->
+				<!-- New FW version should not be listed in this file.-->
+				<version>0101</version>
+			</fwversions>
+		</device>
+		<device>
+			<!-- Format: <INTERFACE>\<VENDOR DEVICE ID>.-->
+			<hw_id>USB\VID_5986_PID_111D</hw_id>
+			<fwversions>
+				<!-- Add more fw version here if more than 1 fws has already been released to public.-->
+				<!-- New FW version should not be listed in this file.-->
+				<version>3755</version>
+			</fwversions>
+		</device>
+		<device>
+			<!-- Format: <INTERFACE>\<VENDOR DEVICE ID>.-->
+			<hw_id>USB\VID_04F2_PID_B616</hw_id>
+			<fwversions>
+				<!-- Add more fw version here if more than 1 fws has already been released to public.-->
+				<!-- New FW version should not be listed in this file.-->
+				<version>6200</version>
+			</fwversions>
+		</device>
+	</devices>
+</fwutil>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<fwutil>
+<!--  This part is for FW utility software specific usage, please do not change this version -->
+	<config version="1.0.0.0" />
+<!--  The sample below is taken from Camera FW versioning -->
+	<devices>
+		<device>
+			<hw_id>USB\VID_056A&amp;PID_51F5&amp;MI_00</hw_id>
+			<fwversions>
+				<version>0001.00</version>
+				<version>0002.00</version>
+				<version>0002.01</version>
+				<version>0002.02</version>
+				<version>0002.03</version>
+			</fwversions>
+		</device>
+		<device>
+			<hw_id>USB\VID_056A&amp;PID_51F6&amp;MI_00</hw_id>
+			<fwversions>
+				<version>0001.00</version>
+				<version>0002.00</version>
+				<version>0002.01</version>
+				<version>0002.02</version>
+				<version>0002.03</version>
+			</fwversions>
+		</device>
+		<device>
+			<hw_id>USB\VID_056A&amp;PID_51F7&amp;MI_00</hw_id>
+			<fwversions>
+				<version>0001.00</version>
+				<version>0002.00</version>
+				<version>0002.01</version>
+				<version>0002.02</version>
+				<version>0002.03</version>
+			</fwversions>
+		</device>
+		<device>
+			<hw_id>USB\VID_056A&amp;PID_51F8&amp;MI_00</hw_id>
+			<fwversions>
+				<version>0001.00</version>
+				<version>0002.00</version>
+				<version>0002.01</version>
+				<version>0002.02</version>
+				<version>0002.03</version>
+			</fwversions>
+		</device>
+		<device>
+			<hw_id>USB\VID_056A&amp;PID_51F9&amp;MI_00</hw_id>
+			<fwversions>
+				<version>0001.00</version>
+				<version>0002.00</version>
+				<version>0002.01</version>
+				<version>0002.02</version>
+				<version>0002.03</version>
+			</fwversions>
+		</device>
+	</devices>
+</fwutil>

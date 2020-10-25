@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAM3D_R003C" id="r003c08w" version="1.4.27.52404" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel F200 Camera Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%PROGRAMFILES%\Common Files\Intel\RealSense\Analog\F200\RealSenseSourceProvider.dll</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%PROGRAMFILES%\Common Files\Intel\RealSense\Analog\F200\RealSenseSourceProvider.dll</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r003c08w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-09-02</ReleaseDate>
+  <DiskSpaceNeeded>143933321</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="1,1073741825" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /sa /sw /se /sh</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%PROGRAMFILES%\Common Files\Intel\RealSense\Analog\F200\RealSenseSourceProvider.dll</File>
+      <Version>1.4.27.52404^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&MI_02]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r003c08w.exe</Name>
+        <CRC>E1C774E99505D4DFCB6F05E347D47FF7E4217989</CRC>
+        <Size>36091896</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r003c08w.txt</Name>
+        <CRC>CD2DBAE682E4D8C6D828C15C0D66F3061BB7FD84</CRC>
+        <Size>7471</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="14">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1box04us17_1064_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9251daa1aa0658705c753ae3771555554edc95bea7a41b7c682fec92ec7ddccf</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k4etna7us17_10_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f3c4a7779364876e9d5c4da6aa46528f13b37abfad95f85db60e59f452643474</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdo66us17_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e20e6c4a1cffbe6e727f3e258fcf6204508efbf48e59927103e9fab7a96540ff</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m11jy52usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">aca65efb21b7779c1431ff9c70e63e4023c753991118c7de5fe8db5196e632d7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k10kyba3us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0829aefc2f7043ad5a05e81f2b231a85d5b5d2a27e0737b37db2a73976a3590b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k9kyb07us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b407e33564a055dedc77d80a1f871aea93f51ca57eed585e63ece0fbff2a0c56</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k4wlg18us17_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">07ac6634f2cf6d77ce6fe047fb51e304b44cb5d0eeed8b6e05409cd0586bcabd</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u6chp59us17_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b6f5332035a152e35521617eed1d923a0b158b646a3a79e88a52555f03036a49</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k11miea5us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0106970d58887b666b7842ce387f28f419c24fef915bd373806a0ee158f3cabf</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/i3blt13us17_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3701aa99f3a6b09e29c1f21edeb27c7a4d02b42e3020a5d9535b1408170fbe69</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/i3blt15us17_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0e5e7c83e17d572bef782b6091c5d036d74a143cd8bdaeee9fdcfa84cac3f91e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k3wlg25us17_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">aa6870538626f152a061d844ee7ac288b36b0ca3b4f231e60a3b37d2ef1cf4cc</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/g7audc8us17_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4fe7d282ee2de8cce9dca6ceb86a35a1bc4847d8b164fe5d359ddd26dbb13259</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+</packages>

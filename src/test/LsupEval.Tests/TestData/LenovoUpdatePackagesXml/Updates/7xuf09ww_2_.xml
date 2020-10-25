@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="DPM_7XUB" id="7xuf09ww" version="4.00.0009" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Desktop Power Manager - 7/8/8.1/10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Lenovo\PWRMGRV\InstallInfo</Key>
+      <ValueName>PWRMGRVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <Vendor>Lenove</Vendor>
+  <ReleaseDate>2016-05-23</ReleaseDate>
+  <DiskSpaceNeeded>20000000</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\7XUF09WW.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\7XUF09WW.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Lenovo\PWRMGRV\InstallInfo</Key>
+        <KeyName>PWRMGRVersion</KeyName>
+        <Version>4.00.0009^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Lenovo\PWRMGRV\InstallInfo</Key>
+        <KeyName>PWRMGRVersion</KeyName>
+        <Version>4.00.0009^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>7xuf09ww.exe</Name>
+        <CRC>796CAAC6EA72D2B9D7B2D313BBF56AEADC1F90E1</CRC>
+        <Size>13146312</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>7xuf09ww.txt</Name>
+        <CRC>10C344EAFA0D30CCC037F142EFF8B474E652B126</CRC>
+        <Size>9551</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

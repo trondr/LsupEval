@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IWL_U2WLG03" id="u2wlg06us14" version="21.50.1.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Wifi Driver (Windows 10 Version 1903,1909) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3165]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3166]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_24FD]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_24F3]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_2526]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DF0]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A370]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_31DC]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u2wlg06us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-12-03</ReleaseDate>
+  <DiskSpaceNeeded>71004906</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="1" />
+  <PackageType type="2" />
+  <Install rc="0,1,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3165]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3166]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_24FD]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_24F3]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_2526]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DF0]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A370]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_31DC]]></HardwareID>
+      <Date>2019-10-06</Date>
+      <Version>21.50.1.1^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3165]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3166]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_24FD]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_24F3]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_2526]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DF0]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A370]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_31DC]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>M2CKT*</Level>
+        <Level>*</Level>
+        <Level>M1VKT*</Level>
+        <Level>FBKT*</Level>
+        <Level>M1AKT*</Level>
+        <Level>M16KT*</Level>
+        <Level>S06KT*</Level>
+        <Level>M1UKT*</Level>
+        <Level>M1XKT*</Level>
+        <Level>M1WKT*</Level>
+        <Level>FWKT*</Level>
+      </_Bios>
+      <_ExternalDetection rc="6,7">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u2wlg06us14.exe</Name>
+        <CRC>69A830F6E98385EAA67A9943E1E009C5C50075433D1B3DC3D54407CDB241FAF3</CRC>
+        <Size>9083584</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u2wlg06us14.txt</Name>
+        <CRC>E57292BE1B15B3B461576B02D64F6FFF7EC90257EC49E396F2968DDE3008F570</CRC>
+        <Size>3229</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>hVaVfNSW9tSRQQi8ecuvXyjMx5I=</DigestValue></Reference></SignedInfo><SignatureValue>aDo+OjqKSQn1XVCUnSVZkstN5PRQl/hgXuGhGy8s+DnkJ1poKSIrd1dUTVB63aaRmyH+hPjj9YxXUXwIrVBb0vdodr4dTjs3NmBnEqhFpyyS98sszpnPJTNYHluFRBcjp9ycAC0NswzaaYXqWLbhk9BY+NVrh0sBIbjvt/EHPbqfAEFyvqdJZvArowEOGHNnhL+57tNo/1kpDXQx+sSbUzRMIL0OJ4rQ0x5/qcZfm2IAt3E8799/flMTWD8y1skgtTLfEP+n9VyO3c0wl2G3vLYo/V/g1TmduLZO7PhzKH+39Y2CsReLHOMPQbFmEH9KjO4QWzOu80Dr0iEPgQcobg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

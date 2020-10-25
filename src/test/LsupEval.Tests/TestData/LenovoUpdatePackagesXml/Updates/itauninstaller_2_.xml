@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="UITA_ITAU" id="itauninstaller" version="1.0.0.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Technology Access Software Uninstaller - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>itauninstallerymt.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-09-02</ReleaseDate>
+  <DiskSpaceNeeded>1338797</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\ItaUninstaller.exe</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\ItaUninstaller.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Not>
+      <Or>
+        <_FileExists>%PROGRAMFILES%\Intel Corporation\Intel(R) Technology Access\IntelTechnologyAccessService.exe</_FileExists>
+      </Or>
+    </Not>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_FileExists>%PROGRAMFILES%\Intel Corporation\Intel(R) Technology Access\IntelTechnologyAccessService.exe</_FileExists>
+      </Or>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>itauninstallerymt.exe</Name>
+        <CRC>5482923D6D3A1DFD707372CA257D150859747147</CRC>
+        <Size>803144</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>itauninstaller.txt</Name>
+        <CRC>29D889C9750C1D0187A48DA81D3CE421979CF837</CRC>
+        <Size>1324</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

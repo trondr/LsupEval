@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="PMD_WIN10X86" id="n2hku62w_x86" version="1.67.17.51" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Power Management Driver - 10 [32]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[*LEN0268]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[*LEN0268]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2hku62w_x86.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-07-28</ReleaseDate>
+  <DiskSpaceNeeded>7496997</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1,1073741825,256" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst_x86.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst_x86.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[*LEN0268]]></HardwareID>
+      <Date>2020-03-13</Date>
+      <Version>1.67.17.51^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>32</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[*LEN0268]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0GET*</Level>
+        <Level>R0QET*</Level>
+        <Level>N1UET*</Level>
+        <Level>N1VET*</Level>
+        <Level>N27ET*</Level>
+        <Level>N1TET*</Level>
+        <Level>R0SET*</Level>
+        <Level>N1QET*</Level>
+        <Level>R0FET*</Level>
+        <Level>N1WET*</Level>
+        <Level>N24ET*</Level>
+        <Level>N22ET*</Level>
+        <Level>N2IET*</Level>
+        <Level>N2JET*</Level>
+        <Level>N1MET*</Level>
+        <Level>N23ET*</Level>
+        <Level>N1OET*</Level>
+        <Level>N1ZET*</Level>
+        <Level>N1NET*</Level>
+        <Level>N25ET*</Level>
+        <Level>N20ET*</Level>
+        <Level>N2LET*</Level>
+        <Level>R0HET*</Level>
+        <Level>N2CET*</Level>
+        <Level>R13ET*</Level>
+        <Level>N2OET*</Level>
+        <Level>N2HET*</Level>
+        <Level>N2NET*</Level>
+        <Level>N2QET*</Level>
+        <Level>R15ET*</Level>
+        <Level>N2RET*</Level>
+        <Level>R18ET*</Level>
+        <Level>R17ET*</Level>
+        <Level>N2YET*</Level>
+        <Level>N2XET*</Level>
+        <Level>R1AET*</Level>
+        <Level>R19ET*</Level>
+        <Level>N2VET*</Level>
+        <Level>N30ET*</Level>
+      </_Bios>
+      <Or>
+        <Or>
+          <Not>
+            <_Bios>
+              <Level>GDET*</Level>
+            </_Bios>
+          </Not>
+        </Or>
+        <Or>
+          <And>
+            <_Bios>
+              <Level>GDET*</Level>
+            </_Bios>
+            <Or>
+              <_Coreq name="BIOS_GDUJ">
+                <Version>1.07.1.07^</Version>
+              </_Coreq>
+              <Not>
+                <_Bios>
+                  <Level>GDET0*</Level>
+                  <Level>GDET1*</Level>
+                  <Level>GDET2*</Level>
+                  <Level>GDET30*</Level>
+                  <Level>GDET31*</Level>
+                  <Level>GDET32*</Level>
+                  <Level>GDET33*</Level>
+                  <Level>GDET34*</Level>
+                  <Level>GDET35*</Level>
+                  <Level>GDET36*</Level>
+                </_Bios>
+              </Not>
+            </Or>
+          </And>
+        </Or>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2hku62w_x86.exe</Name>
+        <CRC>D064FBFA4BB4C15D2F33C763640971CE3A03E448A690B7482AEA73FB3AF05FC2</CRC>
+        <Size>1880064</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2hku62w.txt</Name>
+        <CRC>5CA71B116A1215B20281B4686BE13EDB22C1F1508C727681EE8EB2796FC7921F</CRC>
+        <Size>45280</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>rIuf6GVNTk3J2w10oli1d0IDPgQ=</DigestValue></Reference></SignedInfo><SignatureValue>lngDP/oomT2LnrXZl8zHsZ7fWBEmI5CUTznBJW0D5MSnDqRlR+PQuCzdanRv9S5Nr/wyG8YulZJZolnFy76qGKI3DapQOWBz3YVxiQ8f3ez+gBby1u7xdu9RQWfn9QGe/H2SmnHZzn7OuK4E0w8G5KuAyn+jQFXh0zSeX4MZXYev1da6xtuCHCL1vRWyW1WeMG3A98odijvTNQDmSoBbi+C5DXpp/x1Au0woNjLYt/nHl4i4bnEfNA9A5K+iJ36E8tdw1n66SuugNw2NVxtWvXdO3ETawnKrKjB+nt53URGSDKFQHqn2KUiGZjmSAt5PxxlR+1BfamRTMuRtFNN2jw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

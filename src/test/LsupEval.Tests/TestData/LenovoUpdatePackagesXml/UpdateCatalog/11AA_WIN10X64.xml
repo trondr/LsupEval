@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="48">
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k10kyba3us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0829aefc2f7043ad5a05e81f2b231a85d5b5d2a27e0737b37db2a73976a3590b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k9kyb07us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b407e33564a055dedc77d80a1f871aea93f51ca57eed585e63ece0fbff2a0c56</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k11miea5us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0106970d58887b666b7842ce387f28f419c24fef915bd373806a0ee158f3cabf</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4etn1jus17_tc_m75s-1-rs45_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7a6cf0a44e6440a5415dd73f05b6ba9f9a1af2881d974b266017a04c7ee4ac1e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4etn1jus17_tc_m75s-1_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5c60db7fa4d86672b34e97379b7a797d3b8f1844be7ebca3a7647c6b6da1ef48</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/g7auda5us17_tc_m75s-1_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7cae3e9ac4bde6ccd305ef97787ebefc38ad6ea2f55b7a5353ee23800af567b4</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/g7auda5us17_tc_m75s-1-rs45_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e5fd9dea315ac20a12890eee8c18033591a7f988926a3ab7647f9e94a2696b3a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1vdoc0us14_tc_m75s-1_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">207dd5580515f0715d2998ea7bbb3f62617a944a5b0746b7bd1d5faff9045b70</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m2cjy38usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">eec187779e645c73649f9449de1d1d6e891ce4e8d5e7b69a89d74546a05ae163</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1vdoc5us14_tc_m75s-1-rs45_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3eab4b2a17aef96ed2a378930fe02d2ba66db5a27c3efeaf754ae837bc2ebfc8</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4blt05us14_tc_m75s-1-rs45_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e59043aa6e7cd926581cdc6c69b47e9cb3ab0578260597c2f18fcf43352368b6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4blt05us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">542a2418714f81cdf5d3f9f2bac2424d496bf48918f79716a0f541c872a2d6cf</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4wlg06us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">35b5aa77d809d153b71ba4094cc96edc0bf5be630ddf4055299c0c4cfa4f1fec</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4wlg06us14_tc_m75s-1-rs45_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">bbb364d2de9f0935d9395b8d132f5231aa2a760117673221ff1d16f5e41df2dc</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6chp6fus17_tc_m75s-1_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5c559f71064c0fd1f81030a7cba9ce39615451abeafaeb502a8520c24b775b48</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdoc0us17_tc_m75s-1_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6bafd66d2b1413b0eaffba5c7148a2c6cbe312e6a98262730e3d8912d63efe7d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt00us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">756c915945dbaad097d524f46fc2f8f9098d1735d14b0752f3e2f41f3661e828</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt00us14_tc_m75s-1-rs45_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1d564fd9cd4180c5d208bf74032895d9a21b7b469754a324965115b4bffe6544</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg03us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f5193c9a86de7bc616fa19639e746bf945879b28616e6c82356aa3b81a19d1b5</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg03us14_tc_m75s-1-rs45_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">199a6c5eabfd47ee2cade4c4f89c4392a11bb1e391a4f2671835b7fffce74c43</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3blt00us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a0c0250d4f2499e02b420236167166cd8272b61e2db218d3de905343ca1068d8</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3blt00us14_tc_m75s-1-rs45_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">52b3200a05a41fafef92859ee4ab3715b09938e278c9c76be1598eea9bee0f2b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3wlg00us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">77eb988260d3129bc815e3fa160c759647b52a47cdab88084d7e41fdc89fdcf0</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3wlg00us14_tc_m75s-1-rs45_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">876467b800afb73be8feddd9fa2865c9dd42c550b2d852b5860492cb5278fe56</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u4blt07us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a4ed926bf2e594904e6ed8321cd17d3dd03f1a075cf9291954a0bb2588d2af0e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/g7audb2us17_tc_m75s-1_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1c0597e55841f2ebd55ab8f3d762194591f89debc7b1924f53d837841c7eb2eb</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k2car22us17_tc_m75s-1_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6520079e7bc616cfdc2e796a44df30a9440a15bfad489172a214558060acbbdf</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdobwus17_tc_m75s-1_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7cf548211ab478a32d58f42fe5c17acb558ed9048eb8736a05804c10d2333a2a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdobwus17_tc_m75s-1-rs45_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">aab013b7e6d50a665f16fb4df540f95a44991ab9173cc12f30816521e3c1fa6a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u1vdocius14_tc_m75s-1_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">2f61d51e39636d8b5926dd67091474a69b65c87b9013743ed54b7dca345d9cf7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt05us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">38ade4a1827ba4332d7593b05076d79ad2f7d51bf0012df45f256f87c2fc6da0</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3blt03us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">542a43ac845de358d93123ed5b690bf4fd02a11b5d9ef2a30e117539c8acdba1</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3wlg03us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">276169d26be6a1e030de2cbb30f8dc83a6ebc5b37886c1d2aaaf9fb46fc1a56b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4wlg10us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">c27509b7085569a1ddfafe5ec2a8561fb2b631d640db30c04cb8f29f29750858</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdobzus17_tc_m75s-1_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0944a66aaa35b96147ad9a21ce94a72d35b5fb431469fd9b5bd53384c661a9ef</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg06us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">c3d24039f44b693a142252a3479aa7b3d4a8bf18c22b1dc2fd432b03cd71fff9</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/g7audc3us17_tc_m75s-1_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">67304e53fb81ea607ebe11e5b3a51a1423b5b723bb37bf8f54d040d2ec5203d7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u1vdod7us14_tc_m75s-1_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">34b6aeb67954d0018909e9adadafd8589a59a3ec6f8f443c897f23bb3e6bc5cb</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u2blt09us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">52f2b5f29ded0c8df3f4d04646268c7d54ce75eeff23f82288d177e73bc375dc</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u4blt0aus14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">8f270110149193aeef2bba2b4b323e7f6b9cbbb643165530950080c884249189</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u4wlg13us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">85ae4f03600a66baf8eb559fe8779446171130911551cd24466eb1744219862a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u6chp6ius17_tc_m75s-1_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">13f91f6c7f7db81b449925c6a49c04d59ceb2ae705813b96150edddd7ded42f6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u6vdockus17_tc_m75s-1_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ffb29832d7f4188ea656804a17d7f7ff8d7a03e606558fc23bd95c26ac12ed70</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1car14us17_tc_m75s-1_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d1dea29dd8021f51b6c3f1d7719fbb5b3dc1636f1746578ed9422e7cec3defde</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u4etn1ous17_tc_m75s-1_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">13e134fa9d868bf81aa18aec3f5ec69083684d5daf902267cc3607ce78f05750</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u3blt06us14_tc_m75s-1_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a92b14fa47ee8f40bca8b917eec08e6035fa4aece5f9e2d81cfecb2a44a3a4b3</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u3wlg06us14_tc_m75s-1_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5932483d82c229c5e11885359718b411afc808cfd6643e9c8137f77fd0143a83</checksum>
+  </package>
+</packages>

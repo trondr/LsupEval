@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="ERICSSON_WWAN_H4W4" id="h4w407ww" version="8.0.9.3" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Ericsson H5321gw Mobile Broadband Driver - 8/10 [32,64]/8.1[64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{68D0E8C7-E4F8-424E-A6D6-97A06A323FFE}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{68D0E8C7-E4F8-424E-A6D6-97A06A323FFE}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{68D0E8C7-E4F8-424E-A6D6-97A06A323FFE}</Key>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{68D0E8C7-E4F8-424E-A6D6-97A06A323FFE}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>h4w407ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-05</ReleaseDate>
+  <DiskSpaceNeeded>12800000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{68D0E8C7-E4F8-424E-A6D6-97A06A323FFE}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>8.0.9.3^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{68D0E8C7-E4F8-424E-A6D6-97A06A323FFE}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>8.0.9.3^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[USB\Vid_0bdb&PID_1926]]></_PnPID>
+      </Or>
+      <Or>
+        <_OS>
+          <OS>WIN8.*</OS>
+          <OS>WIN8-ENT.*</OS>
+          <OS>WIN8-PRO.*</OS>
+          <OS>WIN10</OS>
+          <OS>WIN10-PRO</OS>
+          <OS>WIN10-ENT</OS>
+          <OS>WIN10.*</OS>
+          <OS>WIN10-PRO.*</OS>
+          <OS>WIN10-ENT.*</OS>
+        </_OS>
+        <And>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+          <_OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>h4w407ww.exe</Name>
+        <CRC>32F11554293438DCC5DC1B1B2456A40B9A3DC3C6</CRC>
+        <Size>4964952</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>h4w407ww.txt</Name>
+        <CRC>8D947BBCCD45365483ED5D7865E7A10E904EC6FC</CRC>
+        <Size>7012</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

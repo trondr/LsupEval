@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IRST_N2WRS_1809" id="n2wrs04w" version="17.8.1.1066" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) Rapid Storage Technology Driver (Windows 10 Version 1809) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A103]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A282]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D3]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D7]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A102]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A103]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A282]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_2822]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D3]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D7]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2wrs04w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-04-10</ReleaseDate>
+  <DiskSpaceNeeded>15805648</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,2,257,512,1073741826,1073742081,1073742336,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Install.bat -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Install.bat</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A102]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A103]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A282]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_2822]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D3]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D7]]></HardwareID>
+      <Date>2019-12-20</Date>
+      <Version>17.8.1.1066^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A103]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A282]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D3]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D7]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="5">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      <_Bios>
+        <Level>N2WET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2wrs04w.exe</Name>
+        <CRC>19BA5B0F46F6FB23F890F2BF999E29FA9C06ABFCDE0CD015F224DFBEBD8C1A7A</CRC>
+        <Size>3921712</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2wrs04w.txt</Name>
+        <CRC>ECAD72BBCBEC919B27109619EA4BBD7E6E0C3E57D0F6BE48589B9F78193E7DA6</CRC>
+        <Size>9683</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>FC6UboohJWnLHNxnauL7wi095f4=</DigestValue></Reference></SignedInfo><SignatureValue>foouYBG9s6RuBio1CGHvNmNuDa3RPK2V4paBABzK3oqXC/DIG5au3XnOl/k7ZFRChzCyb3FSNe42zzdqd0L/42ueVnNqn2bLwePBQ7iUn3eRI0tgMLyKv5wFCJYkxEuDNvnhoBiPTxdsSTkHY4LA1NPsKxkbwZZevPgM31wA4BXYkpLIl1OG3vjkzUrxVHJ45KXZjea6XU6UU6SW5oJ7j4e8P7t9F3ncAuKz40Yk48gdlDSe1bZ0aVT6f/3l5zS1nlJ9OiO+ReCTt+ftkNWBjnTeMqcvNInbxmVPq9PK+rwocVoL3TocR2e7gY54qolvl9MLbLIwPUU937fg6/6xYg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

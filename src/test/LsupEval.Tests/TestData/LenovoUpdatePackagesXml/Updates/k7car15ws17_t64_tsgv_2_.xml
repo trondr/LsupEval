@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CARD_K7CAR15WS_TSGV" id="k7car15ws17_t64_tsgv" version="10.0.15063.31235" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Cardreader Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_0BDA&PID_0129]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_0BDA&PID_0157]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_0BDA&PID_0301]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_0BDA&PID_0184]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_0BDA&PID_0129]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_0BDA&PID_0157]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_0BDA&PID_0301]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_0BDA&PID_0184]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k7car15ws17_t64_tsgv.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2017-07-26</ReleaseDate>
+  <DiskSpaceNeeded>12341652</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="0" />
+  <Install rc="0,1,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_0BDA&PID_0129]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_0BDA&PID_0157]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_0BDA&PID_0301]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_0BDA&PID_0184]]></HardwareID>
+      <Date>2017-04-06</Date>
+      <Version>10.0.15063.31235^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0129]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0157]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0301]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0184]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>S00KT*</Level>
+        <Level>S01KT*</Level>
+        <Level>S02KT*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k7car15ws17_t64_tsgv.exe</Name>
+        <CRC>B611FEC64776B33A5E2CFEF3000C1FA444CC5AF5</CRC>
+        <Size>8182944</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k7car15ws17_t64_tsgv.txt</Name>
+        <CRC>BE3C9363F9C909EAD037A3CEEBCB3F388CA30922</CRC>
+        <Size>3269</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>eWwqfSt29LpghhHCVRitpk5RuQk=</DigestValue></Reference></SignedInfo><SignatureValue>Cn4KsNXCNBhq+Y6bGkUJv8gXfDuLQlO3fnHsZ7SHdyrRShAM65k1jDU3nL6EvX1O2GiufsBqb3Crd64DACpM/RWKG5CkblKrSaCrMcMaCW0cnb8lV8zYcizGS9rnGP6PB8NgLSvn4GL9woo/grz9qqneisDXcXVIMqxzh6Wu2tZalBJQ2t70NVF2E/w1gWP1nBE56cDAek/4WdkasYqJ5IyJuORHsJWDM+1QsQPqV5k1rQInFKHs5Gii1oddJXoy2gzAAWPGjoVb/YzkGONxzY0TB70TxU7aEuX8LPaMt3d9qXG3xxwvzuk7oQtDMuVCMOnGuBISXS3z6QnV4KmPUA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIE9jCCA96gAwIBAgIQVxYYDbfUmJ3EoXCD3Pp1ZzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxMDAuBgNVBAMTJ1N5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2lnbmluZyBDQTAeFw0xNTAxMTMwMDAwMDBaFw0xODAxMTIyMzU5NTlaMF4xCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBxMLTW9ycmlzdmlsbGUxDzANBgNVBAoUBkxFTk9WTzEPMA0GA1UEAxQGTEVOT1ZPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwVWMufFrSa68v9h+qMIEPTNZrZcxPzdiOoDfdTuX4A51yhSpbcySu9MbeXsu4Zg8f29nQMYnYsxSVfAUpaed3Sjjnff2k6/WHpSfoGzf5oDWrzY3Nss64VrE2/C3FZ0XVlp/xRAOO51MyRQ14Pz0KVOggw4LXgjQ8Tyy379Fi9CiDdBLmSFBt2rDoGVPfiiu0XPg6H6r/jw4U3sQ2iw1eyFWXa+tKqHm4uJKvWzWZWd5Wsls4iWx5RhHgT7+O3fLRc1FPf8oXl5QdVer/1UHGHN4wRbEJDDJWKhCUCbpzLxCkd1FIxMPQgojbiz9TkBBLi35zYzhHeRABHm1DX/BQIDAQABo4IBjTCCAYkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCB4AwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL3N2LnN5bWNiLmNvbS9zdi5jcmwwZgYDVR0gBF8wXTBbBgtghkgBhvhFAQcXAzBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTATBgNVHSUEDDAKBggrBgEFBQcDAzBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9zdi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zdi5zeW1jYi5jb20vc3YuY3J0MB8GA1UdIwQYMBaAFJY7U/B5M5evfYPvLivMyreGHnJmMB0GA1UdDgQWBBRSMmHtmvK1hUveuxeoJ/Jwj5J18jARBglghkgBhvhCAQEEBAMCBBAwFgYKKwYBBAGCNwIBGwQIMAYBAQABAf8wDQYJKoZIhvcNAQELBQADggEBAHW49q6GgSXkLVnqgvw2Zpsz7mqr3TOb9OXM4KOnGQWUpfYnT/HaJbHOpH46LlgOwBd9hVyOI5ON6S0JSe6gcp49NZ2aoYvyIqq+k6xsr0QxVqHzPD0gOotwWBXKhg0+CMyxIuKYAjXNxvnzBqeAmyRbZoGvFdPeqbGpm+kvS+MeMTdy8gmXMZCj9f2KhDNjm2gYjKAVEeyodrs/LqrYsAMB4+ie099pA5++gBM892Z4DEREh14Y1Ydv/sLsAtOrkNeGlRgnoTklzFVqaHHm55T/c6VzHjKabNHb/t8Wt3psevQUnN4KqxyHrk1oQp8V3wzJNNum4tA4+Dc5w9uUgRc=</X509Certificate></X509Data></KeyInfo></Signature></Package>

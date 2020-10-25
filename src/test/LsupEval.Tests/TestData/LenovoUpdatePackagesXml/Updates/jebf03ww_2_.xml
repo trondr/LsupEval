@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BT_JEBF_W10" id="jebf03ww" version="17.1.1525.1443" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) PROSet/Wireless Software for Bluetooth(R) Technology - 10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\ibtusb.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jebf03ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-30</ReleaseDate>
+  <DiskSpaceNeeded>583446329</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win10\Setup.exe /qn</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win10\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\ibtusb.sys</File>
+      <Version>17.1.1525.1443^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0A2A]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jebf03ww.exe</Name>
+        <CRC>AADF49FD90E8E8D027227AD84A208454C0857D50</CRC>
+        <Size>76689712</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jebf03ww.txt</Name>
+        <CRC>A576C3CD9866B1C9C048387EED865A1854481B7A</CRC>
+        <Size>8075</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

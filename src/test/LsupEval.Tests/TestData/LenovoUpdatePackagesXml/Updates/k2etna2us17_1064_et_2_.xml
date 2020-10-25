@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="LAN_K2ET_1064_P310" id="k2etna2us17_1064_et" version="12.12.226.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel LAN Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\System32\drivers\e1r65x64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\System32\drivers\e1r65x64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k2etna2us17_1064_et.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-24</ReleaseDate>
+  <DiskSpaceNeeded>417000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\APPS\PROSETDX\Winx64\DxSetup.exe /qn ans=0 dmix=0</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\APPS\PROSETDX\Winx64\DxSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_FileVersion>
+        <File>%Windows%\System32\drivers\e1r65x64.sys</File>
+        <Version>12.12.226.0^</Version>
+      </_FileVersion>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1533]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1521]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k2etna2us17_1064_et.exe</Name>
+        <CRC>0801E1A530B618C2EAE16282968188F46059F80A</CRC>
+        <Size>99167016</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k2etna2us17_1064_et.txt</Name>
+        <CRC>118902F0D36379C3B1D6805209DB89714835172A</CRC>
+        <Size>60384</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

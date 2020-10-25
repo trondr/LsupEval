@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="VGA_U3VDO66" id="u3vdo72us14ws_p330" version="25.21.14.1967" hide="False">
+  <Title default="EN">
+    <Desc id="EN">NVIDIA Graphic Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1CB3&SUBSYS_11BE10DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1CB6&SUBSYS_126410DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1CB1&SUBSYS_11BC10DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C30&SUBSYS_11B310DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1BB1&SUBSYS_11A310DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13B9&SUBSYS_116310DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1EB1&SUBSYS_12A010DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1BB0&SUBSYS_11B210DE]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C31&SUBSYS_131B10DE]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="3">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1CB3&SUBSYS_11BE10DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1CB6&SUBSYS_126410DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1CB1&SUBSYS_11BC10DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C30&SUBSYS_11B310DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1BB1&SUBSYS_11A310DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_13B9&SUBSYS_116310DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1EB1&SUBSYS_12A010DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1BB0&SUBSYS_11B210DE]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C31&SUBSYS_131B10DE]]></HardwareID>
+        <Version>0.01^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3vdo72us14ws_p330.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-05-17</ReleaseDate>
+  <DiskSpaceNeeded>979000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -n -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1CB3&SUBSYS_11BE10DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1CB6&SUBSYS_126410DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1CB1&SUBSYS_11BC10DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C30&SUBSYS_11B310DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1BB1&SUBSYS_11A310DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_13B9&SUBSYS_116310DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1EB1&SUBSYS_12A010DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1BB0&SUBSYS_11B210DE]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C31&SUBSYS_131B10DE]]></HardwareID>
+      <Date>2019-03-17</Date>
+      <Version>25.21.14.1967^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1CB3&SUBSYS_11BE10DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1CB6&SUBSYS_126410DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1CB1&SUBSYS_11BC10DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C30&SUBSYS_11B310DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1BB1&SUBSYS_11A310DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13B9&SUBSYS_116310DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1EB1&SUBSYS_12A010DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1BB0&SUBSYS_11B210DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C31&SUBSYS_131B10DE]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3vdo72us14ws_p330.exe</Name>
+        <CRC>A3101921991DEA844BB46CC879E4156266585F2CAA1D0642C5B362579B238A76</CRC>
+        <Size>405061480</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3vdo72us14ws_p330.txt</Name>
+        <CRC>F10F6F118A639085D12027E7289924B041A475A12780AB62CBDF090CC48EA387</CRC>
+        <Size>7362</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>aJfBt9FKc3itg/mBJ9KJtdIPa54=</DigestValue></Reference></SignedInfo><SignatureValue>mRzB4w12Nvvuu84b4OsQCa/G+nA+Pl+mQy3pKNu8e9PwIxjB/dIoi7QJgkAnYpC5ccK5sB/3CfTwAD+b7T4AEBnK4B/WUWLh43d/KUQDKfaath6DlvbJ121F8tdfQKEpBhdLD3g14Y5leZ10pat3WXgOc0tYVk9OUUY2/yjspYjUKmXNTB5omM73Zgr/zoCrLL96zeULkE/U57tivw6p00P7Y7Si9UzsbBaQ4CAGNu3GgpfBC/jCSgVh/jkTP8n51v1xyynqb289gNRVdvh5MkKlahvtksyIi4T1lnZRzbz3Pl/BuYMkVCtF4q+u9MSRKHsw0ym6qzVJ8uTvF/qM8Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RLTMULTICARD_GJXT" id="gjxt03ww" version="10.0.10125.21277" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek MultiCard Driver - 10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\System32\drivers\RtsPer.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\System32\drivers\RtsPer.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>gjxt03ww.exe /VERYSILENT /SP- /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-01</ReleaseDate>
+  <DiskSpaceNeeded>39149568</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%Windows%\System32\drivers\RtsPer.sys</File>
+      <Version>10.0.10125.21277^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5227&SUBSYS_220C17AA&REV_01]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5227&SUBSYS_220E17AA&REV_01]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>gjxt03ww.exe</Name>
+        <CRC>93C8521D388273C961A88E41DD510727B668606A</CRC>
+        <Size>6320056</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>gjxt03ww.txt</Name>
+        <CRC>A6B7774BC8F4D3F0B076EFBE8F38E1B0F8D39162</CRC>
+        <Size>7361</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

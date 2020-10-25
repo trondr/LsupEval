@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="SMARTCR_GMV1" id="gmv103ww" version="1.7.37.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Alcor SmartCard Reader Driver - 7 [32,64]/8/8.1 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84236}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84237}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84237}</Key>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84236}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>gmv103ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-07-21</ReleaseDate>
+  <DiskSpaceNeeded>10259683</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84237}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.7.37.0^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F24F876B-7D71-4BD6-88E9-614D3BB84237}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.7.37.0^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+      </_OS>
+      <Not>
+        <And>
+          <_CPUAddressWidth>
+            <AddressWidth>32</AddressWidth>
+          </_CPUAddressWidth>
+          <_OS>
+            <OS>WIN8.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+            <OS>WIN8-ENT.*</OS>
+            <OS>WIN8-PRO.*</OS>
+          </_OS>
+        </And>
+      </Not>
+      <_Bios>
+        <Level>*</Level>
+        <Level>GNET*</Level>
+        <Level>GMET*</Level>
+      </_Bios>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_058F&PID_9540&REV_0120]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>gmv103ww.exe</Name>
+        <CRC>30E8F04D964550C65B725134922F979FAA4464D4</CRC>
+        <Size>3834664</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>gmv103ww.txt</Name>
+        <CRC>0C03CDBE3E3E95924949E52144419C9818C0198A</CRC>
+        <Size>6521</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

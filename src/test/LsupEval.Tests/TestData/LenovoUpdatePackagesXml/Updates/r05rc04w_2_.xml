@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="LAN_R05R" id="r05rc04w" version="12.13.17.4" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel PRO/1000 LAN Adapter Software - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\e1d65x64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\e1d65x64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r05rc04w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-09-21</ReleaseDate>
+  <DiskSpaceNeeded>203155575</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\APPS\SETUP\SETUPBD\Win10_x64\SetupBD.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\APPS\SETUP\SETUPBD\Win10_x64\SetupBD.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\e1d65x64.sys</File>
+      <Version>12.13.17.4^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_156F]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1570]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r05rc04w.exe</Name>
+        <CRC>0BE5FD7C8A33BFC28ACE9D5181550EB79F0D27A4</CRC>
+        <Size>64921256</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r05rc04w.txt</Name>
+        <CRC>32EEA4926C25A2585F933109242AAEF803BE7CE5</CRC>
+        <Size>6579</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTEL_VIDEO_R0SD2" id="r0sd216w" version="26.20.100.7812" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel HD Graphics Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0sd216w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-03-16</ReleaseDate>
+  <DiskSpaceNeeded>1278382333</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,14,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe -nosc -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+      <Date>2020-01-21</Date>
+      <Version>26.20.100.7812^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0SET*</Level>
+      </_Bios>
+      <Or>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+          <Version>26.20.100.6951</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+          <Version>25.20.100.6576</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+          <Version>25.20.100.6472</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+          <Version>24.20.100.6286</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+          <Version>23.20.16.5018</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+          <Version>23.20.16.4905</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5916&SUBSYS_506D17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_506D17AA]]></HardwareID>
+          <Version>23.20.16.4849</Version>
+        </_Driver>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0sd216w.exe</Name>
+        <CRC>8BDD101170CB05CE7217804D7D0010A765040921AB28D267355F672929055665</CRC>
+        <Size>199599048</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0sd216w.txt</Name>
+        <CRC>20FA29B285D055DE87FECEB5C3E89661824C01D3E8FEC83971E10678BC76FE81</CRC>
+        <Size>9382</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>b3aIevDYNmKcvX8wbkUq9iDVPbk=</DigestValue></Reference></SignedInfo><SignatureValue>hJkr4k1f4N7s+8hWtgFxygKCTPg15FWrTUkaaECeTiOrS6ER7KmNF/AZPJLccUKD1aKE3RvLpF/xVnWnnYUg/Nlo9pqfvKUrP7RW55F8wW1zyF2BSxXUW/siegaSTvfNczauG9TGafMj2f1z/8oQA6TzL25qlmAd/7ngJxj80Btvcyb0cA8ZtY1h9N12XjMQM1oo6K+ORmZ+euFYgRe4O+Dw9zODOOLQ0rs1L9kPf4UyndyDadCXKBiVfVxMl3mnwlA+OiskTXfO+Ipx17m3YJdvCMp1cN9aFnje2sQzSC8VVYelyChbV2NyQo/Ws4MBeOcBENFiB/XKsY5He/KXWQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

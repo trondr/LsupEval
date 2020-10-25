@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AUDIO_GIA1" id="n10a516w_781032" version="6.0.8907.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek High Definition Audio Driver - 7/8/8.1 [32,64]/10 [32]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0292]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0292]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n10a516w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-04-21</ReleaseDate>
+  <DiskSpaceNeeded>782256080</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s /sa</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0292]]></HardwareID>
+      <Date>2020-03-03</Date>
+      <Version>6.0.8907.1^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0292]]></_PnPID>
+      </Or>
+      <Or>
+        <_OS>
+          <OS>WIN8.*</OS>
+          <OS>WIN81</OS>
+          <OS>WIN81-ENT</OS>
+          <OS>WIN81-PRO</OS>
+          <OS>WIN8-ENT.*</OS>
+          <OS>WIN8-PRO.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>32</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB4474419~31bf3856ad364e35~x86~~6.1.3.2</Key>
+          </_RegistryKey>
+          <_CPUAddressWidth>
+            <AddressWidth>32</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB4474419~31bf3856ad364e35~amd64~~6.1.3.2</Key>
+          </_RegistryKey>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>GLET*</Level>
+        <Level>GJET*</Level>
+        <Level>N11ET*</Level>
+        <Level>GMET*</Level>
+        <Level>GNET*</Level>
+        <Level>GRET*</Level>
+        <Level>N14ET*</Level>
+        <Level>GIET*</Level>
+        <Level>N10ET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n10a516w.exe</Name>
+        <CRC>4F04CC0AB9823F603ECB978D322BC17986F81C3E79F686CA803F0FE830E40DC6</CRC>
+        <Size>277057800</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n10a516w.txt</Name>
+        <CRC>932936BEF057E457B27F0232DD617445DC78C1D789D605DA4217DE0605B722CC</CRC>
+        <Size>7908</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>r9V0tBazJAC25MiJuOeP8fOdYeM=</DigestValue></Reference></SignedInfo><SignatureValue>WhYgMCnzELjCa2wh18srY3gYEcm90MDG5KRaAczvdTKdrLMqJYAzsbIUfjvE9VLZlW90j5JohI/8Oef0AqsN17rjL2G1sE8IsdRn15HcQDkOyJPACfIoMVJ0A9Grt0yuQvOxbPkdvjbSD0EcLSMuKbPTFuT1VYOdgpsJRvQfLZcOsiX13jQmo9Vj4zt3mEjsw1nF/OBGnSfCrQfdWnHniWIasV8ZronJZ0y53RWWgFo4HgqtzP0l6shCFhr/22wEE3W8F39AL/Xalxxjayq2LZKfxmZODm9ig5cLQjMuSJyqwHKicxq/0h/LBw+ITm+dc1gekrhpUl9L4kZ8Y1b99Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

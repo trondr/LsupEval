@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTEL_G4ET_1064" id="g4etn01us17" version="12.13.17.7" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Lan Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\e1d65x64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\e1d65x64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>g4etn01us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-01-06</ReleaseDate>
+  <DiskSpaceNeeded>888000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\APPS\PROSETDX\Win10_x64\DxSetup.exe /qn ANS=0 DMIX=0 SNMP=0</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Autorun.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\e1d65x64.sys</File>
+      <Version>12.13.17.7^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_156F]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15B7]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>g4etn01us17.exe</Name>
+        <CRC>C866DF6D0964427DAD60DCB8BD3A599FF0D411EA</CRC>
+        <Size>275761224</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>g4etn01us17.txt</Name>
+        <CRC>6287A3C5E6CF2451EDCA451D06C4B66295EAEDD6</CRC>
+        <Size>61741</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

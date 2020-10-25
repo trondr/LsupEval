@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_TBT_N22TH" id="n22th09w" version="17.0.0.12-N22TF20W" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated Firmware for Thunderbolt Function (Windows 10 Version 1709 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n22th09w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-06-12</ReleaseDate>
+  <DiskSpaceNeeded>3120474</DiskSpaceNeeded>
+  <Reboot type="5" />
+  <Brand type="2" />
+  <PackageType type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\FwUpdateTool2003.exe 1 -s</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15BF&SUBSYS_11112222]]></HardwareID>
+        <Version>17.4.77.13^</Version>
+      </_Driver>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\detect1911.exe 20_t480s</_ExternalDetection>
+      <Not>
+        <_ExternalDetection rc="0,1,2">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n22th09w.exe</Name>
+        <CRC>4DC9FDA366CA48B1C8247B0CD0AE7F5DA1932A08D9A405F8F4E36EC60DEC1602</CRC>
+        <Size>1328160</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n22th09w.txt</Name>
+        <CRC>56B7514E67D347A32E28B57A1F2F5705FCF3C9C2F513026798353BA022E1F853</CRC>
+        <Size>8337</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>tbtapi1911.dll</Name>
+        <CRC>261CE1DA0596A92805DE21E780B624267DF46A459F5C86BDD22232102F6F9DB8</CRC>
+        <Size>64952</Size>
+      </File>
+      <File>
+        <Name>detect1911.exe</Name>
+        <CRC>FA9B521D764A98F3A8F28F7C3E5D782ABFA9289936FFBE0FB71CC1E2D2502B7D</CRC>
+        <Size>650168</Size>
+      </File>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+      <File>
+        <Name>fwdetectcmd1911.exe</Name>
+        <CRC>8D8944B52AA3E573830E798C0723019844F6E96C05312E5EFFEEE5B1D3E49DF8</CRC>
+        <Size>37816</Size>
+      </File>
+      <File>
+        <Name>20_t480s.txt</Name>
+        <CRC>99C3E09292F8A7FB25C8CC9F7FFF92DFB982355185D605055A00BDA58891ADE6</CRC>
+        <Size>8</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Z/xxxZJljFOcGNDAa9SGRuf31CM=</DigestValue></Reference></SignedInfo><SignatureValue>ET9P17qA+tLPgRwh3KN6LQzy1CA1leKvkQ6HC4tXcGLN8KYaNSgCwEJDms1SHfH1cmjJBN6fbbIZ1H8AT7l1wNGsI0Y0GmfWmd5LSsC/+mvOUixlnPg3HcPsaQSOO0570LW8XS/FPAgcUPYfJ3idBiUc+vM/z9hxmFzWDCLqwB8TcPDja/9fPtKnXAonwoowpk8zZI/N18SyKem1y7oafBRdhVyqAQwthYPOauO/sYAy04HGMtfFARek4X/CjobIs5dRyxofBu5q1snULMJtiRUCnn7v4U+LuevjBLjHC63b4fgYGwnHMDoTuX1S/FiAuCyUU2Ebw4za9rkqC7NOGA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

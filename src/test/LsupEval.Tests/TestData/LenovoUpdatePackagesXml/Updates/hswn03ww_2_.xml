@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WLAN_BCM_HSWN" id="hswn03ww" version="6.30.223.201" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Wireless LAN Driver - 8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Broadcom 802.11 Network Adapter</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Broadcom 802.11 Network Adapter</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>hswn03ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-05</ReleaseDate>
+  <DiskSpaceNeeded>61800000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Broadcom 802.11 Network Adapter</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>6.30.223.201^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_4359]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_4365]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN10</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>hswn03ww.exe</Name>
+        <CRC>D49C8F99A7BBA7C4157B0ADF2BF987DF330989EF</CRC>
+        <Size>12622016</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>hswn03ww.txt</Name>
+        <CRC>E250E42D3A59D9DED876E5784E39213057FC31B9</CRC>
+        <Size>7091</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

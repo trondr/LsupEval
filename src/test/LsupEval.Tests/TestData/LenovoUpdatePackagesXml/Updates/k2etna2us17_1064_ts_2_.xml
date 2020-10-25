@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="TS_K2ETN_P3_W10" id="k2etna2us17_1064_ts" version="12.13.17.6" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel LAN Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\e1d65x64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\e1d65x64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k2etna2us17_1064_ts.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-26</ReleaseDate>
+  <DiskSpaceNeeded>416183401</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\APPS\SETUP\SETUPBD\Win10_x64\SetupBD.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\APPS\SETUP\SETUPBD\Win10_x64\SetupBD.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\e1d65x64.sys</File>
+      <Version>12.13.17.6^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_153A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_153B]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15B7]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15B8]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k2etna2us17_1064_ts.exe</Name>
+        <CRC>E8D115DA696DA3A607785177E8FD527900C63876</CRC>
+        <Size>99168856</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k2etna2us17_1064_ts.txt</Name>
+        <CRC>118902F0D36379C3B1D6805209DB89714835172A</CRC>
+        <Size>60384</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

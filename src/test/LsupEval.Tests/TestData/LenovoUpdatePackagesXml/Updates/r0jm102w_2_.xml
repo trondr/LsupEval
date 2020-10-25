@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="MONITOR_R0JM1" id="r0jm102w" version="6.5.0.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Monitor INF File - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[MONITOR\LEN4090]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN4094]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40D1]]></_PnPID>
+    <_PnPID><![CDATA[MONITOR\LEN40D5]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[MONITOR\LEN4090]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN4094]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40D1]]></HardwareID>
+        <HardwareID><![CDATA[MONITOR\LEN40D5]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0jm102w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-10-30</ReleaseDate>
+  <DiskSpaceNeeded>831086</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0" type="inf" default="EN">
+    <INFCmd id="EN">
+      <INFfile>tplcd.inf</INFfile>
+      <Mfg>%Lenovo%</Mfg>
+      <DeviceDesc>%TPWHD%</DeviceDesc>
+      <DeviceDesc>%TPWFHDF%</DeviceDesc>
+      <DeviceDesc>%TPWHDF%</DeviceDesc>
+    </INFCmd>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[MONITOR\LEN4090]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN4094]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40D1]]></HardwareID>
+      <HardwareID><![CDATA[MONITOR\LEN40D5]]></HardwareID>
+      <Date>2017-08-01</Date>
+      <Version>6.5.0.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[MONITOR\LEN4090]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN4094]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40D1]]></_PnPID>
+        <_PnPID><![CDATA[MONITOR\LEN40D5]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0jm102w.exe</Name>
+        <CRC>20FCBD81D5B76938A677ED4EEA2889507460EB96CA61D4859D1A883CF5C0B236</CRC>
+        <Size>534472</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0jm102w.txt</Name>
+        <CRC>45F23B7E705574A2EA06DABED41831FE646AF32675771C69078F712774203E30</CRC>
+        <Size>6047</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>eVH2hjk9TuGyeqcdkaR8B1cjf7E=</DigestValue></Reference></SignedInfo><SignatureValue>dBxNjZxLfJjS4F2hIRpmTBVLve23mJZLapbn5dA7evuv3YChdpOuaw3kerleFMcAG13adkgN+0BCVbhjJ7EGO2rnUsHpsktxnSutZy2rsQGw1Qqik+rXCTnaPC/mlI1GjrHzKlLRwJ1DqVNC+YpcFm3iSIc7L48sQPVVX9IXyZUP62GFo2N8QIv73YkdtPdJYx3F9qp0iNT/aGMcINOdcbbirhe14fGQxWCkQl+hc2vKFHcjAk3Mv4LrifHyAnFQ+CvwNfDhlB35zedppfHfzP2kwM3LOpFrh6zpO9sltpG3NauH+oLe8O/nPdWaqEraI22WPGZ7wSfzkmD/XWc/iQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

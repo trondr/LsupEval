@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="20">
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u6kyb10us17_64_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6f2e7c2f05ef270c6e0f32a13507eecd87c7ebae0cd30520b48cf26b9dd2525d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u6kyb10us17_32_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f69fb01f8d47bf057dbc22c4e7b49421448d6f4858869746739a2fd108e01772</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/s00jy67usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">24a344d29be43ba952182739ae13f3fe5ec58b4581e7db62daa515edc90b9a21</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1par01ws17_tsgv_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b4087a4a23279c060a5e4d642d08ea592e8d05fa1ffac9be21ed2c16c442ffb8</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k7car15ws17_t64_tsgv_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">efe1af2f4a639a7816673033521a3403f905c68873bde6763005502538ddece3</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1amt13ws17_tsgv_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">946a2c40e5d771e8231ac4603334653a62db347efe0ab2d0f022a9c579fbea4e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k7aud24ws17_t64_tsgv_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">c1ca03edee24d59626eb46238d61e39a769937d2fd392715315020a7a859b25f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1chp21ws17_tsgv_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ab78949689504b80465a04c83f6f1f433740cb57a68dca2e42e76efed123f82f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k4etn04ws17_tsgv_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a180d6392ad19174a02c5442b98d7b3d63ffda595f6491b4db42e23f3621d760</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1etn07ws17_520_tsgv_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e94f38cd7d46c84655cd061f51f089ee27b17e6eabe60c20447e11efcb20acd6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1etn08ws17_tsgv_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ed01f8121e6ffa61c82af67737903c800a3b14bed9b2c6791ff0cd1351a9792a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1tbt07ws17_t64_tsgv_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">bc3d809889194b4127856225323e98d5b65061448d8d7ffff75538007ed487e7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo13ws17_tsgv_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ce014bde2f270b7ac59241192398e648ed1de086511275deff003e869a17c841</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u5aud05ws14_tsgv_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4ce1e796e91a8296228fa2293e60687ae6f08eededf2643d31289da92eb9af1b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdobtus14_tsgv_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">60d94c28f7de407021b01a3b2a321ca4416eb970cac411dc3bb5f0d5fe58d896</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k2wlg32us14_tsv_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d718156f61e7f3f7dfa98351ef9f15c80d448bfddbce38ba97b0d6602f5a0073</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1rst10ws17_tsgv_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">72b2eb1040b241199b3cfd53fbe402fcb0cb0222b065f1d75170da2168052f43</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/kketn01ws17_tsgv_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6dcbb806af12f6570fa70ac4e3308eaf4c8e71d410885c398a887d7623dc571f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdo9bus14ws_tsgv_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">66957c631a405f6db150cd43da228d22dd3d8f379aef6c89d004d35ea73d218d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+</packages>

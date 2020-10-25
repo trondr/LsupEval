@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_TBT_N1ETF" id="n1etf08w" version="25" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Alpine Ridge Thunderbolt Firmware - 7/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1etf08w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-01-14</ReleaseDate>
+  <DiskSpaceNeeded>1567578</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\FwUpdateTool.exe</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\p50_p70_detect.exe p50_8</_ExternalDetection>
+      <Not>
+        <_Bios>
+          <Level>N1EET0*</Level>
+          <Level>N1EET1*</Level>
+          <Level>N1EET2*</Level>
+          <Level>N1EET3*</Level>
+          <Level>N1EET4*</Level>
+          <Level>N1EET5*</Level>
+          <Level>N1EET60*</Level>
+          <Level>N1EET61*</Level>
+          <Level>N1EET62*</Level>
+          <Level>N1EET63*</Level>
+          <Level>N1EET64*</Level>
+          <Level>N1EET65*</Level>
+        </_Bios>
+      </Not>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\VEN_IBM&DEV_0055]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\VEN_IBM&DEV_0068]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0068]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0168]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0268]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\IBM0055]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\IBM0068]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\LEN0068]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\LEN0168]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\LEN0268]]></HardwareID>
+        <Version>1.67.12.19^</Version>
+      </_Driver>
+      <_FileVersion>
+        <File>%ProgramFiles(x86)%\Intel\Thunderbolt Software\Thunderbolt.exe</File>
+        <Version>16.3.59.7^</Version>
+      </_FileVersion>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1etf08w.exe</Name>
+        <CRC>4E15AFFCC78320156AEDEDAF0B7A4A9A6BAABEA91764D0092F5EBCBB2275E066</CRC>
+        <Size>588760</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1etf08w.txt</Name>
+        <CRC>803B115AE5CD50C4C1777B166D2EB085E0EC9C81201D855A2E16F602506B45FD</CRC>
+        <Size>7565</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>p50_p70_api.dll</Name>
+        <CRC>D50F743F1EECECB576C4A58415B0C4334E9E4768125A768B4D6723570628063D</CRC>
+        <Size>55080</Size>
+      </File>
+      <File>
+        <Name>p50_p70_detect_cmd.exe</Name>
+        <CRC>7094D48E61B165ECB057BADBC30F8A4ADFFB8F998BD19ED65D60D7198715045E</CRC>
+        <Size>33064</Size>
+      </File>
+      <File>
+        <Name>p50_p70_detect.exe</Name>
+        <CRC>239F826F2BEFE7BFEF4CAC6481C6183B1161B372180D5672210B6D591F51AF4C</CRC>
+        <Size>29480</Size>
+      </File>
+      <File>
+        <Name>p50_8.txt</Name>
+        <CRC>B7A56873CD771F2C446D369B649430B65A756BA278FF97EC81BB6F55B2E73569</CRC>
+        <Size>2</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ljeZdWr0+0DADjVPWbvT8FQPWF0=</DigestValue></Reference></SignedInfo><SignatureValue>CvrPvwNnm1ENPJDhg/GQ9tEhw5ypTP5THLc+IkEvv0rsatYFJHS7F37Rlm+aaJpiUGDZ4ga+U5Bmjd2TRVtTKxUYoMwV4kWJn/6P1L4XLSlSe9lMUVVIUFbEl2b1dn0+KrYR2e7YSb+kZlCKAeOIYX0pcSngBIN4nZTT3NhTYV27K2GouFrLKyTe55DMJQ+rmPkgGqLJka8lPY3eaqo7v4sMdZe3/LhfMSs0Tj2xgGIae1hdX7/tsETWbOq35DlA/S4n9HvcOsHELPQ8sDclqZxsBUNM3JwXHrEDIesozhth83meNqjehC48IP7ZqVnyQ4iT+zZCRCGcSGzDzJmh+w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

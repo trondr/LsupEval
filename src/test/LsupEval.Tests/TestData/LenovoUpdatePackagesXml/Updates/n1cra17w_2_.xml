@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IME_N1CRA" id="n1cra17w" version="11.0.0.1167" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Management Engine 11.0 Software - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\TeeDriverW8x64.sys</_FileExists>
+        <_FileExists>%WINDOWS%\system32\drivers\TeeDriverx64.sys</_FileExists>
+        <_FileExists>%WINDOWS%\system32\drivers\TeeDriver.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1cra17w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-04</ReleaseDate>
+  <DiskSpaceNeeded>177687583</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupME.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupME.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\drivers\TeeDriverW8x64.sys</File>
+        <Version>11.0.0.1166^</Version>
+      </_FileVersion>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\drivers\TeeDriverx64.sys</File>
+        <Version>11.0.0.1166^</Version>
+      </_FileVersion>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\drivers\TeeDriver.sys</File>
+        <Version>11.0.0.1166^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <And>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5</Key>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4</Key>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4.0</Key>
+          </_RegistryKey>
+        </And>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A13A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D3A]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1cra17w.exe</Name>
+        <CRC>0A502070BD8FF62CD61BB68B8AF6159833E94C67</CRC>
+        <Size>78415096</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1cra17w.txt</Name>
+        <CRC>CD42BBCB0BA96DA86BDA9E7DAB406C13286F5F6A</CRC>
+        <Size>12000</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WINTAB_N1AG" id="n1ags04w" version="7.3.1.11" hide="False">
+  <Title default="EN">
+    <Desc id="EN">WinTab Utility Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\wachidrouter_isd.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\wachidrouter_isd.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1ags04w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-05</ReleaseDate>
+  <DiskSpaceNeeded>71901760</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\wachidrouter_isd.sys</File>
+      <Version>7.3.1.11^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[ACPI\VEN_WCOM&DEV_5020]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\VEN_WCOM&DEV_5026]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\VEN_WCOM&DEV_5027]]></_PnPID>
+      </Or>
+      <Or>
+        <_FileExists>%Windows%\System32\drivers\igdkmd64lp.sys</_FileExists>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1ags04w.exe</Name>
+        <CRC>4854DBF7DC8489D0B0FB3038047DB80B190E5ACB</CRC>
+        <Size>12150976</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1ags04w.txt</Name>
+        <CRC>63B61055A28665677B8A2369CD159AE7D6531213</CRC>
+        <Size>7600</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

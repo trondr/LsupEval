@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="APS_J1APS_1064" id="k1aps08us17_1064" version="2.0.1.0625" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Active Protection System - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B9CE8032-ABBD-49E2-8554-8924599BE4BC}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B9CE8032-ABBD-49E2-8554-8924599BE4BC}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>lenovo</Vendor>
+  <ExtractCommand>k1aps08us17_1064.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-03-21</ReleaseDate>
+  <DiskSpaceNeeded>10000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B9CE8032-ABBD-49E2-8554-8924599BE4BC}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>2.0.1.0625^</Version>
+      </_RegistryKeyValue>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_ExternalDetection rc="1">%PACKAGEPATH%\CheckBoardID.exe</_ExternalDetection>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1aps08us17_1064.exe</Name>
+        <CRC>7075A15F40553F0E3810662994AB1F175FD02B30</CRC>
+        <Size>5087048</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1aps08us17_1064.txt</Name>
+        <CRC>9E73BE0658DD39F299EC024EE13EC81CFF0B7882</CRC>
+        <Size>4552</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>checkboardid.exe</Name>
+        <CRC>8A35B0D18E40629CA75D7B303127CC32D00D4745</CRC>
+        <Size>80912</Size>
+      </File>
+      <File>
+        <Name>checkboardidx64.sys</Name>
+        <CRC>576BD2D5EF69F698E7B386F40A29492D99EA0599</CRC>
+        <Size>13048</Size>
+      </File>
+      <File>
+        <Name>checkboardidx86.sys</Name>
+        <CRC>3077EC7044EB42DF2FC1A2E484E193FB61E0C488</CRC>
+        <Size>12536</Size>
+      </File>
+    </External>
+  </Files>
+</Package>

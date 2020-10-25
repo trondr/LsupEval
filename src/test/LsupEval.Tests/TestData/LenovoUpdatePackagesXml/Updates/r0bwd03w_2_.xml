@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WIDI_R0BWD" id="r0bwd03w" version="6.0.52.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Wireless Display Driver - 7/8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%PROGRAMFILES%\Intel Corporation\Intel WiDi\WiDiApp.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%PROGRAMFILES%\Intel Corporation\Intel WiDi\WiDiApp.exe</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0bwd03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-02-20</ReleaseDate>
+  <DiskSpaceNeeded>211853528</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s /v/qn /V"WIDIAPP_DESKTOP_SHORTCUT=0" /norestart</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%PROGRAMFILES%\Intel Corporation\Intel WiDi\WiDiApp.exe</File>
+      <Version>6.0.52.0^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_FileVersion>
+            <File>%WINDOWS%\system32\drivers\igdkmd64lp.sys</File>
+            <Version>10.18.14.4299^</Version>
+          </_FileVersion>
+          <Or>
+            <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B1&SUBSYS_505717AA]]></_PnPID>
+          </Or>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+          <_FileVersion>
+            <File>%WINDOWS%\system32\drivers\igdkmd64lp.sys</File>
+            <Version>20.19.15.4320^</Version>
+          </_FileVersion>
+          <Or>
+            <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B1&SUBSYS_505717AA]]></_PnPID>
+          </Or>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+          <_FileVersion>
+            <File>%WINDOWS%\system32\drivers\igdkmd64.sys</File>
+            <Version>20.19.15.4312^</Version>
+          </_FileVersion>
+          <Or>
+            <_PnPID><![CDATA[PCI\VEN_8086&DEV_1916&SUBSYS_505817AA]]></_PnPID>
+            <_PnPID><![CDATA[PCI\VEN_8086&DEV_1906&SUBSYS_505817AA]]></_PnPID>
+          </Or>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_FileVersion>
+            <File>%WINDOWS%\system32\drivers\igdkmd64.sys</File>
+            <Version>20.19.15.4312^</Version>
+          </_FileVersion>
+          <Or>
+            <_PnPID><![CDATA[PCI\VEN_8086&DEV_1916&SUBSYS_505817AA]]></_PnPID>
+          </Or>
+        </And>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3166]]></_PnPID>
+      </Or>
+      <Or>
+        <_FileVersion>
+          <File>%WINDOWS%\system32\drivers\Netwsw02.sys</File>
+          <Version>18.30.0.9^</Version>
+        </_FileVersion>
+        <_FileVersion>
+          <File>%WINDOWS%\system32\drivers\Netwbw02.sys</File>
+          <Version>18.30.0.9^</Version>
+        </_FileVersion>
+        <_FileVersion>
+          <File>%WINDOWS%\system32\drivers\Netwtw02.sys</File>
+          <Version>18.30.0.9^</Version>
+        </_FileVersion>
+      </Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client</Key>
+        <KeyName>Version</KeyName>
+        <Version>4.5^</Version>
+      </_RegistryKeyValue>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0bwd03w.exe</Name>
+        <CRC>168DC8727E0E459206F5AEE6AEA5C084A42ACC71</CRC>
+        <Size>98442960</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0bwd03w.txt</Name>
+        <CRC>4B28E89B86D423A940AF806B8CF89C90C53BD859</CRC>
+        <Size>8144</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

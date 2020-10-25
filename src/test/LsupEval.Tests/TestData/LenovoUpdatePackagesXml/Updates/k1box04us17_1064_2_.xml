@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="LITEONBOX_K1BO" id="k1box04us17_1064" version="3.6.78.350" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Liteon IO Box COM Port Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\ser2pl64.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\ser2pl64.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k1box04us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-12-24</ReleaseDate>
+  <DiskSpaceNeeded>20000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\PL2303_Prolific_DriverInstaller_v1.11.0.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\PL2303_Prolific_DriverInstaller_v1.11.0.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\ser2pl64.sys</File>
+      <Version>3.6.78.350^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_067B&PID_2303]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1box04us17.exe</Name>
+        <CRC>F6E7DEA0AFEA1938B9E7BF0A225C29A034A88387</CRC>
+        <Size>4534768</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1box04us17.txt</Name>
+        <CRC>08CFF21DFFCE637C1066A0C5D63243E5F7C32C2E</CRC>
+        <Size>1945</Size>
+      </File>
+    </Readme>
+    <AppIcon>
+      <File>
+        <Name>drivericon.png</Name>
+        <CRC>7EC2C0DE763C66C681583B38CD897DAD5709701B</CRC>
+        <Size>8415</Size>
+      </File>
+    </AppIcon>
+  </Files>
+</Package>

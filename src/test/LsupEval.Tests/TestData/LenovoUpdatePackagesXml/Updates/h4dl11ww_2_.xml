@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTELGRAPHI_H4DL" id="h4dl11ww" version="9.17.10.3190" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel HD Graphics Driver - 8 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F0E3AD40-2BBD-4360-9C76-B9AC9A5886EA}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F0E3AD40-2BBD-4360-9C76-B9AC9A5886EA}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>h4dl11ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2013-11-08</ReleaseDate>
+  <DiskSpaceNeeded>490000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{F0E3AD40-2BBD-4360-9C76-B9AC9A5886EA}</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>9.17.10.3190^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0106&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0116&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0126&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0156&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0166&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0106&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0116&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0126&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0156&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0166&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0106&SUBSYS_500C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0116&SUBSYS_500C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0126&SUBSYS_500C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0156&SUBSYS_500C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0166&SUBSYS_500C17AA]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+      </_OS>
+      <_Bios>
+        <Level>*</Level>
+        <Level>G9ET*</Level>
+        <Level>G8ET*</Level>
+        <Level>H6ET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>h4dl11ww.exe</Name>
+        <CRC>1074A3E1CA0901821722303FF786E6D527BE2BEB</CRC>
+        <Size>97950520</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>h4dl11ww.txt</Name>
+        <CRC>9345567BBDCBA185820D47403507C55A0B97FEAC</CRC>
+        <Size>7816</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

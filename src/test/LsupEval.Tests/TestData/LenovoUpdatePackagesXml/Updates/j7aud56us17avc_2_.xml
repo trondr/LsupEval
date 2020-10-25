@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AUDIO_J7AUD08_AVC" id="j7aud56us17avc" version="6.0.8978.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek  Audio Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3110]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3114]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36BF]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0286&SUBSYS_17AA30BA]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3115]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36C4]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36C6]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36EC]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>j7aud56us17avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-02</ReleaseDate>
+  <DiskSpaceNeeded>1072000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="1" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3110]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3114]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36BF]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0286&SUBSYS_17AA30BA]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3115]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36C4]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36C6]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36EC]]></HardwareID>
+      <Date>2020-06-23</Date>
+      <Version>6.0.8978.1^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3110]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3114]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36BF]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0286&SUBSYS_17AA30BA]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA3115]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36C4]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36C6]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA36EC]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_Bios>
+        <Level>*</Level>
+        <Level>M1BKT*</Level>
+        <Level>FUKT*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>j7aud56us17avc.exe</Name>
+        <CRC>7E2F9976FBA36355922E091DAA8E6D44EE26FB5A2E54C0FADC7DC27A428A3603</CRC>
+        <Size>209401064</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>j7aud56us17avc.txt</Name>
+        <CRC>D7180089F055079B527878B6B81A4A7B5584BE74F1D995A48DC73E6F76F56A87</CRC>
+        <Size>7773</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>LNTB1ahjAVA3/VvKRCyY4VBFoCc=</DigestValue></Reference></SignedInfo><SignatureValue>csY/VsaTbh01icVAjeQQ3/CUhbnYqQORACMZ1rB74ekkVIQON8mJLO4xT8M/VFUQuHvV0Yl0aBTpAtMQU6eqD3+UAFsbDC9+pyhx3LWDlekERzMnkgtLy7Dj+nvQbH4MxuLywkP1YFQn0yQf64B/URTnBnGUu4+lPN6J62HrtZfkV3nFDfUkT8I2pdE2rxBfzVe0W9RRlZxHquM0FQkYbfTIwuNyHHplDPkutFtUF8VUYV/nNxzVeLsjRemQmHWK7diQ7oWOjKsUwlwH2Orbf3kLeRSplKgEngf1rAexAy/BVPRwm2zQcsfRw3XtATCXGoXDaLmVRcJHxrMicXykiA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

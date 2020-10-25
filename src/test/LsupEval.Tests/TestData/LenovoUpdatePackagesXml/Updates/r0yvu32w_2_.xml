@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="HOTKEYPACK4_W10" id="r0yvu32w" version="9.2.0.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Hotkey Features Integration Package Setup - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="3">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0yvu32w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-29</ReleaseDate>
+  <DiskSpaceNeeded>31665918</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="2" />
+  <PackageType type="1" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></HardwareID>
+      <Date>2020-04-03</Date>
+      <Version>9.2.0.1^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_Driver>
+          <HardwareID><![CDATA[ACPI\VEN_IBM&DEV_0055]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_IBM&DEV_0068]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0068]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0168]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0268]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\LEN0068]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\LEN0168]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\LEN0268]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\IBM0055]]></HardwareID>
+          <HardwareID><![CDATA[ACPI\IBM0068]]></HardwareID>
+          <Version>0.1^</Version>
+        </_Driver>
+        <_Coreq name="PMD_WIN10X64">
+          <Version>0.1^</Version>
+        </_Coreq>
+      </Or>
+      <Or>
+        <Or>
+          <Not>
+            <_Bios>
+              <Level>GDET*</Level>
+            </_Bios>
+          </Not>
+        </Or>
+        <Or>
+          <And>
+            <_Bios>
+              <Level>GDET*</Level>
+            </_Bios>
+            <Or>
+              <_Coreq name="BIOS_GDUJ">
+                <Version>1.07.1.07^</Version>
+              </_Coreq>
+              <Not>
+                <_Bios>
+                  <Level>GDET0*</Level>
+                  <Level>GDET1*</Level>
+                  <Level>GDET2*</Level>
+                  <Level>GDET30*</Level>
+                  <Level>GDET31*</Level>
+                  <Level>GDET32*</Level>
+                  <Level>GDET33*</Level>
+                  <Level>GDET34*</Level>
+                  <Level>GDET35*</Level>
+                  <Level>GDET36*</Level>
+                </_Bios>
+              </Not>
+            </Or>
+          </And>
+        </Or>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1EET*</Level>
+        <Level>N1KET*</Level>
+        <Level>GQET*</Level>
+        <Level>B0ET*</Level>
+        <Level>N19ET*</Level>
+        <Level>GJET*</Level>
+        <Level>N1LET*</Level>
+        <Level>N14ET*</Level>
+        <Level>N1FET*</Level>
+        <Level>G6ET*</Level>
+        <Level>G8ET*</Level>
+        <Level>G9ET*</Level>
+        <Level>GIET*</Level>
+        <Level>N15ET*</Level>
+        <Level>JHET*</Level>
+        <Level>N1GET*</Level>
+        <Level>N1DET*</Level>
+        <Level>N1HET*</Level>
+        <Level>JBET*</Level>
+        <Level>GNET*</Level>
+        <Level>GSET*</Level>
+        <Level>N10ET*</Level>
+        <Level>GMET*</Level>
+        <Level>R02ET*</Level>
+        <Level>N1CET*</Level>
+        <Level>N11ET*</Level>
+        <Level>R0IET*</Level>
+        <Level>N1QET*</Level>
+        <Level>N1VET*</Level>
+        <Level>GLET*</Level>
+        <Level>N1XET*</Level>
+        <Level>N1MET*</Level>
+        <Level>N23ET*</Level>
+        <Level>N20ET*</Level>
+        <Level>N25ET*</Level>
+        <Level>N27ET*</Level>
+        <Level>N24ET*</Level>
+        <Level>N22ET*</Level>
+        <Level>R0SET*</Level>
+        <Level>N1ZET*</Level>
+        <Level>N1UET*</Level>
+        <Level>N2CET*</Level>
+        <Level>N2EET*</Level>
+        <Level>N2LET*</Level>
+        <Level>R12ET*</Level>
+        <Level>R13ET*</Level>
+        <Level>N2HET*</Level>
+        <Level>N2OET*</Level>
+        <Level>N2NET*</Level>
+        <Level>N2QET*</Level>
+        <Level>R15ET*</Level>
+        <Level>N2RET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0yvu32w.exe</Name>
+        <CRC>8157C62CB497156B43AA19E658768D3C49050A204CDF892E01B7A855BB03EF4E</CRC>
+        <Size>10542896</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0yvu32w.txt</Name>
+        <CRC>F9E59D68966BE8C72ED0DF76A0D4FE971F0EE47F352FE26A6DBF42EA592B6EC0</CRC>
+        <Size>100550</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>MVnDbxwNjvRRq3zPIlKmUxHVsvI=</DigestValue></Reference></SignedInfo><SignatureValue>Q+BIORRZXPB/Qv42lCWeNThWoXAKR1T/4bUExCb+ggy/EdlGTemvnYJgvmEMb4Z59EIj0QObhmygF+gsA/0tTsEqBXohPoH1cT49uq76lGtW2v7UNbPqG4Axm3xh6CXNJYva2A8cC/I1vJWGhcMLDQh2MFmKSASwcx4D4OKGgvnsEAWPQgHI9tZad5A8GMkZRf6M2BrKAkkLiZnUD/tLNlyj60yE7tvK6ZnBNaKO/KDw26iyD3o542JOA09EKJzxtJ8SynVsoNsvs3MRCbqpcVT1ZRCiBfsSltZXES5DRKZHDhvMBWSDKZTJObYtLI5g4FXfDuVOBrOwvJQTDkDAFQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

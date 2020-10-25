@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIPSET_GJHA" id="gjht06ww" version="10.1.1.9" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) Chipset Device Software - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\InfInst</Key>
+      <ValueName>version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\InfInst</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>gjht06ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-08-24</ReleaseDate>
+  <DiskSpaceNeeded>8000000</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe /s /norestart</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\InfInst</Key>
+      <KeyName>version</KeyName>
+      <Version>10.1.1.9^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C03&SUBSYS_220C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C03&SUBSYS_220E17AA]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>gjht06ww.exe</Name>
+        <CRC>79066C7F588F28D177C0AE91AB027A41FED5E8A0</CRC>
+        <Size>3072264</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>gjht06ww.txt</Name>
+        <CRC>B5B3CA76CFC383A70288D551B5AAF0D5F57520E3</CRC>
+        <Size>6813</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

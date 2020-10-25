@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RTKCARD_J1CA_71064" id="j1car01us17" version="10.0.10240.31220" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Cardeader  Driver - 7[32, 64]/10[64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\RtsUer.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\RtsUer.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>j1car01us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-11</ReleaseDate>
+  <DiskSpaceNeeded>45000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\RtsUer.sys</File>
+      <Version>10.0.10240.31220^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0129]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>j1car01us17.exe</Name>
+        <CRC>19D6B8B48C78315AFBE8F62E39A016E86E72F00D</CRC>
+        <Size>6155824</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>j1car01us17.txt</Name>
+        <CRC>3FB4DFE615A58A47EB0DFABF6783A446535517F3</CRC>
+        <Size>434</Size>
+      </File>
+    </Readme>
+    <AppIcon>
+      <File>
+        <Name>drivericon.png</Name>
+        <CRC>7EC2C0DE763C66C681583B38CD897DAD5709701B</CRC>
+        <Size>8415</Size>
+      </File>
+    </AppIcon>
+  </Files>
+</Package>

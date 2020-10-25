@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="3D_CAMERA_N19C_81" id="n19c308w" version="1.2.14.24922" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel 3D Camera Driver - 8.1 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\RealSenseDCM.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n19c308w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-01-04</ReleaseDate>
+  <DiskSpaceNeeded>69000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\RealSenseDCM.sys</File>
+      <Version>1.0.14.22892^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_0226]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="2">%PACKAGEPATH%\win81checker.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n19c308w.exe</Name>
+        <CRC>6F58845265D17A6DF07F17A3223DA3AE400EBC38</CRC>
+        <Size>15221048</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n19c308w.txt</Name>
+        <CRC>11DB1283622630A69E1DF5C7EB94B33AD2F4A68D</CRC>
+        <Size>7650</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>win81checker.exe</Name>
+        <CRC>9FADD488BC9035FB50EC09A965717F3BED855D15</CRC>
+        <Size>70640</Size>
+      </File>
+    </External>
+  </Files>
+</Package>

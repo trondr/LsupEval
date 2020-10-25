@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="MULCD_R00MR" id="r00mr07w" version="10.0.10586.21290" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek MultiCard Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_504817AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_511317AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_504817AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_511317AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r00mr07w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-09-01</ReleaseDate>
+  <DiskSpaceNeeded>43644971</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Install rc="1,257" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /q /se</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_504817AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_511317AA]]></HardwareID>
+      <Date>2016-05-23</Date>
+      <Version>10.0.10586.21290^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_504817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_522A&SUBSYS_511317AA]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r00mr07w.exe</Name>
+        <CRC>80C144DDD1E81B84B1147338F88C1A7597C47ED1</CRC>
+        <Size>2736968</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r00mr07w.txt</Name>
+        <CRC>A589BEB47DEADF5FBEABAB52CB7A755C8C8FF0F6</CRC>
+        <Size>7453</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

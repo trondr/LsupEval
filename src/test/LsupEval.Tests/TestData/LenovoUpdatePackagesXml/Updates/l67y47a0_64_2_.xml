@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FPR_L67Y_64" id="l67y47a0_64" version="4.5.507" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Validity Fingerprint Common Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\System32\drivers\UMDF\wbf_vfs_lvcmn.dll</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\System32\drivers\UMDF\wbf_vfs_lvcmn.dll</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>l67y47a0.exe /VERYSIlENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-06-20</ReleaseDate>
+  <DiskSpaceNeeded>17704608</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\WBFDDKSetup_CMN_5011_Advanced.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\WBFDDKSetup_CMN_5011_Advanced.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%Windows%\System32\drivers\UMDF\wbf_vfs_lvcmn.dll</File>
+      <Version>4.5.507^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_138A&PID_0011]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_138A&PID_0015]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_138A&PID_0017]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>l67y47a0.exe</Name>
+        <CRC>92606BCDE1F71B00891CFF2FBCCE97EEAB72D9BC</CRC>
+        <Size>7974720</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>l67y47a0.txt</Name>
+        <CRC>61FF13B31987041DE7055C781D73CC1C346CC6A0</CRC>
+        <Size>7282</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

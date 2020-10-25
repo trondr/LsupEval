@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="VIDEO_U3VDO" id="u3vdo06us14" version="353.24" hide="False">
+  <Title default="EN">
+    <Desc id="EN">NVIDIA Discrete VGA Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}_Display.Driver</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}_Display.Driver</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3vdo06us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-29</ReleaseDate>
+  <DiskSpaceNeeded>500741004</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -n -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}_Display.Driver</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>353.24^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FC0&SUBSYS_3B861642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FC2&SUBSYS_27511462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FC2&SUBSYS_27521462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FC2&SUBSYS_275C1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FC2&SUBSYS_3B861642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FC2&SUBSYS_3B981642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FC6&SUBSYS_28091462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FF3]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FFF&SUBSYS_094A10DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1180&SUBSYS_096910DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1184&SUBSYS_103310DE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1185&SUBSYS_28411462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1185&SUBSYS_3C281642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1187&SUBSYS_28491462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1187&SUBSYS_3D341642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1280&SUBSYS_29221462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1280&SUBSYS_3D061642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1286&SUBSYS_29281462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_31311462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3E561642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_31301462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_3E561642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1380&SUBSYS_31091462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1380&SUBSYS_3E321642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1381&SUBSYS_31011462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1382&SUBSYS_31101462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13C0]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13C2]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1401&SUBSYS_32001462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0DC0&SUBSYS_23101462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0DC0&SUBSYS_3A281642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0DE2&SUBSYS_3A261642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0DE5&SUBSYS_23001462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0DE5&SUBSYS_23091462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0DE5&SUBSYS_230C1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0DE5&SUBSYS_3A261642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0E24&SUBSYS_23201462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1040&SUBSYS_25921462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1040&SUBSYS_25931462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1040&SUBSYS_3A981642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1040&SUBSYS_3B421642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1042&SUBSYS_25941462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1042&SUBSYS_25951462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1042&SUBSYS_25961462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1042&SUBSYS_3A981642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1042&SUBSYS_3B421642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1048&SUBSYS_25971462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1048&SUBSYS_25981462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1048&SUBSYS_25991462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1048&SUBSYS_3A981642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1048&SUBSYS_3B421642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1048&SUBSYS_3C261642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1049&SUBSYS_259D1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1049&SUBSYS_259E1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1049&SUBSYS_3A981642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1049&SUBSYS_3B421642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_3A981642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_3B421642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_B5941462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_B5951462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_B5961462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_B5971462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_B5981462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_104C&SUBSYS_B5991462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1084&SUBSYS_25701462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1084&SUBSYS_25711462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1084&SUBSYS_3A961642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1243&SUBSYS_23161462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1243&SUBSYS_3A281642]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3vdo06us14.exe</Name>
+        <CRC>00C72C34A427BFCCC3F08B6B88C42EAEF18A3965</CRC>
+        <Size>250362008</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3vdo06us14.txt</Name>
+        <CRC>B39828277D1597FFCB0D7EB1520CCBF99814414E</CRC>
+        <Size>8494</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

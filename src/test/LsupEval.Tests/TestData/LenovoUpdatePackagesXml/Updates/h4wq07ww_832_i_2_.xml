@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTELBT_H4WQ_832I" id="h4wq07ww_832_i" version="3.1.1306.0354" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Bluetooth Device Software Initial Install - 8/10 [32]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\system32\Drivers\btmhsf.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>h4wq07ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-12</ReleaseDate>
+  <DiskSpaceNeeded>190951189</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win8\Win32\Install\Setup.exe /qn</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win8\Win32\Install\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%Windows%\system32\Drivers\btmhsf.sys</File>
+        <Version>3.1.1306.0340^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8087&PID_07DA]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>32</AddressWidth>
+      </_CPUAddressWidth>
+      <Not>
+        <Or>
+          <_FileExists>%Windows%\system32\Drivers\btmhsf.sys</_FileExists>
+        </Or>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>h4wq07ww.exe</Name>
+        <CRC>D32D115BF55557DB7C5C03B0468FAD6BCA13A843</CRC>
+        <Size>57686616</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>h4wq07ww.txt</Name>
+        <CRC>116046CF594BF7122B924EBA2A08D0295C566903</CRC>
+        <Size>8353</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

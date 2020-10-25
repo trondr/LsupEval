@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BIOS_R00U" id="r00uj27ww" version="1.40" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad BIOS Update - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r00uj27ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-07-17</ReleaseDate>
+  <DiskSpaceNeeded>26433883</DiskSpaceNeeded>
+  <Reboot type="5" />
+  <Brand type="2" />
+  <PackageType type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\winuptp.exe -s</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Bios>
+        <Level>R00ET65*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>1.40^</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>32</AddressWidth>
+          </_CPUAddressWidth>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB2685811~31bf3856ad364e35~x86~~6.1.1.11</Key>
+            <KeyName>InstallName</KeyName>
+            <KeyValue>Package_1_for_KB2685811~31bf3856ad364e35~x86~~6.1.1.11.mum</KeyValue>
+          </_RegistryKeyValue>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB4474419~31bf3856ad364e35~x86~~6.1.3.2</Key>
+            <KeyName>InstallName</KeyName>
+            <KeyValue>Package_1_for_KB4474419~31bf3856ad364e35~x86~~6.1.3.2.mum</KeyValue>
+          </_RegistryKeyValue>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB976902~31bf3856ad364e35~x86~~6.1.1.17514</Key>
+          </_RegistryKey>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_2_for_KB4490628~31bf3856ad364e35~x86~~6.1.1.2</Key>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\ApplicabilityEvaluationCache\Package_for_KB4490628~31bf3856ad364e35~x86~~6.1.1.2</Key>
+          </_RegistryKey>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</Key>
+            <KeyName>Version</KeyName>
+            <Version>4.6.2^</Version>
+          </_RegistryKeyValue>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB2685811~31bf3856ad364e35~amd64~~6.1.1.11</Key>
+            <KeyName>InstallName</KeyName>
+            <KeyValue>Package_1_for_KB2685811~31bf3856ad364e35~amd64~~6.1.1.11.mum</KeyValue>
+          </_RegistryKeyValue>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB4474419~31bf3856ad364e35~amd64~~6.1.3.2</Key>
+            <KeyName>InstallName</KeyName>
+            <KeyValue>Package_1_for_KB4474419~31bf3856ad364e35~amd64~~6.1.3.2.mum</KeyValue>
+          </_RegistryKeyValue>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_1_for_KB976902~31bf3856ad364e35~amd64~~6.1.1.17514</Key>
+          </_RegistryKey>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages\Package_2_for_KB4490628~31bf3856ad364e35~amd64~~6.1.1.2</Key>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\ApplicabilityEvaluationCache\Package_for_KB4490628~31bf3856ad364e35~amd64~~6.1.1.2</Key>
+          </_RegistryKey>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</Key>
+            <KeyName>Version</KeyName>
+            <Version>4.6.2^</Version>
+          </_RegistryKeyValue>
+        </And>
+      </Or>
+      <_Bios>
+        <Level>R00ET63*</Level>
+        <Level>R00ET62*</Level>
+        <Level>R00ET61*</Level>
+        <Level>R00ET60*</Level>
+        <Level>R00ET59*</Level>
+        <Level>R00ET58*</Level>
+        <Level>R00ET57*</Level>
+        <Level>R00ET56*</Level>
+        <Level>R00ET54*</Level>
+        <Level>R00ET53*</Level>
+        <Level>R00ET50*</Level>
+        <Level>R00ET49*</Level>
+        <Level>R00ET48*</Level>
+        <Level>R00ET47*</Level>
+        <Level>R00ET46*</Level>
+        <Level>R00ET45*</Level>
+        <Level>R00ET44*</Level>
+        <Level>R00ET42*</Level>
+        <Level>R00ET41*</Level>
+        <Level>R00ET38*</Level>
+        <Level>R00ET37*</Level>
+        <Level>R00ET35*</Level>
+        <Level>R00ET34*</Level>
+        <Level>R00ET33*</Level>
+        <Level>R00ET32*</Level>
+        <Level>R00ET64*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>^1.39</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r00uj27ww.exe</Name>
+        <CRC>49C0C4469924D28C9D102CEAECD0550C0094A84396D5F35B2F68B576BE6A685C</CRC>
+        <Size>7613568</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r00uj27ww.txt</Name>
+        <CRC>D5D2427C297C747453CD80D4C565153DB788A7BBF4ACD01DB2F205EBB0B8577A</CRC>
+        <Size>20791</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>w0PRTxU2S7/1IW/E+/EaKZjX3V4=</DigestValue></Reference></SignedInfo><SignatureValue>fKdAekPpL/bYhIplEOMEXXe3OCXzRX6f0xULZmRaH6BouCOttMHCgmWbQB74pfBWYBz9wH9tb9ct33ApZ9WjKShjusnJjH04K1V6woO/OivBlaf4e3SOqbHK1A4ye/qAysgiUEnR/OMcMZFlSHMS37bCSVBoo3gckb54OLb9ny0BxzUL+kTuyLk171Vf7pJm1HK7UzQeJsFY9vUFSSICZaN1vBmFXoeqM7JO27fuIwLsBOn6XYfBxP8PRSEJaDNhuSDw57eeWCQz8n3xiW9RlMjnLWrtGXyaKaYqYCcVoyaz04yEY/53aFITZnHJOO5tGm5aQONoPx+l+sQla37kOQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_THUN_N2ETI" id="n2eti12w" version="17.0.0.12-N2ETG17W" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Thunderbolt Firmware Update Tool On X1E-Series - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2eti12w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-08-06</ReleaseDate>
+  <DiskSpaceNeeded>3584301</DiskSpaceNeeded>
+  <Reboot type="5" />
+  <Brand type="2" />
+  <PackageType type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\FwUpdateTool2003.exe 1 -s</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\detect1911.exe ver_p1_n2eti12w.txt</_ExternalDetection>
+      <_Driver>
+        <HardwareID><![CDATA[VEN_8086&DEV_15EB&SUBSYS_226717EF]]></HardwareID>
+        <HardwareID><![CDATA[VEN_8086&DEV_15EB&SUBSYS_226717AA]]></HardwareID>
+        <Version>17.4.80.94^</Version>
+      </_Driver>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2eti12w.exe</Name>
+        <CRC>23522A2A2AFD3AD51D91DDBC5B561E6B282759EA89EE44C944CCC3087D21BED0</CRC>
+        <Size>1419424</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2eti12w.txt</Name>
+        <CRC>5DEB9F809B133B0335288EC4CDAD492370F0A3DB86E11E86ED02A5CD819EFB40</CRC>
+        <Size>6814</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>tbtapi1911.dll</Name>
+        <CRC>261CE1DA0596A92805DE21E780B624267DF46A459F5C86BDD22232102F6F9DB8</CRC>
+        <Size>64952</Size>
+      </File>
+      <File>
+        <Name>detect1911.exe</Name>
+        <CRC>FA9B521D764A98F3A8F28F7C3E5D782ABFA9289936FFBE0FB71CC1E2D2502B7D</CRC>
+        <Size>650168</Size>
+      </File>
+      <File>
+        <Name>fwdetectcmd1911.exe</Name>
+        <CRC>8D8944B52AA3E573830E798C0723019844F6E96C05312E5EFFEEE5B1D3E49DF8</CRC>
+        <Size>37816</Size>
+      </File>
+      <File>
+        <Name>ver_p1_n2eti12w.txt</Name>
+        <CRC>945E2D777C310C82E1F072049FC02C8C24399E039E478F9DCFBFA252E3838BEA</CRC>
+        <Size>7</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>YAvmSBUvqxTKoJe8ma+UNGCVCE8=</DigestValue></Reference></SignedInfo><SignatureValue>k7B5MfiZFusFtilftm0R3raxuLqXhKzBcBS6kJB93YRZVFS5ezUf1kW/mAfe5WNlgjuDqaYGRheDmrOA8HtEK0kClCeAfDwK5pQzaG6humsi/N2MG4giY60KohIHY1/G2EwIYSGrOREUu78O22nGT9gE4A2Bx2ACLna0WxLeXge3UeRgSHmOKTGpzeFpcXe4dLoUQqtiWnBMJiNXUyvhp8LUQqzEcK3UadlIT6Ku9nksiVcy82vAZ8akP4ExMyQcl+U11GSBUM6lPqOpCaAwmopK35pf6UOTv/oD9VI9S2yI63eLll8XS3OQP+9KFT7YCKnDCZyOmn4SJd4nB5VCYQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

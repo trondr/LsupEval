@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAMERA_N1NCP_RTK" id="n1ncp01w_rtk" version="10.0.15063.11300" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated Camera Driver for Realtek (Windows 10 Build 1703 and Older) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_13D3&PID_5619&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_111C&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_111D&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_04CA&PID_7067&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_13D3&PID_5619&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5896&PID_111C&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_111D&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_04CA&PID_7067&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1ncp01w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-08-03</ReleaseDate>
+  <DiskSpaceNeeded>34367340</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1,1073743105,1281,4353,1793" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_13D3&PID_5619&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_111C&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_111D&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_04CA&PID_7067&MI_00]]></HardwareID>
+      <Date>2017-10-13</Date>
+      <Version>10.0.15063.11300^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_13D3&PID_5619]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5896&PID_111C]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_111D]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_7067]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0,1,2">getw10ver4.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1ncp01w.exe</Name>
+        <CRC>73C07B86ADE15A2C683F5187246F5312E251229DD6C0CA259BE1449FFDA92A57</CRC>
+        <Size>6302736</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1ncp01w.txt</Name>
+        <CRC>83004A88D7FA7218DDC8958614370BDFC2D1B23D652B53BA269FE253812FB25A</CRC>
+        <Size>7266</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver4.exe</Name>
+        <CRC>FD6910AFA3522622C4F3C2E4A0C819AB47189FE98C3F71B668EC5CA8E732473A</CRC>
+        <Size>136040</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>AtQlMspLoHY57KlyjiMZNLnyDvk=</DigestValue></Reference></SignedInfo><SignatureValue>EViN0zjHvmPupFDaM7F6e2GATvcpaJBmyQdNoQAjQXxqknsxKSi4dndBsU1GYCIpKGyaJCHTwmLK10iFUK8cVFIRYNrV/9vmw4FvRIct01jWtw5kt1LZB+uT2myTbqWRx4EsdhABwg9no+k9lPaMrfr9K3dxw4cBmR7tWa18C6xBNkxs4ekxHcb8kvTsfCOZm+HKFs8chwY5WPyVMSBUixsRwoIRQ31GuLSlYxyCc8CtL//QNF7gK9yoCL5iJ2xSmzEWV4S62mBDr0qINShjYD7fC68VRhoNRvC9yvFBCxwLMwWatFlUS4JUkJ8n4othuWrBJggJHVPMadnzx7RDbw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

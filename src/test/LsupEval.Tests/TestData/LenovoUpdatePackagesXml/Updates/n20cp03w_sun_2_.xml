@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="SUNCAM_N20CP_RS2" id="n20cp03w_sun" version="3.5.18.32" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated Camera Driver for Sunplus (Windows 10 Build 1703) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_04CA&PID_7070&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_04CA&PID_7070&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n20cp03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-04-16</ReleaseDate>
+  <DiskSpaceNeeded>39124311</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1,1073742849,1025" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s /sa</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_04CA&PID_7070&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></HardwareID>
+      <Date>2018-03-16</Date>
+      <Version>3.5.18.32^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_7070&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_2113&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_211A&MI_00]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="2">%PACKAGEPATH%\getw10rsver.exe</_ExternalDetection>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n20cp03w.exe</Name>
+        <CRC>794018796F51C3FF55803BFA39C300BD1CBA8AD99A7133729BAA0BA7AB939DBB</CRC>
+        <Size>6662384</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n20cp03w.txt</Name>
+        <CRC>0C5DB0CEC7D28E5179DFE579DFC716195F68D13BDF3C0C1BCB57DE1E2A1B4E40</CRC>
+        <Size>6660</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10rsver.exe</Name>
+        <CRC>87805F2AF3A1B1A06DFBB296BCCC03CE6956B36CBC0FAB5F7524EFDD807103EA</CRC>
+        <Size>64376</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>P6Ljoztgzn7wqd3l9Aqqym0+veo=</DigestValue></Reference></SignedInfo><SignatureValue>AuF3PhP8alvu/eiGBj4jy7UqB/FYKZ0a9n3KN192uUm+fobEqMEoRG/3FHZoK1CaY59Y7JnilmHa8Wfw/9ZdwhAZ1w4h3cLyoTAdDhokt/1TYolO0j5zIHuvwYFSpfn3jm+fSuhxopwozBOY8cCcsoautxeinnys7/ocsTuB3mt1SPzMgblCKBVUuP3IXZn91ThJQAnD35bPbJWbNh6cUNapBo2EWkdF1+0e6ZnXMRRClz26U/I858eMAZTT5ULHoUw1oY+HgjXKwR+ki+Fv5GqTaAQLg8/+oqB25f0CcNfzAOQ4FOzqiqwOOtiXO0nWSS0GUIqM96GW1jHXxCdLXw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

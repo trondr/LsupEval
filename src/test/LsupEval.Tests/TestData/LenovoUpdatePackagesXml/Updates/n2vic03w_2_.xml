@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIP_N2VIC" id="n2vic03w" version="10.1.31.2" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Chipset Device Software (Windows 10 Version 1909 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911&SUBSYS_22C0217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B44&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B54&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B64&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_068E&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B8&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B0&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BE&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BF&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1901&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06EF&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A3&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A4&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06F9&SUBSYS_22C017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B44&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B64&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_068E&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B8&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B0&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BE&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BF&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1901&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06EF&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A3&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A4&SUBSYS_22C217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_06F9&SUBSYS_22C217AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2vic03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-25</ReleaseDate>
+  <DiskSpaceNeeded>4351111</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPInst.exe /sa /se /sw</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPInst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1911&SUBSYS_22C0217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9B44&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9B54&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9B64&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_068E&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06B8&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06B0&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06BE&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06BF&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1901&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06EF&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06A3&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06A4&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06F9&SUBSYS_22C017AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1911&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9B44&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9B64&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_068E&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06B8&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06B0&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06BE&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06BF&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1901&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06EF&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06A3&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06A4&SUBSYS_22C217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_06F9&SUBSYS_22C217AA]]></HardwareID>
+      <Version>10.1.31.2^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911&SUBSYS_22C0217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B44&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B54&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B64&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_068E&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B8&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B0&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BE&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BF&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1901&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06EF&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A3&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A4&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06F9&SUBSYS_22C017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B44&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9B64&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_068E&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B8&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06B0&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BE&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06BF&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1901&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06EF&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A3&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06A4&SUBSYS_22C217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_06F9&SUBSYS_22C217AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2VET*</Level>
+      </_Bios>
+      <_ExternalDetection rc="0,1">%PACKAGEPATH%\inboxdrivercheck.exe n2vic03w_2_.xml</_ExternalDetection>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3,4,5,6">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2vic03w.exe</Name>
+        <CRC>264A1B0F61342BC4A59E0CEFFDDA62E2BB82CDDA22803C6E334EB8ECFBEC1683</CRC>
+        <Size>1264008</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2vic03w.txt</Name>
+        <CRC>04E356265EBF0576FE8AACF63F4EFB7F2738C4D2F8BC409285A6D6A571BF5938</CRC>
+        <Size>6346</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>vGffAKbgBqiEw8/v7SY46Of4OHw=</DigestValue></Reference></SignedInfo><SignatureValue>KPoNo1HFD2RGNkvd8a0pXKhL0Ek5pRVDbmVKIx8yeV5TdtHzfpg+XsaCjn0V/XtkWioKlkcaAIrwQwgXHAEmq9TWFp64gKD/GCdtYiGZ6FiMoeT1sE0E4QIcYSxzqvYehHciOKnhq5attG0yhNwG1Q+sz/QFwEV3G2nXQV10snF8Cr69ewvDCARFh4zN31oMH3QaIz3DMZlKctSPzl1ZdNClrQan3cxYd1NZzF+BRC5MnmFj/DKYGMl9EA19zD/R4forUlBpSi4uIEPFIwTmhI1410ri58TtajncU760jCnHe3WfOyvq162Z4kp9ctn0omWGYdYtb0YeCExwL8H99w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AMDVD_JDD7" id="jdd709ww" version="16.300.2201" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD Video Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_1002&DEV_6664&SUBSYS_503D17AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_1002&DEV_6664&SUBSYS_503D17AA]]></HardwareID>
+        <Version>0.01^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jdd709ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-09-21</ReleaseDate>
+  <DiskSpaceNeeded>508884608</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_1002&DEV_6664&SUBSYS_503D17AA]]></HardwareID>
+      <Date>2016-07-07</Date>
+      <Version>16.300.2201.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6664&SUBSYS_503D17AA]]></_PnPID>
+      </Or>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A06&SUBSYS_502017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A06&SUBSYS_502117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A16&SUBSYS_502017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A16&SUBSYS_502117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A26&SUBSYS_502017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A26&SUBSYS_502117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_502017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_502117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_502017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_502117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1626&SUBSYS_502017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1626&SUBSYS_502117AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A06&SUBSYS_503C17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A06&SUBSYS_503D17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A16&SUBSYS_503C17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A16&SUBSYS_503D17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A26&SUBSYS_503C17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_503C17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1606&SUBSYS_503D17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_503C17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1616&SUBSYS_503D17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A26&SUBSYS_503D17AA]]></HardwareID>
+        <Version>0.01^</Version>
+      </_Driver>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jdd709ww.exe</Name>
+        <CRC>B4E5B9148E87D95CC3907E3DBAF44163412F7DE9</CRC>
+        <Size>281104120</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jdd709ww.txt</Name>
+        <CRC>966C9AA3D09342149E80834CCEF8BC00F497E40C</CRC>
+        <Size>6861</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

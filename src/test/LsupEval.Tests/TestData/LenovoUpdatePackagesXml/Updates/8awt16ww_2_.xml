@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WLAN_GOBI3" id="8awt16ww" version="1.0.45.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad UNDP Wireless WAN Driver(Gobi3000)</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_RegistryKey>
+          <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+        </_RegistryKey>
+        <_RegistryKey>
+          <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+        </_RegistryKey>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>8awt16ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-04</ReleaseDate>
+  <DiskSpaceNeeded>159100000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\LenovoGobi3kSetup.exe SILENT=1 -w</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\LenovoGobi3kSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.0.45.0^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.0.45.0^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>VS-BUS.*</OS>
+        <OS>VS-ENT.*</OS>
+        <OS>VS-HOMEBASIC.*</OS>
+        <OS>VS-HOMEPREM.*</OS>
+        <OS>VS-HOMEULT.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WXP-HOME.SP3</OS>
+        <OS>WXP-PRO.SP3</OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <Not>
+        <_OS>
+          <OS>VS-BUS</OS>
+          <OS>VS-ENT</OS>
+          <OS>VS-HOMEBASIC</OS>
+          <OS>VS-HOMEPREM</OS>
+          <OS>VS-HOMEULT</OS>
+        </_OS>
+      </Not>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_1199&PID_9012]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_1199&PID_9013]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>83ET*</Level>
+        <Level>8CET*</Level>
+        <Level>G1ET*</Level>
+        <Level>G7ET*</Level>
+        <Level>8AET*</Level>
+        <Level>G4ET*</Level>
+        <Level>8BET*</Level>
+        <Level>G5ET*</Level>
+        <Level>8MET*</Level>
+        <Level>8RET*</Level>
+        <Level>8QET*</Level>
+        <Level>G9ET*</Level>
+        <Level>G8ET*</Level>
+        <Level>8DET*</Level>
+        <Level>G2ET*</Level>
+        <Level>GCET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>8awt16ww.exe</Name>
+        <CRC>BB41AB1D20727BEFC625F16D4D715FA1A63B33CB</CRC>
+        <Size>76223216</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>8awt16ww.txt</Name>
+        <CRC>58075D4F0B68CCDBE79B2C44794779B2969B1D57</CRC>
+        <Size>12579</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

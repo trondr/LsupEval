@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="UIR_WIDI_JEWM" id="jewm03ww" version="6.0.52.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Wireless Display Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%PROGRAMFILES%\Intel Corporation\Intel WiDi\WiDiToast.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%PROGRAMFILES%\Intel Corporation\Intel WiDi\WiDiToast.exe</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jewm03ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-12-04</ReleaseDate>
+  <DiskSpaceNeeded>212047360</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe /s /v"/qn DISABLE_IWD_UPDATES=1 WIDIAPP_DESKTOP_SHORTCUT=0"</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%PROGRAMFILES%\Intel Corporation\Intel WiDi\WiDiToast.exe</File>
+      <Version>6.0.52.0^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B]]></_PnPID>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1616]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0A16]]></_PnPID>
+      </Or>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\DRIVERS\Netwtw02.sys</File>
+        <Version>18.21.0.2^</Version>
+      </_FileVersion>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\drivers\igdkmd64.sys</File>
+        <Version>10.18.15.4268^</Version>
+      </_FileVersion>
+      <_FileVersion>
+        <File>%WINDOWS%\system32\drivers\TeeDriverW8x64.sys</File>
+        <Version>11.0.0.1160^</Version>
+      </_FileVersion>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jewm03ww.exe</Name>
+        <CRC>6A4FADAE62FB300DCD240E12BEE6A9212EEA0123</CRC>
+        <Size>98636416</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jewm03ww.txt</Name>
+        <CRC>CD3FB297E9781F019A7D3997DC26EFC8C6EA9718</CRC>
+        <Size>7129</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

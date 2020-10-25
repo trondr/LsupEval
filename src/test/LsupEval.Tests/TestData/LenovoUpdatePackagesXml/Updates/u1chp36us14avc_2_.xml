@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIP_U1CHP3_AVC" id="u1chp36us14avc" version="10.1.16.7" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Chipset Driver (Windows 10 Version 1909) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370217AA&REV_10]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C0500]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C05]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370117AA&REV_10]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370117AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA&REV_10]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1chp36us14avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-12-02</ReleaseDate>
+  <DiskSpaceNeeded>9733727</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="1" />
+  <PackageType type="2" />
+  <Install rc="0,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -norestart -silent</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370217AA&REV_10]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370217AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C0500]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C05]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370117AA&REV_10]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370117AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA&REV_10]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA]]></HardwareID>
+      <Version>10.1.16.7^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370217AA&REV_10]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C0500]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&CC_0C05]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370117AA&REV_10]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_370117AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA&REV_10]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A323&SUBSYS_312217AA]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0,1">inboxdrivercheck.exe u1chp36us14avc_2_.xml</_ExternalDetection>
+      <_Bios>
+        <Level>*</Level>
+        <Level>M1MKT*</Level>
+      </_Bios>
+      <_ExternalDetection rc="7">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1chp36us14avc.exe</Name>
+        <CRC>6B1075A87354F3EEA53CCE3EF4351A732C45319DC71878EB5154EE4D5171F50F</CRC>
+        <Size>3644728</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1chp36us14avc.txt</Name>
+        <CRC>E69CF8A4DDCD47FFF53559CBEB4C9FA82BB6376565FE6CA4BF34CFDC8853FA31</CRC>
+        <Size>57586</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>AaKcCksNXOY1NqLwDRe4p8pZHtk=</DigestValue></Reference></SignedInfo><SignatureValue>GfU+RCYMz+kbxudph1vBXbZvFo/yuEb2OjoerXg9oZ6S3YD5UU9ywIIwvsLUQOrizWt2zN3E0bOldu4ADFW0KY8/J2sXemVGf5zC/cK7LpTQa9NmA5LKcGbquH55nH4m01c+zzuKMT2PkbmIxLyp4MD/fcVwnS7XE6D+9kh35NMplrlOr0Ef3RIHex42iOwb35zMoXlFMsaWdUU6cCDG4OzpyUcJm4372qdVqly7SNyFMPhuaCQDMllcHCID/kkcBDt4j63BbGOmQkr2M1J/rVo3F5Sl04brsFXWhIrIka51uoj1QV/By7n61kIGbk0lquofMi7DpuwCqTNZyvJYHg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

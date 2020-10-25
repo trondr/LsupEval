@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="UNAV_JFGJ_W10" id="jfgj05ww" version="8.216.1616.133" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad UltraNav Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{9F72EF8B-AEC9-4CA5-B483-143980AFD6FD}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{9F72EF8B-AEC9-4CA5-B483-143980AFD6FD}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jfgj05ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-01-13</ReleaseDate>
+  <DiskSpaceNeeded>75636876</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1641" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{9F72EF8B-AEC9-4CA5-B483-143980AFD6FD}</Key>
+      <KeyName>DisplayVersion</KeyName>
+      <Version>8.216.1616.133^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[ACPI\LEN200D]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jfgj05ww.exe</Name>
+        <CRC>6F7D128E578DB9DA37695D41131B14476A7D6278</CRC>
+        <Size>18120456</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jfgj05ww.txt</Name>
+        <CRC>E15362BD35A1753C6CF4053EE921BEC2FC6183F0</CRC>
+        <Size>6568</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

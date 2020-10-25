@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="QCABT_L3BL_1064" id="u3blt05us14avc" version="10.0.0.254" hide="False">
+  <Title default="EN">
+    <Desc id="EN">QCA BT Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\btfilter.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\btfilter.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>lenovo</Vendor>
+  <ExtractCommand>u3blt05us14avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-09-05</ReleaseDate>
+  <DiskSpaceNeeded>120000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /C:"install.exe /s /v/qn /v/norestart" /t:"c:\temp"</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\btfilter.sys</File>
+      <Version>10.0.0.254^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0CF3&PID_E360]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0CF3&PID_E300]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0CF3&PID_E370]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0CF3&PID_E500]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_3013]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_3012]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_3019]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04C5&PID_14B2]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04C5&PID_14DE]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0B05&PID_1825]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0CF3&PID_E301]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_10AB&PID_9008]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3blt05us14avc.exe</Name>
+        <CRC>25DED568433DAD4D1773155E1FD98E64504295EB</CRC>
+        <Size>58898712</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3blt05us14avc.txt</Name>
+        <CRC>B69F5458763FF3485A24185CCECF553F5CE2D4C7</CRC>
+        <Size>3317</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

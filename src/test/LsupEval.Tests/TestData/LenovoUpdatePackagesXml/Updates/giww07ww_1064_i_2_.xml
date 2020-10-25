@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTELBT_GIWW_1064_I" id="giww07ww_1064_i" version="3.1.1309.0386" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Bluetooth Device Software - Initial Install - 10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>giww07ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-05</ReleaseDate>
+  <DiskSpaceNeeded>781000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win8\Win64\Install\Setup.exe /qn</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win8\Win64\Install\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\DRIVERS\btmhsf.sys</File>
+      <Version>3.1.1309.0386^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8087&PID_07DA]]></_PnPID>
+      </Or>
+      <Not>
+        <Or>
+          <_FileExists>%WINDOWS%\system32\DRIVERS\btmhsf.sys</_FileExists>
+        </Or>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>giww07ww.exe</Name>
+        <CRC>CEADA0D8E180DCFF689943B5DDE505CCE5E131FE</CRC>
+        <Size>120208200</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>giww07ww.txt</Name>
+        <CRC>7BF4141F0E391475EACF48EBFD334F2B7647A96A</CRC>
+        <Size>12635</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

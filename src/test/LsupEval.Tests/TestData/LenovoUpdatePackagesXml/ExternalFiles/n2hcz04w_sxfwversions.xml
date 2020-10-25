@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<fwutil>
+	<config version="1.0.0.0" >
+	</config>
+	<devices>
+  		<device> 
+  			<hw_id>VID_13D3_PID_56BB</hw_id> 
+    			<fwversions>
+					<version>1902</version>
+    			</fwversions> 
+  		</device>
+	</devices>
+</fwutil>

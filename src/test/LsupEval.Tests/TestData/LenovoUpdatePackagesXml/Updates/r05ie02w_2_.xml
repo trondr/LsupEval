@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIPSET_R05IE_10" id="r05ie02w" version="10.1.1.38" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Chipset Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D13]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D31]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D15]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D18]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D21]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D48]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D13]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D31]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D15]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D18]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1911]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D21]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D48]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r05ie02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2017-05-04</ReleaseDate>
+  <DiskSpaceNeeded>6548040</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,1641" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -s -norestart</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D13]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D31]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D15]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D18]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1911]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D21]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D48]]></HardwareID>
+      <Date>2016-05-19</Date>
+      <Version>10.1.1.38^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D13]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D31]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D15]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D18]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1911]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D21]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D48]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r05ie02w.exe</Name>
+        <CRC>30704E606A93E95161B7CDCF21A49EFC113341D2</CRC>
+        <Size>2994592</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r05ie02w.txt</Name>
+        <CRC>4CC3C24B2DBE413E1D13848AEF5272F835BD4310</CRC>
+        <Size>6131</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>UBflBKlv6ql5RXmmMupc0K3Nhmc=</DigestValue></Reference></SignedInfo><SignatureValue>FqHs0eEBmsD6TuHjvtAk+NU/lIr2FcRiIPA0sHNIXhNiySorckimUpXwCtHDbWrqyEA37+ctklKdYXscUvkJWRA+7e+aTWXioJtVWgolhkRkmVLfX81QA95gCBbtloEq2pp3TSM2y6HwB0Vv9Tw3lwgSKFPtqHPuBbIDF9fTH2cm5NxoiSE41nScEsxCzboglwrBypZLRcDNXwzw9HEtpG019Up7LbDYJrendLFNqVkK9jY4XvwhaPhUhokSHlhJ00TJXjC6ppKUf4mu0kVBOnTEs4E2B8TJyfIfQr4FrVjop5cobmTiVUzgH3aUd1e2/n3DOBLj4D1vZEFxGg0wJQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIE9jCCA96gAwIBAgIQVxYYDbfUmJ3EoXCD3Pp1ZzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxMDAuBgNVBAMTJ1N5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2lnbmluZyBDQTAeFw0xNTAxMTMwMDAwMDBaFw0xODAxMTIyMzU5NTlaMF4xCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBxMLTW9ycmlzdmlsbGUxDzANBgNVBAoUBkxFTk9WTzEPMA0GA1UEAxQGTEVOT1ZPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwVWMufFrSa68v9h+qMIEPTNZrZcxPzdiOoDfdTuX4A51yhSpbcySu9MbeXsu4Zg8f29nQMYnYsxSVfAUpaed3Sjjnff2k6/WHpSfoGzf5oDWrzY3Nss64VrE2/C3FZ0XVlp/xRAOO51MyRQ14Pz0KVOggw4LXgjQ8Tyy379Fi9CiDdBLmSFBt2rDoGVPfiiu0XPg6H6r/jw4U3sQ2iw1eyFWXa+tKqHm4uJKvWzWZWd5Wsls4iWx5RhHgT7+O3fLRc1FPf8oXl5QdVer/1UHGHN4wRbEJDDJWKhCUCbpzLxCkd1FIxMPQgojbiz9TkBBLi35zYzhHeRABHm1DX/BQIDAQABo4IBjTCCAYkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCB4AwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL3N2LnN5bWNiLmNvbS9zdi5jcmwwZgYDVR0gBF8wXTBbBgtghkgBhvhFAQcXAzBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTATBgNVHSUEDDAKBggrBgEFBQcDAzBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9zdi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zdi5zeW1jYi5jb20vc3YuY3J0MB8GA1UdIwQYMBaAFJY7U/B5M5evfYPvLivMyreGHnJmMB0GA1UdDgQWBBRSMmHtmvK1hUveuxeoJ/Jwj5J18jARBglghkgBhvhCAQEEBAMCBBAwFgYKKwYBBAGCNwIBGwQIMAYBAQABAf8wDQYJKoZIhvcNAQELBQADggEBAHW49q6GgSXkLVnqgvw2Zpsz7mqr3TOb9OXM4KOnGQWUpfYnT/HaJbHOpH46LlgOwBd9hVyOI5ON6S0JSe6gcp49NZ2aoYvyIqq+k6xsr0QxVqHzPD0gOotwWBXKhg0+CMyxIuKYAjXNxvnzBqeAmyRbZoGvFdPeqbGpm+kvS+MeMTdy8gmXMZCj9f2KhDNjm2gYjKAVEeyodrs/LqrYsAMB4+ie099pA5++gBM892Z4DEREh14Y1Ydv/sLsAtOrkNeGlRgnoTklzFVqaHHm55T/c6VzHjKabNHb/t8Wt3psevQUnN4KqxyHrk1oQp8V3wzJNNum4tA4+Dc5w9uUgRc=</X509Certificate></X509Data></KeyInfo></Signature></Package>

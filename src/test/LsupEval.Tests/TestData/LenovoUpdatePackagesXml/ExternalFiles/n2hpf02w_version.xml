@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<fwutil>
+<!--  This part is for FW utility software specific usage, please do not change this version -->
+	<config version="1.0.0.0" />
+<!--  The sample below is taken from Camera FW versioning -->
+	<devices>
+		<device>
+			<hw_id>VID_056A&amp;PID_522B</hw_id>
+			<fwversions>
+				<version>0001.00</version>
+				<version>0002.00</version>
+				<version>0002.01</version>
+				<version>0002.02</version>
+			</fwversions>
+		</device>
+	</devices>
+</fwutil>

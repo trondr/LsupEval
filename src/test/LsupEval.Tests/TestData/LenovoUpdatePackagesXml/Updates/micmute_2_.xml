@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="MUTE_MIC" id="micmute" version="1.0.0.0002" hide="False">
+  <Title default="EN">
+    <Desc id="EN">MIC Mute Driver - 7 [32,64]/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{40E4AA7B-601A-4C3A-9C14-6A0919303286}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{40E4AA7B-601A-4C3A-9C14-6A0919303286}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{40E4AA7B-601A-4C3A-9C14-6A0919303286}</Key>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{40E4AA7B-601A-4C3A-9C14-6A0919303286}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>micmute.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-06</ReleaseDate>
+  <DiskSpaceNeeded>5260372</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\MICMuteDriver.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\MICMuteDriver.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{40E4AA7B-601A-4C3A-9C14-6A0919303286}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.0.0.0002^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{40E4AA7B-601A-4C3A-9C14-6A0919303286}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>1.0.0.0002^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+     <And>
+      <Or>
+         <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_8086&DEV_2809]]></_PnPID>
+      </Or>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>micmute.exe</Name>
+        <CRC>B057E6372CA3145E3AD4F6B1B06073B598769285</CRC>
+        <Size>2629376</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>micmute.txt</Name>
+        <CRC>72E53A71EBB6BE44A15C1A92A63116A98BA345BF</CRC>
+        <Size>810</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

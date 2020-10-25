@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTEL_VGA_U3VDO05" id="u3vdo05us15" version="21.20.16.4599" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Graphics Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1902&SUBSYS_30D017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1912&SUBSYS_30D017AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1902&SUBSYS_30D217AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1912&SUBSYS_30D217AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3vdo05us15.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-11-09</ReleaseDate>
+  <DiskSpaceNeeded>635000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="1" />
+  <PackageType type="2" />
+  <Install rc="0,14,5" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s -overwrite</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1902&SUBSYS_30D017AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1912&SUBSYS_30D217AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1902&SUBSYS_30D217AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1912&SUBSYS_30D017AA]]></HardwareID>
+        <Date>2017-02-01</Date>
+        <Version>21.20.16.4599^</Version>
+      </_Driver>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1902&SUBSYS_30D017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1912&SUBSYS_30D017AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1902&SUBSYS_30D217AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1912&SUBSYS_30D217AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>FWKT*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3vdo05us15.exe</Name>
+        <CRC>FD37AA009521B57D1FEE2FD588847C4AF5F354EC66A18E022807A92BA9D4587A</CRC>
+        <Size>132688136</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3vdo05us15.txt</Name>
+        <CRC>245DAD6BC740578B28FB6114DB1908FE43E6C31AF5F5393F770A81F8AF169264</CRC>
+        <Size>3824</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>F21c+lVk/TLzxwVsTZ7Kgh5BJQs=</DigestValue></Reference></SignedInfo><SignatureValue>kwSVVvrXAJxLQ7xi1epNzsEAzszMZMubHYiUlQfuHq5LKYm7+lfcABgsa4NHVkNmiJDa0yK5e0qqiTnKsX97HL1z1ucc07uSr1KHkVVirMUVenhBf3dMmw6nWxfL58QPkmcKz8G4v2lhGvUMquqjMcQYtFl4nBbqjt6y8VQASkNk68VaUYxnoPZTAuaNZ4J7HuHUdQOi0woaREmM8YkLJURp2F2QAJj6XLo1DP1M4ykTINrIttUcS0n7m33kcXjmewa5LfzKUZHt22DtiluvuLI3Jh/hsWUvuT1Ez3Wn+wQ0lSkf6LrsPd/zaxWUF8HFwxUbBkxLk9axLkT5nnhVlQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

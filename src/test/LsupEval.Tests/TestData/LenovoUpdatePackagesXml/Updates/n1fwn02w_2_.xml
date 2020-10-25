@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="NFC_N1FWN" id="n1fwn02w" version="1.3.0.676" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Broadcom NFC Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\System32\drivers\UMDF\bcmnfcser.dll</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\System32\drivers\UMDF\bcmnfcser.dll</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1fwn02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-08-15</ReleaseDate>
+  <DiskSpaceNeeded>11664811</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="1073742082,257,258,513" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe /sa /sw /se /c</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\System32\drivers\UMDF\bcmnfcser.dll</File>
+      <Version>1.3.0.620^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[ACPI\BCM2F3C]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\BCM2F3D]]></_PnPID>
+      </Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SynTPDeinstKey</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>19.0.17.43^</Version>
+      </_RegistryKeyValue>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1fwn02w.exe</Name>
+        <CRC>CC99A7AB975915B139EE6A386D764DBBDAE19EF4</CRC>
+        <Size>3147824</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1fwn02w.txt</Name>
+        <CRC>05FBB6DBF52C3DBD2D91A102B9D00FAF79BB3BE8</CRC>
+        <Size>6826</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

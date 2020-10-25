@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RTK_WIFI_U4WL" id="k4wlg04us17" version="2023.25.1201.2015" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek WIFI Drvier - 10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\System32\DriverStore\FileRepository\netrtwlane.inf_amd64_161598afc2c88425\rtwlane.sys</File>
+    <File>%Windows%\System32\DriverStore\FileRepository\netrtwlane.inf_x86_4221d8c10ee62aea\rtwlane.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\System32\DriverStore\FileRepository\netrtwlane.inf_amd64_161598afc2c88425\rtwlane.sys</_FileExists>
+        <_FileExists>%Windows%\System32\DriverStore\FileRepository\netrtwlane.inf_x86_4221d8c10ee62aea\rtwlane.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>lenovo</Vendor>
+  <ExtractCommand>k4wlg04us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-02-03</ReleaseDate>
+  <DiskSpaceNeeded>86000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN" context="user">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%Windows%\System32\DriverStore\FileRepository\netrtwlane.inf_amd64_820953cd910aad46\rtwlane.sys</File>
+        <Version>2023.25.1201.2015^</Version>
+      </_FileVersion>
+      <_FileVersion>
+        <File>%Windows%\System32\DriverStore\FileRepository\netrtwlane.inf_x86_ee9a5f7ef3d830a3\rtwlane.sys</File>
+        <Version>2023.25.1201.2015^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_8821]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B723]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_818B]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_8179]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k4wlg04us17.exe</Name>
+        <CRC>C9E76BD8120AC60438B9766FD84201A8D92F9FA9</CRC>
+        <Size>33181160</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k4wlg04us17.txt</Name>
+        <CRC>B731CB1882B5346FF348B88AE253E4D4C7512FAF</CRC>
+        <Size>2226</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

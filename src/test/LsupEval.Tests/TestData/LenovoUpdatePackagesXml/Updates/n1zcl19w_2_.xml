@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="SKYCAM_N1ZCL" id="n1zcl19w" version="30.18305.6.1482" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel SKYCAM Driver (Windows 10 Build 1709 or later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[ACPI\VEN_INT&DEV_3477]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\VEN_INT&DEV_3477]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1zcl19w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-07-14</ReleaseDate>
+  <DiskSpaceNeeded>90723274</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1,2,256,257,512,772,1281,1793,4353,4098,1073742081,1073742336,1073741825,1073742080,1073743106" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\VEN_INT&DEV_3477]]></HardwareID>
+        <Date>2020-04-12</Date>
+        <Version>30.18305.6.1482^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[VIDEO\VEN_8086&DEV_5917&SUBSYS_224417AA&INT3470]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1919&SUBSYS_224417AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D32&SUBSYS_224417AA]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\VEN_INT&DEV_3472]]></HardwareID>
+        <Date>2020-05-12</Date>
+        <Version>30.18305.6.1840^</Version>
+      </_Driver>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1919&SUBSYS_224417AA]]></_PnPID>
+        <_PnPID><![CDATA[VIDEO\VEN_8086&DEV_5917&SUBSYS_224417AA&INT3470]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D32&SUBSYS_224417AA]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\VEN_INT&DEV_3472]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\VEN_INT&DEV_3477]]></_PnPID>
+      </Or>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_5917&SUBSYS_224417AA]]></HardwareID>
+        <Version>23.20.16.4901^</Version>
+      </_Driver>
+      <And>
+        <_Driver>
+          <HardwareID><![CDATA[ACPI\VEN_INT&DEV_344B]]></HardwareID>
+          <Version>0.1^</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D60&SUBSYS_224417AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D61&SUBSYS_224417AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D62&SUBSYS_224417AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D2A&SUBSYS_224417AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D27&SUBSYS_224417AA]]></HardwareID>
+          <Version>0.1^</Version>
+        </_Driver>
+      </And>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1ZET*</Level>
+      </_Bios>
+      <Not>
+        <_ExternalDetection rc="0,1,2">getw10ver8.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1zcl19w.exe</Name>
+        <CRC>7E51E81B37F1DB134CCFF8ECC72E7BE9E3C72A56EFBC94511259323D2E324982</CRC>
+        <Size>23480800</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1zcl19w.txt</Name>
+        <CRC>D1373AE85E3B5D3C47330FE1E1427024C889B3B7A0CE2A935EBFC887E0273C16</CRC>
+        <Size>9383</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>aaALsPdxVw6GPvabuekj7UKGy84=</DigestValue></Reference></SignedInfo><SignatureValue>fr0n1hG0ZYFieVXEUuRFHovIR1LTy54hUW5fTwreegvNAf8ZFwA8JsT3PQ/oVT+tZPtoEiMeMjkUiN7WIQt0vHCkgjy93+DctlQznh5llwo3xtKTPDuS4/NSdtxtgpM80AetO+4qMveducNNn5JVMB4wnXnvR7TbZH7tMQuJk3jhq3BTzHdlN+wzJP8EK6f00PaTcx/TsG+ejih2xfH8ReW9WkRi+kUwamDN5cY4O6UFxTFJ0FGZtUErXViWfBwQHrlcQVfdUF5Bh7fJAntVuih9wRPWfwHKPpnwOwMcuUZA0BQg9E1BJVGNgleZxQ+V90FlggisqdD3VTl40T1uRw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

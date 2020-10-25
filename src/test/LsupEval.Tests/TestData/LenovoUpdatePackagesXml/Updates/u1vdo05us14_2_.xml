@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="VIDEO_U1VDO" id="u1vdo05us14" version="15.200.1055.0000" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD Discrete VGA driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <ValueName>ProductVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1vdo05us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-07-21</ReleaseDate>
+  <DiskSpaceNeeded>926000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="1" />
+  <PackageType type="0" />
+  <Install rc="0,1,3" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\BIN64\ATISetup.exe -Noui -Install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <KeyName>ProductVersion</KeyName>
+      <Version>15.200.1055.0000^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_B4911462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_68FA&SUBSYS_21841462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_68FA&SUBSYS_21861462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_68FA&SUBSYS_39851642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_677B&SUBSYS_24971462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_677B&SUBSYS_24981462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_677B&SUBSYS_3A661642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_677B&SUBSYS_3A761642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_B4921462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_3C651642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_3C751642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_212B1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_B4971462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_B49A1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_B49B1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_3D451642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_3D651642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6778&SUBSYS_3D851642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6611&SUBSYS_29001462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6611&SUBSYS_29011462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6611&SUBSYS_3C791642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6610&SUBSYS_29111462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6610&SUBSYS_3C811642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6610&SUBSYS_3C911642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6611&SUBSYS_29021462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6611&SUBSYS_3D791642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6610&SUBSYS_30211462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6610&SUBSYS_3F091642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6835&SUBSYS_30401462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6658&SUBSYS_293C1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_665F&SUBSYS_32711462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_679A&SUBSYS_0B011002]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_67B1&SUBSYS_0C011002]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1vdo05us14.exe</Name>
+        <CRC>FE361B26792BB755CB2592B078136E587913317C</CRC>
+        <Size>343428224</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1vdo05us14.txt</Name>
+        <CRC>EB09061FCF44F8E9B78DDE0F822C4DCE01154E64B6C09788048EFD1DF71AF721</CRC>
+        <Size>6857</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>DwXx7ejVBNXvogX9l9LRgYGVTwo=</DigestValue></Reference></SignedInfo><SignatureValue>YPuW0GrEgpxqc+b7LnYfGWh74KEhw15ofNJDxWKQCNQl3vRoAyMgHMB4C5fbdjzVFf0Jfkx7fwcHrp8Arc9opuQZz1HixZlkLmqSQ50PHMPK13Jp1Wy2TdGwFobtWmb2Ufc1S1gHiBFSU6tA7votD9Nv53Kj9LsD4DzepTXl36o2Nu9RimtDiB854qNvr0wdsXJYKA5AmSLP3NOqsl7rmOP88RJe3ZwdyPNixB+Tcstm3iu/txWuRGyy9qCvXtMMcscaGMW8jqSfi7kyjobxBz+xHtQ85vqdK+AfVXgxAPYXoZC5iaKrFxmmdOVNQQ60tJKbpAZIFnl+1Gb4/b5HGA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

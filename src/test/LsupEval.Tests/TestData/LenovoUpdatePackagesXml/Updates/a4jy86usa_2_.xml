@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BIOS_A4JY" id="a4jy86usa" version="1.86" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Flash BIOS Update for ThinkStation P500 [32,64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>a4jy86usa.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-03-18</ReleaseDate>
+  <DiskSpaceNeeded>15768903</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Install rc="0,1073807364" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\tvsu.cmd</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_Bios>
+      <Level>A4KT86*</Level>
+    </_Bios>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+      <_Bios>
+        <Level>A4KT0*</Level>
+        <Level>A4KT1*</Level>
+        <Level>A4KT2*</Level>
+        <Level>A4KT3*</Level>
+        <Level>A4KT4*</Level>
+        <Level>A4KT5*</Level>
+        <Level>A4KT6*</Level>
+        <Level>A4KT7*</Level>
+        <Level>A4KT80*</Level>
+        <Level>A4KT81*</Level>
+        <Level>A4KT82*</Level>
+        <Level>A4KT83*</Level>
+        <Level>A4KT84*</Level>
+        <Level>A4KT85*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>a4jy86usa.exe</Name>
+        <CRC>8E2D9C872CA7A16DFCB66010D7A752FAE08CF2AD</CRC>
+        <Size>5637056</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>a4jy86usa.txt</Name>
+        <CRC>9F2B7905D01F9AF1CFA0A66429B057960100A012</CRC>
+        <Size>11421</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

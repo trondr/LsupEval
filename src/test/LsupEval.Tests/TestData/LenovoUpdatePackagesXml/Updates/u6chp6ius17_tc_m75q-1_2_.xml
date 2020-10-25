@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIP_U6CHP6_75Q" id="u6chp6ius17_tc_m75q-1" version="4.11.0.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD Chipset Driver (Windows 10 Version 2004) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_1022&DEV_1537]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_1022&DEV_1578]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_1022&DEV_1456]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_1022&DEV_15DF]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_1022&DEV_1486]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_1022&DEV_1537]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_1022&DEV_1578]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_1022&DEV_1456]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_1022&DEV_15DF]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_1022&DEV_1486]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u6chp6ius17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-07-28</ReleaseDate>
+  <DiskSpaceNeeded>43662241</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,2,3,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_1022&DEV_1537]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_1022&DEV_1578]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_1022&DEV_1456]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_1022&DEV_15DF]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_1022&DEV_1486]]></HardwareID>
+      <Date>2019-06-19</Date>
+      <Version>4.11.0.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1022&DEV_1537]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1022&DEV_1578]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1022&DEV_1456]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1022&DEV_15DF]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1022&DEV_1486]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="8">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      <_Bios>
+        <Level>*</Level>
+        <Level>M2FKT*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u6chp6ius17.exe</Name>
+        <CRC>717814A46AFEBB4DDC16A5151AF3EB828D9BD7C54051EC3C144F41E6A26B8771</CRC>
+        <Size>16506712</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u6chp6ius17.txt</Name>
+        <CRC>9E253B3FC0C2B27FF56A84D5EF441CCF5868D80806C6A0E487AD5F67975C9266</CRC>
+        <Size>3746</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>UaiUjvPK2fIaUn7KZjVGQ/7oCy0=</DigestValue></Reference></SignedInfo><SignatureValue>BdjKM8EMDiQFKndYj+3mhKzVywXq9FldTm1pyoJwQH3BK/CA2VaATFwG6mLMRFcVUbWaN+6xfcmLRC+kmGa70CR3nW9bVVNEOU9ac0vnw/tFhVYQnbr1ygejj/MwFkvPJSC2t9p2fuoirc2nBu/0K59NRYkm08yc2E0Pc4t1RJFE8nXkLpQ05TOKAnekVfmmtPR1x3+rLpN52p1jLlh8fc0qkj2rDZmSgPCLDiQ8NY0cCkUhmR1aFf8ps5hX3tR7SsiEd0NnloNzRDiLdE0mKASUz+rpmJgnLgaJ6dn5kawhFafxHTKO1Nmg+VlOZ41bo3nrAoChNMqtHd2E04U55g==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

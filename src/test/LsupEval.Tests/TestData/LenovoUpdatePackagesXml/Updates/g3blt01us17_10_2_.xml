@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="QCA_BLT_G3BL_1064" id="g3blt01us17_10" version="10.0.0.177" hide="False">
+  <Title default="EN">
+    <Desc id="EN">QCA BLUETOOTH Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>C:\Windows\System32\drivers\btfilter.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>C:\Windows\System32\drivers\btfilter.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>lenovo</Vendor>
+  <ExtractCommand>g3blt01us17_10.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-01-05</ReleaseDate>
+  <DiskSpaceNeeded>500000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win8.1_Win10\setup.exe /C:"install.exe /s /v/qn /v/norestart" /t:"c:\temp"</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Win8.1_Win10\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>C:\Windows\System32\drivers\btfilter.sys</File>
+      <Version>10.0.0.177^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0CF3&PID_E300]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0CF3&PID_E360]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>g3blt01us17_10.exe</Name>
+        <CRC>F567008CB09141895D6910C68590CE748372BADD</CRC>
+        <Size>243869800</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>g3blt01us17.txt</Name>
+        <CRC>514BEF0E842F6617208185C30604DBD6F4FED259</CRC>
+        <Size>3392</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

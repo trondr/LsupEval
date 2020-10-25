@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="NVIVGA04_U3VD_1064" id="u3vdo25us14wis" version="25.21.14.1972" hide="False">
+  <Title default="EN">
+    <Desc id="EN">NVDIA Graphic Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1299]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1346]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1347]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1349]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_134D]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_134F]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_139B]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1299]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1346]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1347]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1349]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_134D]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_134F]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_139B]]></HardwareID>
+        <Version>0.01^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3vdo25us14wis.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-05-31</ReleaseDate>
+  <DiskSpaceNeeded>1789000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="4" />
+  <PackageType type="2" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -n -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1299]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1346]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1347]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1349]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_134D]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_134F]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_139B]]></HardwareID>
+        <Date>2019-03-18</Date>
+        <Version>25.21.14.1972^</Version>
+      </_Driver>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_ExternalDetection rc="1,2,3,4,5,6">%PACKAGEPATH%\getw10ver6.exe</_ExternalDetection>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1299]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1346]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1347]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1349]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_134D]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_134F]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_139B]]></_PnPID>
+      </Or>
+      <Or>
+        <_ExternalDetection rc="0,1">inboxdrivercheck.exe u3vdo25us14wis_2_.xml</_ExternalDetection>
+        <Not>
+          <_RegistryKeyValue type="REG_SZ">
+            <Key>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\nvlddmkm</Key>
+            <KeyName>DCHUVen</KeyName>
+            <Version>1^</Version>
+          </_RegistryKeyValue>
+        </Not>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3vdo25us14wis.exe</Name>
+        <CRC>5DA30652207B43E0424EEA7E329F006A85EA5B6BCDC4EAD7172BB0E47DECCBE2</CRC>
+        <Size>546772624</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3vdo25us14wis.txt</Name>
+        <CRC>C6A6A05106A1BAF26F9B41C3B3E15B2E294FDA19B3A760A3A65A6F0EA79B7EC9</CRC>
+        <Size>7889</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
+      <File>
+        <Name>getw10ver6.exe</Name>
+        <CRC>D983A6376977C6B578D05232FEE0BDFA2C66538FDB2B35CA41694A900A2DEB6A</CRC>
+        <Size>159048</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>BbGEy+PRhdDdQgzP5KSQtNJuRaI=</DigestValue></Reference></SignedInfo><SignatureValue>MoyXXFEiFjRmzUicOlsYFbVmA75AZYpEYARb5ZOHIOi3r/BxIsv3xToyrHF2me3wcMZHU3L89RjUlgscIuyY+PJeVQg9I7qIVVc8bQMUIQw58DP89mwC7dGgZnC0ST6pNWnbVXMAcEFnnLhSoStk/7/rnZV0LYsTEbcOlPXF144LjPLg1WFEaNPyLO2+A9DV9eihbFSDW0n/3j7HxsDAfHRQocpKOQw3u2ePMd9JxhB3VAuD+q04p7JBY1WccR+MHxO7+KkBZkh17ZyqnYzNc6yvgRU392ZCpINL4oMJzkQrdTQCnouFofebbWhbLQCR5LshsvDxlk4b3QrQJpVVMA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

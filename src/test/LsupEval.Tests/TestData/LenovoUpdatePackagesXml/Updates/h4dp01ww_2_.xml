@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTEL_VGA_H4DPW10" id="h4dp01ww" version="10.18.10.4242" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel HD Graphics Driver - 10 [32]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\igdkmd32.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\igdkmd32.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>h4dp01ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-14</ReleaseDate>
+  <DiskSpaceNeeded>235661371</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s -nosc -overwrite</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\igdkmd32.sys</File>
+      <Version>10.18.10.4242^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>32</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0156&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0166&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0156&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0166&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0156&SUBSYS_500C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0166&SUBSYS_500C17AA]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>h4dp01ww.exe</Name>
+        <CRC>6916B587C8BA84042A094DC0F05516700AB2151B</CRC>
+        <Size>40301968</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>h4dp01ww.txt</Name>
+        <CRC>BE4A2BEB98A84AC1B7F659CE0D364D647F045981</CRC>
+        <Size>7548</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

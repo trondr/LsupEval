@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="KABYLAKE_IO_R0LSI" id="r0lsi02w" version="30.100.1633.3" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Kabylake Serial IO Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[ACPI\VEN_INT&DEV_344B]]></_PnPID>
+    <_PnPID><![CDATA[ACPI\INT344B]]></_PnPID>
+    <_PnPID><![CDATA[*INT344B]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\VEN_INT&DEV_344B]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\INT344B]]></HardwareID>
+        <HardwareID><![CDATA[*INT344B]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0lsi02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-05-29</ReleaseDate>
+  <DiskSpaceNeeded>4951692</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <PackageType type="2" />
+  <Install rc="0,1536,1024,1073742338" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Driver>
+        <HardwareID><![CDATA[ACPI\VEN_INT&DEV_344B]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\INT344B]]></HardwareID>
+        <HardwareID><![CDATA[*INT344B]]></HardwareID>
+        <Date>2016-08-09</Date>
+        <Version>30.100.1633.3^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D60&SUBSYS_506317AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D61&SUBSYS_506517AA]]></HardwareID>
+        <Date>2016-08-09</Date>
+        <Version>30.100.1633.3^</Version>
+      </_Driver>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[ACPI\VEN_INT&DEV_344B]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\INT344B]]></_PnPID>
+        <_PnPID><![CDATA[*INT344B]]></_PnPID>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D60&SUBSYS_506317AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D61&SUBSYS_506517AA]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0lsi02w.exe</Name>
+        <CRC>31726EF1B56CEBEA031679BAECE7FAD7BA77B3CFDBBDCC551A5F36FDFDF408B2</CRC>
+        <Size>1498240</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0lsi02w.txt</Name>
+        <CRC>05489E97FECC60A1BCC8EBDDCFEB78E4282650FBA4BF2ED75B9484A21EC322CC</CRC>
+        <Size>8313</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>7RWmmg4LlYw5QfXIeYCcVoKWbL4=</DigestValue></Reference></SignedInfo><SignatureValue>kTaiDkLNXRGUVk6ASW5T7zGRPI+qdS+ugdg8m2idLzl37zBzpd49/pUG9lLYYxa9jFPuH29/yhk9nxifHH2pAFzQxcbVX+rRzfr/YfGBG2yiH+6LNQ7xvJz2pv7cwi84djX49S8W/waUCd9lWz+GT29fEmprh8nEgi1z1/08QNo11OPImZLO1JdkraNhsSi1Qwd9rYJbwUdocDeLoDgNXX2+3u3s7dIxF4odfjqitOhQp5REmwPeacc2NyxCfKavs9bY6qy1eRJ4SoheNZoLtKFs+UN88j3sS2ejU4ooilpNffqha0hH2BcHJE49PpSKe2FK70w8ieHFPb0XG0qFaQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

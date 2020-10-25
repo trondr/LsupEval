@@ -1,0 +1,288 @@
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 20:34:28
+[20:34:28.323] IAP_MODE: TVSU_CHECK_FW
+[20:34:28.323] Command Line: "iap1004_RV2_version.exe" /hwid ACPI\LEN001F /fw 31
+[20:34:28.323] default interface: PS2
+[20:34:28.327] OS: 64-bit
+[20:34:28.368] [WARNING]: 0.0482-0.0724(0.0242) 	:Write 0x00 => TimeOut
+[20:34:28.398] IsElanTP: 0
+[20:34:28.509] [WARNING]: 0.1906-0.2133(0.0227) 	:Write 0x00 => TimeOut
+[20:34:28.551] [WARNING]: The special id 000264 doesn't support.
+[20:34:28.551] Pst Vendor ID : 1
+[20:34:28.551] This TrackPoint is TP4 (ID:01)
+
+[20:34:29.077] [WARNING]: 0.7595-0.7819(0.0224) 	:Write 0x00 => TimeOut
+[20:34:29.137] [ERROR]: Get fw info failed.
+[20:34:29.146] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 20:35:19
+[20:35:19.768] IAP_MODE: TVSU_CHECK_FW
+[20:35:19.768] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1003_yoda2_version.exe" /hwid ACPI\LEN0092 /fw 06
+[20:35:19.768] default interface: PS2
+[20:35:19.772] OS: 64-bit
+[20:35:19.850] [WARNING]: 0.0891-0.1124(0.0234) 	:Write 0x00 => TimeOut
+[20:35:19.865] IsElanTP: 0
+[20:35:19.975] [WARNING]: 0.2150-0.2376(0.0226) 	:Write 0x00 => TimeOut
+[20:35:20.010] [WARNING]: The special id 000264 doesn't support.
+[20:35:20.012] Pst Vendor ID : 1
+[20:35:20.012] This TrackPoint is TP4 (ID:01)
+
+[20:35:20.527] [WARNING]: 0.7661-0.7889(0.0228) 	:Write 0x00 => TimeOut
+[20:35:20.587] [ERROR]: Get fw info failed.
+[20:35:20.590] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 20:35:20
+[20:35:20.739] IAP_MODE: TVSU_CHECK_FW
+[20:35:20.739] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1003_yoda2_version.exe" /hwid ACPI\LEN0091 /fw 06
+[20:35:20.739] default interface: PS2
+[20:35:20.743] OS: 64-bit
+[20:35:20.779] [WARNING]: 0.0317-0.0554(0.0237) 	:Write 0x00 => TimeOut
+[20:35:20.795] IsElanTP: 0
+[20:35:20.908] [WARNING]: 0.1597-0.1825(0.0228) 	:Write 0x00 => TimeOut
+[20:35:20.943] [WARNING]: The special id 000264 doesn't support.
+[20:35:20.943] Pst Vendor ID : 1
+[20:35:20.943] This TrackPoint is TP4 (ID:01)
+
+[20:35:21.457] [WARNING]: 0.7102-0.7331(0.0229) 	:Write 0x00 => TimeOut
+[20:35:21.519] [ERROR]: Get fw info failed.
+[20:35:21.522] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 20:35:26
+[20:35:26.177] IAP_MODE: TVSU_CHECK_FW
+[20:35:26.177] Command Line: "iap1004_RV3_version.exe" /hwid ACPI\LEN009A /fw 21
+[20:35:26.177] default interface: PS2
+[20:35:26.180] OS: 64-bit
+[20:35:26.247] [WARNING]: 0.0685-0.0912(0.0227) 	:Write 0x00 => TimeOut
+[20:35:26.262] IsElanTP: 0
+[20:35:26.374] [WARNING]: 0.1957-0.2185(0.0228) 	:Write 0x00 => TimeOut
+[20:35:26.409] [WARNING]: The special id 000264 doesn't support.
+[20:35:26.409] Pst Vendor ID : 1
+[20:35:26.409] This TrackPoint is TP4 (ID:01)
+
+[20:35:26.922] [WARNING]: 0.7441-0.7668(0.0227) 	:Write 0x00 => TimeOut
+[20:35:26.984] [ERROR]: Get fw info failed.
+[20:35:26.987] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.35
+2020-10-24 20:35:34
+[20:35:34.318] IAP_MODE: TVSU_CHECK_FW
+[20:35:34.318] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1001_P52_version.exe" /fw 03
+[20:35:34.318] default interface: PS2
+[20:35:34.321] OS: 64-bit
+[20:35:34.391] [WARNING]: 0.0701-0.0929(0.0229) 	:Write 0x00 => TimeOut
+[20:35:34.405] IsElanTP: 0
+[20:35:34.429] [WARNING]: 0.1082-0.1313(0.0230) 	:Write 0x00 => TimeOut
+[20:35:34.443] [WARNING]: The special id 200264 doesn't support.
+[20:35:34.444] [ERROR]: Get fw info failed.
+[20:35:34.448] ExitCode = 1
+
+3 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 22:36:24
+[22:36:24.790] IAP_MODE: TVSU_CHECK_FW
+[22:36:24.790] Command Line: "iap1004_RV2_version.exe" /hwid ACPI\LEN001F /fw 31
+[22:36:24.790] default interface: PS2
+[22:36:24.793] OS: 64-bit
+[22:36:24.832] [WARNING]: 0.0326-0.0551(0.0225) 	:Write 0x00 => TimeOut
+[22:36:24.847] IsElanTP: 0
+[22:36:24.957] [WARNING]: 0.1573-0.1807(0.0234) 	:Write 0x00 => TimeOut
+[22:36:24.995] [WARNING]: The special id 000264 doesn't support.
+[22:36:24.996] Pst Vendor ID : 1
+[22:36:24.996] This TrackPoint is TP4 (ID:01)
+
+[22:36:25.510] [WARNING]: 0.7107-0.7337(0.0230) 	:Write 0x00 => TimeOut
+[22:36:25.571] [ERROR]: Get fw info failed.
+[22:36:25.580] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 22:36:57
+[22:36:57.297] IAP_MODE: TVSU_CHECK_FW
+[22:36:57.297] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1003_yoda2_version.exe" /hwid ACPI\LEN0092 /fw 06
+[22:36:57.297] default interface: PS2
+[22:36:57.301] OS: 64-bit
+[22:36:57.366] [WARNING]: 0.0628-0.0851(0.0223) 	:Write 0x00 => TimeOut
+[22:36:57.380] IsElanTP: 0
+[22:36:57.491] [WARNING]: 0.1874-0.2106(0.0231) 	:Write 0x00 => TimeOut
+[22:36:57.526] [WARNING]: The special id 000264 doesn't support.
+[22:36:57.527] Pst Vendor ID : 1
+[22:36:57.527] This TrackPoint is TP4 (ID:01)
+
+[22:36:58.041] [WARNING]: 0.7373-0.7601(0.0227) 	:Write 0x00 => TimeOut
+[22:36:58.101] [ERROR]: Get fw info failed.
+[22:36:58.107] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 22:36:58
+[22:36:58.266] IAP_MODE: TVSU_CHECK_FW
+[22:36:58.266] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1003_yoda2_version.exe" /hwid ACPI\LEN0091 /fw 06
+[22:36:58.266] default interface: PS2
+[22:36:58.271] OS: 64-bit
+[22:36:58.307] [WARNING]: 0.0328-0.0560(0.0232) 	:Write 0x00 => TimeOut
+[22:36:58.322] IsElanTP: 0
+[22:36:58.433] [WARNING]: 0.1588-0.1822(0.0234) 	:Write 0x00 => TimeOut
+[22:36:58.471] [WARNING]: The special id 000264 doesn't support.
+[22:36:58.471] Pst Vendor ID : 1
+[22:36:58.471] This TrackPoint is TP4 (ID:01)
+
+[22:36:58.986] [WARNING]: 0.7116-0.7347(0.0232) 	:Write 0x00 => TimeOut
+[22:36:59.046] [ERROR]: Get fw info failed.
+[22:36:59.048] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 22:37:04
+[22:37:04.272] IAP_MODE: TVSU_CHECK_FW
+[22:37:04.272] Command Line: "iap1004_RV3_version.exe" /hwid ACPI\LEN009A /fw 21
+[22:37:04.272] default interface: PS2
+[22:37:04.275] OS: 64-bit
+[22:37:04.349] [WARNING]: 0.0708-0.0931(0.0224) 	:Write 0x00 => TimeOut
+[22:37:04.364] IsElanTP: 0
+[22:37:04.474] [WARNING]: 0.1946-0.2176(0.0230) 	:Write 0x00 => TimeOut
+[22:37:04.509] [WARNING]: The special id 000264 doesn't support.
+[22:37:04.510] Pst Vendor ID : 1
+[22:37:04.510] This TrackPoint is TP4 (ID:01)
+
+[22:37:05.023] [WARNING]: 0.7446-0.7670(0.0224) 	:Write 0x00 => TimeOut
+[22:37:05.084] [ERROR]: Get fw info failed.
+[22:37:05.088] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.35
+2020-10-24 22:37:13
+[22:37:13.240] IAP_MODE: TVSU_CHECK_FW
+[22:37:13.240] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1001_P52_version.exe" /fw 03
+[22:37:13.241] default interface: PS2
+[22:37:13.244] OS: 64-bit
+[22:37:13.311] [WARNING]: 0.0597-0.0824(0.0227) 	:Write 0x00 => TimeOut
+[22:37:13.326] IsElanTP: 0
+[22:37:13.349] [WARNING]: 0.0982-0.1208(0.0227) 	:Write 0x00 => TimeOut
+[22:37:13.364] [WARNING]: The special id 200264 doesn't support.
+[22:37:13.364] [ERROR]: Get fw info failed.
+[22:37:13.367] ExitCode = 1
+
+3 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 23:31:11
+[23:31:11.369] IAP_MODE: TVSU_CHECK_FW
+[23:31:11.369] Command Line: "iap1004_RV2_version.exe" /hwid ACPI\LEN001F /fw 31
+[23:31:11.369] default interface: PS2
+[23:31:11.375] OS: 64-bit
+[23:31:11.444] [WARNING]: 0.0682-0.0911(0.0229) 	:Write 0x00 => TimeOut
+[23:31:11.460] IsElanTP: 0
+[23:31:11.571] [WARNING]: 0.1955-0.2180(0.0225) 	:Write 0x00 => TimeOut
+[23:31:11.606] [WARNING]: The special id 000264 doesn't support.
+[23:31:11.606] Pst Vendor ID : 1
+[23:31:11.606] This TrackPoint is TP4 (ID:01)
+
+[23:31:12.121] [WARNING]: 0.7452-0.7683(0.0231) 	:Write 0x00 => TimeOut
+[23:31:12.183] [ERROR]: Get fw info failed.
+[23:31:12.186] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 23:31:44
+[23:31:44.260] IAP_MODE: TVSU_CHECK_FW
+[23:31:44.260] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1003_yoda2_version.exe" /hwid ACPI\LEN0092 /fw 06
+[23:31:44.260] default interface: PS2
+[23:31:44.263] OS: 64-bit
+[23:31:44.294] [WARNING]: 0.0289-0.0519(0.0230) 	:Write 0x00 => TimeOut
+[23:31:44.309] IsElanTP: 0
+[23:31:44.422] [WARNING]: 0.1569-0.1798(0.0229) 	:Write 0x00 => TimeOut
+[23:31:44.457] [WARNING]: The special id 000264 doesn't support.
+[23:31:44.457] Pst Vendor ID : 1
+[23:31:44.457] This TrackPoint is TP4 (ID:01)
+
+[23:31:44.972] [WARNING]: 0.7063-0.7296(0.0233) 	:Write 0x00 => TimeOut
+[23:31:45.032] [ERROR]: Get fw info failed.
+[23:31:45.036] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 23:31:45
+[23:31:45.180] IAP_MODE: TVSU_CHECK_FW
+[23:31:45.180] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1003_yoda2_version.exe" /hwid ACPI\LEN0091 /fw 06
+[23:31:45.180] default interface: PS2
+[23:31:45.183] OS: 64-bit
+[23:31:45.224] [WARNING]: 0.0369-0.0600(0.0232) 	:Write 0x00 => TimeOut
+[23:31:45.239] IsElanTP: 0
+[23:31:45.353] [WARNING]: 0.1661-0.1889(0.0227) 	:Write 0x00 => TimeOut
+[23:31:45.388] [WARNING]: The special id 000264 doesn't support.
+[23:31:45.388] Pst Vendor ID : 1
+[23:31:45.388] This TrackPoint is TP4 (ID:01)
+
+[23:31:45.901] [WARNING]: 0.7146-0.7376(0.0230) 	:Write 0x00 => TimeOut
+[23:31:45.962] [ERROR]: Get fw info failed.
+[23:31:45.964] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.32
+2020-10-24 23:31:51
+[23:31:51.532] IAP_MODE: TVSU_CHECK_FW
+[23:31:51.532] Command Line: "iap1004_RV3_version.exe" /hwid ACPI\LEN009A /fw 21
+[23:31:51.532] default interface: PS2
+[23:31:51.535] OS: 64-bit
+[23:31:51.568] [WARNING]: 0.0303-0.0532(0.0229) 	:Write 0x00 => TimeOut
+[23:31:51.583] IsElanTP: 0
+[23:31:51.695] [WARNING]: 0.1574-0.1809(0.0235) 	:Write 0x00 => TimeOut
+[23:31:51.731] [WARNING]: The special id 000264 doesn't support.
+[23:31:51.731] Pst Vendor ID : 1
+[23:31:51.731] This TrackPoint is TP4 (ID:01)
+
+[23:31:52.245] [WARNING]: 0.7075-0.7304(0.0230) 	:Write 0x00 => TimeOut
+[23:31:52.305] [ERROR]: Get fw info failed.
+[23:31:52.326] ExitCode = 1
+
+4 warnings
+1 errors
+****************************************
+TouchPad-Flash Utility v1.0.0.35
+2020-10-24 23:32:00
+[23:32:00.771] IAP_MODE: TVSU_CHECK_FW
+[23:32:00.771] Command Line: "E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData\LenovoUpdatePackagesXml\ExternalFiles\iap1001_P52_version.exe" /fw 03
+[23:32:00.772] default interface: PS2
+[23:32:00.775] OS: 64-bit
+[23:32:00.811] [WARNING]: 0.0347-0.0574(0.0228) 	:Write 0x00 => TimeOut
+[23:32:00.826] IsElanTP: 0
+[23:32:00.849] [WARNING]: 0.0726-0.0957(0.0231) 	:Write 0x00 => TimeOut
+[23:32:00.863] [WARNING]: The special id 200264 doesn't support.
+[23:32:00.864] [ERROR]: Get fw info failed.
+[23:32:00.867] ExitCode = 1
+
+3 warnings
+1 errors

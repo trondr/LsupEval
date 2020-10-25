@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTELCPSET_KICH_1064" id="k1chp07us17" version="10.1.1.7" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Chipset Driver - Win10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      <ValueName>Version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k1chp07us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-06</ReleaseDate>
+  <DiskSpaceNeeded>10000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0, 14,3010,5,160,1603" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -s -norestart</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      <KeyName>Version</KeyName>
+      <Version>10.1.1.7^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C00]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C01]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C04]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C05]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C08]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C09]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1600]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1601]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1604]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1605]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1608]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1609]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1chp07us17.exe</Name>
+        <CRC>8A6E8BB0558F338FB39B42597AEFF2953C08B382</CRC>
+        <Size>3106424</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1chp07us17.txt</Name>
+        <CRC>8B3C156A8279CA02B7918827D2E1F7A47692A36E</CRC>
+        <Size>25741</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

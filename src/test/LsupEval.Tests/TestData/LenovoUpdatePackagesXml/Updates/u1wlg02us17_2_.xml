@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BCM_WIFI_0764" id="u1wlg02us17" version="7.35.267" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Broadcom WIFI - 7 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5D642A72-8194-4A22-80DA-11FE610CCA8E}</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5D642A72-8194-4A22-80DA-11FE610CCA8E}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>lenovo</Vendor>
+  <ExtractCommand>u1wlg02us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-09</ReleaseDate>
+  <DiskSpaceNeeded>45943720</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup\setup.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{5D642A72-8194-4A22-80DA-11FE610CCA8E}</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>7.35.267^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E027]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E036]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E03D]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E043]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E048]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E04A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E04C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E04D]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E04E]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E056]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E057]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E05F]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E060]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VID_0489&PID_E061]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_4358]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_4359]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_4365]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_43B1]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_43AE]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_14E4&DEV_43A0]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN7-ENT</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-ENT.SP1</OS>
+        <OS>WIN7-HOMEBASIC</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEBASIC.SP1</OS>
+        <OS>WIN7-HOMEPREM</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-HOMEPREM.SP1</OS>
+        <OS>WIN7-PRO</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-PRO.SP1</OS>
+        <OS>WIN7-STARTER</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-STARTER.SP1</OS>
+        <OS>WIN7-ULT</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN7-ULT.SP1</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1wlg02us17.exe</Name>
+        <CRC>8E8EB84229D892AAAF7470AAFC21D6989A8FB942</CRC>
+        <Size>22955688</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1wlg02us17.txt</Name>
+        <CRC>BBEADF1BFA29408BA8CCBE9C1E973298E6B40D38</CRC>
+        <Size>16164</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

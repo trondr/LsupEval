@@ -1,0 +1,95 @@
+8086,1234
+8086,F1A6
+8086,15D3
+8086,1C18	; Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 5 - 1C18
+8086,1C16	; Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 4 - 1C16
+8086,1C12	; Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 2 - 1C12
+8086,1C10	; Intel(R) 6 Series/C200 Series Chipset Family PCI Express Root Port 1 - 1C10
+8086,A11C	; Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #13 - A11C
+8086,A110	; Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #1 - A110
+8086,A112	; Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #3 - A112
+8086,A114	; Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #5 - A114
+8086,A118	; Intel(R) 100 Series/C230 Series Chipset Family PCI Express Root Port #9 - A118
+8086,A102	; Intel(R) 100 Series/C230 Chipset Family SATA AHCI Controller
+8086,A167	; Intel(R) 100 Series/C230 Series Chipset Family PCI Root Port #17 - A167
+8086,1901	; Intel(R) Xeon(R) E3 - 1200/1500 v5/6th Gen Intel(R) Core(TM) PCIe Controller (x16) - 1901
+8086,9C92	; Mobile 5th Generation Intel(R) Core(TM) PCI Express Root Port #2 - 9C92
+8086,9C94	; Mobile 5th Generation Intel(R) Core(TM) PCI Express Root Port #3 - 9C94
+8086,9C83	; Intel(R) 9 Series Chipset Family SATA AHCI Controller
+8086,9D21	; Intel(R) 100 Series Chipset Family PMC - 9D21
+8086,9D48	; Intel(R) 100 Series Chipset Family LPC Controller/eSPI Controller - 9D48
+8086,9D03	; Intel(R) 6th Generation Core Processor Family Platform I/O SATA AHCI Controller
+8086,9D10	; Intel(R) 100 Series Chipset Family PCI Express Root Port #1 - 9D10
+8086,9D11
+8086,9D12	; Intel(R) 100 Series Chipset Family PCI Express Root Port #3 - 9D12
+8086,9D13
+8086,9D14	; Intel(R) 100 Series Chipset Family PCI Express Root Port #5 - 9D14
+8086,9D15	; Intel(R) 100 Series Chipset Family PCI Express Root Port #6 - 9D15
+8086,9D16	; Intel(R) 100 Series Chipset Family PCI Express Root Port #7 - 9D16
+8086,9D18	; Intel(R) PCI Express Root Port #9 - 9D18
+8086,9D1A	; Intel(R) PCI Express Root Port #11 - 9D1A
+8086,9D1B	; Intel(R) PCI Express Root Port #12 - 9D1B
+8086,9DB8	; Intel(R) PCI Express Root Port #1 - 9DB8(WHL)
+8086,9DBC	; Intel(R) PCI Express Root Port #5 - 9DBC(WHL)
+8086,9DBE	; Intel(R) PCI Express Root Port #7 - 9DBE(WHL)
+8086,9DB0	; Intel(R) PCI Express Root Port #9 - 9DB0(WHL)
+8086,9DB2	; Intel(R) PCI Express Root Port #11- 9DB2(WHL)
+8086,9DB3	; Intel(R) PCI Express Root Port #12- 9DB3(WHL)
+8086,9DB4	; Intel(R) PCI Express Root Port #13- 9DB4(WHL)
+8086,9DB6	; Intel(R) PCI Express Root Port #15- 9DB6(WHL)
+8086,9DB7	; Intel(R) PCI Express Root Port #16- 9DB7(WHL)
+8086,02B8	; Intel(R) PCI Express Root Port #1 - 02B8(CML)
+8086,02BC	; Intel(R) PCI Express Root Port #5 - 02BC(CML)
+8086,02BE	; Intel(R) PCI Express Root Port #7 - 02BE(CML)
+8086,02B0	; Intel(R) PCI Express Root Port #9 - 02B0(CML)
+8086,02B4	; Intel(R) PCI Express Root Port #13- 02B4(CML)
+8086,8C03	; Intel(R) 8 Series Chipset Family SATA AHCI Controller
+8086,9C03	; Intel(R) 8 Series Chipset Family SATA AHCI Controller
+8086,9DD3	; Intel(R) 300 Series Chipset Family SATA AHCI Controller(WHL)
+8086,9D03
+8086,A353	; Intel(R) 300 Series Chipset Family SATA AHCI Controller(P1)
+8086,2822	; Intel Chipset SATA RAID Controller
+8086,A340	; P series
+8086,A342	; P series
+8086,A330	; P series
+8086,A336
+8086,A338	; P series
+8086,A33D	; P series
+8086,A33E	; P series
+8086,A33F	; P series
+8086,A32C
+8086,A332	; P series
+8086,282A	; P series RAID,TG(any)
+8086,2822	; P series RAID,TG(any)
+8086,06B8	; P series Gen3(non-RAID)
+8086,06BF	; P series Gen3(non-RAID)
+8086,06B0	; P series Gen3(non-RAID)
+8086,06C0	; P series Gen3(non-RAID)
+8086,06D7	; P series Gen3(RAID)
+1022,145D
+1022,157C	; PCI Express standard Root Port (Bristol Ridge)
+1022,157B
+1022,1570
+1022,1576
+1022,15D3	; PCI Express standard Root Port (Ryzen)
+1022,15DB	; PCI Express standard Root Port (Ryzen)
+1022,15DC
+14A4,3500	; Standard NVMe Controller
+15B7,5002	; Standard NVMe Controller
+15B7,5006	; Standard NVMe Controller
+1179,011A	; Standard NVMe Controller
+1179,0113	; Standard NVMe Controller
+1179,0116
+17AA,0004
+17AA,0005
+144D,A809
+144D,A808
+144D,A804
+1C5C,1327
+;DT platforms
+8086,A102	; Standard SATA AHCI Controller M900/M800/M800z/M900z
+8086,A103 ; SKUs H110 Q150 B150
+8086,A107 ; SATA RAID
+8086,22A3	; Standard SATA AHCI Controller M600
+8086,22B1	; Standard SATA AHCI Controller M600
+;

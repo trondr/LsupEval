@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="MOUSE_K1MI_TC" id="k1mie01us17" version="6.73" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Mouse Suite - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Primax\Mouse Suite 98</Key>
+      <ValueName>Version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Primax\Mouse Suite 98</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k1mie01us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-01-21</ReleaseDate>
+  <DiskSpaceNeeded>55839260</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="1" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s /nr /h /p /TYPE:USB</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Primax\Mouse Suite 98</Key>
+        <KeyName>Version</KeyName>
+        <Version>6.73^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_04B3&PID_3100]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04B3&PID_310D]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04B3&PID_310C]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04B3&PID_3107]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04B3&PID_3020]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04B3&PID_3109]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04B3&PID_3108]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_6000]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_600E]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_600C]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_6016]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_6022]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_6025]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_6039]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_6044]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_6045]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1mie01us17.exe</Name>
+        <CRC>A0E9878B10025ECFDD1F1948C322375A407AC836A0DDCE081329FD2A8E1221C9</CRC>
+        <Size>28569072</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1mie01us17.txt</Name>
+        <CRC>2D27BA4061073FB31C4BC492427A4B9D98868AC3FEB9FC3E7D500FB73FA2C619</CRC>
+        <Size>4918</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>SPWDEBvLtFjRiGfKfx0xs5uyzHY=</DigestValue></Reference></SignedInfo><SignatureValue>JQMWtvQoBNcb1XdAGYgiak48b2zYGzHYT31Pk36OEmiQTAPHKL3zCWKPOG0EsvZQ7S+wABKtOz9v9cMKhkjV2/EeEogPsZB0aO/QtbXnQWFgEz8eUblaqEII/t6/ZlNjOH4mUTJeO+JYuUOiiqtOs2i79zsWdf7ibDE0/+BrerjZC4FUw9cfGaKjZ8RUOnEnKHtKGJkNYn59A0g0xi7bYpimK4C1fSlrCUB1YKN4J1KiQ/k6rx6HN0pLBUnxeeCAgMWngTEx0jF2AhqJqgNpFlhwYbgIGKlyD+Dr06MlHUFzEYd2hGC/SgcJBEBxDWH7JeUWZH6ZTcgycKfdtoKRIQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

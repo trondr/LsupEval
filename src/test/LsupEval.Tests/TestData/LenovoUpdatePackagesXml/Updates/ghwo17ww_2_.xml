@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WWAN_GOBI_GHWO" id="ghwo17ww" version="6.21.4431.0106" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Sierra Wireless MC7355 - Gobi 5000(TM) Software - 7/8/8.1/10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+      <ValueName>DisplayVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>ghwo17ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-03-17</ReleaseDate>
+  <DiskSpaceNeeded>451000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Lenovo7355DriverSetup.exe SILENT=1</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Lenovo7355DriverSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>6.21.4431.0106^</Version>
+      </_RegistryKeyValue>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\SWILenovoDrvInstaller</Key>
+        <KeyName>DisplayVersion</KeyName>
+        <Version>6.21.4431.0106^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN8.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN8-ENT.*</OS>
+        <OS>WIN8-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_1199&PID_901E]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_1199&PID_901F]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>GHET*</Level>
+        <Level>GJET*</Level>
+        <Level>GLET*</Level>
+        <Level>GMET*</Level>
+        <Level>GNET*</Level>
+        <Level>GIET*</Level>
+        <Level>GRET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>ghwo17ww.exe</Name>
+        <CRC>E3BA2B3E6E6243A6FFD5A7C498D2FE80621AEDDE</CRC>
+        <Size>227157696</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>ghwo17ww.txt</Name>
+        <CRC>55CE8F4E5EDCD96524880DE8BE1798CA7DB77AB5</CRC>
+        <Size>11347</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

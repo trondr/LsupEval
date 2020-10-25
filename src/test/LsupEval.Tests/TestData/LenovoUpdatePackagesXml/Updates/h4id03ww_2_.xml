@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIPSET_H4ID" id="h4id03ww" version="9.3.0.1021" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) Chipset Device Software - 8/10 [32,64]/8.1 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      <ValueName>Version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>h4id03ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-05</ReleaseDate>
+  <DiskSpaceNeeded>10007095</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      <KeyName>Version</KeyName>
+      <Version>9.3.0.1021^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1E57&SUBSYS_500817AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1E57&SUBSYS_21FE17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1E57&SUBSYS_500C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1E58&SUBSYS_500C17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1E57&SUBSYS_500D17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1E58&SUBSYS_500D17AA]]></_PnPID>
+      </Or>
+      <Or>
+        <_OS>
+          <OS>WIN8.*</OS>
+          <OS>WIN8-ENT.*</OS>
+          <OS>WIN8-PRO.*</OS>
+          <OS>WIN10-ENT.*</OS>
+          <OS>WIN10-PRO.*</OS>
+          <OS>WIN10.*</OS>
+          <OS>WIN10-ENT</OS>
+          <OS>WIN10-PRO</OS>
+          <OS>WIN10</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>h4id03ww.exe</Name>
+        <CRC>95C7DED01B3F7FEC248C68EDE8F4E6B8BC5D4938</CRC>
+        <Size>1349616</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>h4id03ww.txt</Name>
+        <CRC>80D703BEE75FE45E9B8A06D47BB30FFEF2DE172B</CRC>
+        <Size>6089</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

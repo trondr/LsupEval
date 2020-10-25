@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BCM_BLT03" id="u1blt03us17" version="12.0.1.616" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Broadcom BT - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%Windows%\System32\drivers\bcbtums.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%Windows%\System32\drivers\bcbtums.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>lenovo</Vendor>
+  <ExtractCommand>u1blt03us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-09</ReleaseDate>
+  <DiskSpaceNeeded>7413086</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,256" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /S</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_FileVersion>
+        <File>%Windows%\System32\drivers\bcbtums.sys</File>
+        <Version>12.0.1.410^</Version>
+      </_FileVersion>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0489&PID_E032]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21E6]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0489&PID_E052]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0B05&PID_17CB]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_050D&PID_065A]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0930&PID_0229]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21F1]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0489&PID_E047]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_13D3&PID_3384]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21E8]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0489&PID_E04F]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_2003]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0489&PID_E042]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21E3]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21E1]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21EC]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21E4]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_745E]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21DE]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B4A2]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_19FF&PID_0239]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21FD]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_2169]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21D3]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21D6]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21D7]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21D8]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_13D3&PID_3388]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_13D3&PID_3389]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_2167]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_2168]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_640A]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_413C&PID_8143]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_640E]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_2016]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0489&PID_E07A]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0489&PID_E079]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21F3]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0A5C&PID_21F4]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_105B&PID_E066]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_185F&PID_2167]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_200A]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_200B]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_200C]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_200E]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_2004]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_2005]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1blt03us17.exe</Name>
+        <CRC>175760280E2BF0E3A740255E57991756C77ABD52</CRC>
+        <Size>3706424</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1blt03us17.txt</Name>
+        <CRC>9A7DA5B0B7EDB3D7FB074E38DD634B474C2CF000</CRC>
+        <Size>330</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

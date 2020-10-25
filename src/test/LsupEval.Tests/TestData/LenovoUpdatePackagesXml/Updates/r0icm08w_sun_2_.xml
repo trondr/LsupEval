@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INT_CAMERA_R0ICM_SUN" id="r0icm08w_sun" version="3.5.7.5901" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Integrated Camera Driver for Sunplus  (Windows 10 Build 1703 and Older) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_04F2&PID_B5AB&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_04CA&PID_7066&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_5986&PID_2118&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_04CA&PID_7071&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_04F2&PID_B5AB&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_04CA&PID_7066&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_5986&PID_2118&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_04CA&PID_7071&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0icm08w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-07-01</ReleaseDate>
+  <DiskSpaceNeeded>35678092</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1281,1793" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_04F2&PID_B5AB&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_04CA&PID_7066&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_5986&PID_2118&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_04CA&PID_7071&MI_00]]></HardwareID>
+      <Date>2017-07-21</Date>
+      <Version>3.5.7.5901^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_04F2&PID_B5AB&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_7066&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_5986&PID_2118&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_04CA&PID_7071&MI_00]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0IET*</Level>
+      </_Bios>
+      <_ExternalDetection rc="0,1,2">getw10ver4.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0icm08w.exe</Name>
+        <CRC>71FAD1B643B321A2F8504E26F19712ACCAF2E665C73FDE15DAFE973BDFB13032</CRC>
+        <Size>6532048</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0icm08w.txt</Name>
+        <CRC>08D2E144E90158A3B57004AAED025CFDACA692ED0E8A4753B9EF341BCE886DE5</CRC>
+        <Size>7697</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver4.exe</Name>
+        <CRC>FD6910AFA3522622C4F3C2E4A0C819AB47189FE98C3F71B668EC5CA8E732473A</CRC>
+        <Size>136040</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ub43NN5Kdnt6hMQh6zGlTJrmUsc=</DigestValue></Reference></SignedInfo><SignatureValue>eOVc/ZkOIrzi5RnAWEwILUyoUKdOtNMu48fQceMLYffHXCD4vcvGTFB5M5iJ+py7m86BXP8QSuEEt94ZNouoLOS+B807WpGCAqFBuuGB1ebUbm87AlwbX49kWoIiGvvqXbW1jgBBNL038/ahaiXeP72nvIrPB07182cozv/zy400FbHzbwsvjc0G8nsDBCJ5uyFWAmHwzO8WKdKAbyg7d073BcXPAZD8Ld63o7oYuw5nv1KWMRyIW4Y9IXsqkIwzcInRLHoqDLuKRFcNYsSc36ITjK2gqRBptUcMaEjziZueB7Yl4t6P+INg2IfbWWOtY0OrOcuQWwEGdWRNmP0vag==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

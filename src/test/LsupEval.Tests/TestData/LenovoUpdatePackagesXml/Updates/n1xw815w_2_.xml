@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="REALTEKWLAN_N1XW8" id="n1xw815w" version="2024.0.2.101" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek RTL8822BE Wireless LAN Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf" show="False">
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA&REV_00]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF0000]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA&REV_00]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF0000]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1xw815w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-06-05</ReleaseDate>
+  <DiskSpaceNeeded>14509432</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s /sa</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA&REV_00]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF0000]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF00]]></HardwareID>
+      <Date>2018-08-14</Date>
+      <Version>2024.0.2.101^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA&REV_00]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&SUBSYS_B02317AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF0000]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_B822&CC_FF00]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1XET*</Level>
+      </_Bios>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1xw815w.exe</Name>
+        <CRC>3DB4F3420181D024E6D0264FBF7717427417DF06A02EB5EDED5DD1BF6282796B</CRC>
+        <Size>3259752</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1xw815w.txt</Name>
+        <CRC>01A7171D3DA5BA6D59CC76A23C839427B690019F458B3BB5BDAE1CF9666A7FD0</CRC>
+        <Size>7577</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>lQyor1EFjAblSkARYVN4heWEBQs=</DigestValue></Reference></SignedInfo><SignatureValue>DmsQvwy9E7XcnFCEx82OUoknVxl6fnblXUIB+BvYZgDAiNnbFu7fmwjn8q89WGvMYbqLS23AO2fYyk4YEGd/arB04YxK6f+dV8nCbcmrpd1sllTKuw0jVjyvNrfpMQuHmPAEqk9pSSfL4jg/G9w1VzV2MBhzB/J2KAQtaAUSCNUwldf0tnbxhn9fWgghd1XwCeHsCPnCGPYHm1/vJQA/Lr+d8exekVJPmn+NPEWymDtAS+0AYYa3fddOzKvxBlm04QvJ15vprXgsajGKm3EzJSofMFlx8X/3lKhmhoHSeS+FOAKeHIVXS3wuAF0PUXvuxeJoMPUSJE3j7JfuivYi0Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

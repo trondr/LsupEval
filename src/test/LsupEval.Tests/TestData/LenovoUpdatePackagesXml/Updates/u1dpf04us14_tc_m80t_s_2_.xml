@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IDTD_U1DPF0_M80" id="u1dpf04us14_tc_m80t_s" version="8.7.10200.12510" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) Dynamic Tuning Driver (Windows 10 Version 1909,2004) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0103]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0153]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0A03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0D03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1603]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_22DC]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0A8C]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1A8C]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_4A8C]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_5A8C]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_5A03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_318C]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_8A03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9820]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9A03]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0103]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0153]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0C03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0D03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1603]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1903]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_22DC]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A8C]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1A8C]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_4A8C]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_5A8C]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_5A03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_318C]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_8A03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9820]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9A03]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1dpf04us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-15</ReleaseDate>
+  <DiskSpaceNeeded>27910614</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0103]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0153]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0C03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0D03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1603]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1903]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_22DC]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0A8C]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1A8C]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_4A8C]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_5A8C]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_5A03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_318C]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_8A03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9820]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9A03]]></HardwareID>
+      <Date>2019-11-05</Date>
+      <Version>8.7.10200.12510^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0103]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0153]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0C03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0A03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0D03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1603]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1903]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_22DC]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0A8C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1A8C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_4A8C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_5A8C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_5A03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_318C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8A03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9820]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9A03]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>M2TKT*</Level>
+        <Level>*</Level>
+      </_Bios>
+      <_ExternalDetection rc="7,8">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1dpf04us14.exe</Name>
+        <CRC>BE48A98991987A38A1EE9DA62CBCA03018A35E7963E601A837435F34A6514FAF</CRC>
+        <Size>5149832</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1dpf04us14.txt</Name>
+        <CRC>6F8B8BCAC8B7978A3898C634D02616F005E0B181D9BA500D990C2FDE8E3B2290</CRC>
+        <Size>5503</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>wxtz7uKbXtW7mToVngt8L+r6tBQ=</DigestValue></Reference></SignedInfo><SignatureValue>ON4zlRjpWFHBWWs72g4CYQHCxahN6TWj8PduF9q/dQZdu52KFH9YvOHZOGrlE/B4NJDxmU8JHyjQszKtzt5QkG+dVKtBQ4xbFmeaWlJfObDBxKjBODap2YKItddHwcMPn5cRSIeQTX2hRO8DhG4IJPlQGXwj5skHZBxqdoqkei7Vk7EIT6GHmKkpaVOZNeUSNe1Xc+0rEZ8lbsSgyf8Bz6um/EXJ4YlW13vtECxoTLpyl+da23WZL/yh1eS4Cza5CReeWlOiwoKkJFt978VmBXh6fjp2cb+SDDsJqBAUAh/WYg1HR6L7vrGPgTQmBQ3Q2IOWoWglDDUcqgkBXmyc/Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

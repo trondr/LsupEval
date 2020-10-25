@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="PREPROKB_U3KY_1064" id="u3kyb01us17_64" version="3.4.0.5.150529" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Preferred Pro USB Fingerprint Keyboard hotkey Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{DA344EE6-6F75-4F94-A39F-37F728DF63CB}</Key>
+      <ValueName>Revision</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{DA344EE6-6F75-4F94-A39F-37F728DF63CB}</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3kyb01us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-17</ReleaseDate>
+  <DiskSpaceNeeded>20000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN" context="user">%PACKAGEPATH%\Package\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Package\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{DA344EE6-6F75-4F94-A39F-37F728DF63CB}</Key>
+      <KeyName>Revision</KeyName>
+      <Version>3.4.0.5.150529^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[HID\VID_17EF&PID_600B&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[HID\VID_04F2&PID_0761]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3kyb01us17.exe</Name>
+        <CRC>D7A41B058380DD6ACA96CA2F8C5105A8F74693E1</CRC>
+        <Size>4489576</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3kyb01us17.txt</Name>
+        <CRC>A1C7802333A1D3B86DFBEF73C9CBBD71E905C205</CRC>
+        <Size>2296</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IRST_JHIW_W10" id="jhiw04ww" version="14.5.0.1081" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Rapid Storage Technology Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\iaStorA.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\iaStorA.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jhiw04ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-06-30</ReleaseDate>
+  <DiskSpaceNeeded>2635102</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="inf" default="EN">
+    <INFCmd id="EN">
+      <INFfile>iaAHCIC.inf</INFfile>
+      <Mfg>%INTEL%</Mfg>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C02&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C03&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C82&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8C83&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C02&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C03&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C82&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9C83&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_9D03&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_A102&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_A103&amp;CC_0106.DeviceDesc%</DeviceDesc>
+      <DeviceDesc>%PCI\VEN_8086&amp;DEV_8D02&amp;CC_0106.DeviceDesc%</DeviceDesc>
+    </INFCmd>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\iaStorA.sys</File>
+      <Version>14.5.0.1081^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C83&SUBSYS_504517AA]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jhiw04ww.exe</Name>
+        <CRC>E0D3D2AEF13A98ED52655AFDB69A4D240D378D45</CRC>
+        <Size>977120</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jhiw04ww.txt</Name>
+        <CRC>9CD2BEB3B3CF0D37F1417C6C03DDDD3CA9A9E1EB</CRC>
+        <Size>6555</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

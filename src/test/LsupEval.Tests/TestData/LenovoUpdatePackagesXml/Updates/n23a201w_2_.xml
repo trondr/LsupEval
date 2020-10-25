@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AUDIO_N23A2" id="n23a201w" version="6.0.1.8422" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek High Definition Audio Driver (Windows 10 Build 1703 and older) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></_PnPID>
+    <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></_PnPID>
+    <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></HardwareID>
+        <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></HardwareID>
+        <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></HardwareID>
+        <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n23a201w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-06-05</ReleaseDate>
+  <DiskSpaceNeeded>460719328</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></HardwareID>
+      <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></HardwareID>
+      <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></HardwareID>
+      <Date>2018-04-12</Date>
+      <Version>6.0.1.8422^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></_PnPID>
+        <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA2264]]></_PnPID>
+        <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0285&SUBSYS_17AA225C]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0,1,2">getw10ver4.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n23a201w.exe</Name>
+        <CRC>2689162CDD320C2AE8D36CAB991894F7800B4810D0E49B6DD914DF7EA13C1F1F</CRC>
+        <Size>144468816</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n23a201w.txt</Name>
+        <CRC>81938C574A67D0AB618CBFEC09D59C2B5DACB457778DD9C0FFC4A298F6386544</CRC>
+        <Size>7130</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver4.exe</Name>
+        <CRC>FD6910AFA3522622C4F3C2E4A0C819AB47189FE98C3F71B668EC5CA8E732473A</CRC>
+        <Size>136040</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>is79ovELi3k+GWjJgnFiTVN30Ho=</DigestValue></Reference></SignedInfo><SignatureValue>IiP8a14RPzYPw5kBfyd8+XPU1Q+dZl1goUuk3WqnyZi+71/g23jTB0JsQsM8Zv0TEV/3E4120FZQvIi0Op3YiKLCOFGc89P78/zFq3HlGMShs4mo0lEB2tltxQY/HrfTtPd/hBTw4TZLNIKgBPTlm4NLAbgU6YisEqFLkn4iIme6vIL6DuU0+TMt1Liag41gbbukdw9EryBej8XxTrnD4knJ6ZGqWFGEoSQcX5V+IEHsnxM9S3tEAgTvo28vj7pqK0J59kh2lKwEo1gVzFNFLupx7v3G2Vz2EX/Xns0hJv5nTilEenHCB6HQcPVhI3LVLCHw7x8RsCovLi2vos24RQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

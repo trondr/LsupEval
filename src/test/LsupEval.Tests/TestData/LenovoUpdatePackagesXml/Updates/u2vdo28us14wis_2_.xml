@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="U2VDO28_WIS_10" id="u2vdo28us14wis" version="26.20.100.7463" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Graphic Driver- 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E90]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E92]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E96]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E9B]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E94]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA6]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA5]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA8]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E93]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E91]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E98]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E99]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E9A]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E9C]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA9]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E90]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E92]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E96]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E9B]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E94]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA6]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA5]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA8]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E93]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E91]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E98]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E99]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E9A]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E9C]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA9]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u2vdo28us14wis.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-06-19</ReleaseDate>
+  <DiskSpaceNeeded>1347064305</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,14,5" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe -s -overwrite</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E90]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E92]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E96]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E9B]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E94]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA6]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA5]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA8]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E93]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E91]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E98]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E99]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E9A]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3E9C]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3EA9]]></HardwareID>
+      <Date>2019-11-06</Date>
+      <Version>26.20.100.7463^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E90]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E92]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E96]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E9B]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E94]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA6]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA5]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA8]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E93]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E91]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E98]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E99]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E9A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3E9C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3EA9]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u2vdo28us14wis.exe</Name>
+        <CRC>D91C8C3E9B7E16A174AE33521FC1666C4650BAACD021B5EDE7C110C7A3976AE8</CRC>
+        <Size>203868280</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u2vdo28us14wis.txt</Name>
+        <CRC>52F9FB17A01426C522EA81CBA1CBCBF00FF87DBD21D0161113B74CF6351B1700</CRC>
+        <Size>7541</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>hcNlJM4+2BtZ9qgKQHXaHo+F4KU=</DigestValue></Reference></SignedInfo><SignatureValue>mAuLLqdmz0cf+dzUrLbwak+wZMh0MpHMALLfsCaLICsaikpqWoGgk0JslV5eaEQ6WMs8IsWMuYxtH3o5DLQjXChYnvT8NdqAYIw4VAy7GSwFKVVyUbViWX25VkCo0GS+HSI+7qNq1grTTZ11lj0+1JGedTJQnzqygezj2ovRMrs2AzYBGrwScJsAGEfM5l37x18ADsFpeGYtLiUq0se/k3g4gMTvq0s8wdAPA1AbfmlH+2dSs0qG5EQ/do2Rh4dnBBR07u1RtCxjPpQceF2GpLodP3BtapFhfUo2ldvM8bnvkUx+5P3NzbpyD2jGAjpOvaE5wUDN2Y0Acb0m10o9yA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

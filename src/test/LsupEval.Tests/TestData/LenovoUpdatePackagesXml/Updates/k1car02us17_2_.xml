@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAR_K1CAR_1064" id="k1car02us17" version="6.3.9600.31213" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Card Reader Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      <ValueName>version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k1car02us17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-01-21</ReleaseDate>
+  <DiskSpaceNeeded>9980676</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="1" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /s /f2"c:\windows\mylog.log"</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <Or>
+      <_RegistryKeyValue type="REG_SZ">
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Realtek Semiconductor Corp.\Realtek Card Reader</Key>
+        <KeyName>version</KeyName>
+        <Version>6.3.9600.31213^</Version>
+      </_RegistryKeyValue>
+    </Or>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0129&REV_3960]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0139]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0129]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0140]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0105]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0184&REV_8413]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0125]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0119]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0103]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0104]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0106]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0107]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0108]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0111]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0113]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0115]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0116]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0117]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0118]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0120]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0121]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0136]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0138]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0150]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0151]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0152&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0153]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0155]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0156]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0157]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0158]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0159]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0163&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0161&MI_01]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0168&MI_01]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0166&MI_01]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0167]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0169&MI_01]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0171]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0176]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0177]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0178]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0181]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0182&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0084&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0184]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0185]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0186]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0187]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0188]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0301]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0302]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0303]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0305]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0306]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0307]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0308]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0309]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0311]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0312]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0314]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0315]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0316]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0317]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0318]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0319]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0321]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0322]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0326]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0327]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0328]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0329]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0001&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0009&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0011&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_0BDA&PID_0029&MI_00]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1car02us17.exe</Name>
+        <CRC>62E901EF02E08E9A8CD3A5E4FBC158BC63970128A116E60F983D44DF7835BBFC</CRC>
+        <Size>5641328</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1car02us17.txt</Name>
+        <CRC>C3629FC8DF2FCECAF64305749EC7FA9DB2D5D593DC5947940B550648A1AD415E</CRC>
+        <Size>3274</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>lXn6a6iijYVXbfabeJ8sRf2g+HE=</DigestValue></Reference></SignedInfo><SignatureValue>HRrG+qZiWbeS7v5khl5xgwLznpgGaS7y6owEzxhM0caI6UEfzNOINe0b2OI1JBHuEFXZNJqmu5X013Yr3htqo/LyNEVHR1wGx6e82NPj8LTwCI+4euR76tYgpHuTITNm59VDtlH6MutdWi9PGnl/4eT8TW4iIDA2UF6guSUGdHP6ijVS4TgHqnkQcB3cFlRsvJDfiIIi85iPKQN0n9aeM0O7jVwefYAAjqc/Ftx6loPjuFEmysz/B9X7B8Zvwr1ezl2jMzyXdwjP3BVSaB9LV3tAZFBuP+0vxrvylIP8bHwq8RSo5mq8VplCWDFMjGuBXooYsu+ApvW0b+ItvwuSOg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

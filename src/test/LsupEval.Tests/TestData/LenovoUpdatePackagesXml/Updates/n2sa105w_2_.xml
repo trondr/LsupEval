@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AUD_N2JA1" id="n2sa105w" version="6.0.8947.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek Audio Driver (Windows 10 Version 1709 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></_PnPID>
+    <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></_PnPID>
+    <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></_PnPID>
+    <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></_PnPID>
+    <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></_PnPID>
+    <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></HardwareID>
+        <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></HardwareID>
+        <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></HardwareID>
+        <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></HardwareID>
+        <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></HardwareID>
+        <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></HardwareID>
+        <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></HardwareID>
+        <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2sa105w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-07-27</ReleaseDate>
+  <DiskSpaceNeeded>812656592</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n2sa105w.exe /verysilent /DIR=%PACKAGEPATH%\TMP</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n2sa105w.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></HardwareID>
+      <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></HardwareID>
+      <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></HardwareID>
+      <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></HardwareID>
+      <HardwareID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></HardwareID>
+      <HardwareID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></HardwareID>
+      <Date>2020-05-05</Date>
+      <Version>6.0.8947.1^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></_PnPID>
+        <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2286]]></_PnPID>
+        <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2288]]></_PnPID>
+        <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA22AC]]></_PnPID>
+        <_PnPID><![CDATA[HDAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></_PnPID>
+        <_PnPID><![CDATA[INTELAUDIO\FUNC_01&VEN_10EC&DEV_0257&SUBSYS_17AA2287]]></_PnPID>
+      </Or>
+      <Not>
+        <_ExternalDetection rc="0,1,2">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      </Not>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2JET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2sa105w.exe</Name>
+        <CRC>A18591046396B56F012FD0A92E31E802A18BE1A72574EC5DCC7959F7262C9125</CRC>
+        <Size>159021264</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2sa105w.txt</Name>
+        <CRC>6DFCF919F5E719639DD3CCD59D39A63AD7F7441481C486ED10C65D09745591A2</CRC>
+        <Size>8468</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>nsfX7ErAaM4upDMoRxuU1jwF+1g=</DigestValue></Reference></SignedInfo><SignatureValue>HYLJFov+zMpw6XLfwn0bNKOTX8I8JcaH3+yIeOmpoNstitV93WPGcyIWgNDlFGsHKIRSob8csvUHiNV6Or+lXfu6/sWK3bV64c5uZ2U0kXJrYA2kCm/yNM1Nx9E7aLsmJhX3iMpbKElQTeFhiVvt6A8XLrNAAMcofQ6uSR6mrjH030C2VeIB2hG+ghWGgJ2Y7sFt3O1uaqie1jO/n8k5vEqlnOgI+0G0C7IyMpZ2yAl8dhY2EVbqJIWtAjJDQePUNjImBI3UppPbbjdx1rYQyp1hGp3XGG5rpuAGyQz+T1VEdkWaA5yPKl+BgxavfDB+Fs8We7DBkem8bXny1ltWAA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="ITD_1U1TBT_FXN" id="1u1tbtb104fxn" version="1.41.914.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Thunderbolt Driver (Windows 10 Version 2004) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1575&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_1577&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15BF&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D2&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D9&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15E8&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15EB&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15DC&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15DD&CC_0880]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_15DE&CC_0880]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1575&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_1577&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15BF&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D2&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D9&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15E8&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15EB&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15DC&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15DD&CC_0880]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_15DE&CC_0880]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>1u1tbtb104fxn.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-08-07</ReleaseDate>
+  <DiskSpaceNeeded>336892860</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="3010,14,0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1575&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_1577&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15BF&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D2&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15D9&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15E8&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15EB&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15DC&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15DD&CC_0880]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_15DE&CC_0880]]></HardwareID>
+      <Date>2020-05-12</Date>
+      <Version>1.41.914.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1575&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1577&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15BF&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D2&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15D9&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15E8&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15EB&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15DC&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15DD&CC_0880]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_15DE&CC_0880]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>S03KT*</Level>
+        <Level>S04KT*</Level>
+        <Level>S05KT*</Level>
+        <Level>*</Level>
+      </_Bios>
+      <_ExternalDetection rc="8">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>1u1tbtb104fxn.exe</Name>
+        <CRC>B0161230C8334E18961808B83C6ECFC756579501A0858EC296D86D7627ABA9C0</CRC>
+        <Size>155147496</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>1u1tbtb104fxn.txt</Name>
+        <CRC>C5ECE8A68CA10606A88789411C9DD8B47CC43D98DA4987918A92F70E21D72008</CRC>
+        <Size>3991</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>L6Bq1almyc9A9JLdfGEPDdLsOtA=</DigestValue></Reference></SignedInfo><SignatureValue>ATS3d8n8QtFDEOWwlw4fw1UFJ3cx0X9iBaDwS6JVoIah7wm6OCdPgR08bQNjNHgu175Vb5AOr5PQZ/PjE8/KOyu4jFrgeqnRsSox1gKt+McWq4CF4EW4388sCmlOXoPIMqMPC5xM+j5jOtf32i1IRJUwwssegy5uvCL7vdZlGCQdHbNlgEDpYSy//GhToVrQjWKRtaeoLLJpfN/qb675k5oIoOX0MnOWcY1cqciUbejBhB2XrQiT+Y3NTqV0bJYM1vGg7Ol2Z/EUS01spSRZpGmhuoeCfZbF8b4mpcuJ90monN/3C0735AgQoqn7X4bUz4nz9qR0b0CoQYeEXZF+8g==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

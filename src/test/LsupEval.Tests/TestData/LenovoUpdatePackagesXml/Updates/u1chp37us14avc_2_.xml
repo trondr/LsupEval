@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIP_U1CHP37_AVC" id="u1chp37us14avc" version="10.1.15.6" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Chipset Driver (Windows 10 Version 1909) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&SUBSYS_314417AA&REV_30]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&SUBSYS_314417AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&CC_0C0500]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&CC_0C05]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u1chp37us14avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-12-26</ReleaseDate>
+  <DiskSpaceNeeded>10672318</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -norestart -silent</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DA3&SUBSYS_314417AA&REV_30]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DA3&SUBSYS_314417AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DA3&CC_0C0500]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DA3&CC_0C05]]></HardwareID>
+      <Version>10.1.15.6^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&SUBSYS_314417AA&REV_30]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&SUBSYS_314417AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&CC_0C0500]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DA3&CC_0C05]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>M28KT*</Level>
+        <Level>*</Level>
+      </_Bios>
+      <_ExternalDetection rc="0,1">inboxdrivercheck.exe u1chp37us14avc_2_.xml</_ExternalDetection>
+      <_ExternalDetection rc="7">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u1chp37us14avc.exe</Name>
+        <CRC>FCD88FC36E5A41AA21B78485C7A62202C073252E1A380BAFAFBE01A5273DA90C</CRC>
+        <Size>3792192</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u1chp37us14avc.txt</Name>
+        <CRC>A37E09247200DF196770D357CD290F0E6029CA7DB05B2279A646C74581F53E1A</CRC>
+        <Size>61362</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>iZelOCpPtiEwU/e9hjFJzi2kkZM=</DigestValue></Reference></SignedInfo><SignatureValue>fJ0qhgJc0pUJuCJol6sJDk43CyaOUNhwMj4kYu/1OmaoT29CKHyWolp9x2Eo1WQHD0GPSFsWYx3sK/GpBEintfXGmsLHTr3EuFUC3KAS3rHmFTyFpIFJNMtqqgDSjUkH9NsZThUlAa7mIeyMvZHY44u8KHkGmdP1cw76BqQZws3P5Pgn9Ve3/rj2ATVNsa1q3aeSWnhixjTrw/NtMODuP7U9yknBwiAuIscyFNoOJmzyKQpvD342zU16lg1Qwh8MRQJNDYFrd1eIwlTqSVUuoWfDBC9wLxHGjVO8Jo+7DyPBTAA70E6oru8GQQ8GP9MRUAzRDw5Wt+YAOsYNrU6DlQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

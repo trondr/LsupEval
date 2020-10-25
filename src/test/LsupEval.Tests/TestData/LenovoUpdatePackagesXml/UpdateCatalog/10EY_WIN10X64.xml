@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="20">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/fvjy67usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">52a15b66832e1af2ada7508bd8a66abd7c1ae71186eeb7a3c60e0e76e4abe063</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1acpd1us14_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e965a51aec8bd3a4030ee99402a071f5bbe43f3c99d89fc0409e1f757be641ef</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j1amt01us17_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">475667f28c64b8f30039e9ca82b6b1d4b58c86ca369c2e3ef1fd405f16ac1618</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j1car01us17_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">efe1542237991c1715a342d0e90b187a7e1016952e03eb07518cfa52a51f0ae8</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/g1rad01us17_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e281d016ab4de0d2295edc4cd18307f73c78f462ba36127dcac115d77abfb55f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1car03us14wis_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">82b8f9754f93d055579e89cdcb04c7fbe7bc31f7525c586f007fbfbbd3b78da3</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/btlock2_1_0527_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5cbb67582c6bed4ab8a5fa8960c2f15a03c22168a418fb360fa673755a028713</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdo25us14wis_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5c2e20e287d224137912eedb48254380c14801da437176f0b5be4305a429d571</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u1amt02us14wis_2_.xml</location>
+    <category>Management Module IMM IMM2 AMM CMM SMM</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e01a3129f2fce47e2d4ca2b70ce970859331fb6bac508ed9879b1bcc6588aead</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u3blt05us14wis_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0c572f0256e49ce53bb44d6747335a85cedf01a6f53a16a006f159620580d1ef</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u3wlg09us14wis_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6144a10f01865d35e826a3e919784a5582c6ab55231b279b19faede6efcba2bd</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j2wlg04us17wis_1064_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6cb169162bba4a53d99e6ccff8179a659f7caaef34309df9384d277dbbb41a1a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo09us14wis_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">472d84d6d7890bf67e770ee532a63b4d4321ebc41dda8ee5ee322428e0b58d88</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg12us14wis_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">36975ca43af21822d6975d1733dd787b5014389043694f4f58b28afea3a6e2ad</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/u3etn02w_w10_2_.xml</location>
+    <category>Docking Station and Port Replicator</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7a2334cbed7631288760c26a27a7ecaeda6c37077e9c5a34fabddb64105ce25e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k7aud26us17wis_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ad80fbf0ee8881c0617b1d18b5d38e1eeacb0992e81929fe493674d3235e78c2</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo23us14wis_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">53ec76a9652bd54730ce74ba1dcc00bb7cc93256859da1c1eb3f898e3f674130</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1chp17us14wis_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5f46b5d6429791f6a84c0dc067f27f18b787c8245e94b099a47c943ffb7f0012</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u2vdo27us14wis_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">da5f60cf85cbec8647cf2a104d7445e6a52a3b002ff17384e57a8d65667dff43</checksum>
+  </package>
+</packages>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="RAID_GIIT" id="giit08ww" version="14.8.16.1063" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Rapid Storage Technology Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C02]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C82]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C83]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C02]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C82]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C83]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C02]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C82]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C83]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C02]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C82]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C83]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>giit08ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2017-09-27</ReleaseDate>
+  <DiskSpaceNeeded>4359862</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1073742081,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s /sa /se /sw</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C02]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C82]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_8C83]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C02]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C82]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9C83]]></HardwareID>
+      <Date>2017-04-10</Date>
+      <Version>14.8.16.1063^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C02]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C82]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_8C83]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C02]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C82]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9C83]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>GJET*</Level>
+        <Level>GLET*</Level>
+        <Level>GNET*</Level>
+        <Level>GIET*</Level>
+        <Level>GRET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>giit08ww.exe</Name>
+        <CRC>922D53CD06A6304507F41D5409F77260067CE40B</CRC>
+        <Size>1043048</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>giit08ww.txt</Name>
+        <CRC>54BDC3C372ADD6ADA1482471DA01D2CDBDAB52C1</CRC>
+        <Size>9848</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>T22wZ54HLTxh5O/IMrotxbadmok=</DigestValue></Reference></SignedInfo><SignatureValue>lboxsXUJctAnfryH8k69lZO5rZyuInLOKuU0jNlNLXLEEAwBR8asW/xfhHNqZr7aRj5CmXTwUXF0LkmOf2XxjIRHPBnaHSN7j+jwC5bFyTvmW4Xx1nzEypK5dhNe6oyq6Dyrw3BGxfJRys2F/VWegWR+5nMnaZCytvF8IRJ9Zov9m947b4duDIHWm2NbMGjaD8Lw4S1U5THQTjM/msldg4/lm3ArQhcyENW67wBnuEZgz1i9cx+k1OKl/QbNt2X0Q6OzPkQ+zCYGXIO+h7iTTGtWB347fVGBNxnA8xfcJ0UQF6m1xmg7BYrmEoClAVpAMz1e3Ktsqyz1mXszB7PqGg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIE9jCCA96gAwIBAgIQVxYYDbfUmJ3EoXCD3Pp1ZzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAdBgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxMDAuBgNVBAMTJ1N5bWFudGVjIENsYXNzIDMgU0hBMjU2IENvZGUgU2lnbmluZyBDQTAeFw0xNTAxMTMwMDAwMDBaFw0xODAxMTIyMzU5NTlaMF4xCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBxMLTW9ycmlzdmlsbGUxDzANBgNVBAoUBkxFTk9WTzEPMA0GA1UEAxQGTEVOT1ZPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwVWMufFrSa68v9h+qMIEPTNZrZcxPzdiOoDfdTuX4A51yhSpbcySu9MbeXsu4Zg8f29nQMYnYsxSVfAUpaed3Sjjnff2k6/WHpSfoGzf5oDWrzY3Nss64VrE2/C3FZ0XVlp/xRAOO51MyRQ14Pz0KVOggw4LXgjQ8Tyy379Fi9CiDdBLmSFBt2rDoGVPfiiu0XPg6H6r/jw4U3sQ2iw1eyFWXa+tKqHm4uJKvWzWZWd5Wsls4iWx5RhHgT7+O3fLRc1FPf8oXl5QdVer/1UHGHN4wRbEJDDJWKhCUCbpzLxCkd1FIxMPQgojbiz9TkBBLi35zYzhHeRABHm1DX/BQIDAQABo4IBjTCCAYkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCB4AwKwYDVR0fBCQwIjAgoB6gHIYaaHR0cDovL3N2LnN5bWNiLmNvbS9zdi5jcmwwZgYDVR0gBF8wXTBbBgtghkgBhvhFAQcXAzBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTATBgNVHSUEDDAKBggrBgEFBQcDAzBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9zdi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9zdi5zeW1jYi5jb20vc3YuY3J0MB8GA1UdIwQYMBaAFJY7U/B5M5evfYPvLivMyreGHnJmMB0GA1UdDgQWBBRSMmHtmvK1hUveuxeoJ/Jwj5J18jARBglghkgBhvhCAQEEBAMCBBAwFgYKKwYBBAGCNwIBGwQIMAYBAQABAf8wDQYJKoZIhvcNAQELBQADggEBAHW49q6GgSXkLVnqgvw2Zpsz7mqr3TOb9OXM4KOnGQWUpfYnT/HaJbHOpH46LlgOwBd9hVyOI5ON6S0JSe6gcp49NZ2aoYvyIqq+k6xsr0QxVqHzPD0gOotwWBXKhg0+CMyxIuKYAjXNxvnzBqeAmyRbZoGvFdPeqbGpm+kvS+MeMTdy8gmXMZCj9f2KhDNjm2gYjKAVEeyodrs/LqrYsAMB4+ie099pA5++gBM892Z4DEREh14Y1Ydv/sLsAtOrkNeGlRgnoTklzFVqaHHm55T/c6VzHjKabNHb/t8Wt3psevQUnN4KqxyHrk1oQp8V3wzJNNum4tA4+Dc5w9uUgRc=</X509Certificate></X509Data></KeyInfo></Signature></Package>

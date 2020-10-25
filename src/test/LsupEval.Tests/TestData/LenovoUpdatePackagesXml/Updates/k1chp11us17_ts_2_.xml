@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CHIPSET_K1CH_TS_P310" id="k1chp11us17_ts" version="10.1.1.9" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Chipset Driver - 7/8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      <ValueName>Version</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>k1chp11us17_ts.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-26</ReleaseDate>
+  <DiskSpaceNeeded>6613616</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,14,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe -s -norestart</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupChipset.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Intel\Infinst</Key>
+      <KeyName>Version</KeyName>
+      <Version>10.1.1.9^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1900]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1901]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1905]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1909]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_190F]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_1910]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_191F]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>k1chp11us17_ts.exe</Name>
+        <CRC>E4C84BE3740157BC679878B3EE93A3B1A50E944C</CRC>
+        <Size>3080032</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>k1chp11us17_ts.txt</Name>
+        <CRC>E480DF2A89673A5B1B637EB0A473EB9E77F9210D</CRC>
+        <Size>25743</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

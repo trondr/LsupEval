@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="9">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k7kyb02us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">19323ab9ead0893aeddd46e61a251ef267f7ed3b02258c0ee5183b8897fd8e51</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3kyb01us17_64_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a9285b836de9c909a486cf0aacfcc3624cf3a95323d7eeae9338274c85e2817a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1box04us17_1064_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9251daa1aa0658705c753ae3771555554edc95bea7a41b7c682fec92ec7ddccf</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1aps08us17_1064_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4942581aab0b1277c0d3150aedef8803ba0a11e3e2300e82c227a8e4ae867204</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/fwjyb1usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e9018474688adae1a96804712dca23b43eaedc59664f791e0162ea0c50730ae0</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k2wlg14us14_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f8d0b37239f35b463b7c47b10abe483c1550026b24ee2c03add3ac31b9baa524</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k2vd131us14_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0d6f75a23c1c7095a260f7e1984617c7fb92091c7b2de88e3715409021cb5dfa</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/g7audc8us17_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4fe7d282ee2de8cce9dca6ceb86a35a1bc4847d8b164fe5d359ddd26dbb13259</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+</packages>

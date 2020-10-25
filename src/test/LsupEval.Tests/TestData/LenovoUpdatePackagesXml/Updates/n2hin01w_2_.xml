@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IRST_N2HIN" id="n2hin01w" version="17.2.7.1028" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel(R) Rapid Storage Technology Driver(Windows 10 Version 1709) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D03]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A103]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A282]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D03]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A102]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A103]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A282]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_2822]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2hin01w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-05-11</ReleaseDate>
+  <DiskSpaceNeeded>13781082</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /s /se /sa /sw</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D03]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A102]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A103]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A282]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_2822]]></HardwareID>
+      <Date>2019-03-25</Date>
+      <Version>17.2.7.1028^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DD3]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9D03]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A103]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A282]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_2822]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="3">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2HET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2hin01w.exe</Name>
+        <CRC>16FA8833790EA993140C68BDC977D024F21DF4C4FE81E1425E4F18073C8A8D6B</CRC>
+        <Size>3722904</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2hin01w.txt</Name>
+        <CRC>1FCDB86644CD3A625779641B7801600485CF7DC42E4CBFA7AE6FC8731006B8E7</CRC>
+        <Size>9522</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Xu6pceG5LVCy5kr7vdBpBCXeoHE=</DigestValue></Reference></SignedInfo><SignatureValue>FtaGg+L7lap0jSqR4Rl1mM4/necX/oAqRZCwizfMfv06VmZDQGLB5OnIBKweSIddh4raed0HOCzYHKIMqPzkh59O3vaFipkv6zJvjs1Nv7iISSmACjanN0SGMGZMpWhrtkUGoYx3LB1OyE3/lmu0xMqiyU8sgwTmtM/KA7u2yJ9qh6m/K/ErCcS/uvqdNJYaCZR4XyXCuIclhuadMMQuRaeSoGtXCZtGsaRhWTlx2lc8bLe/QMuKoCZVOAJ2nAB80ZMT3c5ZZh5U5XBte0Lmbv0AywJfj8VeQ0t9f5nQdrRQ4SvGI6rYDkwCvMPyn+P4d3dUdMyGelEx1VJpEiRUzA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

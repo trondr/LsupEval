@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="CAMERA_N19C" id="n19c704w" version="1.4.27.30007" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel 3D Camera Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\RealSenseDCM.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\RealSenseDCM.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n19c704w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-07-21</ReleaseDate>
+  <DiskSpaceNeeded>146636800</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.bat</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\RealSenseDCM.sys</File>
+      <Version>1.4.27.22089^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_0224&MI_02]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_0224&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_0226&MI_02]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_0226&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_2640&MI_02]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_2640&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_2780&MI_02]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8086&PID_0A66&REV_2780&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[ACPI\VEN_INT&DEV_33A3]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n19c704w.exe</Name>
+        <CRC>FFD74AC1CF45C6DCB0FD22592B3CEADF2ACE70F1</CRC>
+        <Size>35762640</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n19c704w.txt</Name>
+        <CRC>FE4F35F28A10710D2D5DF1BE8743DEB2E1C9276D</CRC>
+        <Size>7638</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

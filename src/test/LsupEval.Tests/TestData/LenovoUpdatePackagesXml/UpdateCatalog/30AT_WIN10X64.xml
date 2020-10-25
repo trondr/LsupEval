@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="30">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1tbt04ws17_1064_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">76f8d8a6668f9ef0d8492cb96d9a10ca58a12a644fcda3f6e4f44dfe2929aaa2</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1car03us17_ts_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ddbe4d431a7f00d1e7eb4f56622aea34431544eb5be08f2323e6f23af6a21a20</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1mie05us17_ts_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">34bab0c15516cf1e36bb6458622e942d712e647a6758a5767a716b08b238e9d9</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k2etna2us17_1064_ts_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9b7f340a0a88940ec6625b85c73b4b65f3e80d2885726f7180a9ec2af75c1fa0</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k4kyb03us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e04f4022c4537e34ac373d8be0d031702bf3b097a9086b3205d298236a68786d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1acp02us17_ts_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">8ef7490e88f2d59465f78107e141e7325587f056dbe26589f5628b90984b9389</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u6kyb10us17_64_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6f2e7c2f05ef270c6e0f32a13507eecd87c7ebae0cd30520b48cf26b9dd2525d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/u6kyb10us17_32_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f69fb01f8d47bf057dbc22c4e7b49421448d6f4858869746739a2fd108e01772</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3kyb01us17_64_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a9285b836de9c909a486cf0aacfcc3624cf3a95323d7eeae9338274c85e2817a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/d1vdo38us17ws_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6330b1e0085469aa2f846cd8f5b8048e42a20222e1c6fb0078db2c2d31c00024</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1chp11us17_ts_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">830622b8f0933d09ff391d85482d31d6b30834d6ac3098f00a03a8e4e007a055</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k2etna2us17_1064_et_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1ec0d06c590b62671d368f60874366e64f080d59a414399b41390cbb2b7d9c3d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k4etna4us17_1064_ts_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e11e29f035abd7131d4710a3570a495332598bb1fcecf3d5916daea644f482db</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/g5aud04ws17_p310_ts_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">fd5cb451b4bc73b5da879ee8852b2466054e078039b16668f3195fa9b238154f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6kyb02us17_ts_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">bfa8ac4e73bf16543c556fcf16988a31d423e36aeb469eef7841da7a0a01ca5d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/fwjyb0usa_p310_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">17979e343af6abb35bc0badbc94e2d3135d035807bb4c81d076c839d384f25bb</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1rau22us17_ts_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f230106f7bbda7619e5852be42fc0118fa63feb18b10d895caf167d5ed8f4c9c</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo80us14_ts_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">37e2276fac3f6183de5095c88e51cf3cfb1d113e648694671c6d8d42444ce937</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k2wlg14us14_ts_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ac1590d2a445d389d25b9bd1ebbe5a529880d3417024e2c495fb2bda778ca6e9</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt20us17_ts_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4d528c36e7330f80864edcc326e9e206b9f1398c13814934e2851abf80c401ca</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k5kyb06us17_2_.xml</location>
+    <category>Mouse Pen and Keyboard</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a31029da3006474ba71663ba34eb4bc062054806f259c910c0a983f631c1c59e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/k2vd131us14_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0d6f75a23c1c7095a260f7e1984617c7fb92091c7b2de88e3715409021cb5dfa</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt0bus14_old_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">326cd15f62d6b498e9a68f5dc198b938819fd6cb3533ea91473fa00bab931fc5</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt48us14_2_.xml</location>
+    <category>Chipset</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">2651a0e1619bed2b67140b8a229120665f117323e883d697e5afb46f9c32df9c</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/g7audc8us17_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4fe7d282ee2de8cce9dca6ceb86a35a1bc4847d8b164fe5d359ddd26dbb13259</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdo9bus14ws_p300_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e2be1c0f86221259cf223e2b19514dcd271005e463828f6ef048946a27cd3f88</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg06us14_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1e6e59aa9bcf97c120277817074ffc0909b9072f3c14f70dfc2f0dd80b825e6c</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u2etn24us14_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">314757b9e6b56c0554f2b244d379c56813396d6fea8771c51374e6092dfad435</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg0eus14_old_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1301a018728b7b04543985b71b0c3618343b15a7b44b8b9da00ef99369ceb29a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+</packages>

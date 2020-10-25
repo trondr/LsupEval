@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTL_RST_J1RA_0710" id="j1rau10us17avc" version="14.6.1.1030" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel RST utility Driver - 7 [32,64]/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%WINDOWS%\system32\drivers\iaStorA.sys</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\system32\drivers\iaStorA.sys</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>j1rau10us17avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-01-13</ReleaseDate>
+  <DiskSpaceNeeded>30000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,1,3010,1641,1603,9009" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupRST.exe -notray -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\SetupRST.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%WINDOWS%\system32\drivers\iaStorA.sys</File>
+      <Version>14.6.1.1030^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO.*</OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102&SUBSYS_30BA17AA&REV_30]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102&SUBSYS_30BA17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102&CC_010601]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A102&CC_0106]]></_PnPID>
+      </Or>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319\SKUs\.NETFramework,Version=v4.5</Key>
+      </_RegistryKey>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>j1rau10us17avc.exe</Name>
+        <CRC>64D7FA53E68C323F795B6EF3D0FE27A07E02AD91</CRC>
+        <Size>12308384</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>j1rau10us17avc.txt</Name>
+        <CRC>3F220B269DB70FFE0E686E9F1AD88CCB52456559</CRC>
+        <Size>69228</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="USBC_U3ETN_W10" id="u3etn02w_w10" version="10.25.704.2018" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo USB3.0 LAN Driver for Docks and Adapters - 10 [32,64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_17EF&PID_7214&REV_3100]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_7205&REV_3000]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_720C&REV_3000]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_A359&REV_3103]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_3069&REV_3103]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_3062&REV_3101]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_3082]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_7214&REV_3100]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_7205&REV_3000]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_720C&REV_3000]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_A359&REV_3103]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_3069&REV_3103]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_3062&REV_3101]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_3082]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3etn02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2018-09-25</ReleaseDate>
+  <DiskSpaceNeeded>11675672</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_7214&REV_3100]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_7205&REV_3000]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_720C&REV_3000]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_A359&REV_3103]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_3069&REV_3103]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_3062&REV_3101]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_3082]]></HardwareID>
+      <Date>2018-07-04</Date>
+      <Version>10.25.704.2018^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_7214&REV_3100]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_7205&REV_3000]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_720C&REV_3000]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_A359&REV_3103]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_3069&REV_3103]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_3062&REV_3101]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_3082]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0KET*</Level>
+        <Level>R0NET*</Level>
+        <Level>R04ET*</Level>
+        <Level>R0RET*</Level>
+        <Level>JDET*</Level>
+        <Level>R08ET*</Level>
+        <Level>R0GET*</Level>
+        <Level>R0QET*</Level>
+        <Level>N1HET*</Level>
+        <Level>N1XET*</Level>
+        <Level>R05ET*</Level>
+        <Level>N1EET*</Level>
+        <Level>N1KET*</Level>
+        <Level>N1UET*</Level>
+        <Level>N1VET*</Level>
+        <Level>N27ET*</Level>
+        <Level>N2CET*</Level>
+        <Level>N1DET*</Level>
+        <Level>N1TET*</Level>
+        <Level>N2EET*</Level>
+        <Level>JBET*</Level>
+        <Level>R06ET*</Level>
+        <Level>R07ET*</Level>
+        <Level>N1CET*</Level>
+        <Level>N1QET*</Level>
+        <Level>R0FET*</Level>
+        <Level>N1WET*</Level>
+        <Level>N24ET*</Level>
+        <Level>N22ET*</Level>
+        <Level>N1AET*</Level>
+        <Level>R0AET*</Level>
+        <Level>R0VET*</Level>
+        <Level>R0TET*</Level>
+        <Level>R0JET*</Level>
+        <Level>R0CET*</Level>
+        <Level>JEET*</Level>
+        <Level>N23ET*</Level>
+        <Level>N1MET*</Level>
+        <Level>N1OET*</Level>
+        <Level>N1ZET*</Level>
+        <Level>N1NET*</Level>
+        <Level>N25ET*</Level>
+        <Level>R0IET*</Level>
+        <Level>N20ET*</Level>
+        <Level>R0SET*</Level>
+        <Level>JIET*</Level>
+        <Level>JHET*</Level>
+        <Level>R0HET*</Level>
+        <Level>GNET*</Level>
+        <Level>N14ET*</Level>
+        <Level>N1FET*</Level>
+        <Level>N10ET*</Level>
+        <Level>R02ET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3etn02w.exe</Name>
+        <CRC>2829619BE27FD7C2BAD8D9BC39B00AA26382058AE80063A45FAD477B62939702</CRC>
+        <Size>5962656</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3etn02w.txt</Name>
+        <CRC>F0252194533132639E65DFF96985AFCA0FCD6592C3BFC864D4D4A201C73A6698</CRC>
+        <Size>11726</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>wUe3HX1cfdX348IqiQQPbdjRYvE=</DigestValue></Reference></SignedInfo><SignatureValue>OLEPfQG0ioPZBJE+IHNae/LvB1clDVa3ULjjOI19725tuLmG0uS9OVyujS7cJr45RNaCXzJ8qjP7g0mUb9Kij7zH1xNQg5gIhEP9suQQnpR3w7GDngsXqWXVyQEw3DU84r3MFzMMopuESKlKoD5y2zCwMOPk1a0+9Y7MPer1oyedp7Zj8O+5Mfad9h5m67+qWbi/FZQlk9tijzk/AYFdJQa6J+r5cPfU0ayL5zxZrBfPHVZWJ+843QfVAfs1CKWW1YZuesdvnaYcqmtzXPQ1XnOEg1qhxP++KywdLIP/5W6fzHfqTLDeAAG3uTllW8D5f+0JosxWlcDo9aGNbgOEBA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQNxEb0gSOFAQZejVe5ZfmzjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xNzEyMjAwMDAwMDBaFw0xODEyMjEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4C4sFc5vALA4YXkXUSqebNW766lHwdzfJWWLIx02RvzkzcDZs5Gx5gnQDGan6YXV4JM2kwhbtr9376qB0T+Io7GrgYE8EAIhDCH6isK6JZIisf0MDI3C7t7MP7/7mUa4irWUveJbzZJKJTQIbw/lLz1aXCDajWfPs9tAVcQqnpYmUJChcUjFvp7D1F9caeR0Z4TYm84sfJRNqYO3ipdCue2LgaaLaDUYWbLtSK8+sDiSD+tVNuD6BUe7e5R/wiwfsDM9swSmtVcBk+DViaDUtsSbsQcQPYMy6mBAjCFsSzfyxPhjY3ZDj4u9oq3nJBfSe+koKf5qL+LqxolaWhrbtAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQA3hnPpw6xodQZ1K11eVA36zNHnEhWgMrleFg3fiEom+X1cCBR3rheYzO5gvpathXGeWc+gZ1MF3waJFBzeMAmDa0Xj/1JaY3jSVNQmwISr51BNWCQwEPnVN+T+LABZRziBFHfwATQZC7Y2yQEmjZGCstcF0XmqV43vI2h72OB8l5+oAE7Kow97PJo9QEMh6f0dw+eRYw4Cy76D0QOUVDnu44b5NDDTUPiiTsM8CGRNPhNVX8QnQ5IhlS8BnMjAKL8jS8PmnoBn8iXGIp/Me+CKXdnXGQ4IkEQ5swJx0T5QMC4594M7LSwJHp1iVCM00/2klo4K8IvnZleCQgdlELM6</X509Certificate></X509Data></KeyInfo></Signature></Package>

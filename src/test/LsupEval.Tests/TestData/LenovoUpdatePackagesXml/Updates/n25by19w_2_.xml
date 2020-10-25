@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="LSS_N25BY" id="n25by19w" version="4.0.39.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Smart Standby (Windows 10 Version 1703 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[SWC\LenovoSmartStandby]]></_PnPID>
+    <_PnPID><![CDATA[ACPI\VEN_LEN&DEV_0111]]></_PnPID>
+    <_PnPID><![CDATA[ACPI\LEN0111]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[SWC\LenovoSmartStandby]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0111]]></HardwareID>
+        <HardwareID><![CDATA[ACPI\LEN0111]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n25by19w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-10-09</ReleaseDate>
+  <DiskSpaceNeeded>5378876</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n25by19w.exe /verysilent /DIR=%PACKAGEPATH%\TMP</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n25by19w.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[SWC\LenovoSmartStandby]]></HardwareID>
+      <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0111]]></HardwareID>
+      <HardwareID><![CDATA[ACPI\LEN0111]]></HardwareID>
+      <Date>2019-12-11</Date>
+      <Version>4.0.39.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <And>
+          <_Bios>
+            <Level>N23ET*</Level>
+            <Level>N25ET*</Level>
+            <Level>N1ZET*</Level>
+          </_Bios>
+          <_Driver>
+            <HardwareID><![CDATA[ACPI\VEN_LEN&DEV_0268]]></HardwareID>
+            <HardwareID><![CDATA[ACPI\LEN0268]]></HardwareID>
+            <Version>0.1^</Version>
+          </_Driver>
+        </And>
+        <And>
+          <Not>
+            <_Bios>
+              <Level>N23ET*</Level>
+              <Level>N25ET*</Level>
+              <Level>N1ZET*</Level>
+            </_Bios>
+          </Not>
+          <Or>
+            <_PnPID><![CDATA[ACPI\VEN_LEN&DEV_0111]]></_PnPID>
+            <_PnPID><![CDATA[ACPI\LEN0111]]></_PnPID>
+          </Or>
+        </And>
+      </Or>
+      <Not>
+        <_ExternalDetection rc="0,1">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      </Not>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N23ET*</Level>
+        <Level>N25ET*</Level>
+        <Level>N1ZET*</Level>
+        <Level>N2HET*</Level>
+        <Level>N2XET*</Level>
+        <Level>N2YET*</Level>
+        <Level>R1BET*</Level>
+        <Level>R1CET*</Level>
+        <Level>N2UET*</Level>
+        <Level>N2VET*</Level>
+        <Level>R1FET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n25by19w.exe</Name>
+        <CRC>C1EFDBF9A5867AF8B0E3F411B81D05DFEC5EC99F93987FAD42056B1514DB83E3</CRC>
+        <Size>2010256</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n25by19w.txt</Name>
+        <CRC>6139665F8E55AAB9408172A471FB4B4C39DFAC8035947746732F1A1FD5CC7B09</CRC>
+        <Size>7705</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>jfwwQU2EmxQHgn4knbRkqt/p9i0=</DigestValue></Reference></SignedInfo><SignatureValue>KO59K5IIcTfnWF/35Y/zvof2iUJtCUfp6s35wEDdZrTVUrWcqY7nbdm9GydiiK61xmXcG+Ql4mMZYM5uX4Q/4HPDZn9V2GFwn65ru5EwCoflzyGcO9bP5DrRkBZvxbqOvQyXPaTlMDvK43BlrnQ/SgbatTwBpmMD7cBSodKAG17oaav8sO0Ai1TRmY6J7NLdXVVRtDwscx8HR98AfIwgytikd3LMdoTMLqLzUSKNr4YVAIiB8j8xhiTfXFFj6NDdsIHJ4JL2HDzpEJSRo8kFq/Q9cUOyU0D2RehXeZCNa7NbiKL/YRFIQeT7HgoiFwS2SDz0so2lM2CCpHrd000CZw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

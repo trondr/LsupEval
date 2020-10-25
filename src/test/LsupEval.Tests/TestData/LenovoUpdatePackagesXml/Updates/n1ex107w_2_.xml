@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="MULCD_N1EX1" id="n1ex107w" version="10.0.16299.21304" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Realtek MultiCard Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222E17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222E17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222D17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222D17AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222E17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222E17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222D17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222D17AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1ex107w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-02</ReleaseDate>
+  <DiskSpaceNeeded>16755123</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPInst.exe /s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DPInst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222E17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222E17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222D17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222D17AA]]></HardwareID>
+      <Date>2017-10-19</Date>
+      <Version>10.0.16299.21304^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_525A&SUBSYS_222D17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10EC&DEV_5250&SUBSYS_222D17AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N1EET*</Level>
+        <Level>N1DET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1ex107w.exe</Name>
+        <CRC>DABEF76CA93C5AE0E155F49AEEE5FA0413FD1B5F0258568FDF1223B08794B222</CRC>
+        <Size>2811576</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1ex107w.txt</Name>
+        <CRC>65D92DE7FF5273413EC8ADF794AC47760A31715E09146994A70F09DF686619B2</CRC>
+        <Size>7170</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>RvMaT/FjAH0jd3GAKeGo4/3GPEM=</DigestValue></Reference></SignedInfo><SignatureValue>f0sAChziTf9E0nIvh8Vp5IWyRfdzaKs9lwmtT1yuFYq0HH5ecroRDbcPWEPgx/jxBQHsd4QxFyg3z5EaP0qMnva+oG53Uxn1zbzGRn0YmJtCpGo1ApjZpvRcr62HMzAbzQADYrUkU9XNAlFe7NFJtBPaMRCbx4OiGMjp4OSvEC+PH3DDZylOk5vu05BPfA0BK9pM9pu33MdJILH5Q4w6tsNEclcT/+K4J7o8sK/9MCoHgyALYNvOqikqnHTNdgJunWR+IEAMLyGbT+AUnU1KiA/tCTnues8AuU9vAADFCqsLYsPv/i7xu78+EoIUtf8p7OnzrQvRhXnYiz3w4EGa/w==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IPD_N1AH" id="n1ah208w" version="20.19.15.4424" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Platform Device Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B0&SUBSYS_222A17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B1&SUBSYS_222A17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B8&SUBSYS_222A17AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_22B0&SUBSYS_222A17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_22B1&SUBSYS_222A17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_22B8&SUBSYS_222A17AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1ah208w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2016-09-06</ReleaseDate>
+  <DiskSpaceNeeded>755725720</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s -fo</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_22B0&SUBSYS_222A17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_22B1&SUBSYS_222A17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_22B8&SUBSYS_222A17AA]]></HardwareID>
+      <Date>2016-03-31</Date>
+      <Version>20.19.15.4424^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B0&SUBSYS_222A17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B8&SUBSYS_222A17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_22B1&SUBSYS_222A17AA]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1ah208w.exe</Name>
+        <CRC>2B81B97E80001A1853B739041A37519324A4A2DF</CRC>
+        <Size>124761256</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1ah208w.txt</Name>
+        <CRC>1ECBF12CD59378E91D6DBFE829FE07D11A8993CE</CRC>
+        <Size>9703</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FLWWD_N2VWK" id="n2vwk05w" version="3.8.32.228" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Fibocom L860-GL Wireless WAN Driver (Windows 10 Version 1909 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf" show="False">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_7560&SUBSYS_86011CF8]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0ADA&REV_0100&MI_04]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0B46&REV_0100&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[MBFW\{CA96A539-11B4-49E0-B7E1-01A65AF4A3B3}]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_7560&SUBSYS_86011CF8]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0ADA&REV_0100&MI_04]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0B46&REV_0100&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[MBFW\{CA96A539-11B4-49E0-B7E1-01A65AF4A3B3}]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2vwk05w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-25</ReleaseDate>
+  <DiskSpaceNeeded>723060688</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0, 514, 769, 1073742338" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe /q /se</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\dpinst.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_7560&SUBSYS_86011CF8]]></HardwareID>
+        <Date>2020-06-16</Date>
+        <Version>0.5.100.458^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0ADA&REV_0100&MI_04]]></HardwareID>
+        <Date>2020-06-16</Date>
+        <Version>0.5.100.458^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0B46&REV_0100&MI_00]]></HardwareID>
+        <Date>2020-05-18</Date>
+        <Version>3.19041.3003.1^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[MBFW\{CA96A539-11B4-49E0-B7E1-01A65AF4A3B3}]]></HardwareID>
+        <Date>2020-08-05</Date>
+        <Version>18600.5903.23587.2^</Version>
+      </_Driver>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_7560&SUBSYS_86011CF8]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0ADA&REV_0100&MI_04]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0B46&REV_0100&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[MBFW\{CA96A539-11B4-49E0-B7E1-01A65AF4A3B3}]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2VET*</Level>
+      </_Bios>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3,4,5,6">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2vwk05w.exe</Name>
+        <CRC>55532D58B5EF704ECCCA26630038E3C19D22E4BC58587757EA9B3E01EBAFC0AE</CRC>
+        <Size>353631888</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2vwk05w.txt</Name>
+        <CRC>DA76D61B150BC01BCEA96805EC0356EA3E3F08D22E55D8EAAB2A645F404AC3C2</CRC>
+        <Size>11307</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>4GsM7GnTyMlgHyXWEB6KEK+pV/k=</DigestValue></Reference></SignedInfo><SignatureValue>XJ99P6l19UUwq3LYQy6Zd37YplA9nkasXHcYnQagmzntZZbAPMb+0onoctiCua9d2fpB0lYpwPoyV9tehj+MMI8hn93Cgipzz7RJsc4yzO6V5knkxzm6e6mWOQUd7jVUc3bKAwKLqKVuH1dRVWZWXq5S7WgkxEtLdXiN22vbdO+/gg+PhPE2OBwPqI85iWuzgmdd4gAxiixcdKsQd4O6AXmMkjrnQoYDNxP47o2VVH4fBeNX6qrNUn96RKH4m9IbTtaUnRmg97oxJXMu2ESUDnHfoHxqrAFGbVny8b9yWJSQoy/D/isBxXshxebMFJQYJeP4lOUxwx1XNgIfhhrZ3Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

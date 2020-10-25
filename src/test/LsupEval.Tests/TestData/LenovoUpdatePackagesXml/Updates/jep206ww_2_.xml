@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WINTAB_JEP2_W10" id="jep206ww" version="7.3.1.11" hide="False">
+  <Title default="EN">
+    <Desc id="EN">WinTab Utility - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File">
+    <File>%ProgramFiles%\Tablet\ISD\ISD_Tablet.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <Or>
+        <_FileExists>%ProgramFiles%\Tablet\ISD\ISD_Tablet.exe</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>jep206ww.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-11-18</ReleaseDate>
+  <DiskSpaceNeeded>89368202</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_FileVersion>
+      <File>%ProgramFiles%\Tablet\ISD\ISD_Tablet.exe</File>
+      <Version>7.3.1.11^</Version>
+    </_FileVersion>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_056A&PID_501B]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5024]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5025]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_00EC]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5067]]></_PnPID>
+      </Or>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>jep206ww.exe</Name>
+        <CRC>09C870BE09998512A7A6BE780B856C629511A680</CRC>
+        <Size>12030128</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>jep206ww.txt</Name>
+        <CRC>4A58F5C5A22ECB04DFAD5D771BA03A2035CC927A</CRC>
+        <Size>6913</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

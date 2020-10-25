@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AMD_U2VD_P579" id="u2vdo07ws17" version="15.200.1065" hide="False">
+  <Title default="EN">
+    <Desc id="EN">AMD_External VGA Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Registry">
+    <Registry>
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <ValueName>ProductVersion</ValueName>
+    </Registry>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="3" />
+  <SeverityOverride type="2">
+    <Not>
+      <_RegistryKey>
+        <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      </_RegistryKey>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u2vdo07ws17.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-08-31</ReleaseDate>
+  <DiskSpaceNeeded>953206508</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -install</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_RegistryKeyValue type="REG_SZ">
+      <Key>HKEY_LOCAL_MACHINE\SOFTWARE\ATI Technologies\Install\Packages\W-06-0001-000-001-001-001-00-00</Key>
+      <KeyName>ProductVersion</KeyName>
+      <Version>15.200.1065.0000^</Version>
+    </_RegistryKeyValue>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_68F2]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6608]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6649]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_682C]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_6808]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1002&DEV_692B]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u2vdo07ws17.exe</Name>
+        <CRC>924138D2C045A75A4F7398318DDA02C5F0D21B68</CRC>
+        <Size>336526552</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u2vdo07ws17.txt</Name>
+        <CRC>5FF7ECB658A10873A47CCD59A4C4A988D9A67021</CRC>
+        <Size>6365</Size>
+      </File>
+    </Readme>
+  </Files>
+</Package>

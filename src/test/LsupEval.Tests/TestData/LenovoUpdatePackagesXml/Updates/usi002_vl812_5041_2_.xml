@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FW_USI_VIA" id="usi002_vl812_5041" version="5041" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad Pro/Ultra Dock VIA Firmware - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>usi002_vl812_5041.exe /VERYSILENT /DIR=%PACKAGEPATH%</ExtractCommand>
+  <ReleaseDate>2015-08-31</ReleaseDate>
+  <DiskSpaceNeeded>2391344</DiskSpaceNeeded>
+  <Reboot type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /verysilent</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_1010]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_1012]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_1013]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\usi002_vl812_5041_version.exe</_ExternalDetection>
+      <Or>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+          <_RegistryKey>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{240C3DDD-C5E9-4029-9DF7-95650D040CF2}</Key>
+            <Key>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{240C3DDD-C5E9-4029-9DF7-95650D040CF2}</Key>
+          </_RegistryKey>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>usi002_vl812_5041.exe</Name>
+        <CRC>6A54442735B7D49CC6A1044FF08CC4872679D0A7</CRC>
+        <Size>1277720</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>usi002_vl812_5041.txt</Name>
+        <CRC>8F55247BB2CC3BC2323DC2A671378E0972D30118</CRC>
+        <Size>7085</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>usi002_vl812_5041_version.exe</Name>
+        <CRC>1F64EC8C4D0C451FCFD7393B44781E19F5DAD95D</CRC>
+        <Size>45888</Size>
+      </File>
+    </External>
+  </Files>
+</Package>

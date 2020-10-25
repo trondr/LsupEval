@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="AUDIO_U3AUD_W10" id="u3aud03w_w10" version="1.31.38.31" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Generic Conexant USB Audio driver for Docks and Adapters - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_17EF&PID_3063&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_306A&MI_00]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_17EF&PID_3083&MI_00]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_3063&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_306A&MI_00]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_17EF&PID_3083&MI_00]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3aud03w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2019-02-14</ReleaseDate>
+  <DiskSpaceNeeded>52669984</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1024" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_3063&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_306A&MI_00]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_17EF&PID_3083&MI_00]]></HardwareID>
+      <Date>2018-10-30</Date>
+      <Version>1.31.38.31^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N29ET*</Level>
+        <Level>R0TET*</Level>
+        <Level>R0JET*</Level>
+        <Level>R0NET*</Level>
+        <Level>R04ET*</Level>
+        <Level>R0RET*</Level>
+        <Level>R0QET*</Level>
+        <Level>N1VET*</Level>
+        <Level>N2CET*</Level>
+        <Level>N2EET*</Level>
+        <Level>N27ET*</Level>
+        <Level>N1QET*</Level>
+        <Level>N1WET*</Level>
+        <Level>N24ET*</Level>
+        <Level>N22ET*</Level>
+        <Level>N1MET*</Level>
+        <Level>N23ET*</Level>
+        <Level>N1OET*</Level>
+        <Level>N1ZET*</Level>
+        <Level>N1NET*</Level>
+        <Level>N25ET*</Level>
+        <Level>R0IET*</Level>
+        <Level>N20ET*</Level>
+        <Level>R0SET*</Level>
+        <Level>R0HET*</Level>
+      </_Bios>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_306A&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_3063&MI_00]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_3083&MI_00]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3aud03w.exe</Name>
+        <CRC>87C47A39CD6E736EB2576B9F2462E88C7092E949095792F5C94F4A956B940177</CRC>
+        <Size>19397784</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3aud03w.txt</Name>
+        <CRC>5120990D5DDC85AA4C1BEA63937ECB6CD90B71CE1A2765DD15B8D03431DD92D3</CRC>
+        <Size>4215</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>2gQ4XitlsBo2bfAeacyaSEmYAdo=</DigestValue></Reference></SignedInfo><SignatureValue>QDwJTqVwy12j3v7Sj95rfYYarxx0B9k62t/xBeDAg61nyGEPB2r7xpnRQ8nWYyxWpc3vKwrj5Ijs02goq6vckySI/+QCh/0VYlHEnVqcIUPuwmQStpmv7IBO14KPnzJ7WBWAGjNxjUT+k3rPNzKHoX+LGZfySVj36FMEhKMHrdM97pYZvVRM4aq9DE83QbRvV44XNdEpRFYFU0UmNdJ168PpqacEiNRGscIMCKlSNy9FwhZ02Df8ENHWpsH3lkv5V2xT7B4tzAmJgDWGOX9XVZx5mC/gl55YItI6KxqwEPnVQ/ff3Oa1JVF4DebkHaVHjhLOEUTvZD13F29P56HSmA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>

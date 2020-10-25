@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WINTAB_R0SP2" id="r0sp215w" version="7.6.2.46" hide="False">
+  <Title default="EN">
+    <Desc id="EN">WinTab Utility Driver- 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_056A&PID_5150]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_056A&PID_5151]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_056A&PID_5152]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_056A&PID_5153]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_056A&PID_5154]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_056A&PID_5155]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5150]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5151]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5152]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5153]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5154]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5155]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0sp215w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-09-01</ReleaseDate>
+  <DiskSpaceNeeded>44316313</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\r0sp215w.exe /VERYSILENT /DIR=%PACKAGEPATH%\TMP</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\r0sp215w.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5150]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5151]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5152]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5153]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5154]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_056A&PID_5155]]></HardwareID>
+        <Date>2020-06-12</Date>
+        <Version>7.6.2.46^</Version>
+      </_Driver>
+      <_Driver>
+        <HardwareID><![CDATA[SWC\VID_056A&PID_F004]]></HardwareID>
+        <Date>2020-08-14</Date>
+        <Version>7.6.1.57^</Version>
+      </_Driver>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5150]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5151]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5152]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5153]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5154]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_056A&PID_5155]]></_PnPID>
+      </Or>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0SET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0sp215w.exe</Name>
+        <CRC>FF11561D9653B1FE5AC752B5EFD3BC41152EBC476100C5986A68DB2B7998D81A</CRC>
+        <Size>11524784</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0sp215w.txt</Name>
+        <CRC>AA2855D7A4EC11293D65A63450E1966D20912B2847632EED9FDE128AA53651F4</CRC>
+        <Size>9183</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>sdyMmkOsA+HvbTLAsFTxKvjQRMw=</DigestValue></Reference></SignedInfo><SignatureValue>hQRVuzbDb2hjbf9Xqqn/33tGA2QOQNd/6ZF5kKBjGcHeZtG/vPfORibfAtSAuirjbUBt91RquVfeGhQ5xCvvgjCQHekBdf0blTHWAxR92MoMt4g6XApIgnBfXv75OBusHJmhS169MbL4YdLHreSKWlxjNIyWTw+pM+/n3jJ6cgI+SDQUNpDvWairkEsZBZSWD+2qeIegCbeekj9/3qtceCqQWLh6+dQjfRYSbTQ+9g0QBjU11dJ3pMO3jSXxV5W949O/tEHpBkblsZNWRrNdY5PgHJzyD0zaKwkv1Mfvanw42wng1fB8hJasog+nbxf03leT1I7PSmUcLOwEd0G8zA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>
