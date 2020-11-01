@@ -204,15 +204,18 @@ module Registry=
                 |None -> false
                 |Some vd ->                
                     let rvd = (vd.Value:?>string)
-                    match registryKeyValuePattern.Value with
-                    |Value v -> v = rvd
-                    |Version v -> 
-                        let verPattern = LsupEval.Version.versionPatternUnsafe v
-                        let ver = LsupEval.Version.versionUnsafe rvd                        
-                        LsupEval.Version.isVersionPatternMatch ver verPattern
-                    |Level v -> 
-                        let regEx = toRegEx v
-                        regEx.IsMatch(rvd)
+                    match String.IsNullOrWhiteSpace(rvd) with
+                    |true -> false
+                    |false ->
+                        match registryKeyValuePattern.Value with
+                        |Value v -> v = rvd
+                        |Version v -> 
+                            let verPattern = LsupEval.Version.versionPatternUnsafe v
+                            let ver = LsupEval.Version.versionUnsafe rvd                        
+                            LsupEval.Version.isVersionPatternMatch ver verPattern
+                        |Level v -> 
+                            let regEx = toRegEx v
+                            regEx.IsMatch(rvd)
             else
                 false
         isMatch        

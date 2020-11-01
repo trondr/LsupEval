@@ -1134,4 +1134,30 @@ module LsupTest =
         match testResult with        
         |Result.Ok v -> Assert.IsTrue(not (System.String.IsNullOrWhiteSpace(v.BiosVersion)),"Did not expect success")
         |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
-    
+
+    open LsupEval.Registry
+    type internal RegistryTestData ={ValueName:string;Value:string;PatternValueName:string;PatternValue:string;IsMatch:bool}
+    let testKey = {Hive=Microsoft.Win32.Registry.LocalMachine;SubKeyPath="SOFTWARE\\WOW6432Node\\Intel\\ME"}
+    let internal registryTestData =        
+        [|
+            yield {ValueName="MEIVersion"; Value="";PatternValueName="MEIVersion";PatternValue="11.7.0.1040^";IsMatch=false}
+            yield {ValueName="MEIVersion"; Value="11.7.0.1040";PatternValueName="MEIVersion";PatternValue="11.7.0.1040^";IsMatch=true}
+        |]
+
+    [<Test>]
+    [<TestCaseSource("registryTestData")>]
+    let isRegistryKeyValueMatchTest (testDataObject:obj) =
+        let testData = (testDataObject:?>RegistryTestData)        
+        let registryKeyValue =
+            let valueData = Some { Value=testData.Value; ValueKind=RegValueKind.RegSz}
+            LsupEval.Registry.toRegistryKeyValue testKey testData.ValueName valueData
+        let registryKeyValuePattern =
+            {
+                Key = testKey
+                ValueName = testData.PatternValueName
+                ValueKind = RegValueKind.RegSz
+                Value = LsupEval.Registry.ValuePattern.Version testData.PatternValue
+            }
+        let actualIsMatch = LsupEval.Registry.isRegistryKeyValueMatch logger registryKeyValuePattern registryKeyValue
+        Assert.AreEqual(testData.IsMatch,actualIsMatch,"Registry value match was not as expected.")
+        ()    
