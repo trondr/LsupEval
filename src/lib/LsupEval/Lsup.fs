@@ -432,11 +432,27 @@ module Lsup =
         |Result.Ok cr -> ApplicabilityRule.Coreq cr
         |Result.Error ex -> raise ex
         
+    //Check if xml string is an xml element (rooted)
+    let isXmlRooted xmlString = 
+        try
+            XElement.Parse(xmlString) |> ignore
+            true
+        with
+        | _ -> 
+            false
+
+    let toValidApplicabilityRule (applicabilityXml:string) =
+        if (isXmlRooted applicabilityXml) then
+            applicabilityXml
+        else
+            sprintf "<And>%s</And>" applicabilityXml
+
     let rec lsupXmlToApplicabilityRules (logger:Common.Logging.ILog) (applicabilityXml:string) : ApplicabilityRule =
         let nameTable = new NameTable()
         let namespaceManager = new XmlNamespaceManager(nameTable);
         let xmlParserContext = XmlParserContext(null,namespaceManager,null,XmlSpace.None)
-        use xmlReader = new XmlTextReader(applicabilityXml,XmlNodeType.Element,xmlParserContext)
+        let normalizedApplicabilityXml = toValidApplicabilityRule applicabilityXml
+        use xmlReader = new XmlTextReader(normalizedApplicabilityXml,XmlNodeType.Element,xmlParserContext)
         let xElement = XElement.Load(xmlReader)
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Processing ApplicabilityRule element: %s" xElement.Name.LocalName))|>ignore))
         let applicabilityRules =
@@ -480,4 +496,4 @@ module Lsup =
             let! xElement = loadLsuPackageXElement xDocument
             let! lsuPackage = loadLsuPackage xElement
             return lsuPackage
-        }        
+        }
