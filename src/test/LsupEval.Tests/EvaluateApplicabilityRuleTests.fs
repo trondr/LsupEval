@@ -16,7 +16,7 @@ module EvaluateApplicabilityRuleTests =
     //let testDataFolderPath = System.IO.Path.Combine(assemblyFile.Directory.Parent.Parent.Parent.FullName,"TestData")
     let testDataFolderPath = @"E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData"
     let externalFilesFolder = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\ExternalFiles")
-    let systemInfo = LsupEval.Rules.getCurrentSystemInformation()
+    let systemInfo = LsupEval.Rules.getCurrentSystemInformation'()
     type internal TestData ={FileName:string}
     let internal testData =        
         [|

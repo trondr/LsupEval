@@ -13,6 +13,7 @@ module Rules =
     open LsupEval.PnPId
     open LsupEval.ExternalDetection
     open LsupEval.Coreq
+    open MBrace.FsPickler
 
     let logger = Logging.getLoggerByName "Rules"
 
@@ -47,6 +48,7 @@ module Rules =
             PnPIds:string[]
         }
 
+    //This function is expensive as it takes approx 45 seconds to run. Consider implementing a caching mechanism in front of this function.
     let getCurrentSystemInformation() =
         result{
             let! biosVersion = Bios.getCurrentBiosVersion()        
@@ -67,6 +69,27 @@ module Rules =
                     PnPIds = pnpIds
                 }
         }
+
+    let getCurrentSystemInformation' () =
+        result{
+            let cachePath = "c:\\temp\\systeminformation.xml"
+            let pickle = MBrace.FsPickler.FsPickler.CreateXmlSerializer(indent = true)
+            //let pickle = MBrace.FsPickler.FsPickler.CreateBinarySerializer()
+            let! systemInformation =
+                if(File.fileExists cachePath) then
+                    use sr = new System.IO.StreamReader(cachePath)
+                    Result.Ok (pickle.Deserialize<SystemInformation>(sr))
+                else
+                    let sysInfoResult = getCurrentSystemInformation()
+                    match sysInfoResult with
+                    |Error _ -> sysInfoResult
+                    |Ok info ->
+                        use sw = new System.IO.StreamWriter(cachePath)
+                        pickle.Serialize<SystemInformation>(sw,info)
+                        sysInfoResult                    
+            return systemInformation
+        }
+        
 
     let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo workingDirectory applicabilityRule =
         match applicabilityRule with

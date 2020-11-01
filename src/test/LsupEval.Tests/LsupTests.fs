@@ -1122,4 +1122,16 @@ module LsupTest =
         match testResult with        
         |Result.Ok v -> Assert.IsTrue(not (System.String.IsNullOrWhiteSpace(v.BiosVersion)),"Did not expect success")
         |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
+
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let getSystemInformation'Test () =
+        let testResult = result{
+                let! systemInformation = LsupEval.Rules.getCurrentSystemInformation'()
+                return systemInformation
+            }
+        match testResult with        
+        |Result.Ok v -> Assert.IsTrue(not (System.String.IsNullOrWhiteSpace(v.BiosVersion)),"Did not expect success")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
     
