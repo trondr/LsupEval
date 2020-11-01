@@ -6,9 +6,4 @@ src/test/LsupEval.Tests/obj/
 _NCrunch_LsupEval/
 LsupEval.v3.ncrunchsolution.user
 src/test/LsupEval.Tests/LsupEval.Tests.v3.ncrunchproject.user
-src/test/LsupEval.Tests/TestData/LenovoUpdatePackagesXml/ExternalFiles/ETDTPFPFW.log
-src/test/LsupEval.Tests/TestData/LenovoUpdatePackagesXml/ExternalFiles/fwchksd.log
-src/test/LsupEval.Tests/TestData/LenovoUpdatePackagesXml/ExternalFiles/Lenovo-Thunderbolt-3-Essential-Dock_00-00-00-00-00-00_20201025230555.log
-src/test/LsupEval.Tests/TestData/LenovoUpdatePackagesXml/ExternalFiles/Lenovo-Thunderbolt-3-Essential-Dock_00-00-00-00-00-00_20201025235254.log
-src/test/LsupEval.Tests/TestData/LenovoUpdatePackagesXml/ExternalFiles/TPS65988_DTool.log
-src/test/LsupEval.Tests/TestData/LenovoUpdatePackagesXml/ExternalFiles/Lenovo-Thunderbolt-3-Essential-Dock_00-00-00-00-00-00_20201101163413.log
+*.log
