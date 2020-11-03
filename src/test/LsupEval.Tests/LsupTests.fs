@@ -4,6 +4,7 @@ module LsupTest =
     
     open NUnit.Framework
     open LsupEval;
+    open LsupEval.LsupData
 
     let logger = LsupEval.Logging.getLoggerByName "Rules"
     
@@ -39,7 +40,7 @@ module LsupTest =
             Assert.AreEqual("ISDAS_NZ3GS",p.Name,"Package.Name")
             Assert.AreEqual("2.7.100.2",p.Version,"Package.Version")
             Assert.AreEqual(false,p.Hide,"Package.Hide")
-            Assert.AreEqual(Lsup.LsuRebootType.RebootRequired,p.RebootType,"Package.RebootType")
+            Assert.AreEqual(LsupData.LsuRebootType.RebootRequired,p.RebootType,"Package.RebootType")
             Assert.AreEqual("Intel® SGX Device and Software (Windows 10 Version 1709 or later) - 10 [64]",p.Title,"Package.Title")
             match p.DetectInstall with
             |None -> Assert.Fail("DetectInstall is None")
@@ -215,7 +216,7 @@ module LsupTest =
             }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         printf "%A" applicabilityRule
-        let actual = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationFalse workingDirectory applicabilityRule 
+        let actual = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationFalse workingDirectory None applicabilityRule 
         let expecedFalse = false
         Assert.AreEqual(expecedFalse,actual,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationFalse)
 
@@ -244,7 +245,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -273,7 +274,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -302,7 +303,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -354,7 +355,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules2
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -383,7 +384,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -401,7 +402,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -428,7 +429,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -455,7 +456,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists2
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaulation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -485,7 +486,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -515,7 +516,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion2
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -544,7 +545,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -573,7 +574,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang2
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -603,7 +604,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyExist
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -633,7 +634,7 @@ module LsupTest =
             PnPIds = [||]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyExist2
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -665,7 +666,7 @@ module LsupTest =
             PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesPnPIds
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -694,7 +695,7 @@ module LsupTest =
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesPnPIds2
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -732,7 +733,7 @@ module LsupTest =
             PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -770,7 +771,7 @@ module LsupTest =
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue2
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -808,7 +809,7 @@ module LsupTest =
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue3
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = true
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -846,7 +847,7 @@ module LsupTest =
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue4
-        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+        let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
         let expectedTrue = false
         Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
         ()
@@ -877,7 +878,7 @@ module LsupTest =
          PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
      }
      let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesExternalDetection
-     let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+     let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
      let expectedTrue = true
      Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
      ()
@@ -907,7 +908,7 @@ module LsupTest =
          PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
      }
      let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesExternalDetection2
-     let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory applicabilityRule 
+     let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
      let expectedTrue = false
      Assert.AreEqual(expectedTrue,actual2,sprintf "Evaluation of applicability rule '%A' with  system information '%A'" applicabilityRule systemInformationTrue)
      ()

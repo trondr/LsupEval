@@ -13,6 +13,7 @@ module Rules =
     open LsupEval.PnPId
     open LsupEval.ExternalDetection
     open LsupEval.Coreq
+    open LsupEval.LsupData
     open MBrace.FsPickler
 
     let logger = Logging.getLoggerByName "Rules"
@@ -91,7 +92,7 @@ module Rules =
         }
         
 
-    let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo workingDirectory applicabilityRule =        
+    let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo workingDirectory (lsuPackages: LsuPackage[] option) applicabilityRule =
         match applicabilityRule with
         |True -> 
             let isMatch = true
@@ -102,15 +103,15 @@ module Rules =
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating False rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |And al -> 
-            let isMatch = al |> Seq.forall (evaluateApplicabilityRule logger systemInfo workingDirectory)
+            let isMatch = al |> Seq.forall (evaluateApplicabilityRule logger systemInfo workingDirectory lsuPackages)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating And rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |Or al -> 
-            let isMatch = al |> Seq.exists (evaluateApplicabilityRule logger systemInfo workingDirectory)
+            let isMatch = al |> Seq.exists (evaluateApplicabilityRule logger systemInfo workingDirectory lsuPackages)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating Or rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |Not al -> 
-            let isMatch = not (evaluateApplicabilityRule logger systemInfo workingDirectory al)
+            let isMatch = not (evaluateApplicabilityRule logger systemInfo workingDirectory lsuPackages al)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating Not rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |Bios bios ->
