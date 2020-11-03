@@ -490,10 +490,20 @@ module Lsup =
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Lsup converted to ApplicabilityRule: %A" applicabilityRules))|>ignore))
         applicabilityRules
 
-    let loadLsuPackageFromFile (file:string) : Result<LsuPackage,Exception> =
+    let loadLsuPackageFromFile file : Result<LsuPackage,Exception> =
         result{
             let! xDocument = loadLsuPackageXDocument file
             let! xElement = loadLsuPackageXElement xDocument
             let! lsuPackage = loadLsuPackage xElement
             return lsuPackage
         }
+
+    let loadLsuPackagesFromFiles files  : Result<seq<LsuPackage>,Exception> =
+        let lsuPackageResults =
+            files
+            |> Array.map loadLsuPackageFromFile
+            |> Array.toSeq
+            |>toAccumulatedResult
+        lsuPackageResults
+
+        
