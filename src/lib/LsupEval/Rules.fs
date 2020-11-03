@@ -91,7 +91,7 @@ module Rules =
         }
         
 
-    let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo workingDirectory applicabilityRule =
+    let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo workingDirectory applicabilityRule =        
         match applicabilityRule with
         |True -> 
             let isMatch = true
@@ -172,14 +172,11 @@ module Rules =
             //1. Execute command line
             let processExitData = LsupEval.ExternalDetection.executeCommandLine externalDetection.CommandLine workingDirectory
             logger.Info(new Msg(fun m -> m.Invoke( (sprintf "External detection executed and exited with:\n'%A'" processExitData))|>ignore))
-
             //2. Check return codes
             let isMatch = LsupEval.ExternalDetection.returnCodeIsMatch processExitData.ExitCode externalDetection.ReturnCodes
-            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating external detection rule: '%A' with '%A'. Return: %b" applicabilityRule externalDetection isMatch))|>ignore))
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating external detection rule: '%A' with '%A', Exit code %A. Return: %b" applicabilityRule externalDetection processExitData.ExitCode isMatch))|>ignore))
             isMatch
-
         |Coreq coreqElement ->
             let isMatch = false
             logger.Error(new Msg(fun m -> m.Invoke( (sprintf "Coreq rule evaluation not implemented: '%A' with '%A'. Return: %b" applicabilityRule coreqElement isMatch))|>ignore))
             isMatch
-            

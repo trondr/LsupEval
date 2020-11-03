@@ -5,6 +5,7 @@ module ExternalDetection =
     open System.Diagnostics
     open LsupEval.CommandLineExtensions
     open LsupEval.ProcessOperations
+    open LsupEval.Logging
 
     type ExternalDetection =
         {
@@ -53,7 +54,10 @@ module ExternalDetection =
         |Result.Error ex -> raise (toException (sprintf "Failed to execute external detection command '%s'. It is required that the file to be executed is present in the working directory '%s' and if required that the process is started elevated." resolvedCommandLine workingDirectory) (Some ex))
 
     let returnCodeIsMatch rc returnCodes =
-        returnCodes 
-        |> Array.filter(fun c -> rc = c) //Check if return code is in the list of valid return codes.
-        |> Array.tryHead //If valid return code was found Some return code is returned, otherwise None
-        |> toBoolean //If Some -> true, if None -> false
+        let isMatch =
+            returnCodes 
+            |> Array.filter(fun c -> rc = c) //Check if return code is in the list of valid return codes.
+            |> Array.tryHead //If valid return code was found Some return code is returned, otherwise None
+            |> toBoolean //If Some -> true, if None -> false
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing return codes: '%A' with driver external detection return code '%A'. Return: %b" returnCodes rc isMatch))|>ignore))
+        isMatch
