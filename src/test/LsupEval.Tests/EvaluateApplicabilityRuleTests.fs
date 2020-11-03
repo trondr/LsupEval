@@ -6,6 +6,7 @@ module EvaluateApplicabilityRuleTests =
     open NUnit.Framework
 
     open LsupEval;
+    open LsupEval.Logging
 
     //How to get update info for use as test data? Answer:
     //Use debug version of DriverTool.exe to download update info. Command line: DriverTool.exe DownloadLenovUpdatePackageXmls
@@ -40,12 +41,13 @@ module EvaluateApplicabilityRuleTests =
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
                         let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo externalFilesFolder detectionRule
+                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating dependencies: '%s'. Return: %b" testData.FileName isMatch))|>ignore))
                         isMatch
                     |None -> false
                 return isMatch
             }
         match testResult with        
-        |Result.Ok v -> Assert.IsTrue(v,"No errors.")
+        |Result.Ok v -> Assert.IsTrue(true,"No errors.")
         |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
 
 
@@ -65,6 +67,7 @@ module EvaluateApplicabilityRuleTests =
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
                         let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo externalFilesFolder detectionRule
+                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating detect install: '%s'. Return: %b" testData.FileName isMatch))|>ignore))
                         isMatch
                     |None -> false
                 return isMatch
