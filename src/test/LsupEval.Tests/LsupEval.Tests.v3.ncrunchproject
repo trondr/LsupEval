@@ -1,6 +1,8 @@
 ﻿<ProjectConfiguration>
   <Settings>
-    <HiddenComponentWarnings />
+    <HiddenComponentWarnings>
+      <Value>LongTestTimesWithoutParallelExecution</Value>
+    </HiddenComponentWarnings>
     <IgnoredTests>
       <NamedTestSelector>
         <TestName>LsupEval.Tests.LsupTest.getPnpDevicesTests </TestName>
