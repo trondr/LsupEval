@@ -1146,6 +1146,7 @@ module LsupTest =
 
     [<Test>]
     [<TestCaseSource("registryTestData")>]
+    [<Category(TestCategory.UnitTests)>]
     let isRegistryKeyValueMatchTest (testDataObject:obj) =
         let testData = (testDataObject:?>RegistryTestData)        
         let registryKeyValue =
