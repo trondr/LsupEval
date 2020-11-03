@@ -2709,3 +2709,45 @@ module UpdatesTestData =
             "v10fp20w_64_2_.xml";            
         |]
 
+    let P50UpdateFiles = [|
+        "n1msk20w_1064_2_.xml";
+        "n1msa20w_1032_2_.xml";
+        "hlud10ww_rs_2_.xml";
+        "n1eca13w_rek_2_.xml";
+        "n1eca13w_sun_2_.xml";
+        "n1dww20w_2_.xml";
+        "n1edl40w_2_.xml";
+        "n1ex107w_2_.xml";
+        "n1eva09w_2_.xml";
+        "n1coi07w_2_.xml";
+        "n1ete11w_2_.xml";
+        "n1drg64w_2_.xml";
+        "n1cra36w_2_.xml";
+        "hvg225ww_2_.xml";
+        "n1euj44w_2_.xml";
+        "nz1wn14w_2_.xml";
+        "n1ei210w_2_.xml";
+        "n1dwt10w_2_.xml";
+        "n1etf08w_2_.xml";
+        "n1ca511w_2_.xml";
+        "nz1w528w_2_.xml";
+        "n1eh113w_2_.xml";
+        "nz1it05w_2_.xml";
+        "fwnva39_2_.xml";
+        "r0yvu32w_2_.xml";
+        "n1cgn09w_2_.xml";
+        "nz1rv01w_2_.xml";
+        "nz1ry05w_2_.xml";
+        "n1ucq05w_rtk_2_.xml";
+        "n1ucq05w_sun_2_.xml";
+        "nz3wn11w_2_.xml";
+        "pcc1316742ww_2_.xml";
+        "fwdptv08_2_.xml";
+        "nz3gs07w_2_.xml";
+        "u3etn02w_w10_2_.xml";
+        "n2hku07w_x64_skl_2_.xml";
+        "n2hku07w_x86_skl_2_.xml";
+        "n1fup88w_2_.xml";
+        "suutspatchww01_2_.xml";        
+    |]
+

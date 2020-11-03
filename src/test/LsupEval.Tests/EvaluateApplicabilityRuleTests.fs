@@ -20,7 +20,7 @@ module EvaluateApplicabilityRuleTests =
     type internal TestData ={FileName:string}
     let internal testData =        
         [|
-            for fileName in UpdatesTestData.UpdateFiles do
+            for fileName in UpdatesTestData.P50UpdateFiles do
                 yield {FileName = fileName}            
         |]
 
