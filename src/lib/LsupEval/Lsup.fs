@@ -403,6 +403,8 @@ module Lsup =
             |"_RegistryKeyValue" -> (toRegistryKeyValue xElement)
             |"_ExternalDetection" -> (toExternalDetection xElement)
             |"_Coreq" -> (toCoreq xElement)
+            |"True" -> ApplicabilityRule.True
+            |"False" -> ApplicabilityRule.False
             |"And" -> 
                 ApplicabilityRule.And (
                     xElement.Elements()
