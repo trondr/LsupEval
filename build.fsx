@@ -74,12 +74,12 @@ Target.create "Test" (fun _ ->
 )
 
 Target.create "Publish" (fun _ ->
-    Trace.trace "Publishing app..."
-    let assemblyVersion = getVersion (System.IO.Path.Combine(buildLibFolder,"lsupeval.dll"))
-    !! ("build/lib/**/*.nupkg")
-    |> Shell.copy artifactFolder
-    !! ("artifact/**/*.nupkg")
-    |> Shell.copy "E:\NugetRepository"
+    Trace.trace "Publishing app..."    
+    let files = 
+        !! ("build/lib/**/*.nupkg")
+        ++ ("build/lib/**/*.snupkg")
+    files |> Shell.copy artifactFolder    
+    files|> Shell.copy "E:\NugetRepository"
 )
 
 Target.create "Default" (fun _ ->

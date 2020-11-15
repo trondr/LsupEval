@@ -15,6 +15,8 @@
     <Version>1.0.20144-alpha</Version>
     <PackageReleaseNotes>1.0.20144</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
