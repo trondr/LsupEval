@@ -4,7 +4,6 @@ module EvaluateApplicabilityRuleTests =
     
     open System.IO
     open NUnit.Framework
-
     open LsupEval;
     open LsupEval.Logging
 
@@ -15,8 +14,7 @@ module EvaluateApplicabilityRuleTests =
 
     //let assemblyFile = new System.IO.FileInfo((new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath)
     //let testDataFolderPath = System.IO.Path.Combine(assemblyFile.Directory.Parent.Parent.Parent.FullName,"TestData")
-    let testDataFolderPath = @"E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData"
-    let externalFilesFolder = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\ExternalFiles")
+    
     let systemInfo = LsupEval.Rules.getCurrentSystemInformation'()
     type internal TestData ={FileName:string; AllUpdateFiles:string[]}
     let internal testData =        
@@ -33,16 +31,16 @@ module EvaluateApplicabilityRuleTests =
         let testResult = 
             result{
                 let testData = (testDataObject:?>TestData)
-                let lsuPackageFilePath = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\Updates",testData.FileName)
+                let lsuPackageFilePath = System.IO.Path.Combine(UpdatesTestData.UpdateFilesFolder,testData.FileName)
                 let! lsuPackage = LsupEval.Lsup.loadLsuPackageFromFile(lsuPackageFilePath)
-                let lsuPackageFilePaths = testData.AllUpdateFiles |> Array.map (fun f -> System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\Updates",f))
+                let lsuPackageFilePaths = testData.AllUpdateFiles |> Array.map (fun f -> System.IO.Path.Combine(UpdatesTestData.UpdateFilesFolder,f))
                 let! lsuPackages = LsupEval.Lsup.loadLsuPackagesFromFiles(lsuPackageFilePaths)
                 let! sysInfo = systemInfo
                 let isMatch =
                     match lsuPackage.Dependencies with                
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
-                        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo externalFilesFolder (Some (lsuPackages|>Seq.toArray)) detectionRule 
+                        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder (Some (lsuPackages|>Seq.toArray)) detectionRule 
                         logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating dependencies: '%s'. Return: %b" testData.FileName isMatch))|>ignore))
                         isMatch
                     |None -> false
@@ -61,14 +59,14 @@ module EvaluateApplicabilityRuleTests =
         let testResult = 
             result{
                 let testData = (testDataObject:?>TestData)
-                let lsuPackageFilePath = System.IO.Path.Combine(testDataFolderPath,"LenovoUpdatePackagesXml\\Updates",testData.FileName)
+                let lsuPackageFilePath = System.IO.Path.Combine(UpdatesTestData.UpdateFilesFolder,testData.FileName)
                 let! lsuPackage = LsupEval.Lsup.loadLsuPackageFromFile(lsuPackageFilePath)                
                 let! sysInfo = systemInfo
                 let isMatch =
                     match lsuPackage.DetectInstall with                
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
-                        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo externalFilesFolder None detectionRule
+                        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder None detectionRule
                         logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating detect install: '%s'. Return: %b" testData.FileName isMatch))|>ignore))
                         isMatch
                     |None -> false

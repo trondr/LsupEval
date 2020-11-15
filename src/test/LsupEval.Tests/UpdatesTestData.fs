@@ -1,7 +1,18 @@
 ﻿namespace LsupEval.Tests
 
 module UpdatesTestData =
-
+    
+    let TestDataFolderPath = 
+        //Hardcoding, must be changed if develop catalog is changed
+        let testDataFolder = @"E:\Dev\github.trondr\LsupEval\src\test\LsupEval.Tests\TestData"
+        if(System.IO.Directory.Exists(testDataFolder)) then
+            testDataFolder
+        else
+            failwith (sprintf "Test data folder '%s' not found. Change this hardcoding to reflect your development setup." testDataFolder)
+    
+    let ExternalFilesFolder = System.IO.Path.Combine(TestDataFolderPath,"LenovoUpdatePackagesXml","ExternalFiles")
+    let UpdateFilesFolder = System.IO.Path.Combine(TestDataFolderPath,"LenovoUpdatePackagesXml","Updates")
+    
     let UpdateFiles = [|
             "1j1amt084b_2_.xml";
             "1j1chp027b_2_.xml";

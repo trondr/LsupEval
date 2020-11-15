@@ -11,7 +11,8 @@ module LsupTest =
     [<Test>]
     [<Category(TestCategory.ManualTests)>]
     let ``loadLsuPackageXDocument xml file exists return OK`` () =
-        let actual = Lsup.loadLsuPackageXDocument @"C:\Temp\LenovoUpdatePackagesXml\nz3gs07w_2_.xml"
+        let existingUpdateFile = System.IO.Path.Combine(UpdatesTestData.UpdateFilesFolder,"nz3gs07w_2_.xml")
+        let actual = Lsup.loadLsuPackageXDocument existingUpdateFile
         match actual with
         |Result.Ok _ -> Assert.IsTrue(true)
         |Result.Error ex -> Assert.Fail(ex.Message)
@@ -20,11 +21,14 @@ module LsupTest =
     [<Test>]
     [<Category(TestCategory.ManualTests)>]
     let ``loadLsuPackageXDocument xml file does not exists return Error`` () =
-        let actual = Lsup.loadLsuPackageXDocument @"C:\Temp\LenovoUpdatePackagesXml\nz3gs07w_2_Does_Not_Exist.xml"
+        let nonExistingUpdateFile = System.IO.Path.Combine(UpdatesTestData.UpdateFilesFolder,"nz3gs07w_2_DoesNotExist.xml")
+        let actual = Lsup.loadLsuPackageXDocument nonExistingUpdateFile
         match actual with
         |Result.Ok _ -> Assert.IsTrue(false, "Expected error result")
-        |Result.Error ex -> Assert.AreEqual("Failed to load 'C:\\Temp\\LenovoUpdatePackagesXml\\nz3gs07w_2_Does_Not_Exist.xml'. Could not find file 'C:\\Temp\\LenovoUpdatePackagesXml\\nz3gs07w_2_Does_Not_Exist.xml'.",ex.Message)
-
+        |Result.Error ex -> 
+            Assert.IsTrue(ex.Message.Contains("Failed to load"))
+            Assert.IsTrue(ex.Message.Contains("Could not find file"))
+            Assert.IsTrue(ex.Message.Contains("nz3gs07w_2_DoesNotExist.xml"),"Error message does not contain file name.")
 
     [<Test>]
     [<Category(TestCategory.ManualTests)>]

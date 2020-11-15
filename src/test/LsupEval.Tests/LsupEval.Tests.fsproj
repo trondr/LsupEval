@@ -7,9 +7,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <Compile Include="TestCategory.fs" />
+    <Compile Include="UpdatesTestData.fs" />
     <Compile Include="CommandLineExtensionTests.fs" />
     <Compile Include="LsupTests.fs" />
-    <Compile Include="UpdatesTestData.fs" />
     <Compile Include="EvaluateApplicabilityRuleTests.fs" />
   </ItemGroup>
 
