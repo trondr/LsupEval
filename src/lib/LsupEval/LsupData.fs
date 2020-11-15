@@ -2,6 +2,17 @@
 
 module LsupData=
     open System
+    open LsupEval.Bios
+    open LsupEval.Cpu
+    open LsupEval.OperatingSystem
+    open LsupEval.Driver
+    open LsupEval.EmbeddedController
+    open LsupEval.File
+    open LsupEval.Registry
+    open LsupEval.PnPId
+    open LsupEval.ExternalDetection
+    open LsupEval.Coreq    
+    open MBrace.FsPickler
 
     type LsuRebootType = Default=0|RebootForced=1|Reserved=2|RebootRequired=3|Shutdown=4|RebootDelayed=5
     type LsuSeverityType = Default=0|Critical=1|Recommended=2|Optional=3|Extra=9|Offer=10
@@ -72,3 +83,35 @@ module LsupData=
         Files:LsuFiles
     }
 
+
+
+    type ApplicabilityRule =
+        |True
+        |False
+        |And of ApplicabilityRule seq
+        |Or of ApplicabilityRule seq
+        |Not of ApplicabilityRule
+        |Bios of Bios
+        |CpuAddressWidth of CpuAddressWidth
+        |Os of Os
+        |OsLang of OsLang
+        |Driver of DriverElement
+        |EmbeddedControllerVersion of EmbeddedControllerVersionElement
+        |FileExists of FileExistsElement
+        |FileVersion of FileVersionPattern
+        |RegistryKeyExists of RegistryKeyExistPattern
+        |PnPId of PnPIdPattern
+        |RegistryKeyValue of RegistryKeyValuePattern
+        |ExternalDetection of ExternalDetection
+        |Coreq of CoreqElement
+        
+    type SystemInformation =
+        {
+            BiosVersion:string
+            CpuAddressWidth:Cpu.CpuAddressWidth
+            Os:string
+            OsLang:string
+            Drivers: DriverInfo[]
+            EmbeddedControllerVersion:string
+            PnPIds:string[]
+        }

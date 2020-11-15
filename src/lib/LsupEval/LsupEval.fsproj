@@ -38,8 +38,8 @@
     <Compile Include="ProcessOperations.fs" />
     <Compile Include="ExternalDetection.fs" />
     <Compile Include="LsupData.fs" />
-    <Compile Include="Rules.fs" />
     <Compile Include="Lsup.fs" />
+    <Compile Include="Rules.fs" />
   </ItemGroup>
 
   <ItemGroup>

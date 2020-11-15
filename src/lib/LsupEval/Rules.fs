@@ -18,36 +18,7 @@ module Rules =
 
     let logger = Logging.getLoggerByName "Rules"
 
-    type ApplicabilityRule =
-        |True
-        |False
-        |And of ApplicabilityRule seq
-        |Or of ApplicabilityRule seq
-        |Not of ApplicabilityRule
-        |Bios of Bios
-        |CpuAddressWidth of CpuAddressWidth
-        |Os of Os
-        |OsLang of OsLang
-        |Driver of DriverElement
-        |EmbeddedControllerVersion of EmbeddedControllerVersionElement
-        |FileExists of FileExistsElement
-        |FileVersion of FileVersionPattern
-        |RegistryKeyExists of RegistryKeyExistPattern
-        |PnPId of PnPIdPattern
-        |RegistryKeyValue of RegistryKeyValuePattern
-        |ExternalDetection of ExternalDetection
-        |Coreq of CoreqElement
-            
-    type SystemInformation =
-        {
-            BiosVersion:string
-            CpuAddressWidth:Cpu.CpuAddressWidth
-            Os:string
-            OsLang:string
-            Drivers: DriverInfo[]
-            EmbeddedControllerVersion:string
-            PnPIds:string[]
-        }
+
 
     //This function is expensive as it takes approx 45 seconds to run. Consider implementing a caching mechanism in front of this function.
     let getCurrentSystemInformation() =
