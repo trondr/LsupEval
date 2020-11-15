@@ -3,8 +3,7 @@
 module Lsup =
     open System
     open System.Xml
-    open System.Xml.Linq
-    open LsupEval.Rules
+    open System.Xml.Linq    
     open LsupEval.Logging
     open LsupEval.Registry
     open LsupEval.LsupData
@@ -17,6 +16,13 @@ module Lsup =
         with
         |ex ->
             Result.Error (toException (sprintf "Failed to load '%s'. %s" filePath  ex.Message) (Some ex))
+
+    let loadLsuPackageXDocumentFromString (xmlString:string) =
+        try
+            Result.Ok (XDocument.Parse(xmlString))
+        with
+        |ex ->
+            Result.Error (toException (sprintf "Failed to load '%s'. %s" xmlString  ex.Message) (Some ex))
 
     let loadLsuPackageXElement (lsuPackageXDocument:XDocument) =        
             Result.Ok lsuPackageXDocument.Root
@@ -424,6 +430,14 @@ module Lsup =
             |_ -> raise (new NotSupportedException(sprintf "Applicability rule for '%s' is not implemented." xElement.Name.LocalName))
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Lsup converted to ApplicabilityRule: %A" applicabilityRules))|>ignore))
         applicabilityRules
+
+    let loadLsuPackageFromString xmlString : Result<LsuPackage,Exception> =
+        result{
+            let! xDocument = loadLsuPackageXDocumentFromString xmlString
+            let! xElement = loadLsuPackageXElement xDocument
+            let! lsuPackage = loadLsuPackage xElement
+            return lsuPackage
+        }
 
     let loadLsuPackageFromFile file : Result<LsuPackage,Exception> =
         result{
