@@ -318,8 +318,8 @@ module Driver =
             match hardwareIdElementDriverDate with
             |None -> true
             |Some date ->         
-                hardwareInfoDriverDate < date
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver  date: '%A' with driver date pattern '%A'. Return: %b" (Some hardwareInfoDriverDate) hardwareIdElementDriverDate isMatch))|>ignore))
+                hardwareInfoDriverDate <= date
+        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver date: '%A' with driver date pattern '%A'. Return: %b" (Some hardwareInfoDriverDate) hardwareIdElementDriverDate isMatch))|>ignore))
         isMatch
 
     let isDriverVersionMatch currentDriverVersion newDriverVersion =
