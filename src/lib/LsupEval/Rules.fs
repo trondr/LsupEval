@@ -150,6 +150,30 @@ module Rules =
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating external detection rule: '%A' with '%A', Exit code %A. Return: %b" applicabilityRule externalDetection processExitData.ExitCode isMatch))|>ignore))
             isMatch
         |Coreq coreqElement ->
-            let isMatch = false
-            logger.Error(new Msg(fun m -> m.Invoke( (sprintf "Coreq rule evaluation not implemented: '%A' with '%A'. Return: %b" applicabilityRule coreqElement isMatch))|>ignore))
+            let isMatch = 
+                match lsuPackages with
+                |Some ps ->
+                    let matchingPackages = 
+                        ps 
+                        |> Array.filter (fun p -> p.Name = coreqElement.Name) //Find coreq package
+                        |> Array.filter (fun p ->                             //Return true if it is installed, otherwise false
+                                match p.DetectInstall with
+                                |Some di ->                                
+                                    let detectInstallApplicabilityRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger di
+                                    let isInstalled =  evaluateApplicabilityRule logger systemInfo workingDirectory lsuPackages detectInstallApplicabilityRule
+                                    isInstalled
+                                |None ->
+                                    logger.Error(new Msg(fun m -> m.Invoke( (sprintf "Not possible to detect install of Coreq '%A' with '%A' because package %s do not have a detect install element." applicabilityRule coreqElement p.Name))|>ignore))
+                                    false
+                            )
+                    if(Array.length matchingPackages > 0) then
+                        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Found that coreq package '%A' is installed." coreqElement))|>ignore))
+                        true
+                    else
+                        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Did not find that coreq package '%A' is installed." coreqElement))|>ignore))
+                        false
+                |None ->
+                    logger.Error(new Msg(fun m -> m.Invoke( (sprintf "Coreq rule evaluation failed because list of update packages was not provided to the evaulation. '%A' with '%A'" applicabilityRule coreqElement))|>ignore))
+                    false            
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating coreq rule: '%A'. with %A. Return: %b" applicabilityRule coreqElement isMatch))|>ignore))
             isMatch

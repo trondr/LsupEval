@@ -5,7 +5,7 @@ module LsupTest =
     open NUnit.Framework
     open LsupEval;
     open LsupEval.LsupData
-
+    open LsupEval.Logging
     let logger = LsupEval.Logging.getLoggerByName "Rules"
     
     [<Test>]
@@ -1167,3 +1167,210 @@ module LsupTest =
         let actualIsMatch = LsupEval.Registry.isRegistryKeyValueMatch logger registryKeyValuePattern registryKeyValue
         Assert.AreEqual(testData.IsMatch,actualIsMatch,"Registry value match was not as expected.")
         ()    
+
+    let testUpdate1 = """<?xml version="1.0" encoding="utf-8"?>
+    <?pcdDescriptor version="0230"?>
+    <Package name="PMD_N2HKU_32_SKL" id="n2hku07w_x86_skl" version="1.67.16.42" hide="False">
+      <Title default="EN">
+        <Desc id="EN">Lenovo Power Management Driver - 7/8/8.1/10 [32]</Desc>
+      </Title>
+      <ReleaseDate>2019-12-18</ReleaseDate>
+        <Reboot type="3" />  
+      <Install rc="0,1,1073741825" type="cmd" default="EN">
+        <Cmdline id="EN">%PACKAGEPATH%\dpinst_x86.exe /s</Cmdline>
+      </Install>
+      <ManualInstall type="cmd" default="EN">
+        <Cmdline id="EN">%PACKAGEPATH%\dpinst_x86.exe</Cmdline>
+      </ManualInstall>
+      <Uninstall />
+      <DetectInstall>
+        <False/>
+      </DetectInstall>
+      <Dependencies>
+        <And>
+          <False/>
+        </And>
+      </Dependencies>
+      <Files>
+        <Installer>
+          <File>
+            <Name>n2hku07w_x86.exe</Name>
+            <CRC>8FA675656A50F06197AE8A29FF36B4DD4CA3F8C564CE3E91A0938259463EB8A0</CRC>
+            <Size>1905472</Size>
+          </File>
+        </Installer>
+        <Readme default="EN">
+          <File id="EN">
+            <Name>n2hku07w.txt</Name>
+            <CRC>00C3070610857AF8284D71FF00F77F0633A07B18C059DB84E31E21796C613813</CRC>
+            <Size>41736</Size>
+          </File>
+        </Readme>
+      </Files>
+    </Package>        
+                """
+
+    let testUpdate2 = """<?xml version="1.0" encoding="utf-8"?>
+    <?pcdDescriptor version="0230"?>
+    <Package name="PMD_N2HKU_64_SKL" id="n2hku07w_x64_skl" version="1.67.16.42" hide="False">
+      <Title default="EN">
+        <Desc id="EN">Lenovo Power Management Driver - 7/8/8.1/10 [64]</Desc>
+      </Title>
+      <ReleaseDate>2019-12-18</ReleaseDate>
+      <Reboot type="3" />  
+      <DetectInstall>
+        <And>
+          <True/>
+    	  <True/>
+        </And>
+      </DetectInstall>
+      <Dependencies>
+        <And>
+          <True/>
+    	  <True/>
+        </And>
+      </Dependencies>
+      <Files>
+        <Installer>
+          <File>
+            <Name>n2hku07w_x64.exe</Name>
+            <CRC>D341EA61F07D8C77A50A4165EBE02A9F5BCF4D4E2143475C199D885284C2DBB3</CRC>
+            <Size>1905488</Size>
+          </File>
+        </Installer>
+        <Readme default="EN">
+          <File id="EN">
+            <Name>n2hku07w.txt</Name>
+            <CRC>00C3070610857AF8284D71FF00F77F0633A07B18C059DB84E31E21796C613813</CRC>
+            <Size>41736</Size>
+          </File>
+        </Readme>
+      </Files>
+    </Package>
+                """
+
+    let testUpdate3 = """<?xml version="1.0" encoding="utf-8"?>
+    <?pcdDescriptor version="0230"?>
+    <Package name="HOTKEYPACK4_W10" id="r0yvu32w" version="9.2.0.1" hide="False">
+      <Title default="EN">
+        <Desc id="EN">ThinkPad Hotkey Features Integration Package Setup - 10 [64]</Desc>
+      </Title>  
+      <ReleaseDate>2020-09-29</ReleaseDate>  
+      <Reboot type="0" />  
+      <DetectInstall>
+        <And>
+    		<True/>
+    		<False/>
+    	</And>
+      </DetectInstall>
+      <Dependencies>
+        <And>
+    		<_Coreq name="PMD_N2HKU_64_SKL">
+              <Version>0.1^</Version>
+            </_Coreq>
+        </And>
+      </Dependencies>
+      <Files>
+        <Installer>
+          <File>
+            <Name>r0yvu32w.exe</Name>
+            <CRC>8157C62CB497156B43AA19E658768D3C49050A204CDF892E01B7A855BB03EF4E</CRC>
+            <Size>10542896</Size>
+          </File>
+        </Installer>
+        <Readme default="EN">
+          <File id="EN">
+            <Name>r0yvu32w.txt</Name>
+            <CRC>F9E59D68966BE8C72ED0DF76A0D4FE971F0EE47F352FE26A6DBF42EA592B6EC0</CRC>
+            <Size>100550</Size>
+          </File>
+        </Readme>
+      </Files>
+    </Package>
+                """
+
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isCoreqMatchTest - Coreq is installed `` () =
+        let testResult =
+            result{        
+                let! update1 = LsupEval.Lsup.loadLsuPackageFromString testUpdate1
+                let! update2 = LsupEval.Lsup.loadLsuPackageFromString testUpdate2
+                let! update3 = LsupEval.Lsup.loadLsuPackageFromString testUpdate3
+                let lsuPackages = [|update1;update2;update3|]
+                let! sysInfo = LsupEval.Rules.getCurrentSystemInformation'()
+                let isMatch =
+                    match update3.Dependencies with                
+                    |Some d ->                    
+                        let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
+                        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder (Some lsuPackages) detectionRule 
+                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating dependencies: '%s'. Return: %b" update3.Name isMatch))|>ignore))
+                        isMatch
+                    |None -> false
+                return isMatch
+            }
+        match testResult with        
+        |Result.Ok v -> Assert.IsTrue(v,"No errors.")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
+
+    let testUpdate2NotInstalled = """<?xml version="1.0" encoding="utf-8"?>
+     <?pcdDescriptor version="0230"?>
+     <Package name="PMD_N2HKU_64_SKL" id="n2hku07w_x64_skl" version="1.67.16.42" hide="False">
+       <Title default="EN">
+         <Desc id="EN">Lenovo Power Management Driver - 7/8/8.1/10 [64]</Desc>
+       </Title>
+       <ReleaseDate>2019-12-18</ReleaseDate>
+       <Reboot type="3" />  
+       <DetectInstall>
+         <And>
+           <True/>
+     	  <False/>
+         </And>
+       </DetectInstall>
+       <Dependencies>
+         <And>
+           <True/>
+     	  <True/>
+         </And>
+       </Dependencies>
+       <Files>
+         <Installer>
+           <File>
+             <Name>n2hku07w_x64.exe</Name>
+             <CRC>D341EA61F07D8C77A50A4165EBE02A9F5BCF4D4E2143475C199D885284C2DBB3</CRC>
+             <Size>1905488</Size>
+           </File>
+         </Installer>
+         <Readme default="EN">
+           <File id="EN">
+             <Name>n2hku07w.txt</Name>
+             <CRC>00C3070610857AF8284D71FF00F77F0633A07B18C059DB84E31E21796C613813</CRC>
+             <Size>41736</Size>
+           </File>
+         </Readme>
+       </Files>
+     </Package>
+                 """
+    [<Test>]
+    [<Category(TestCategory.UnitTests)>]
+    let ``isCoreqMatchTest - Coreq is not installed `` () =
+        let testResult =
+            result{        
+                let! update1 = LsupEval.Lsup.loadLsuPackageFromString testUpdate1
+                let! update2 = LsupEval.Lsup.loadLsuPackageFromString testUpdate2NotInstalled
+                let! update3 = LsupEval.Lsup.loadLsuPackageFromString testUpdate3
+                let lsuPackages = [|update1;update2;update3|]
+                let! sysInfo = LsupEval.Rules.getCurrentSystemInformation'()
+                let isMatch =
+                    match update3.Dependencies with                
+                    |Some d ->                    
+                        let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
+                        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder (Some lsuPackages) detectionRule 
+                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating dependencies: '%s'. Return: %b" update3.Name isMatch))|>ignore))
+                        isMatch
+                    |None -> false
+                return isMatch
+            }
+        match testResult with        
+        |Result.Ok v -> Assert.IsFalse(v,"No errors.")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
