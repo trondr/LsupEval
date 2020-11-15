@@ -7,3 +7,9 @@ _NCrunch_LsupEval/
 LsupEval.v3.ncrunchsolution.user
 src/test/LsupEval.Tests/LsupEval.Tests.v3.ncrunchproject.user
 *.log
+.fake/
+build/
+packages/
+artifact/
+TestResult.xml
+build.fsx.lock

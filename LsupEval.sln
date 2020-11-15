@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "LsupEval", "src\lib\LsupEval\LsupEval.fsproj", "{660A6B0C-B427-4F7F-BA8C-4F0AF63961F4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LsupEval.Tests", "src\test\LsupEval.Tests\LsupEval.Tests.fsproj", "{D983859E-0FF1-436E-99E1-8B28ABD6CE0A}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "LsupEval.Tests", "src\test\LsupEval.Tests\LsupEval.Tests.fsproj", "{D983859E-0FF1-436E-99E1-8B28ABD6CE0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{081253E7-5C29-4042-A394-B31E9E2826F9}"
+	ProjectSection(SolutionItems) = preProject
+		build.fsx = build.fsx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
