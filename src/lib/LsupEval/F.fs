@@ -56,3 +56,6 @@ module F =
 
     let any predicate source =
         source|>Seq.filter predicate|>Seq.tryHead|>toBoolean
+
+    let expandEvironmentVariables text =
+        System.Environment.ExpandEnvironmentVariables(text)

@@ -145,7 +145,8 @@ module Rules =
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating FileExists rule: '%A' with '%A'. Return: %b" applicabilityRule files isMatch))|>ignore))
             isMatch
         |FileVersion fileversionPattern ->
-            let fileVersionExists = fileExists fileversionPattern.FilePath
+            let filePath = expandEvironmentVariables fileversionPattern.FilePath
+            let fileVersionExists = fileExists filePath
             match fileVersionExists with
             | true ->
                 let fileVersion = LsupEval.File.getFileVersionFromFileVersionPattern fileversionPattern
