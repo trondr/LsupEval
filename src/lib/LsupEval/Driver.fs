@@ -313,12 +313,16 @@ module Driver =
         let regex = toRegEx hardwareIdPattern
         regex.IsMatch(hardwareId)
 
+    ///Remove time information from the date
+    let absoluteDate (dateTime:DateTime) =
+        new DateTime(dateTime.Year,dateTime.Month,dateTime.Day)        
+            
     let isDriverDateMatch (hardwareInfoDriverDate:DateTime) (hardwareIdElementDriverDate:DateTime option) =
         let isMatch =
             match hardwareIdElementDriverDate with
             |None -> true
             |Some date ->         
-                hardwareInfoDriverDate <= date
+                (absoluteDate hardwareInfoDriverDate) <= (absoluteDate date)
         logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver date: '%A' with driver date pattern '%A'. Return: %b" (Some hardwareInfoDriverDate) hardwareIdElementDriverDate isMatch))|>ignore))
         isMatch
 

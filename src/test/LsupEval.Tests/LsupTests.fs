@@ -1380,33 +1380,39 @@ module LsupTest =
     [<Test>]
     [<Category(TestCategory.ManualTests)>]
     let detectInstallTest_Driver_IsInstalled_IsTrue () =
-        let detectInstall1 = """
-        <_Driver>
-          <HardwareID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></HardwareID>
-          <Date>2020-04-03</Date>
-          <Version>9.2.0.1^</Version>
-        </_Driver>
-                    """
-        let driverInfo =             
-            Driver.DriverInfo.Hardware
-                               {
-                                   HardwareIds=Some [|"{5425BAE1-FDEE-4761-BB5E-14706E8DC386}"|]
-                                   CompatibleIds = [||]
-                                   Name="Fn and function keys"
-                                   Date=(new System.DateTime(2020,04,03))
-                                   Version= (Driver.Version "9.2.0.1")
-                                   ProviderName="Lenovo"
-                               }
+        match(result{        
+            let detectInstall1 = """
+            <_Driver>
+              <HardwareID><![CDATA[{5425BAE1-FDEE-4761-BB5E-14706E8DC386}]]></HardwareID>
+              <Date>2020-04-03</Date>
+              <Version>9.2.0.1^</Version>
+            </_Driver>
+                        """
+            let driverInfo =             
+                Driver.DriverInfo.Hardware
+                                   {
+                                       HardwareIds=Some [|"{5425BAE1-FDEE-4761-BB5E-14706E8DC386}"|]
+                                       CompatibleIds = [||]
+                                       Name="Fn and function keys"
+                                       Date=(new System.DateTime(2020,04,03,2,00,0))
+                                       Version= (Driver.Version "9.2.0.1")
+                                       ProviderName="Lenovo"
+                                   }
         
-        let systemInformationTrue = { 
-                   BiosVersion = "N1XET1234567"
-                   CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
-                   Os = "WIN10"
-                   OsLang="JP"
-                   Drivers= [|driverInfo|]
-                   EmbeddedControllerVersion="1.17"
-                   PnPIds = [||]
-               }
-        let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger detectInstall1
-        let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue UpdatesTestData.ExternalFilesFolder None detectionRule
-        Assert.IsTrue(isMatch)
+            let systemInformationTrue = { 
+                       BiosVersion = "N1XET1234567"
+                       CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+                       Os = "WIN10"
+                       OsLang="JP"
+                       Drivers= [|driverInfo|]
+                       EmbeddedControllerVersion="1.17"
+                       PnPIds = [||]
+                   }
+            
+            let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger detectInstall1
+            let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue UpdatesTestData.ExternalFilesFolder None detectionRule
+            Assert.IsTrue(isMatch)
+            return isMatch
+        })with
+        |Result.Ok v -> Assert.IsTrue(v,"No errors.")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())

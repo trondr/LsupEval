@@ -12,7 +12,7 @@
     <PackageTags>Evaluate Dependencies DetectInstall Lenovo Package</PackageTags>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.20144.0</FileVersion>
-    <Version>1.0.20144-alpha</Version>
+    <Version>1.0.20144-alpha3</Version>
     <PackageReleaseNotes>1.0.20144</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<IncludeSymbols>true</IncludeSymbols>
