@@ -377,32 +377,34 @@ module Driver =
         isMatch
 
     let isDriverMatch (logger:Common.Logging.ILog) driver (installedDrivers:seq<DriverInfo>) =
-        match driver with
-        |HardwareIdElements hw ->                        
-            let isMatch =
-                installedDrivers
-                |>Seq.map(fun d -> 
-                    match d with
-                    |DriverInfo.Hardware h -> Some h
-                    |DriverInfo.File _ -> None
-                    )
-                |>Seq.choose id
-                |>Seq.filter (fun h -> isHardwareMatch hw h)
-                |>Seq.tryHead |> toBoolean
-            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" installedDrivers hw isMatch))|>ignore))
-            isMatch            
-        |FileElement fileElement -> 
-            let isMatch =
-                installedDrivers
-                |>Seq.map(fun d -> 
-                    match d with
-                    |DriverInfo.Hardware _ -> None
-                    |DriverInfo.File f -> Some f
-                    )
-                |>Seq.choose id
-                |>Seq.filter (fun file -> (isDriverFileMatch fileElement file))
-                |>Seq.tryHead |> toBoolean
-            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver file version: '%A' with driver file pattern '%A'. Return: %b" installedDrivers fileElement isMatch))|>ignore))
-            isMatch            
-        |ServiceNameElement s ->
-            raise (new NotImplementedException("Evaluation of ServiceNameElement"))
+        let isDriverMatch =
+            match driver with
+            |HardwareIdElements hw ->                        
+                let isMatch =
+                    installedDrivers
+                    |>Seq.map(fun d -> 
+                        match d with
+                        |DriverInfo.Hardware h -> Some h
+                        |DriverInfo.File _ -> None
+                        )
+                    |>Seq.choose id
+                    |>Seq.filter (fun h -> isHardwareMatch hw h)
+                    |>Seq.tryHead |> toBoolean
+                logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" installedDrivers hw isMatch))|>ignore))
+                isMatch            
+            |FileElement fileElement -> 
+                let isMatch =
+                    installedDrivers
+                    |>Seq.map(fun d -> 
+                        match d with
+                        |DriverInfo.Hardware _ -> None
+                        |DriverInfo.File f -> Some f
+                        )
+                    |>Seq.choose id
+                    |>Seq.filter (fun file -> (isDriverFileMatch fileElement file))
+                    |>Seq.tryHead |> toBoolean
+                logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver file version: '%A' with driver file pattern '%A'. Return: %b" installedDrivers fileElement isMatch))|>ignore))
+                isMatch            
+            |ServiceNameElement s ->
+                raise (new NotImplementedException("Evaluation of ServiceNameElement"))
+        isDriverMatch

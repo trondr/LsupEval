@@ -1416,3 +1416,26 @@ module LsupTest =
         })with
         |Result.Ok v -> Assert.IsTrue(v,"No errors.")
         |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    let detectInstallTest2_Driver_IsInstalled_IsTrue () =
+        match(result{        
+            let detectInstall1 = """
+                <_Driver>
+                  <HardwareID><![CDATA[PCI\VEN_8086&DEV_A13A]]></HardwareID>
+                  <HardwareID><![CDATA[PCI\VEN_8086&DEV_9D3A]]></HardwareID>
+                  <Date>2020-07-28</Date>
+                  <Version>2031.15.0.1743^</Version>
+                </_Driver>
+                        """
+                        
+            let! systemInformation = getCurrentSystemInformation'()
+            
+            let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger detectInstall1
+            let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger systemInformation UpdatesTestData.ExternalFilesFolder None detectionRule
+            Assert.IsTrue(isMatch)
+            return isMatch
+        })with
+        |Result.Ok v -> Assert.IsTrue(v,"No errors.")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
