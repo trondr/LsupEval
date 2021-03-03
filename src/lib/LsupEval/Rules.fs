@@ -4,6 +4,7 @@ module Rules =
     open System    
     open Logging
     open LsupEval.Bios
+    open LsupEval.Windows
     open LsupEval.Cpu
     open LsupEval.OperatingSystem
     open LsupEval.Driver
@@ -30,6 +31,7 @@ module Rules =
             let! embeddedControllerVersion = getCurrentEmbeddedControllerVersion()
             let! osLang = LsupEval.OperatingSystem.getCurrentOsLanguage()
             let pnpIds = LsupEval.PnPId.getCurrentPnpIds drivers
+            let windowsBuildVersion = LsupEval.Windows.getWindowsBuildVersion()
             return 
                 {
                     BiosVersion = biosVersion
@@ -39,6 +41,7 @@ module Rules =
                     Drivers = drivers
                     EmbeddedControllerVersion = embeddedControllerVersion
                     PnPIds = pnpIds
+                    WindowsBuildVersion = windowsBuildVersion
                 }
         }
 
@@ -61,7 +64,6 @@ module Rules =
                         sysInfoResult                    
             return systemInformation
         }
-        
 
     let rec evaluateApplicabilityRule (logger:Common.Logging.ILog) systemInfo workingDirectory (lsuPackages: LsuPackage[] option) applicabilityRule =
         match applicabilityRule with
@@ -88,6 +90,10 @@ module Rules =
         |Bios bios ->
             let isMatch = (isBiosMatch logger bios systemInfo.BiosVersion)
             logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating BIOS rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
+            isMatch
+        |WindowsBuildVersion windowsBuildVersion ->
+            let isMatch = (isWindowsBuildVersionMatch logger windowsBuildVersion systemInfo.WindowsBuildVersion)
+            logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Evaluating WindowsBuildVersion rule: '%A'. Return: %b" applicabilityRule isMatch))|>ignore))
             isMatch
         |CpuAddressWidth cpuAddressWidth ->
             let isMatch = (isCpuAddressWidthMatch logger cpuAddressWidth systemInfo.CpuAddressWidth)

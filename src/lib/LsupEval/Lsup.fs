@@ -218,6 +218,10 @@ module Lsup =
         let versions = levels|>Seq.map (fun (x:XElement) -> x.Value)|>Seq.toArray
         ApplicabilityRule.Bios {Versions=versions}
 
+    let internal toWindowsBuildVersion (xElement:XElement) =
+        let windowsBuildVersionLevel = Windows.WindowsBuildVersion.VersionElement (xElement.Element(xn "Version").Value)        
+        ApplicabilityRule.WindowsBuildVersion windowsBuildVersionLevel
+
     let internal toCpuAddressWidth (xElement:XElement) =
         let addressWidth = xElement.Element(xn "AddressWidth")
         let cpuAddressWidth =  Convert.ToUInt16(addressWidth.Value)
@@ -397,6 +401,7 @@ module Lsup =
         let applicabilityRules =
             match xElement.Name.LocalName with
             |"_Bios" -> (toBios xElement)
+            |"_WindowsBuildVersion" -> (toWindowsBuildVersion xElement)
             |"_CPUAddressWidth" -> (toCpuAddressWidth xElement)
             |"_OS" -> (toOperatingSystem xElement)
             |"_OSLang" -> (toOsLanguage xElement)

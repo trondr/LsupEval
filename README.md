@@ -18,8 +18,9 @@ Implemented detection rules
 
 | Base Applicability Rule | Status      |  Comment    |
 |-------------------------|-------------|-------------|
-| _AddRemovePrograms      | &#x274C;    | Not in use by any known Lenovo update packages (2020-10-24)|
-| _Bios			              | &#x2714;    ||
+| _AddRemovePrograms      | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
+| _Bios			          | &#x2714;    ||
+| _WindowsBuildVersion    | &#x2714;    ||
 | _BiosDate               | &#x274C;    |Not in use by any known Lenovo update packages (2020-10-24)|
 | _CpuAddressWidth        | &#x2714;    ||
 | _Driver                 | &#x2714;    ||

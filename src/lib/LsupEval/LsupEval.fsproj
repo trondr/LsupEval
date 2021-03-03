@@ -4,16 +4,16 @@
     <TargetFramework>net452</TargetFramework>
     <Description>Evaluate Dependencies and DetectInstall elements defined in an Lenovo System Update Package xml.</Description>
     <Authors>github.com/trondr</Authors>
-    <Copyright>Copyright © github.com/trondr 2020</Copyright>
+    <Copyright>Copyright © github.com/trondr 2020-2021</Copyright>
     <PackageLicenseFile>LICENSE.TXT</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/trondr/LsupEval</PackageProjectUrl>
     <RepositoryUrl>https://github.com/trondr/LsupEval.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Evaluate Dependencies DetectInstall Lenovo Update Package Xml</PackageTags>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.20336.0</FileVersion>
-    <Version>1.0.20336-alpha4</Version>
-    <PackageReleaseNotes>1.0.20336</PackageReleaseNotes>
+    <FileVersion>1.0.21063.0</FileVersion>
+    <Version>1.0.21063-alpha5</Version>
+    <PackageReleaseNotes>1.0.21063</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -30,6 +30,7 @@
     <Compile Include="File.fs" />
     <Compile Include="Registry.fs" />
     <Compile Include="Bios.fs" />
+    <Compile Include="Windows.fs" />
     <Compile Include="EmbeddedController.fs" />
     <Compile Include="Cpu.fs" />
     <Compile Include="OperatingSystem.fs" />

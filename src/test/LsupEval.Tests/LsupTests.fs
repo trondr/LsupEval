@@ -217,6 +217,7 @@ module LsupTest =
                 Drivers= [||]
                 EmbeddedControllerVersion="1.17"
                 PnPIds = [||]
+                WindowsBuildVersion = "16299"
             }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         printf "%A" applicabilityRule
@@ -247,6 +248,7 @@ module LsupTest =
                 |]
             EmbeddedControllerVersion="1.17"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -276,6 +278,7 @@ module LsupTest =
                 |]
             EmbeddedControllerVersion="1.17"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -305,6 +308,7 @@ module LsupTest =
                 |]
             EmbeddedControllerVersion="1.17"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -357,6 +361,7 @@ module LsupTest =
                 |]
             EmbeddedControllerVersion="1.17"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -386,6 +391,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -404,6 +410,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.17"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRules3
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -431,6 +438,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -458,6 +466,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileExists2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -488,6 +497,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -518,6 +528,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesFileVersion2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -547,6 +558,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"      
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -576,6 +588,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"   
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesOsLang2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -606,6 +619,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"        
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyExist
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -636,6 +650,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [||]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyExist2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -668,6 +683,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"        
             PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesPnPIds
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -697,6 +713,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesPnPIds2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -735,6 +752,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"        
             PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -773,6 +791,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue2
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -811,6 +830,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue3
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -849,6 +869,7 @@ module LsupTest =
             Drivers= [||]
             EmbeddedControllerVersion="1.21"
             PnPIds = [|"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+            WindowsBuildVersion = "16299"
         }
         let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesRegistryKeyValue4
         let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -880,6 +901,7 @@ module LsupTest =
          Drivers= [||]
          EmbeddedControllerVersion="1.21"        
          PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+         WindowsBuildVersion = "16299"
      }
      let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesExternalDetection
      let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -910,6 +932,7 @@ module LsupTest =
          Drivers= [||]
          EmbeddedControllerVersion="1.21"        
          PnPIds = [|"PCI\VEN_8086&DEV_2826&CC_0104";"PCI\VEN_8086&DEV_2826";"PCI\VEN_8086&DEV_201D"|]
+         WindowsBuildVersion = "16299"
      }
      let applicabilityRule = Lsup.lsupXmlToApplicabilityRules logger applicabiliyRulesExternalDetection2
      let actual2 = LsupEval.Rules.evaluateApplicabilityRule logger systemInformationTrue workingDirectory None applicabilityRule 
@@ -1407,6 +1430,7 @@ module LsupTest =
                        Drivers= [|driverInfo|]
                        EmbeddedControllerVersion="1.17"
                        PnPIds = [||]
+                       WindowsBuildVersion = "16299"
                    }
             
             let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger detectInstall1
@@ -1438,4 +1462,65 @@ module LsupTest =
             return isMatch
         })with
         |Result.Ok v -> Assert.IsTrue(v,"No errors.")
+        |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())
+
+
+    [<Test>]
+    [<Category(TestCategory.ManualTests)>]
+    [<TestCase("16299^","16299",true)>]
+    [<TestCase("16299^","17299",true)>]
+    [<TestCase("^16299","17299",false)>]
+    [<TestCase("^16299","15299",true)>]
+    [<TestCase("16299","15299",false)>]
+    [<TestCase("16299","16299",true)>]
+    [<TestCase("16299","17299",false)>]
+    let dependencies_WindowsBuildVersion_IsMatch (versionPattern:string,currentWindowsBuildVersion:string,expectedIsMatch:bool) =
+        match(result{
+            let dependencies = (sprintf "
+            <And>
+                <_OS>
+                  <OS>WIN10</OS>
+                  <OS>WIN10.*</OS>
+                  <OS>WIN10-ENT</OS>
+                  <OS>WIN10-ENT.*</OS>
+                  <OS>WIN10-PRO</OS>
+                  <OS>WIN10-PRO.*</OS>
+                </_OS>
+                <_CPUAddressWidth>
+                  <AddressWidth>64</AddressWidth>
+                </_CPUAddressWidth>                        
+                <_WindowsBuildVersion>
+                  <Version>%s</Version>
+                </_WindowsBuildVersion>
+            </And>" versionPattern)
+
+            let driverInfo =             
+                Driver.DriverInfo.Hardware
+                                   {
+                                       HardwareIds=Some [|"{5425BAE1-FDEE-4761-BB5E-14706E8DC386}"|]
+                                       CompatibleIds = [||]
+                                       Name="Fn and function keys"
+                                       Date=(new System.DateTime(2020,04,03,2,00,0))
+                                       Version= (Driver.Version "9.2.0.1")
+                                       ProviderName="Lenovo"
+                                   }
+            
+            let systemInformation =  
+                { 
+                    BiosVersion = "N1XET1234567"
+                    CpuAddressWidth = Cpu.CpuAddressWidth.Bit64
+                    Os = "WIN10"
+                    OsLang="JP"
+                    Drivers= [|driverInfo|]
+                    EmbeddedControllerVersion="1.17"
+                    PnPIds = [||]
+                    WindowsBuildVersion = currentWindowsBuildVersion
+                }
+
+            let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger dependencies
+            let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger systemInformation UpdatesTestData.ExternalFilesFolder None detectionRule
+            Assert.IsTrue( (isMatch = expectedIsMatch))
+            return isMatch
+        })with
+        |Result.Ok v -> Assert.IsTrue((v = expectedIsMatch),"No errors.")
         |Result.Error ex -> Assert.Fail("Did expect success" + ex.ToString())

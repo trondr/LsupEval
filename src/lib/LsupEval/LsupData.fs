@@ -3,6 +3,7 @@
 module LsupData=
     open System
     open LsupEval.Bios
+    open LsupEval.Windows
     open LsupEval.Cpu
     open LsupEval.OperatingSystem
     open LsupEval.Driver
@@ -92,6 +93,7 @@ module LsupData=
         |Or of ApplicabilityRule seq
         |Not of ApplicabilityRule
         |Bios of Bios
+        |WindowsBuildVersion of WindowsBuildVersion
         |CpuAddressWidth of CpuAddressWidth
         |Os of Os
         |OsLang of OsLang
@@ -114,4 +116,5 @@ module LsupData=
             Drivers: DriverInfo[]
             EmbeddedControllerVersion:string
             PnPIds:string[]
+            WindowsBuildVersion:string
         }
