@@ -14,7 +14,7 @@ Implemented detection rules
 | Or                         | &#x2714;    |
 | Not                        | &#x2714;    |
 
-8 of 23 detection rules are supported
+14 of 25 detection rules are supported
 
 | Base Applicability Rule | Status      |  Comment    |
 |-------------------------|-------------|-------------|
