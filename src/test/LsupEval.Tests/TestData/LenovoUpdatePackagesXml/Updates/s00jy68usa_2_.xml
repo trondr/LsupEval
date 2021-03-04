@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BIOS_S00JY" id="s00jy68usa" version="S00KT68A" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Flash BIOS update for ThinkStation P410/P510 [32,64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>s00jy68usa.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-02-02</ReleaseDate>
+  <DiskSpaceNeeded>18000000</DiskSpaceNeeded>
+  <Reboot type="5" />
+  <Brand type="2" />
+  <PackageType type="3" />
+  <Install rc="0,1073807364" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\tvsu.cmd</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <_Bios>
+      <Level>S00KT68*</Level>
+    </_Bios>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_Bios>
+        <Level>S00KT4*</Level>
+        <Level>S00KT51*</Level>
+        <Level>S00KT52*</Level>
+        <Level>S00KT53*</Level>
+        <Level>S00KT54*</Level>
+        <Level>S00KT55*</Level>
+        <Level>S00KT56*</Level>
+        <Level>S00KT57*</Level>
+        <Level>S00KT58*</Level>
+        <Level>S00KT59*</Level>
+        <Level>S00KT60*</Level>
+        <Level>S00KT61*</Level>
+        <Level>S00KT62*</Level>
+        <Level>S00KT63*</Level>
+        <Level>S00KT64*</Level>
+        <Level>S00KT65*</Level>
+        <Level>S00KT66*</Level>
+        <Level>S00KT67*</Level>
+      </_Bios>
+      <Or>
+        <And>
+          <_OS>
+            <OS>WIN7-ENT.*</OS>
+            <OS>WIN7-HOMEBASIC.*</OS>
+            <OS>WIN7-HOMEPREM.*</OS>
+            <OS>WIN7-PRO.*</OS>
+            <OS>WIN7-STARTER.*</OS>
+            <OS>WIN7-ULT.*</OS>
+          </_OS>
+        </And>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN8.*</OS>
+            <OS>WIN8-ENT.*</OS>
+            <OS>WIN8-PRO.*</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>s00jy68usa.exe</Name>
+        <CRC>B48F59F2B3B2690B4D78B4CD005395EBA04B62B997582E3F9DB963F29486F5BA</CRC>
+        <Size>7410248</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>s00jy68usa.txt</Name>
+        <CRC>BFD49D4186A3D140F5BB400B4EAF975987DDB68D9A2D0C379C517EB29A2C7F45</CRC>
+        <Size>10673</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>YgNObze5T4/PWoWIgoPNfeMCQ7s=</DigestValue></Reference></SignedInfo><SignatureValue>IOLcWTnDuNujGNfua1MlWAlnTOzUfslyXM9UoaFiXFDzonaZ7g3yB0pyp686hZCzmkBnR7HdfjKlrPTBcqOgyOzpKiVjbW6abWzlowaYE/mvjVyYGzRsFN6wyq29zHkLUJ1FD5xi6bNcgtTLBmND5YK1p23KTOQosCicdhmyw1L81R43GYinfCihqIZnlagxtZUF8Z240ieQzq9zWpgV4NwKAhErh2lAW8jPSfeYHggBnqQs1XAQDa8+fzf4K8E5lfNaB+P8Rsb3NM7a2kpDZnGbGX0D/cuuDLnhWfxG7WJqaaDs1ym8nREyVrYcbdpB6AQs9EeS7ftCyjkYKYh/Tw==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

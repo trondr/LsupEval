@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="MDLD_1JKENT_TS_P340_20H2" id="1jkent224_ts_p340" version="2.2.2.0" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Marvell Discrete Lan Driver (Windows 10 Version 20H2) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_1D6A&DEV_D108&SUBSYS_00011D6A]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_1D6A&DEV_07B1&SUBSYS_104717AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_1D6A&DEV_D108&SUBSYS_00011D6A]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_1D6A&DEV_07B1&SUBSYS_104717AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>1jkent224.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-02-02</ReleaseDate>
+  <DiskSpaceNeeded>3891440</DiskSpaceNeeded>
+  <Reboot type="0" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Marvell_AQtion_x64_Win10_20H2_ver2.2.2.0.msi /q</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\Marvell_AQtion_x64_Win10_20H2_ver2.2.2.0.msi /q</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_1D6A&DEV_D108&SUBSYS_00011D6A]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_1D6A&DEV_07B1&SUBSYS_104717AA]]></HardwareID>
+      <Date>2020-04-30</Date>
+      <Version>2.2.2.0^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_1D6A&DEV_D108&SUBSYS_00011D6A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_1D6A&DEV_07B1&SUBSYS_104717AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>S08KT*</Level>
+      </_Bios>
+      <_ExternalDetection rc="9">%PACKAGEPATH%\getw10ver9.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>1jkent224.exe</Name>
+        <CRC>2DDBAD75A0A1DAA4AFE848E95C0460593BAD6BF21D6302BD2945481B1471FF01</CRC>
+        <Size>1549288</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>1jkent224.txt</Name>
+        <CRC>6AE9C0DE387F4A17C9BB356456C56D3F3C18AC165BACF2CC306CCF3150D80FCC</CRC>
+        <Size>4767</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver9.exe</Name>
+        <CRC>CFE9DCB74813F9C4170C981E84C27511880E3C44C2D80A6BAADBB2BCF78DCFFD</CRC>
+        <Size>159688</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>LKecmtobikl+mW/BtNXj95GUd20=</DigestValue></Reference></SignedInfo><SignatureValue>DwpXixjYk4D49FIfRTrga7gHXnSxxKcGioJxQpQwCGrJD1tyrwt6tPaPYENr2fx+kOPKOFCCXSrWIHY42XFMDz7gEs18KjTTrs9ThUMjv2SE9+MAJglxFCE72BSpaTaFb5kDE601QOG3e9GP/BpC1PuAHr6bI1VJBl9lLSO8up6o5Jdcs9xGbFOt/FXffp8JKkRkKnsbIfM1pIrLqUVH3iHQ/xgJeKmoG+x91vj07JW94JThmqZZz/5k5sPw9bdAGxrhK9+GLEQzAlGVWsdQ4ffk9hCNFPj/OEpQrzKc7rRcML6DSX2prjEqEIRQJExiFHkh34iZd6eVLdjsm3rgWQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

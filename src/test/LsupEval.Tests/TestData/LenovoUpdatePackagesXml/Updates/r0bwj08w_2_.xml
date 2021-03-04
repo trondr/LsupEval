@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTELWLAN_R0BWJ" id="r0bwj08w" version="21.120.0.9" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel 3165/7265 Wireless Driver (Windows 10 Version 1607 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3166]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3166]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0bwj08w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-01-13</ReleaseDate>
+  <DiskSpaceNeeded>29261023</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\r0bwj08w.exe /verysilent /DIR=%PACKAGEPATH%\TMP</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\r0bwj08w.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3166]]></HardwareID>
+      <Date>2020-08-16</Date>
+      <Version>21.120.0.9^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3166]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0AET*</Level>
+        <Level>R0BET*</Level>
+      </_Bios>
+      <Not>
+        <_ExternalDetection rc="0">%PACKAGEPATH%\getw10ver9.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0bwj08w.exe</Name>
+        <CRC>D6503C1FD7CC8C558E0F9D9463B99C70F855D02FDA87D30501B8A4648054749D</CRC>
+        <Size>3852928</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0bwj08w.txt</Name>
+        <CRC>7254BB344B4E4BDD80CAEF60077484BC1A6C97FC2F85D10BC58425AD78732881</CRC>
+        <Size>7822</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver9.exe</Name>
+        <CRC>CFE9DCB74813F9C4170C981E84C27511880E3C44C2D80A6BAADBB2BCF78DCFFD</CRC>
+        <Size>159688</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>w7yC6bHNEtJYPFTYm4Ev2szA4rs=</DigestValue></Reference></SignedInfo><SignatureValue>l3fcb4QCndFsX+5fIgHMsrKjROOgll1apWQY07uOaHpi7cAbEjQNH9tB52M8IMlV0Ow9WIEvaxAXyhw2veIEkYxAKdRd87CCF9FjEPyKFtkKBAIvnGX3J+SV8Jr9qs7XCSEzo279fJuAUS42AjMId1zTICGhPhf83bAN1jYrrfnNCkzvYQXgwK5X02XrgKh7I3jnNfor1egTuGxrIEtLtOFA4cKQNV7W5NJdxlbqmIqO3n9MreSwdaj/vFrlPli2NY/8PKKTdzydx+f6IG1hC3U5nVXUY/br2Qt1J4tVu2Rgpomx2M1eoeoGj4ADAahMnU6AjD/+TawczktjqanAPA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

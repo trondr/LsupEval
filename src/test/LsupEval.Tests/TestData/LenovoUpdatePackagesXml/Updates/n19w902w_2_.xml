@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="WLAN_N19W9" id="n19w902w" version="19.51.30.1" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Stone Peak 7265/7265BN Wireless LAN Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_59]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_61]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_99]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_59]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_61]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_99]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n19w902w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-10-26</ReleaseDate>
+  <DiskSpaceNeeded>59745861</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\WirelessSetup.exe -q</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\WirelessSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_59]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_61]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_99]]></HardwareID>
+      <Date>2020-06-02</Date>
+      <Version>19.51.30.1^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_59]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52028086&REV_61]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_59]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_61]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_095B&SUBSYS_52108086&REV_99]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N19ET*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n19w902w.exe</Name>
+        <CRC>9D8CAAFDEB4AFC0F95577F84C1A839040A50BECA19455195A5BB24BB2512B3C1</CRC>
+        <Size>30038952</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n19w902w.txt</Name>
+        <CRC>F2307E57264227219EF815165C38048E2827A69564D373CE0FD879FB36F1ED48</CRC>
+        <Size>15167</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>CfMKmrmYhnnnY/jW4v2Y4zcAyFs=</DigestValue></Reference></SignedInfo><SignatureValue>bS+okvYL7fj64Ht9aZOp0fwScyGfcquOqIg7q8Q2raNGHZcU7L02nwLhjpe8O9C1Zm5W6AW7NR6hPtgukJLCqk9mn4BrQYLhLOVuELhlIYR3Lc9n9ZU81P+YNwGYgdrxBk0DR6ntvTcm9FznKW49CnoMIut0iNHj/bnCJ40Yg67IDq9A1iF6JYRuBqnKapID8NzRYlJR1p2xpeHi304+eb6BXe6o5iYfftt2sLaEy377CIQ5TZ8TUyrW66WcaB+r3Nn4Z2EVUXCgXpxY54NpJKKU1kx4B0Zs73DSjEn6aaSYkaF9tDq6HhEtnvAge25sb0SXapGR/NUFgaa/Rd7KKg==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

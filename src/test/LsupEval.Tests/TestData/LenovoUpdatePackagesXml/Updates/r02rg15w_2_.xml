@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_IME_R02RG" id="r02rg15w" version="11.8.82.3838" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Management Engine 11.8 Firmware - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="1" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r02rg15w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-02-07</ReleaseDate>
+  <DiskSpaceNeeded>26378967</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="4" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\FwUpdate.exe</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\FwUpdate.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_ExternalDetection rc="0">mefwdetect.exe /fw 11.8.82.3838</_ExternalDetection>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r02rg15w.exe</Name>
+        <CRC>9454EED9456CC2A36985DAC6288048B5AFAE9FD65D960D3F090846B982E256A7</CRC>
+        <Size>7698056</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r02rg15w.txt</Name>
+        <CRC>470467F03F533BDC180098CB740C265EFB8F9562249EEDCAE13A0E9AD905F8EB</CRC>
+        <Size>19015</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>mefwdetect.exe</Name>
+        <CRC>0DE3986C16ECB41F70DA839125D544B0E626F27AED34B0B821F3C11ED4829FFB</CRC>
+        <Size>178200</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>FYZy/yiYVTdxY7a/VZERnTNtVMI=</DigestValue></Reference></SignedInfo><SignatureValue>doGY7p7fjgbCCnnXkX3DRnbR5ZnVv5/B8a9zjR0S9vp5oLHgehQj5gcEGR4en7qplPc4WYV199dz6Md8YBGHwwRhvaMDkY+nWgiqSu9RmspNLbVlomLG1OYVEJOy/Tqq0/GXTRwLRmn6zhWx5ygvsfHzCfhEQLD61i/9smGXWEBnUFvY2F8phOpWTBSFm9sMO3vxq22uN8izozD6azN65wTZF+54axOOXe74yPHdnu40zZiif4cUdq816sqx3Oe8iLBmNM6JvzqZiU0TsA+mdss63lYtZbkkhg11liCVPWOnpylqY8liQX4EdZWmmt8tQ7y5g7RxpCCj7KruheCY3A==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

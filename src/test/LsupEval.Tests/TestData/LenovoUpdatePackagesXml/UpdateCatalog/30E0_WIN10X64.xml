@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="22">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2car01us14wsusi_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">bf74cb6efbdc25f4e4d9a13256b118fd26e64b4635e7272eb34840558a66e6d5</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg0bus14usi_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4516f3abba253add32e32b649ae2d0831e4fc0f15f2c5771b36603468e44f46e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdo02ap14wsusi_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9906bceadb83349d0eacf888c5a905b24b8bd76effc1761de63f7e3f59844c76</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdo04us14wsusi_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1ba8ae27d5dd446718f3d6f3eef5d3b82030e67ac626d9e53457a73f24c7117f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdobzus14_p620_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6b1cda0fcba9629ee9121fce68eca094eb9fd07ac8159631318f16c1e18c7da9</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6chp08us14wsusi_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">54e529d2ebce6d9de7659ba9cbc28d5d443ae5a4270396c5d6c8d35e3bdf0048</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6etn03us14wsusi_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">727aeb3e4441fe5355dee18fd231fcbdcf86a3a896abd222bd7576fe048c34c8</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u7aud10us14wsusi_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e2fd64b0730238745387ea5e90b9e4691869a3424c3d1b5383d59e2e6608b505</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1vdo09us14wsusi_p620_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">bb0bc3d6bd4396248ea01288c1f0e54703e2c34f8e9e1491d5a394d7bf668f42</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt09us14usi_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a8cbdcab54f3f4c6c872cf45ce8581783cb0da67a44da97b45a9e440cbbbdeb0</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/s07jy17usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f382d90df40b334cf27244271c5ed0c376ec6f8aa5c3fca77168534010a3b879</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1vdo13us14wsusi_p620_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">795a3ba02b5b95fe9a715bbac7de77974a9b0f8e971956888e01ea53c557f27c</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt0cus14usi_p620_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">53fbcc16914513c05b4f5c4cbc99c19ff26044745d9e63d5635e46aec3f34e1e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2car02us14wsusi_p620_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">878aad791062139024b17fda80a0883e3cad33471daf57bcb6bff57de6604053</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg0fus14usi_p620_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3ced2f18290c6e086dc0ba692f06146a6038e8ed71fb7b8023fa061219ec437a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdo11us14wsusi_p620_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">fa14a48e7190918eed49a90114ab72999039a2dd111db54ec5f9b783c4b1763b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdo12us14wsusi_p620_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">72829187f92b47c9f6ff36dc6088e4b6d6532c6971263221bed5453c76d819a8</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u3vdoczus14_p620_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ccf990aac7e056efd8c7116c4eed91077992c5cfe9a3b54bf2befa5a6598a99c</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6chp10us14wsusi_p620_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7ef4c3d6f6c06d5d18a1c1be0ed7d930e386e8e4dee68bb8c3518bef899d6cc7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6etn06us14wsusi_p620_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d84bd5a16bd83c5b607f9156c9bf83f6ca38d9bc5167ad6969ac18d3c453b7df</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u7aud11us14wsusi_p620_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d3754b584bd0ee76b10fdb30a3e925b4e492233e78ed64ef90abf81f1d590fc4</checksum>
+  </package>
+</packages>

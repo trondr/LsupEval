@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><packages count="20">
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="21">
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/jeuj85ww_2_.xml</location>
     <category>BIOS UEFI</category>
@@ -6,10 +6,10 @@
     <checksum type="sha256">0212462ae9e41ab09df1f6c2e15d7ea8ac05b60244151c0fd6607d9a04cd7e0d</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/hlud10ww_rs_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/hlud13ww_rs_2_.xml</location>
     <category>Display and Video Graphics</category>
     <oslangs></oslangs>
-    <checksum type="sha256">ec48e5916237523302b56e40396a714ccb1ceae31d862d3e25d2ddc2600266c5</checksum>
+    <checksum type="sha256">946a1ca9470f7891504ec21c76c6b1f8c7eb37247f6bde8a41c7e3c50ac35e44</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/acconelink02gw_2_.xml</location>
@@ -18,20 +18,14 @@
     <checksum type="sha256">d32ac52b4dd3257d06c1edf45f0a299c7f09189860a2aba03b0c0f83741160f2</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/jec608ww_chi_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/jec609ww_chi_2_.xml</location>
     <category>Camera and Card Reader</category>
     <oslangs></oslangs>
-    <checksum type="sha256">51620ff84759fe7ed5dfbc6010025fd59cc59dc92ac8706b15732a7b75486711</checksum>
-  </package>
-  <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/jec609ww_lit_2_.xml</location>
-    <category>Camera and Card Reader</category>
-    <oslangs></oslangs>
-    <checksum type="sha256">5965f93c60f1a3c52ac62424e7beea02264d4f71fe03f61b899cea4992fa40bc</checksum>
+    <checksum type="sha256">24579e2b9fa3fa588595d8ef3095fbf603e938568b7513f854bd94ae6a40ee11</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/jeia04ww_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">c1d792346cbf7e9f17981279d1baf4adb886df3214e6b5c2953ad225a2600568</checksum>
   </package>
@@ -91,7 +85,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/jemk08ww_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">dd5afb9944b0a520cced6b1f52090eb0569eee0a5b7011f1d7c4901351c3e57a</checksum>
   </package>
@@ -109,7 +103,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/jdrg04ww_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">0a0b9fe41b50fc7a90eb5bb207d23feaa3afcf2cc414ae6fddff1d1ff6c1ef5f</checksum>
   </package>
@@ -118,5 +112,17 @@
     <category>Software and Utilities</category>
     <oslangs></oslangs>
     <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/jecq01ww_rtk_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9b9f8b0cc520375250063add9991f30d5be8d9ce942da89c41dca4081a801b55</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/jecq01ww_sun_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">375e824fd3c9363ac380db68fb187b331f166e420bc3eb3860018ae63e147721</checksum>
   </package>
 </packages>

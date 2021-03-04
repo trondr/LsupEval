@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="LDPRU_N2VWD" id="n2vwd07w" version="1.0.0.5" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Dynamic Power Reduction Utility (Windows 10 Version 1909 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\SysWOW64\DPRSrv.exe</File>
+    <File>%WINDOWS%\SysWOW64\Dynamic Power Reduction Utility.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="3">
+    <Not>
+      <Or>
+        <_FileExists>%WINDOWS%\SysWOW64\DPRSrv.exe</_FileExists>
+        <_FileExists>%WINDOWS%\SysWOW64\Dynamic Power Reduction Utility.exe</_FileExists>
+      </Or>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n2vwd07w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-02-05</ReleaseDate>
+  <DiskSpaceNeeded>6126549</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="1" />
+  <Install rc="0,259,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n2vwd07w.exe /verysilent /DIR=%PACKAGEPATH%\TMP</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\n2vwd07w.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_FileVersion>
+        <File>%WINDOWS%\SysWOW64\DPRSrv.exe</File>
+        <Version>1.0.20.530^</Version>
+      </_FileVersion>
+      <_FileVersion>
+        <File>%WINDOWS%\SysWOW64\Dynamic Power Reduction Utility.exe</File>
+        <Version>2.0.20.530^</Version>
+      </_FileVersion>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_7560&SUBSYS_86011CF8]]></_PnPID>
+      </Or>
+      <And>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_7560&SUBSYS_86011CF8]]></HardwareID>
+          <Date>2020-03-18</Date>
+          <Version>0.5.100.411^</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[USB\VID_8087&PID_0ADA&REV_0100&MI_04]]></HardwareID>
+          <Date>2020-03-18</Date>
+          <Version>0.5.100.411^</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[USB\VID_8087&PID_0B46&REV_0100&MI_00]]></HardwareID>
+          <Date>2019-12-17</Date>
+          <Version>3.18362.3003.3^</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[MBFW\{CA96A539-11B4-49E0-B7E1-01A65AF4A3B3}]]></HardwareID>
+          <Date>2020-03-20</Date>
+          <Version>18600.5903.23560.2^</Version>
+        </_Driver>
+      </And>
+      <_Bios>
+        <Level>*</Level>
+        <Level>N2VET*</Level>
+      </_Bios>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3,4,5,6">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n2vwd07w.exe</Name>
+        <CRC>EF276BB68B0758D5EA3EA7B15E842D3893656CBAA1BA9DE403021E88922D7A60</CRC>
+        <Size>2161632</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n2vwd07w.txt</Name>
+        <CRC>5BF35E7D5154E7C95915228351BFC6C601E5D7FFB928285A5765C3A68C5B4B38</CRC>
+        <Size>7661</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>5Dk1LUYNYpXM/o5P70mziUwywO8=</DigestValue></Reference></SignedInfo><SignatureValue>KAUHS44gIwOxfo+a82PqS6TiwthF1xgRodKZ05R6Si1uDFjTZPeTN3UThkv97gcGl9jUuGV9f9Rf7Yfcv5klXidmjGSADAVBQN+JwjRP0fZtkgxrF05LhF6GBAUGQ1L2ebsKqST6lqREH7Sz0mL9298IKDSgEfa8VO5q8dbqlpjba5vk9SUaVWiJY5uw3HoRnMN9sgubdzdp0AnCc6N1B43DSGCPHnVBehLz7e2029t2NqXbwu/x/rsZXW/AzNDV/YmkgOHEZZq4GKfZInCMHre/8it5quA+8lDZnqiNgF+8NCxu+9cGPOqrEio1+n9ntYdU0Hvb0IycLET/24xsTQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

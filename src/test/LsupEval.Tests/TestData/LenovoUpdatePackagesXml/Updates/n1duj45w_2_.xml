@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BIOS_N1DU" id="n1duj45w" version="2.36" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad BIOS Update - 7/8.1/10 [64]</Desc>
+  </Title>
+  <DetectVersion type="File" show="False">
+    <File>%WINDOWS%\explorer.exe</File>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1duj45w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-12-02</ReleaseDate>
+  <DiskSpaceNeeded>31002877</DiskSpaceNeeded>
+  <Reboot type="1" />
+  <Brand type="2" />
+  <PackageType type="3" />
+  <Install rc="0,1" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\winuptp.exe -r</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall>
+    <And>
+      <_Bios>
+        <Level>N1DETB0*</Level>
+      </_Bios>
+      <_EmbeddedControllerVersion>
+        <Version>1.18^</Version>
+      </_EmbeddedControllerVersion>
+    </And>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN7-ENT.*</OS>
+        <OS>WIN7-HOMEBASIC.*</OS>
+        <OS>WIN7-HOMEPREM.*</OS>
+        <OS>WIN7-PRO.*</OS>
+        <OS>WIN7-STARTER.*</OS>
+        <OS>WIN7-ULT.*</OS>
+        <OS>WIN81</OS>
+        <OS>WIN81-ENT</OS>
+        <OS>WIN81-PRO</OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_Bios>
+        <Level>N1DET0*</Level>
+        <Level>N1DET1*</Level>
+        <Level>N1DET2*</Level>
+        <Level>N1DET30*</Level>
+        <Level>N1DET31*</Level>
+        <Level>N1DET32*</Level>
+        <Level>N1DET33*</Level>
+        <Level>N1DET35*</Level>
+        <Level>N1DET36*</Level>
+        <Level>N1DET37*</Level>
+        <Level>N1DET38*</Level>
+        <Level>N1DET39*</Level>
+        <Level>N1DET40*</Level>
+        <Level>N1DET41*</Level>
+        <Level>N1DET42*</Level>
+        <Level>N1DET43*</Level>
+        <Level>N1DET44*</Level>
+        <Level>N1DET45*</Level>
+        <Level>N1DET46*</Level>
+        <Level>N1DET47*</Level>
+        <Level>N1DET60*</Level>
+        <Level>N1DET62*</Level>
+        <Level>N1DET63*</Level>
+        <Level>N1DET64*</Level>
+        <Level>N1DET65*</Level>
+        <Level>N1DET66*</Level>
+        <Level>N1DET67*</Level>
+        <Level>N1DET68*</Level>
+        <Level>N1DET7*</Level>
+        <Level>N1DET80*</Level>
+        <Level>N1DET83*</Level>
+        <Level>N1DET85*</Level>
+        <Level>N1DET86*</Level>
+        <Level>N1DET87*</Level>
+        <Level>N1DET9*</Level>
+        <Level>N1DETA*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1duj45w.exe</Name>
+        <CRC>F183BED45FD01F854C0235B7044F19F742EF6FDF321C526B72CEEC2ACFBF9DA9</CRC>
+        <Size>8772144</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1duj45w.txt</Name>
+        <CRC>DFBE7FC27A51CEA62261B0F283DC8BB0263759C6EA0242F287631EF1ED623D96</CRC>
+        <Size>34080</Size>
+      </File>
+    </Readme>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>f9SDVk8LAC41v03PbQ6M3Q8adQM=</DigestValue></Reference></SignedInfo><SignatureValue>ZNDn9cXosF8tE+qbjsacj6BSgMVJx2/sC/NRkPgZfq4DBodTmsNYq3796CvOS9PzjXmQBzCBGRDbw5Rj/VUib4uYxLnPAYiW16J4x3fSWRJPYAVp1rwvftO+CQmawnCEnhdiX5Dm0utay1nG9MsGRamfvWhk3ucui4dDClhcS7+nAU7s36SWJUtalRKs6Mkfi2xo+g5ZK7XPynOCBYG9Kw8vPajxlfX9WN+U0myupx9Ig9iQG0czAz6XvwedPK54bmiv/cjlf2y5givUB9QYsLhI6BJj9/VPTKbnYv4fXR8lmOUZFRBegW0KuBay/E3kI6l3nnVqdXtwlECFjNxkog==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

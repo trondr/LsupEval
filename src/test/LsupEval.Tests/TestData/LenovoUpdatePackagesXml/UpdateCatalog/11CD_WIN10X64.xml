@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="40">
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m2rjy43usa_2_.xml</location>
+    <category>BIOS UEFI</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d1135be3e313303a43564a09f1fc35ec4f527792278f97632a788bbf4450dacc</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1dpt07us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Power Management</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6086dedda46c760256e3b865d178773ea3f2b55a595a3d92088cc3a10260a1a7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1dpt07us14avc_tc_m90a_2_.xml</location>
+    <category>Power Management</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">2e03577db3275efe59b5d0e034a4ea6cb0ea3a69e742190f0458787b15e7f56d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1etn25us14avc_tc_m90a_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b604e45760b578a842f6d364a71a9d4f66ef30a82f8abd69956efbe7ec5a94aa</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1etn25us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">24b17511b27ba17a9838281eb47a252bf925926b4714f5a22b533b144c33b790</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1etn28us14avc_m90a20h12_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">42323e381d3a4f3dd1313ba902adaf74713bebcbe4ff090d8f7264805c557334</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1rau40us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5e697e71dada00da99d0d56e79f80e7819261a64e71443debbac46503c53665c</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1rau40us14avc_tc_m90a_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f96d1a25c0ebca034fa25e390372a804ddb46896808a7419f6428bab7976cc74</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1vdo09us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">509404de1754b52dc88092133f0419f22c1c9f135934ef9be325b3f2523968f5</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1vdo09us14avc_tc_m90a_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f64483cd6a14f31f8254e252f7c87a5146c7acf3434d52e687fd2de25a031cce</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo57us14avc_tc_m90a_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4fc77e7270ea0c15d368d6a9dfd809cfbbb59c1ead90c7004bde7d82f4f759aa</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo57us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">9d5799228e2a93dbcf5f83756d61bcad8c13fceedacbe46959aec68250ddedfa</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg39us14avc_tc_m90a_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">7b9d54973c8efd1a4941188a51be73a933ef1d9129de47285dfddaa87491334a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg39us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ff82dcdeacf7ac3c6ec0fac7688825d4d8ca8aef89aeb15d7b9744687656b4eb</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt35us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">81bc3aac41a59983f41e075a9de85ba7d0a4219a4f6e61bf1bb7bdb84fb36d1a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt35us14avc_tc_m90a_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">55a02e68d1c78b2c25152570fc5fe54ad535f18a94611206bfa4e82cce2410a8</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1chp39us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">de13673aea43d98515974766fca5c5ddc7e95e1a8d7674b6854f7d5a26d1d867</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1chp39us14avc_tc_m90a_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">64731633ca33e32189ca6ad2c796f727dec5581ba8326ff73ee08d40c2c2bfbd</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j4blt31us17avc_tc_m90a_rs56_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">444afa2e56b72cbba7c9905b5c937e73d031923a01cb4d870846cb42e7b51215</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j4blt31us17avc_tc_m90a_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3543a8e957e7de7ddb947248e3af37329179b27813444341710a92ac1e1d8f09</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2cam09us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">470e66a0a26ca3709841399ffd1f0ad71f005fdddd959597481b00206cae9a0a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2cam09us14avc_tc_m90a_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a323f47e420774d326fc6c2ebc1c646fd0f114442c55a01c73a0f4ee9ea67bef</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4cam01us14avc_tc_m90a_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">abf5fe408f0a918dd3b721821cc12afe1c424a002957350d9b950dde809e62f5</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4cam01us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">67ad0b5c995b5527ebdbad8b8d8c204b6af7baba16f03441115fb1fcd2617853</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j1car29us17avc_tc_m90a_rs56_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">f12ad064db920c3115f8438423a65692dbc66596f650f582acd7d2eb5660e98e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j1car29us17avc_tc_m90a_2_.xml</location>
+    <category>Camera and Card Reader</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3de868b1d459facf1567bd6982543dd03d5545d6926ab94d06e44fd415c42da6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4wlg19us17avc_tc_m90a_rs56_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">097db0b24e2d9e17267f020334760a8c7557e856b9b7762ccd581a8260ce3a11</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4wlg19us17avc_tc_m90a_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b6905fb5eee9c78a68d63382398d50bcba98074b58b84d769cd0a36e17e11a7e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j2blt35us17avc_tc_m90a_rs56_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">fd18fa06a1522895d6c23724b890f6628cf4d8c9d1233ffa2cf0f6853899809f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j2blt35us17avc_tc_m90a_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">ea17c0446a97c8734b804db2bb3140c6018b6557135df0fffa41ad0a9dff39c7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j7aud53us17avc_tc_m90a_rs56_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">0e95abad03aa483d4236536c6809e7ccb5f6d40ba44f9505842d70412a2fd9f3</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j7aud53us17avc_tc_m90a_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e13810060d2171b58e792db1ddedbae86d13f6d5cfe7c192ac31af226ab2bf33</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1acp14us14avc_tc_m90a_rs56_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a8df4e58a752a8073e307e8c66d1b106820e1e17e068f1c6100cbe7533578f53</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1acp14us14avc_tc_m90a_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">668eeb897d6f596d6089ba0c9250eae7cc6d58492103efc4a078dc1b76e38908</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/j7aud58us17avc_tc_m90a_2_.xml</location>
+    <category>Audio</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">b5dd443d83fb082470827e90a64801833985e498ed6afc8755a0f1fd8b19198d</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo67us14avc_tc_m90a_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">5441f187d93c5a0280ae6c5a8e7ff8d941a3594a07430826ef0b0f6c2552f448</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg50us14avc_tc_m90a_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">468c453eae188f1f8fa12407ac818647cf2f0d90af2bb48de0eeabdcbedb1ce3</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4cam02us14avc_tc_m90a_2_.xml</location>
+    <category>Software and Utilities</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">4d5208451e251f2cf8c6224cb5f7188002c62fe15e7e5e7cb29bade7b15d4f3b</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4etn24us14avc_tc_m90a_2_.xml</location>
+    <category>Networking LAN Ethernet</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">6531aade8b73e33dea1e085510bee605c5fa021348f06b83ff835d0cccd67f02</checksum>
+  </package>
+</packages>

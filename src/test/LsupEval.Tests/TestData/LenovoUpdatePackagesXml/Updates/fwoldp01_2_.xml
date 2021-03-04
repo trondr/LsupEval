@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_FWOLDP" id="fwoldp01" version="2.30.000" hide="False">
+  <Title default="EN">
+    <Desc id="EN">ThinkPad OneLink+ Dock Synaptics Firmware - 7 [32,64]/8.1/10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ReleaseDate>2016-03-30</ReleaseDate>
+  <DiskSpaceNeeded>5127512</DiskSpaceNeeded>
+  <Reboot type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\fwoldp01.exe /verysilent</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\fwoldp01_version.exe /FW 2.30.000</_ExternalDetection>
+      <Or>
+        <_OS>
+          <OS>WIN7-ENT.*</OS>
+          <OS>WIN7-HOMEBASIC.*</OS>
+          <OS>WIN7-HOMEPREM.*</OS>
+          <OS>WIN7-PRO.*</OS>
+          <OS>WIN7-STARTER.*</OS>
+          <OS>WIN7-ULT.*</OS>
+        </_OS>
+        <And>
+          <_OS>
+            <OS>WIN10</OS>
+            <OS>WIN10.*</OS>
+            <OS>WIN10-ENT</OS>
+            <OS>WIN10-ENT.*</OS>
+            <OS>WIN10-PRO</OS>
+            <OS>WIN10-PRO.*</OS>
+            <OS>WIN81</OS>
+            <OS>WIN81-ENT</OS>
+            <OS>WIN81-PRO</OS>
+          </_OS>
+          <_CPUAddressWidth>
+            <AddressWidth>64</AddressWidth>
+          </_CPUAddressWidth>
+        </And>
+      </Or>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_1018]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_17EF&PID_1019]]></_PnPID>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>fwoldp01.exe</Name>
+        <CRC>094725C8D03F9D03B61A10F02857BE005215C1E4</CRC>
+        <Size>1904856</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>fwoldp01.txt</Name>
+        <CRC>40E3EDBB0E563F610FDCFAB07573FBF26D640BB8</CRC>
+        <Size>4967</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>thinkpad onelink+ dock dp hub fw_ver2_30_000.exe</Name>
+        <CRC>E1FD3208728991239980355E9C33DCFC3C1C7FEE</CRC>
+        <Size>3092976</Size>
+      </File>
+      <File>
+        <Name>fwoldp01_version.exe</Name>
+        <CRC>8DEB981C1E5AEE75475729A9890B907C451A5BAB</CRC>
+        <Size>29680</Size>
+      </File>
+    </External>
+  </Files>
+</Package>

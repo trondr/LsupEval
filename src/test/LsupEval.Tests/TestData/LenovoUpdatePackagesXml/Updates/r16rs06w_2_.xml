@@ -5,25 +5,27 @@
     <Desc id="EN">Intel Rapid Storage Technology Driver (Windows 10 Version 1903 or Later) - 10 [64]</Desc>
   </Title>
   <DetectVersion type="Inf">
-    <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D3&SUBSYS_507917AA]]></_PnPID>
-    <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A&SUBSYS_507917AA]]></_PnPID>
-    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0975&SUBSYS_507917AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D3]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_0975]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_34D3]]></_PnPID>
   </DetectVersion>
   <Summary default="EN" />
-  <Severity type="2" />
+  <Severity type="1" />
   <SeverityOverride type="2">
     <Not>
       <_Driver>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D3&SUBSYS_507917AA]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A&SUBSYS_507917AA]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0975&SUBSYS_507917AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D3]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_0975]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_34D3]]></HardwareID>
         <Version>0.1^</Version>
       </_Driver>
     </Not>
   </SeverityOverride>
   <Vendor>Lenovo</Vendor>
   <ExtractCommand>r16rs06w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
-  <ReleaseDate>2020-07-30</ReleaseDate>
+  <ReleaseDate>2020-11-05</ReleaseDate>
   <DiskSpaceNeeded>16659289</DiskSpaceNeeded>
   <Reboot type="3" />
   <Brand type="2" />
@@ -34,9 +36,10 @@
   <Uninstall />
   <DetectInstall>
     <_Driver>
-      <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D3&SUBSYS_507917AA]]></HardwareID>
-      <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A&SUBSYS_507917AA]]></HardwareID>
-      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0975&SUBSYS_507917AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_02D3]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_282A]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_0975]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_34D3]]></HardwareID>
       <Date>2020-04-23</Date>
       <Version>17.9.0.1007^</Version>
     </_Driver>
@@ -55,9 +58,10 @@
         <AddressWidth>64</AddressWidth>
       </_CPUAddressWidth>
       <Or>
-        <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D3&SUBSYS_507917AA]]></_PnPID>
-        <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A&SUBSYS_507917AA]]></_PnPID>
-        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0975&SUBSYS_507917AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_02D3]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_282A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_0975]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_34D3]]></_PnPID>
       </Or>
       <Not>
         <_ExternalDetection rc="0,1,2,3,4,5">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
@@ -75,8 +79,8 @@
     <Readme default="EN">
       <File id="EN">
         <Name>r16rs06w.txt</Name>
-        <CRC>EDFDE3BD2E1FE51A191A00C5C1240C74E55E10A12D437F824BA54837F6049ACE</CRC>
-        <Size>9002</Size>
+        <CRC>36879815DFDF3B28E488135D038EB4A742CC1DBAC92197F45068D662015AE49C</CRC>
+        <Size>7573</Size>
       </File>
     </Readme>
     <External>
@@ -87,4 +91,4 @@
       </File>
     </External>
   </Files>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>pJqStUe5TOdkBCKd5RUwPraf0rs=</DigestValue></Reference></SignedInfo><SignatureValue>l7uZXwr2rBo1md/+SKoSTr58/I58cYV1A2+umJh5Y6+34H4L2RRY768FLhN/a9FIY6BR4t9uw14sV1Ex5/+OPZL1jUC6CPwU9+a+N0FxX4xnKfAU32b2+pUJUbYj0bi0+RMNV1fbq/9Fu8PbRbybtkY2RXGFWvCILZhJx9c2Ii/CowCCyRLQaWioXrVzXmuX9fir8NqXfVj4VYw+bkJk2VLinbfyUCGTDeW4jD6/+fvXG+YGRWOiEDkur6u2bJTSyuOewqg5JCObTVDhjxgO58NlmwmeS3wYmno7CL4QygodcpMFCwXfCRflVOqSLQ5iEpe3UDItQdMVpkSF4kmxWQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>jIclsO9a+63at61OJ6AUAur+ftw=</DigestValue></Reference></SignedInfo><SignatureValue>Psfi/RLrOn/Q9KCF/fmVv03zzrEdhVtxCGZ21p5rk8kVHIz3GIj+d7sGNS+GS3AfrHTmXFB46IHCo+rJXNb4iEDa9/6up05hEMDdIO5Pmnt5d40SV8YTrQohbU+9sUXCDCfTmpuwaRspCZfT57ejoYsOD9rLr7EK0W9QY0Gj4kBaQnKyKxyUy1bls2jhVqf1J42513zmIML+6iGV6Z06cS9cHMNijfpu/PiD+MaZNXSaMmEOQb6Cbu1uCV6eAagrJnUxK7kdAomb7HZF7uvh7EgOakaAUEXCOoBQTcEAwM0STBSPB63sgihnOEx0vgXpUv/X+A2zM0gzmZa96Dh6eQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

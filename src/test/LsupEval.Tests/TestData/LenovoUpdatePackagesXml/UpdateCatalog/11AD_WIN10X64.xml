@@ -1,19 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?><packages count="32">
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="33">
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg10us14lcfc_90n_2_.xml</location>
+    <location>https://download.lenovo.com/consumer/desktop/fwnva40w_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1500752370b4ec9cce75a19de396a440b0f7274b717c31e80a5991664efef8d7</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg12us14lcfc_2_.xml</location>
     <category>Networking Wireless LAN</category>
     <oslangs></oslangs>
-    <checksum type="sha256">9ae7a806abefffd30aab4332c055d7c017f52faee7190fd0251151a4bce35f51</checksum>
+    <checksum type="sha256">8b87002dd3da798180cfe05d3697387e63139ab1a5c5ce041ca0040799a42682</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1chp05us14lcfc_r34_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">b636e0fce174df6fdbb426cd1c28ea9d25ad2fd600dc3f21bf737d09f83aa511</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1chp07us14lcfc_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">78029e77dff04a5724b78c6adb24d136c25c22393bd6d2c305d3e1406a59c69e</checksum>
   </package>
@@ -31,13 +37,13 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1sio05us14lcfc_r34_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">54452953fe786369fcfcf2d26df65fb9184f82f7436c5fe8485bf9272e52fde4</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1sio05us14lcfc_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">d86bbd0b1403e5ede0c0d0fc416e60f1bc40fca12f3a66d3b0f10bddd61ca940</checksum>
   </package>
@@ -60,10 +66,10 @@
     <checksum type="sha256">b3e941d66d492102407d22180fac1913bcedf2eb920f88b83e116dbcc661750f</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt10us14lcfc_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt11us14lcfc_2_.xml</location>
     <category>Bluetooth and Modem</category>
     <oslangs></oslangs>
-    <checksum type="sha256">0ad72ea930d1c7c133ab2b579e857081fb726d2e3c8a8b3aba65783a998c0bf1</checksum>
+    <checksum type="sha256">f747ea4d8e214f331eab7eeb7331985694b2537e59dd99e0bbc81bbb3b645a40</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2etn08us14lcfc_r4_2_.xml</location>
@@ -90,10 +96,10 @@
     <checksum type="sha256">0c2063705a70e950ab8693165540d8cd56df25c8bba90ab87b67e6eb09fc78db</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo13us14lcfc_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2vdo15us14lcfc_2_.xml</location>
     <category>Display and Video Graphics</category>
     <oslangs></oslangs>
-    <checksum type="sha256">1e8131550f804b5a4ccaa78d1e85be19307e085971a2a8f32e866272982c616a</checksum>
+    <checksum type="sha256">1697ce59105f0e0e1c60b91cfb1d311373597a435aeba1b3ee075a140a773845</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4blt04us14lcfc_r34_2_.xml</location>
@@ -138,32 +144,32 @@
     <checksum type="sha256">c37bbc5c29d021ff7d7962232db52e730b491724aabcba0cbc8676c12cbcc8dd</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u7aud10us14lcfc_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u7aud12us14lcfc_2_.xml</location>
     <category>Audio</category>
     <oslangs></oslangs>
-    <checksum type="sha256">ca8706956e247ff9b691292fa59c2d4e9785f343f191116428dbad8b33e1d865</checksum>
+    <checksum type="sha256">81c48a4b6abd15d897002fb1833601a686ae10a6afa1253a2e6162ddf95d3134</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt10us14lcfc_r34_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">5a7a04d264b2798637df2b3c90964f9725cb38d48e770250d9926e269eb84004</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt14us14lcfc_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">518064994d1a5a7d5ac9f8733f6bd3711e1cd02e5faadf38357917d216828f38</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m2ajy26usa_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m2ajy29usa_2_.xml</location>
     <category>BIOS UEFI</category>
     <oslangs></oslangs>
-    <checksum type="sha256">a3375078a05b3020c162d81e495232ca960af2b2dceba21e331ef8c58d5f840b</checksum>
+    <checksum type="sha256">b75750db080b1837a3b1759b04f8b00514ac53fdef5be705d3922ce49e639345</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1dpf02us14lcfc_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">dc3cfb3deea13af7637cd986687f54b9f197c734ef68d74cba592d5ce4993e82</checksum>
   </package>
@@ -175,7 +181,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1dpf03us14lcfc_r34_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">9ee8c85b6dc5f91b25d2f90a3778ad4e2395c6f103074c30b9989c561074c615</checksum>
   </package>
@@ -186,9 +192,9 @@
     <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1wan11us14lcfc_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1wan14us14lcfc_2_.xml</location>
     <category>Networking Wireless WAN</category>
     <oslangs></oslangs>
-    <checksum type="sha256">7d4ce53b8edf0d6e3d4c6302bcab80f625c3eee15626be5e45e6b15289427fbd</checksum>
+    <checksum type="sha256">9f4a44b9a601be78974f1f14d6c3d3ab8c13e1a7f8bd44d63cf8d1beb76258a9</checksum>
   </package>
 </packages>

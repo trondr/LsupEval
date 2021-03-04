@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><packages count="38">
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="46">
   <package>
     <location>https://download.lenovo.com/consumer/desktop/k10kyba3us17_2_.xml</location>
     <category>Mouse Pen and Keyboard</category>
@@ -31,7 +31,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1acp10us17_tc_m80q_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">7bba2656a73b79b5a15b140c6ed6c9dbc5df6dd9df8fcda2cdb4926ea87c943a</checksum>
   </package>
@@ -48,12 +48,6 @@
     <checksum type="sha256">30b41eb4638a5918f546e28355b793d3382e8acf7629bd2734362a1350ce3b29</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1dpf04us14_tc_m80q_2_.xml</location>
-    <category>Software and Utilities</category>
-    <oslangs></oslangs>
-    <checksum type="sha256">ffd50bba7812f647d5606e69b65ec22d534147bd7878af028af6578cd67a8678</checksum>
-  </package>
-  <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2blt07us14_tc_m80q_2_.xml</location>
     <category>Bluetooth and Modem</category>
     <oslangs></oslangs>
@@ -61,7 +55,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2chp38us14_tc_m80q_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">95ff39e7e5a1615643c52b22ef09c1d9f134c054b54dc1aee6ca3bfef1fb1e1c</checksum>
   </package>
@@ -91,15 +85,15 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt50us14_tc_m80q_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">38d827a11ae78dbe752e09114e4efcf277d6be513dd2a657e2ac807d1c8c09b7</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m2wjy38usa_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m2wjy41usa_2_.xml</location>
     <category>BIOS UEFI</category>
     <oslangs></oslangs>
-    <checksum type="sha256">a6b9ae0ecae5c5593dbf75277fe337543e6ccd081c8bbdd5d5a79820caaa3bad</checksum>
+    <checksum type="sha256">c4283fd508a38de631b88b7862217a4aefb2e7e86bc0689407e91596642b343e</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/desktop/k2vd135us14_tc_m80q_2_.xml</location>
@@ -139,7 +133,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2chp38us14_rs56_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">98ebf48318d674869528460d595a02e9071a96cb6a3f8838d3a3f05a5a97f25b</checksum>
   </package>
@@ -151,7 +145,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt50us14_rs56_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">d1644caf0b86b65298153d885988edd1f93f39c152b549b6b1070186893c7fe0</checksum>
   </package>
@@ -189,7 +183,7 @@
     <location>https://download.lenovo.com/pccbbs/desktop/u2etn24us14_tc_m80q_2_.xml</location>
     <category>Networking LAN Ethernet</category>
     <oslangs></oslangs>
-    <checksum type="sha256">ad4f70a3f5be382955bf9cb4b1ef91fbcb3e061e819303b9defa8e18a597461e</checksum>
+    <checksum type="sha256">f5e4daf060840a51eee6f34c0c540932a02d7424ed88461c37171240b4f7673d</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1rad62us14_tc_m80q_2_.xml</location>
@@ -216,15 +210,69 @@
     <checksum type="sha256">045bfdfda215640d7b71a30410fce57fc60b6a9c0fa0770a6a6076a54dfb8f7f</checksum>
   </package>
   <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1acp14us17_tc_m80q_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">840ffa03c2995a8264342c9d6e2d0b56f33d6fd012602cc7f5b7de95ea6d608f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u4wlg17us14_tc_m80q_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">82f82e295ff9cfb6e2ff06f06c53852bbbb60c83d403005046a36f5848110d89</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt56us14_tc_m80q_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">a63842b4bdaba685409f5b3bdbfce8e19c77d5e2d089fc41e316cf9f4a2425c7</checksum>
+  </package>
+  <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/g7audc9us17_tc_m80q_2_.xml</location>
     <category>Audio</category>
     <oslangs></oslangs>
-    <checksum type="sha256">5e9ec76257097df18cfd909037eb56edad2bfcc7c668797a163d8841ab6b1020</checksum>
+    <checksum type="sha256">8d872a60958d6f9127be0f970e3abbc9b840d13c758b699b6527becbf5c0c08d</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1acp14us17_tc_m80q_2_.xml</location>
-    <category>Chipset</category>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1dpf04us14_tc_m80q_2_.xml</location>
+    <category>Software and Utilities</category>
     <oslangs></oslangs>
-    <checksum type="sha256">aabcea886096e97bd292e24d65c13c970730ee5160ee95521074804f396b5b11</checksum>
+    <checksum type="sha256">3b252f15465b6c87f791c86143b09e886f227abd72447230905181de4f21c6ef</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/k2vd149us14_tc_m80q_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">bea6096ccad24ee0c3f0f392ee6a01014d968841980b46db6d9ef55bc279de39</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u1rau93us17_tc_m80q_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">cb7e5e1de188daad407140636e7c7caa8f4a5f1ab033382304568845eb01909e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u2blt0cus14_tc_m80q_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d701d04437a8cf73cadcefaf6315a9468666bec5ac9b40c53ca407b84ad38dd6</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u2chp41us14_tc_m80q_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">bbf15f5a32f565d28ca5a9e67cdedc76867f57a7239efabed232acab8a9ec02f</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u2wlg0ius14_tc_m80q_2_.xml</location>
+    <category>Networking Wireless LAN</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">58290b00574b445cd1495eefdcb62a73ec942a5bce1c14aa97c08889467fcfd9</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/desktop/u4blt0dus14_tc_m80q_2_.xml</location>
+    <category>Bluetooth and Modem</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">e5eacd79234ea99a343dca7610fcadd45bd66ff885bb685ee22edf1600fb7081</checksum>
   </package>
 </packages>

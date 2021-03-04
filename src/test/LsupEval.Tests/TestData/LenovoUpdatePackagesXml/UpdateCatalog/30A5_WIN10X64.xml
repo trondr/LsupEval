@@ -31,7 +31,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1chp17ws17_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">27d3004699f8e48d67dae421b07ba5af18b3aedba44bb6ac6082312e633f9890</checksum>
   </package>
@@ -49,15 +49,15 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1amt04ws17_p579_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">aab76ff1006a04d3ec30e970eda6267fa0329692f608c45287576246ec68904b</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/ibmdl/pub/pc/pccbbs/thinkcentre_drivers/u1rst10ws17_pmr_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1rst10ws17_pmr_2_.xml</location>
     <category>Storage</category>
     <oslangs></oslangs>
-    <checksum type="sha256">358f4e485e9f35efbbf8ead1ae98e3ed60dd6c6ca995cb1a36ab20a2e4049440</checksum>
+    <checksum type="sha256">7e4dc203ee4136fd7666107df158f45868f712802daaaab64268267d89848e96</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1par01us17_ts_2_.xml</location>

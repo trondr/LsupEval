@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="HDRD_N1FH" id="n1fhd02w" version="1.0.0.2" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Lenovo Hide Recovery Drive - 10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>n1fhd02w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2015-09-25</ReleaseDate>
+  <DiskSpaceNeeded>2000000</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_ExternalDetection rc="1">%PACKAGEPATH%\CheckWDrive.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>n1fhd02w.exe</Name>
+        <CRC>07698B502EFEE6079B45C29D401BA6BFE03035B8</CRC>
+        <Size>1115520</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>n1fhd02w.txt</Name>
+        <CRC>F19094200FE69B6FB4769048B02DD2C8491C82F8</CRC>
+        <Size>7595</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>checkwdrive.exe</Name>
+        <CRC>0DA030C4D5C8EDD179EF5D9A2B2E008F071BAEF7</CRC>
+        <Size>258968</Size>
+      </File>
+    </External>
+  </Files>
+</Package>

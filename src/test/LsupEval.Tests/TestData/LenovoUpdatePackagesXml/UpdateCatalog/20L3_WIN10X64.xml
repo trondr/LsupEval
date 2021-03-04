@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><packages count="26">
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/hlud10ww_rs_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/hlud13ww_rs_2_.xml</location>
     <category>Display and Video Graphics</category>
     <oslangs></oslangs>
-    <checksum type="sha256">ec48e5916237523302b56e40396a714ccb1ceae31d862d3e25d2ddc2600266c5</checksum>
+    <checksum type="sha256">946a1ca9470f7891504ec21c76c6b1f8c7eb37247f6bde8a41c7e3c50ac35e44</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/r0yvu32w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/r0yvu34w_2_.xml</location>
     <category>Software and Utilities</category>
     <oslangs></oslangs>
-    <checksum type="sha256">db4b369b3b5214d2a2f914d464338b18c84a53e408afb1f3c3067fc453cd6841</checksum>
+    <checksum type="sha256">a2eb063a9179af5e93c3f4475a44dfdc3c06b94429273767f3e42b065b0471b9</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n29ia07w_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">286881a368e18eedc929ecb1df95cdee0760b80b56a6603c4ab32ef70a5e59b6</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n29si07w_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">915ade8dedb946c0e41d55df74c4e6499c9d1e545a408166e3b69cef341ff738</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n29mk10w_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">60ba8569e63781d23dbfe82c69dd329398b07b45c8bbdd9d34c8eb616ae123b7</checksum>
   </package>
@@ -37,13 +37,13 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n29if08w_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">a735cf9bb54281b2de73991a345ac9ac1be444e7d2dac15a2065918597644672</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n29hi05w_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">1c88b938bde0fe81c06e15b211cf10f1b370b44cb7e9447e9670ba246c35e906</checksum>
   </package>
@@ -102,10 +102,10 @@
     <checksum type="sha256">f495fad58fc025bff867fa53893bb1ce15b60d73bb61ae9bb8bea245cf2d3ce3</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/n29et46w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/n29et49w_2_.xml</location>
     <category>BIOS UEFI</category>
     <oslangs></oslangs>
-    <checksum type="sha256">3fbc5c34c76575a7ecca5dde2812d87b8fbd8fc5743074618476f359280f3bbe</checksum>
+    <checksum type="sha256">00a9456012726885a2418fcc9533efa660e37dddffa0d65f16f65d2174c3d369</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n29sx08w_2_.xml</location>

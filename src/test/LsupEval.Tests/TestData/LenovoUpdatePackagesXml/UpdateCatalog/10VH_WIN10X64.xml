@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?><packages count="18">
+﻿<?xml version="1.0" encoding="utf-8"?><packages count="20">
   <package>
     <location>https://download.lenovo.com/consumer/desktop/k10kyba3us17_2_.xml</location>
     <category>Mouse Pen and Keyboard</category>
@@ -43,7 +43,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/consumer/desktop/u6chp6aus17_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">3ae946b7d8f532093bf33918e93352b3c23dfcdcbcb4e241caeea870498a4f34</checksum>
   </package>
@@ -73,13 +73,13 @@
   </package>
   <package>
     <location>https://download.lenovo.com/consumer/desktop/u6chp6bus17_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">cdf0881a22114911f9d38eef0c859580b663c6d7d2afd35ceabb39dec2e404ad</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/consumer/desktop/u6chp6fus17_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">296086869aee39a94031cedd6ea69281912a3f235109105f8eabb342703b84f0</checksum>
   </package>
@@ -106,5 +106,17 @@
     <category>Software and Utilities</category>
     <oslangs></oslangs>
     <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdocxus17_tc_m715q2ndgen_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">3f8b87a97ccb7c96e3bcbd89345496d1968435bc4c5db96d549bb463ab1b21d5</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u6vdocwus17_tc_m715q2ndgen_2_.xml</location>
+    <category>Display and Video Graphics</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">d80e1bb09e3ad2e40c9eb8e42d7bc3d1ddf4ff8efdcd000af1c8ac7480d04f69</checksum>
   </package>
 </packages>

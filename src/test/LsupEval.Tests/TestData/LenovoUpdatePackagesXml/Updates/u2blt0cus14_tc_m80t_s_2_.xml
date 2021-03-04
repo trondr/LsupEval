@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="BT_U2BLT0_TC_M80T_S" id="u2blt0cus14_tc_m80t_s" version="22.00.0.2" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel BlueTooth Driver (Windows 10 Version 20H2) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[USB\VID_8087&PID_0A2A]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0AA7]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0029&REV_0000]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0029&REV_0001]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0026&REV_0000]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0026&REV_0001]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0026&REV_0002]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0AAA&REV_0000]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0AAA&REV_0001]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0AAA&REV_0002]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0A2B&REV_0001]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0025&REV_0001]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0025&REV_0002]]></_PnPID>
+    <_PnPID><![CDATA[USB\VID_8087&PID_0A2B&REV_0010]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0A2A]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0AA7]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0029&REV_0000]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0029&REV_0001]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0026&REV_0000]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0026&REV_0001]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0026&REV_0002]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0AAA&REV_0000]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0AAA&REV_0001]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0AAA&REV_0002]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0A2B&REV_0001]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0025&REV_0001]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0025&REV_0002]]></HardwareID>
+        <HardwareID><![CDATA[USB\VID_8087&PID_0A2B&REV_0010]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u2blt0cus14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-01-28</ReleaseDate>
+  <DiskSpaceNeeded>26049386</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,1,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0A2A]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0AA7]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0029&REV_0000]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0029&REV_0001]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0026&REV_0000]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0026&REV_0001]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0026&REV_0002]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0AAA&REV_0000]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0AAA&REV_0001]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0AAA&REV_0002]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0A2B&REV_0001]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0025&REV_0001]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0025&REV_0002]]></HardwareID>
+      <HardwareID><![CDATA[USB\VID_8087&PID_0A2B&REV_0010]]></HardwareID>
+      <Date>2020-09-13</Date>
+      <Version>22.00.0.2^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0A2A]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0AA7]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0029&REV_0000]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0029&REV_0001]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0026&REV_0000]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0026&REV_0001]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0026&REV_0002]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0AAA&REV_0000]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0AAA&REV_0001]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0AAA&REV_0002]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0A2B&REV_0001]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0025&REV_0001]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0025&REV_0002]]></_PnPID>
+        <_PnPID><![CDATA[USB\VID_8087&PID_0A2B&REV_0010]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>M2TKT*</Level>
+        <Level>*</Level>
+      </_Bios>
+      <_ExternalDetection rc="9">%PACKAGEPATH%\getw10ver9.exe</_ExternalDetection>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u2blt0cus14.exe</Name>
+        <CRC>4235CFC069F88317CFBA2F7F70705BED1513AF6B5A0BE541B95CA7EDAB8F6143</CRC>
+        <Size>3584240</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u2blt0cus14.txt</Name>
+        <CRC>5DB40111A21E65D88266B44D34535B42B96405BF6022F86786707898B29DAB52</CRC>
+        <Size>3804</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver9.exe</Name>
+        <CRC>CFE9DCB74813F9C4170C981E84C27511880E3C44C2D80A6BAADBB2BCF78DCFFD</CRC>
+        <Size>159688</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>mDaUwMb3OHtln03ym/XwHT0FQjw=</DigestValue></Reference></SignedInfo><SignatureValue>k4QTRfhtX0uEwNZaK3tM4bny9vX3TPDboecDGYu7gxm9hD/ZpygukUbMLFjqtCDv1B3s2IoSdx1AaMUZHdiu/2J/je2aDdx6jTapn6DNf0DCX0l+vrnpOTLsoJoOouRgSZhtKsHpr1UOJQpa9RImoMtcig1NjYAfP6j2R+C3hHre3XDZn8YBaiPd/sHebkQMj+MAlieP53bG54soyAZekxRiN5sSKLtW6MPTLuCbJJ86j/RZq25oZ4co7lUrj+eVSYA0ywrIs+n/T5W2nd/cG5wlJXI8r6BIWpD6vJ4IdNQwOqleN7wDgH0Jdu56TaOwm5VxkCMhMopoNXtuHgl74A==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

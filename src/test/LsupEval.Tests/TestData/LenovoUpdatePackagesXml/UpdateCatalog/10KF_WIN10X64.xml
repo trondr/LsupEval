@@ -25,7 +25,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1amt04us14wis_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">530e37cc3fc042debf091f05971c3d6b940692a38cb1f6b662c49ed005109fb8</checksum>
   </package>
@@ -36,10 +36,10 @@
     <checksum type="sha256">e281d016ab4de0d2295edc4cd18307f73c78f462ba36127dcac115d77abfb55f</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m0hjy47usa_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m0hjy49usa_2_.xml</location>
     <category>BIOS UEFI</category>
     <oslangs></oslangs>
-    <checksum type="sha256">7a6517ab38916a2467f746df6d45e06ecf8174d9832e685d8f16aae3aa1edf4d</checksum>
+    <checksum type="sha256">7b63d53b5294dda906ae1b4ad3c736386ec75f34366810ba18940821d60ad5ed</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1car02us14_2_.xml</location>
@@ -91,7 +91,7 @@
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u1chp17us14wis_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">5f46b5d6429791f6a84c0dc067f27f18b787c8245e94b099a47c943ffb7f0012</checksum>
   </package>

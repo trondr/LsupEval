@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="VDO_U3VDOB2" id="u3vdod5us14_e" version="27.21.14.5765" hide="False">
+  <Title default="EN">
+    <Desc id="EN">NV Discrete VGA Driver (Windows 10 Version 1803 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FF3]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1286&SUBSYS_29281462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_16101642]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_31301462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_33811462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_3E561642]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_31311462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_33801462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3E561642]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3F861642]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1382&SUBSYS_31101462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1381&SUBSYS_31011462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1407&SUBSYS_320D1462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1380&SUBSYS_3E321642]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1401&SUBSYS_32001462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13C2]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13C0]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C03&SUBSYS_34901462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C02&SUBSYS_443819DA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B81]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B81&SUBSYS_34701462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B82&SUBSYS_34721462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B80]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B80&SUBSYS_34801462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C81&SUBSYS_35111462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_35101462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_545519DA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1E82&SUBSYS_37201462]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1F02&SUBSYS_C51119DA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1E07]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_0FF3]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1286&SUBSYS_29281462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_16101642]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_31301462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_33811462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_3E561642]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_31311462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_33801462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3E561642]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3F861642]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1382&SUBSYS_31101462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1381&SUBSYS_31011462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1407&SUBSYS_320D1462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1380&SUBSYS_3E321642]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1401&SUBSYS_32001462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_13C2]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_13C0]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C03&SUBSYS_34901462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C02&SUBSYS_443819DA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B81]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B81&SUBSYS_34701462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B82&SUBSYS_34721462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B80]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B80&SUBSYS_34801462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C81&SUBSYS_35111462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_35101462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_545519DA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1E82&SUBSYS_37201462]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1F02&SUBSYS_C51119DA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1E07]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u3vdod5us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-02-22</ReleaseDate>
+  <DiskSpaceNeeded>1434463857</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="1" />
+  <PackageType type="2" />
+  <Install rc="0,1,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe -n -s</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\setup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_0FF3]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1286&SUBSYS_29281462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_16101642]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_31301462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_33811462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_3E561642]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_31311462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_33801462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3E561642]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3F861642]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1382&SUBSYS_31101462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1381&SUBSYS_31011462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1407&SUBSYS_320D1462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1380&SUBSYS_3E321642]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1401&SUBSYS_32001462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_13C2]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_13C0]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C03&SUBSYS_34901462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C02&SUBSYS_443819DA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B81]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B81&SUBSYS_34701462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B82&SUBSYS_34721462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B80]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1B80&SUBSYS_34801462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C81&SUBSYS_35111462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_35101462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_545519DA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1E82&SUBSYS_37201462]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1F02&SUBSYS_C51119DA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_10DE&DEV_1E07]]></HardwareID>
+      <Date>2020-12-10</Date>
+      <Version> 27.21.14.5765^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_Bios>
+        <Level>*</Level>
+        <Level>FPKT*</Level>
+        <Level>FBKT*</Level>
+        <Level>FCKT*</Level>
+        <Level>F6KT*</Level>
+        <Level>M00KT*</Level>
+        <Level>M05KT*</Level>
+        <Level>F1KT*</Level>
+        <Level>FNKT*</Level>
+        <Level>FWKT*</Level>
+        <Level>9SKT*</Level>
+        <Level>M16KT*</Level>
+        <Level>02VKT*</Level>
+        <Level>M1AKT*</Level>
+      </_Bios>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_0FF3]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1286&SUBSYS_29281462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_16101642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_31301462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_33811462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1288&SUBSYS_3E561642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_31311462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_33801462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3E561642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1287&SUBSYS_3F861642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1382&SUBSYS_31101462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1381&SUBSYS_31011462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1407&SUBSYS_320D1462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1380&SUBSYS_3E321642]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1401&SUBSYS_32001462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13C2]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_13C0]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C03&SUBSYS_34901462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C02&SUBSYS_443819DA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B81]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B81&SUBSYS_34701462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B82&SUBSYS_34721462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B80]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1B80&SUBSYS_34801462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C81&SUBSYS_35111462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_35101462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1C82&SUBSYS_545519DA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1E82&SUBSYS_37201462]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1F02&SUBSYS_C51119DA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_10DE&DEV_1E07]]></_PnPID>
+      </Or>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3">%PACKAGEPATH%\getw10ver9.exe</_ExternalDetection>
+      </Not>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u3vdod5us14.exe</Name>
+        <CRC>0D32730C6FBD60B4C2334A05CF491E67916379B9978B1410B9AC74F5E2564628</CRC>
+        <Size>506996208</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u3vdod5us14.txt</Name>
+        <CRC>E5DF4572E137E5734B3E79F98462FB62208491B3CD57A9B10F93463BB1254C73</CRC>
+        <Size>8057</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver9.exe</Name>
+        <CRC>CFE9DCB74813F9C4170C981E84C27511880E3C44C2D80A6BAADBB2BCF78DCFFD</CRC>
+        <Size>159688</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ueIzeIgI6H9m+uV2z4GcLbM2MFI=</DigestValue></Reference></SignedInfo><SignatureValue>l2JoNHgvvzI1eJOjdaRwMTrmqL62qSJCo/eX4/QfVOYhLbpOMSS7JQFP8BP9e5gboCav1idnT7RaAObM9KpMYZ1qQQEc5MHz2uJ8k3R5I2g0JcJtGgribXBh+Yu8yK8shteNDmOyOtMCnPzUqMOqjRnINFRbSCmS/64HyuiRCVaGiFOrMXISmPyAPW12t2TBvHAFfKZTY/9JdQTL4DIfSF/WqxEh7QyH9TjIhdUghIJLdvIEnbIi5lMtpEu3Ej3NiugenBAMznldgi+mGlnid8OvY6xUC3i/h0a6eDCpVHp3Y7dA5/nYc4u+V9P6PoEL8Km7krIMqqHDN/5xD4SKPQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

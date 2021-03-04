@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><packages count="39">
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/fwnva39_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/fwnva42_2_.xml</location>
     <category>Storage</category>
     <oslangs></oslangs>
-    <checksum type="sha256">1c90eeff44cc7d26761635fc07129b1b82b83fca319051235eaf640b4b417ec7</checksum>
+    <checksum type="sha256">50c1627a11f02262abbfae220223bce01719ed03f98be759ef5ce4962cc40cb0</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/r0yvu32w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/r0yvu34w_2_.xml</location>
     <category>Software and Utilities</category>
     <oslangs></oslangs>
-    <checksum type="sha256">db4b369b3b5214d2a2f914d464338b18c84a53e408afb1f3c3067fc453cd6841</checksum>
+    <checksum type="sha256">a2eb063a9179af5e93c3f4475a44dfdc3c06b94429273767f3e42b065b0471b9</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/n20pe06w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/n20pe07w_2_.xml</location>
     <category>Audio</category>
     <oslangs></oslangs>
-    <checksum type="sha256">21a2d3cce773c45faf4dac989918b5b033325d9e279baee4d56f972fa773f6b5</checksum>
+    <checksum type="sha256">ae78cfbcd47ddf85a3d8dbd5a4a648d06c542e08590d25c190c1191d84d7ffb6</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n20p812w_2_.xml</location>
@@ -120,10 +120,10 @@
     <checksum type="sha256">b4d67364a045126af6de6ec922d36db7990b4b56f4bb69cf9ad6975cc6134e18</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/r0xa135w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/r0xa136w_2_.xml</location>
     <category>Display and Video Graphics</category>
     <oslangs></oslangs>
-    <checksum type="sha256">18e1ada81645ba48a130591b0727089f21c9acfa1fc8a1f4f9bb94e85cbca2c2</checksum>
+    <checksum type="sha256">918f74c667d06e006dd8d5be24c068a6a235339c86a6d5aaffef9d79083ae649</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n20bi08w_2_.xml</location>
@@ -156,16 +156,16 @@
     <checksum type="sha256">e9a43d94ce794438a053e0cc64c4b1627924e9c501b765ac6ded1ae33041b97f</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/r0xiw07w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/r0xiw08w_2_.xml</location>
     <category>Networking Wireless LAN</category>
     <oslangs></oslangs>
-    <checksum type="sha256">0fb72c3113ad653aec6dcfd28339562e5199d8be56ccbeb9419fa8a036c36a3f</checksum>
+    <checksum type="sha256">0167d92e1df5ce4421226d83d091da967f480ccd3705c93780e9b1a2a2ba3b75</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/r0xib05w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/r0xib06w_2_.xml</location>
     <category>Bluetooth and Modem</category>
     <oslangs></oslangs>
-    <checksum type="sha256">cd4cb0c218fe2439f903fc60d019ecd911bc5450c6536e1aba118e109c602f85</checksum>
+    <checksum type="sha256">3daef2abc224da8ebc7c0b25c02d474ad043f188139a10de3b3cd0feac4ff24c</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/r0xfb15w_2_.xml</location>
@@ -180,22 +180,16 @@
     <checksum type="sha256">0f86091f858fafdb802291a894cde8017d485403536bfb35d258cf65d7a78b31</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/r11st09w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/r11st10w_2_.xml</location>
     <category>Mouse Pen and Keyboard</category>
     <oslangs></oslangs>
-    <checksum type="sha256">b73c199906234963e4f5376527bcc17b7ce764c5040beb36968952a2211e380e</checksum>
+    <checksum type="sha256">8dcf5f6ef662c1f69b33112b6bf75fa935d253cefaaacd1b438ce1989aac50ad</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/n2hku62w_x86_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/n2hku64w_x64_2_.xml</location>
     <category>Power Management</category>
     <oslangs></oslangs>
-    <checksum type="sha256">d863d98e4d4333466dd0d8ec4297e78414b334fff88408272b58b65e684aa77c</checksum>
-  </package>
-  <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/n2hku62w_x64_2_.xml</location>
-    <category>Power Management</category>
-    <oslangs></oslangs>
-    <checksum type="sha256">5d19644ff7a51a8ccb5916ad9cd84199206c280f5aeb6098d1bd6b57a4b53f03</checksum>
+    <checksum type="sha256">a359d83fa61d80d6a197bbd06770912a8a4dbe081584a7d0f97ed7af45e99948</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/n20fu04w_2_.xml</location>
@@ -210,10 +204,10 @@
     <checksum type="sha256">e58e2f324d24d5deaf8435cca4fddc3fc7634f01e52c75ca34835100318cbd78</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/mobiles/n1fup88w_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/mobiles/n1fup90w_2_.xml</location>
     <category>Power Management</category>
     <oslangs></oslangs>
-    <checksum type="sha256">34af13ec286d0d0fbeeeba876d35b261a2fec7e316716bb97bfe140c67be5e35</checksum>
+    <checksum type="sha256">1626c80ccd221113e796947f4d842dfa7e97a873cd1b063ee78254cbee297081</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/r0xpd02w_2_.xml</location>
@@ -232,5 +226,11 @@
     <category>Software and Utilities</category>
     <oslangs></oslangs>
     <checksum type="sha256">af5240bb95c09bf1c04b23ad3344cdeab04b695661bdb6a0644d56a5d169bb7a</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/pccbbs/mobiles/n2hku62w_x86_2_.xml</location>
+    <category>Power Management</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">75b46ae46fa50ac402bb5785818adc8c59a77329f604769fee4245f461272c0d</checksum>
   </package>
 </packages>

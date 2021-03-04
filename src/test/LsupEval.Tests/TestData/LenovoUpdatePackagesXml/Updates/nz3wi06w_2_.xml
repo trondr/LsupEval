@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="FWU_WWLAN_N20WI" id="nz3wi06w" version="18300.1002.00.01.01.23" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Fibocom L830-EB Wireless WAN Firmware Update Tool (Windows 10 Version 1703 or later) - 10 [64]</Desc>
+  </Title>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>nz3wi06w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-04-15</ReleaseDate>
+  <DiskSpaceNeeded>70682784</DiskSpaceNeeded>
+  <Reboot type="5" />
+  <Brand type="2" />
+  <PackageType type="4" />
+  <Install rc="0" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\L830-EB_FWUpdateTool_18300.1002.00.01.01.23.exe -silent</Cmdline>
+  </Install>
+  <Uninstall />
+  <DetectInstall />
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[USB\VID_2CB7&PID_0210]]></_PnPID>
+      </Or>
+      <_ExternalDetection rc="0">%PACKAGEPATH%\l83x_detectvertool.exe /hwid "USB\VID_2CB7&amp;PID_0210" /fw "18300.1002.00.01.01.23"</_ExternalDetection>
+      <Or>
+        <And>
+          <_ExternalDetection rc="2">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+          <_Driver>
+            <HardwareID><![CDATA[USB\VID_2CB7&PID_0210&MI_02]]></HardwareID>
+            <Date>2017-08-24</Date>
+            <Version>3.2.0.1^</Version>
+          </_Driver>
+        </And>
+        <And>
+          <Not>
+            <_ExternalDetection rc="0,1,2">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+          </Not>
+          <_Driver>
+            <HardwareID><![CDATA[USB\VID_2CB7&PID_0210&MI_02]]></HardwareID>
+            <Date>2018-12-18</Date>
+            <Version>3.17134.0.6^</Version>
+          </_Driver>
+        </And>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>nz3wi06w.exe</Name>
+        <CRC>C0DD73C1FB4BA0379EED7C4576954EEECA20C8F4A6991AE3DA2DC0045FF50B10</CRC>
+        <Size>12809048</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>nz3wi06w.txt</Name>
+        <CRC>156CF0A02BC20E6DD8E3915E5262E7091A34A551D673FDFC9FC30568726BAC03</CRC>
+        <Size>15432</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>l83x_detectvertool.exe</Name>
+        <CRC>81439D9504D942DFB02BA0D2F99D797D20C69CBD9E3FDDCE566A3F0CD85E1A7C</CRC>
+        <Size>3309352</Size>
+      </File>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>tpfsmXg2qb5BdGTdcTb9qkgyCfY=</DigestValue></Reference></SignedInfo><SignatureValue>UEtn9cW6JEn+m42GBJzspw5mByZg/fyq01ONoCissCISJLjdbKXuA0L69TyGweKyKQsxWmIu035ohmFktKPIrqKURTOWRDzsZssCVvI0akHTjYxnMovKc+wuSC4SjmlCIUlDWUt5GPiDw3xXh5M75jds2pFPWIzO9k4KJJUonpUMEAdF9ZwbYpY5tDExPMRA9CEErIDLX3Bv4Pg4o1+ez2i/Gi0UM7x9VN1PdXyHrF8+hoQf0pXqz783P8VQKLmXvd8XJ3oKSxtIMUTUI6Ipr8MeJB38OVGR5MUnpkbcHzVhtMqowwZ9zzc8N/V8M+QjuKmz+yVro978RLdbwl4N9A==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

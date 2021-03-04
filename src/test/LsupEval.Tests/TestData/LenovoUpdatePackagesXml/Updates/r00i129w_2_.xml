@@ -2,7 +2,7 @@
 <?pcdDescriptor version="0230"?>
 <Package name="IVIDEO_R00I1_1" id="r00i129w" version="25.20.100.6472" hide="False">
   <Title default="EN">
-    <Desc id="EN">Intel HD Graphics Driver (Windows 10 Version 1703 or older) - 10 [64]</Desc>
+    <Desc id="EN">Intel HD Graphics Driver (Windows 10 Version 1607 or 1703) - 10 [64]</Desc>
   </Title>
   <DetectVersion type="Inf">
     <_PnPID><![CDATA[PCI\VEN_8086&DEV_1916&SUBSYS_504817AA]]></_PnPID>
@@ -11,7 +11,7 @@
     <_PnPID><![CDATA[PCI\VEN_8086&DEV_1906&SUBSYS_504917AA]]></_PnPID>
   </DetectVersion>
   <Summary default="EN" />
-  <Severity type="2" />
+  <Severity type="1" />
   <SeverityOverride type="2">
     <Not>
       <_Driver>
@@ -25,7 +25,7 @@
   </SeverityOverride>
   <Vendor>Lenovo</Vendor>
   <ExtractCommand>r00i129w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
-  <ReleaseDate>2020-04-10</ReleaseDate>
+  <ReleaseDate>2020-12-10</ReleaseDate>
   <DiskSpaceNeeded>1229102598</DiskSpaceNeeded>
   <Reboot type="3" />
   <Brand type="2" />
@@ -66,7 +66,7 @@
         <_PnPID><![CDATA[PCI\VEN_8086&DEV_1916&SUBSYS_504917AA]]></_PnPID>
         <_PnPID><![CDATA[PCI\VEN_8086&DEV_1906&SUBSYS_504917AA]]></_PnPID>
       </Or>
-      <_ExternalDetection rc="0,1,2">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      <_ExternalDetection rc="1,2">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
       <Or>
         <_Driver>
           <HardwareID><![CDATA[PCI\VEN_8086&DEV_1916&SUBSYS_504817AA]]></HardwareID>
@@ -145,6 +145,7 @@
           <HardwareID><![CDATA[PCI\VEN_8086&DEV_1906&SUBSYS_504917AA]]></HardwareID>
           <Version>10.18.15.4279</Version>
         </_Driver>
+        <_ExternalDetection rc="0,1">inboxdrivercheck.exe r00i129w_2_.xml</_ExternalDetection>
       </Or>
     </And>
   </Dependencies>
@@ -159,8 +160,8 @@
     <Readme default="EN">
       <File id="EN">
         <Name>r00i129w.txt</Name>
-        <CRC>CA7F109EAEFB3C66DB7E2410F87F80DFECC88C6EAFF63261BCF39C9BD6F88C21</CRC>
-        <Size>9312</Size>
+        <CRC>6CA5A5A4BF9E52DC7E60BEDF889229BDC54E743ECB56A5B5479D1392E3CFC87D</CRC>
+        <Size>9321</Size>
       </File>
     </Readme>
     <External>
@@ -169,6 +170,11 @@
         <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
         <Size>159528</Size>
       </File>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
     </External>
   </Files>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>EeEkuB/4HDb9UAoEeBVvhZ19xds=</DigestValue></Reference></SignedInfo><SignatureValue>VSaLazRzfODqtkQbkN8A7ELL+irIFv8aY5gJiKFIluuuQhu62KaSgtebZFIZf5MTQ0Fc2YoA8rTNvLVLw/WHRVGsmCU0pbderd/4gPllmvyw278ZlwvgKF9hUBh3xfZzeJsvah3bNqQgpcM48lhbRHXUK9tEYSbpZ3AS8jiDT8WM1fpetqkE3rtCvdIREz1BIC4WjDQm9tKBQ8EirRRptabMDjCcyYhGXPHJLHOdpaqQTv85nBhzHN+UmftqxocEdSata6oAsBO3M/fep//zUaSes856I5Amtzvy0k2uWU2GB6bFYtH0jjFu8CTuc8nHlEno9ltwFr88TlSKFAyF7Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>MigYiAJdu2bZtDJTngoNYfAg/gU=</DigestValue></Reference></SignedInfo><SignatureValue>GZpBbmvnss/kc5jW+fLdIqLs82QVclx0HM1JgsYh2rNdsCmkpcm3zp4ZhLZyyPXvkxPiU8/8xHODMCWOQh2b+7EXTwLVgIpuyHQSSxZzQDSm+5UmRJlI+vAYP95qfNkcRsImGjEbJaMw1xq/DFve719qrZLty/hFr85AfeoJVfBeWdco8+rCw4sioso5TLEaxvRyHEFexAHcpbjRMQUf93Y7UMOTHHI4WHI6EWsv2JhtCTIuU3tIW/VAhGZJyCwouExnzL49q9nygQuG3O87uRpicKk5ODqqeQ2Kk+Q/dTIRjMAxrLIVikGmnTFzJ7L+hbytcJeAJ9JzKjFGPz74jQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

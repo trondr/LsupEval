@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="IME_U8AMT22" id="u8amt62us14" version="2040.100.0.1029" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel AMT Driver - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DE0]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A360]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A13A]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A2BA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_A1BA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>u8amt62us14.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2021-02-09</ReleaseDate>
+  <DiskSpaceNeeded>244554493</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,3010,14" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe /VERYSILENT</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\DriverSetup.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_9DE0]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A13A]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A2BA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_A1BA]]></HardwareID>
+      <Date>2020-10-01</Date>
+      <Version>2040.100.0.1029^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_9DE0]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A360]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A13A]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A2BA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_A1BA]]></_PnPID>
+      </Or>
+      <Not>
+        <_ExternalDetection rc="0">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      </Not>
+      <_Bios>
+        <Level>M1UKT*</Level>
+        <Level>M1VKT*</Level>
+        <Level>S06KT*</Level>
+        <Level>M1AKT*</Level>
+        <Level>FWKT*</Level>
+        <Level>*</Level>
+      </_Bios>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>u8amt62us14.exe</Name>
+        <CRC>A141CB8960B6AD0ABB4F0445A1EF09940A97BCAFCACB6A2F3B713BF81B6FAAA1</CRC>
+        <Size>47558248</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>u8amt62us14.txt</Name>
+        <CRC>FEFD318448C2FA5CFEDC674DEC76A8E0499C37B6BDB29F0822344386484B7C2F</CRC>
+        <Size>5271</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>getw10ver7.exe</Name>
+        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
+        <Size>159528</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>cN/1eh2HpCpKdngAe7Jkdk/paQ8=</DigestValue></Reference></SignedInfo><SignatureValue>g5wTfepiOrwthOgJ2KJ6ib61dt4YWFox0dgXBzdvTBBrtOhRTjtfmFwjKOR0n/363X6nDvP43xXoGUpUEE6VDrO2jhS14Z0CikWgx9Tr1iqf3Fu0zMumW4Kan3c71t/Z8DBzCmNNtudxlQN7fy0S9+XeewqwLYB2f6uL87U3n+3qXhpFMJqxD4JTyGI6IEeYicTHgOlK8VPPVmTSRUIjS91L5va3RxKVlsGisln8f2zCEbu+Zo7XLNTLEpQ7EMDJurvkT3KsxKiRCNbv4LIyC3zv550HxQftVUPksx264br6Pe3si15iPDKZ7Sp9BzEdRboxu9LMxTv2fzg+KfCJdQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIFLzCCBBegAwIBAgIQDCqKyP82VfZaw5zhMcNlXzANBgkqhkiG9w0BAQsFADByMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTEwLwYDVQQDEyhEaWdpQ2VydCBTSEEyIEFzc3VyZWQgSUQgQ29kZSBTaWduaW5nIENBMB4XDTIwMTIxODAwMDAwMFoXDTIxMTIyMTIzNTk1OVowbDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQHEwtNb3JyaXN2aWxsZTEPMA0GA1UEChMGTGVub3ZvMQwwCgYDVQQLEwNHMDkxDzANBgNVBAMTBkxlbm92bzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMKxcyWsqiNuKotpNVBJ9PnUWK+tE6XsRIwPSdfi44VsG3lQEBt3HDyBTSrfiycLDLyLO4+Np3nPIVjUG9oyJy08NH3lRnC0tanXkHWkaLQha1VStBu+p1zlwFTSx07pKExvPw9+wP0K8lRwgcs1q+qqE0SlHOv2E+4StWILi/Jhx3dWH3BEGF56I4iAM58ngdgY4Na5HHEOkDGnD77s+Nb/QF+jmXFV0dSmuT3gmbsqqNHDgRPEJfIKlyDkLdd9Qe6R9rVu6WZaxrSE+gu/7V3cojGIGw3bCXoOEknqZ7qJFnPe/jDSGjkSZfQuFxkAErD7VgPTOVZ9FX3pGzShPg0CAwEAAaOCAcUwggHBMB8GA1UdIwQYMBaAFFrEuXsqCqOl6nEDwGD5LfZldQ5YMB0GA1UdDgQWBBTJ3hJkn2/sIbcBx48Gj+cGNhD4wDAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwdwYDVR0fBHAwbjA1oDOgMYYvaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItYXNzdXJlZC1jcy1nMS5jcmwwNaAzoDGGL2h0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWFzc3VyZWQtY3MtZzEuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAMBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQQBMIGEBggrBgEFBQcBAQR4MHYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBOBggrBgEFBQcwAoZCaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkFzc3VyZWRJRENvZGVTaWduaW5nQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBALldMiEATexBAnUR058c6tBM/1UmevpbDAfRqgRK4YBbq0XWbwEMIMj/aBchQekYRnjPKR+rtXyyHt4QvWS+4uuBAj5SZdTpcMeKG2Jkh7cQo3SdnFUtTjMGUXrA9uafySa1RwLW8HWrTTCUMX3NunuORuPtBde6L4FCTKtFt/B2czMKwCS7w4d0sUKmjUYlHDJlxex1EnAhM7ATSSQirtIcDEsTVd5dKHb0tJJGxi4aQJGueHT52AamDcO0RLo6U4BW2j6HCzdhv2NCeILvpnbh/vNSBeqWzKkvzN8A7kLW6IEsH0U4wvyEVNwhNzdzEvDwNnuxPCGPhq1A5o1hsqU=</X509Certificate></X509Data></KeyInfo></Signature></Package>

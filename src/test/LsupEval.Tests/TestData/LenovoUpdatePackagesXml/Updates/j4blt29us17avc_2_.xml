@@ -2,7 +2,7 @@
 <?pcdDescriptor version="0230"?>
 <Package name="BT_J4BLT2_AVC" id="j4blt29us17avc" version="1.7.1019.3002" hide="False">
   <Title default="EN">
-    <Desc id="EN">Realtek BT Driver (Windows 10 Version 1909) - 10 [64]</Desc>
+    <Desc id="EN">Realtek BT Driver (Windows 10 Version 1909,2004) - 10 [64]</Desc>
   </Title>
   <DetectVersion type="Inf">
     <_PnPID><![CDATA[USB\VID_0BDA&PID_C02F&REV_0000]]></_PnPID>
@@ -14,22 +14,9 @@
   </DetectVersion>
   <Summary default="EN" />
   <Severity type="2" />
-  <SeverityOverride type="2">
-    <Not>
-      <_Driver>
-        <HardwareID><![CDATA[USB\VID_0BDA&PID_C02F&REV_0000]]></HardwareID>
-        <HardwareID><![CDATA[USB\VID_0BDA&PID_C02F]]></HardwareID>
-        <HardwareID><![CDATA[USB\VID_0BDA&PID_C024&REV_0110]]></HardwareID>
-        <HardwareID><![CDATA[USB\VID_0BDA&PID_C024]]></HardwareID>
-        <HardwareID><![CDATA[USB\VID_0BDA&PID_B023&REV_0210]]></HardwareID>
-        <HardwareID><![CDATA[USB\VID_0BDA&PID_B023]]></HardwareID>
-        <Version>0.1^</Version>
-      </_Driver>
-    </Not>
-  </SeverityOverride>
   <Vendor>Lenovo</Vendor>
   <ExtractCommand>j4blt29us17avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
-  <ReleaseDate>2019-12-02</ReleaseDate>
+  <ReleaseDate>2020-12-09</ReleaseDate>
   <DiskSpaceNeeded>42784158</DiskSpaceNeeded>
   <Reboot type="3" />
   <Brand type="1" />
@@ -78,7 +65,7 @@
         <_PnPID><![CDATA[USB\VID_0BDA&PID_B023&REV_0210]]></_PnPID>
         <_PnPID><![CDATA[USB\VID_0BDA&PID_B023]]></_PnPID>
       </Or>
-      <_ExternalDetection rc="7">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      <_ExternalDetection rc="7,8">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
     </And>
   </Dependencies>
   <Files>
@@ -98,10 +85,10 @@
     </Readme>
     <External>
       <File>
-        <Name>getw10ver7.exe</Name>
-        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
-        <Size>159528</Size>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
       </File>
     </External>
   </Files>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>mHPtLww/b6OwnLSWDzxN9VkI338=</DigestValue></Reference></SignedInfo><SignatureValue>ms8l+H9/gmyaQazEBjZrDkGi+IMU8S97EpYB9xv12wL/srtG1Ljlej+z54Qdonq06hQYVDydtWJ66PM/LgAGVpVnJwcZlEGW48tTCh6NCTq0697/l5/ws6c8hGAB3jjIpeAB3CoZ9eoRXFGBndZ6JgTvwYS4kr+PYJhkqYpQiZZ6tT1YBFch9jxMEQL9kPoDvhVZWkpqfHsPqB/Ce2Rj3LeyKyXd4nv457xfhCH3UVRgifg1WmgVcPd5c+VHIqkQ0xSanV/axYMmdk6zv8NLy6qKcjseBZWTV0hMi1qxRtCx07OrRotqjMxrYjX0hDQkSlKPgjaXOYxQOdJ84AOo8g==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Bn+1PMxmAUPURCQLM0YmpqOzKJM=</DigestValue></Reference></SignedInfo><SignatureValue>fTXhWJS6Hc60WcNLFkW9VpWvT5scav68Iz1ud91LamFYCJGYUigyB4xhLjhfiblZa0dxW+qnG+tfLyIp6VckgEqV/mPxG2GjiyehaMUH2WXC10vICrdCUmQJ7FU6u/6TxPF+51tiEh4ntI9KPVFei6G+lEeZgXDREggR13HyvWbN/09qRVAQXs7zNy7TectmHMnY/FyvE3wDDRnywc7XW0s7iJBhwzdCZtT8qoFeEkyiH+9R4Jl5MEom9aUzPg+6rgtW5KPOusMj+bbzni3bIw5M1kUfNNKONZN9ueayGTLz9sXc5iA56GSux/QNaf3glLS77NQouLZMQmR+VNqXCA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

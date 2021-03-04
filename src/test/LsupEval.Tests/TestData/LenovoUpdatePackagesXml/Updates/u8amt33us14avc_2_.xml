@@ -2,7 +2,7 @@
 <?pcdDescriptor version="0230"?>
 <Package name="IMD_U8AMT3_AVC" id="u8amt33us14avc" version="1914.12.0.1256" hide="False">
   <Title default="EN">
-    <Desc id="EN">Intel ME Driver (Windows 10 Version 1909) - 10 [64]</Desc>
+    <Desc id="EN">Intel ME Driver (Windows 10 Version 1909,2004) - 10 [64]</Desc>
   </Title>
   <DetectVersion type="Inf">
     <_PnPID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_370217AA&REV_10]]></_PnPID>
@@ -16,24 +16,9 @@
   </DetectVersion>
   <Summary default="EN" />
   <Severity type="2" />
-  <SeverityOverride type="2">
-    <Not>
-      <_Driver>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_370217AA&REV_10]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_370217AA]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&CC_078000]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&CC_0780]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_370117AA&REV_10]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_370117AA]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_312217AA&REV_10]]></HardwareID>
-        <HardwareID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_312217AA]]></HardwareID>
-        <Version>0.1^</Version>
-      </_Driver>
-    </Not>
-  </SeverityOverride>
   <Vendor>Lenovo</Vendor>
   <ExtractCommand>u8amt33us14avc.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
-  <ReleaseDate>2019-12-02</ReleaseDate>
+  <ReleaseDate>2020-12-09</ReleaseDate>
   <DiskSpaceNeeded>295831649</DiskSpaceNeeded>
   <Reboot type="3" />
   <Brand type="1" />
@@ -82,7 +67,7 @@
         <_PnPID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_312217AA&REV_10]]></_PnPID>
         <_PnPID><![CDATA[PCI\VEN_8086&DEV_A360&SUBSYS_312217AA]]></_PnPID>
       </Or>
-      <_ExternalDetection rc="7">%PACKAGEPATH%\getw10ver7.exe</_ExternalDetection>
+      <_ExternalDetection rc="7,8">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
       <_Bios>
         <Level>*</Level>
         <Level>M1MKT*</Level>
@@ -106,10 +91,10 @@
     </Readme>
     <External>
       <File>
-        <Name>getw10ver7.exe</Name>
-        <CRC>19F4E41194B3FA30493BBFBCC7D20C7D940506DAF256FB662EEDC25FB047CDC2</CRC>
-        <Size>159528</Size>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
       </File>
     </External>
   </Files>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>bhR1uYPyy8bM2+TIhcFLfjdHjug=</DigestValue></Reference></SignedInfo><SignatureValue>YwQPz4fVaqHFWWEn6sRFBmzo2r0Jxtp75RW5+Jup0L7fp2O48yQiEhvP4ngIlSD+HYfvuujt3Hc7tbVJzZ4D/oNjZB3oNrLFKYr9mwOTCZJ8Uta90XA3RpwAp7hEWgZ884qR+Q+CrVhc019PyxGTWqDVB3nJPx4muMpigeTxn26BQs+dgzSntlblZf/7BoKaTXU33Q/+XQzs7ECPnJ2lEy6n6z9iyJhwGc6H/brlfAyCA1o6HsW/vqdgOu/2BxwjWK2FcGG4qC3bMr4j/Dh9zi2fD50n94X942c1065SEYVcKFxgCfFye5pGd4yrCcoNQzmJf12gKi77u0qlouHVMA==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQAmDkXQgcJbcAlnnIr1U9jDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xODExMjkwMDAwMDBaFw0xOTEyMzEyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDBlVRiPwUAY0/LNAT/Hg+30FRo1sv8WXp7YE5FQm7MlG1NAsrXkauvdYsr74+WHfxDfKPEJkacD9QDiypqLBWSQFW1qA/Vq8hHu81UfI2fVVu4FRIZ5693fHRj4MtWsKNMU45jBBXLBGjnod0bu6F9/8dqnABXbu9TRYbufH2BW/pk+9wQznCEMvdAj0eBKNNWlDknKB6dfUwzI/uHAMFs94a6jRjf0vcoI60L4Eo/CccdUDwQEZcWBTjbrp0oL6ITHzOUSbWat5HZc/GcDeQOXX4AU6WvtXnrFlpRnvMGlee/LixurNIjU2CC69OR8shLRIclbwMFyZQDAKay3ndAgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQCT3klrJOUvUlJBKRiBREiHrxeVzWfNNmFhowubsvbvB+CCzQlCh7/Eo+qciFN+TVScbrS2XVlR8YblzJsp2Lv5ZMj1Je7clNG9ixq5PfFWRZ2cCUeY/9IbaT47zJrXMCfhPYdbUiuQLlJ8j6k105if4RMp0oAmQvfC6PLPDyzkEWXDpHMF2ew1ic2+Wj4KyLfdxUGTuSl/gJRX5Ckjy/i1TyYMajFkbKTY+/Ux1QgnnpoYJmIg53I6GGWYltAUTBKadydYCx6lLnE7SVbOvzFbLHYczErbARTHAfbAkxxSUeu0B4pt+hpJlX15hkbhkd1G7RhEA8KofrEeYKneXpOI</X509Certificate></X509Data></KeyInfo></Signature></Package>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>IRgT3NRxC3997WKz20lkjtFaSbI=</DigestValue></Reference></SignedInfo><SignatureValue>kNEwNbuzysZMdKXuraZdlkX6ZUuOQRgSVeQEOhwi31QodKY3RmYjWOcIHT7J0/6MSqWAQfQO+Dfmtz9CEQF6OGj36UPn5KwVuH4urJ2mgv0mkfiOggJ+bHZd9dMfsIZFzcDsQTQ5L+/323Uk6u09aTGk/Q8dLyXmuPWyTtLreQGgexSn5PoWJFNCEURzdZZtV9LCGvgHjTCZaw87Z6jVwi3mVaZ+9cHBKZ+6UdQeO41cQt1cUIfdSZ64b3S7mBkLGAVgm7CfV6M1J/lUADccSrJQupd3QakzoRyl2NzMiXTNBV8QevOlvyF0aP0i9aDJhJBuEh3v8ugYbB44N75rug==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

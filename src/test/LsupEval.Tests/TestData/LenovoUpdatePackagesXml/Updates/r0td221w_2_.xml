@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?pcdDescriptor version="0230"?>
+<Package name="INTEL_VDO_R0TD2" id="r0td221w" version="27.20.100.8730" hide="False">
+  <Title default="EN">
+    <Desc id="EN">Intel Graphics Driver (Windows 10 Version 1809 or Later) - 10 [64]</Desc>
+  </Title>
+  <DetectVersion type="Inf">
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></_PnPID>
+    <_PnPID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></_PnPID>
+  </DetectVersion>
+  <Summary default="EN" />
+  <Severity type="2" />
+  <SeverityOverride type="2">
+    <Not>
+      <_Driver>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+        <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+        <Version>0.1^</Version>
+      </_Driver>
+    </Not>
+  </SeverityOverride>
+  <Vendor>Lenovo</Vendor>
+  <ExtractCommand>r0td221w.exe /VERYSILENT /DIR=%PACKAGEPATH% /EXTRACT="YES"</ExtractCommand>
+  <ReleaseDate>2020-11-27</ReleaseDate>
+  <DiskSpaceNeeded>1202665817</DiskSpaceNeeded>
+  <Reboot type="3" />
+  <Brand type="2" />
+  <PackageType type="2" />
+  <Install rc="0,13,14,15,3010" type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe -s -nosc</Cmdline>
+  </Install>
+  <ManualInstall type="cmd" default="EN">
+    <Cmdline id="EN">%PACKAGEPATH%\igxpin.exe</Cmdline>
+  </ManualInstall>
+  <Uninstall />
+  <DetectInstall>
+    <_Driver>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+      <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+      <Date>2020-09-11</Date>
+      <Version>27.20.100.8730^</Version>
+    </_Driver>
+  </DetectInstall>
+  <Dependencies>
+    <And>
+      <_OS>
+        <OS>WIN10</OS>
+        <OS>WIN10.*</OS>
+        <OS>WIN10-ENT</OS>
+        <OS>WIN10-ENT.*</OS>
+        <OS>WIN10-PRO</OS>
+        <OS>WIN10-PRO.*</OS>
+      </_OS>
+      <_CPUAddressWidth>
+        <AddressWidth>64</AddressWidth>
+      </_CPUAddressWidth>
+      <Or>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></_PnPID>
+        <_PnPID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></_PnPID>
+      </Or>
+      <_Bios>
+        <Level>*</Level>
+        <Level>R0TET*</Level>
+        <Level>R0VET*</Level>
+        <Level>R1DET*</Level>
+      </_Bios>
+      <Not>
+        <_ExternalDetection rc="0,1,2,3,4">%PACKAGEPATH%\getw10ver8.exe</_ExternalDetection>
+      </Not>
+      <Or>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>23.20.16.4877</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>23.20.16.4973</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>24.20.100.6286</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>25.20.100.6472</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>26.20.100.6913</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>26.20.100.7263</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>26.20.100.7812</Version>
+        </_Driver>
+        <_Driver>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3184&SUBSYS_506E17AA]]></HardwareID>
+          <HardwareID><![CDATA[PCI\VEN_8086&DEV_3185&SUBSYS_506E17AA]]></HardwareID>
+          <Version>26.20.100.8142</Version>
+        </_Driver>
+        <_ExternalDetection rc="0,1">inboxdrivercheck.exe r0td221w_2_.xml</_ExternalDetection>
+      </Or>
+    </And>
+  </Dependencies>
+  <Files>
+    <Installer>
+      <File>
+        <Name>r0td221w.exe</Name>
+        <CRC>6A90C2673824C911D7DC86EED3E9E4E3238E9ABA989944C0186747A7746DDF89</CRC>
+        <Size>195483600</Size>
+      </File>
+    </Installer>
+    <Readme default="EN">
+      <File id="EN">
+        <Name>r0td221w.txt</Name>
+        <CRC>E5BC6963E72E7BCFF8E74F6F366BE168C11B5DE2FE4DF00472AF89E812E75472</CRC>
+        <Size>8975</Size>
+      </File>
+    </Readme>
+    <External>
+      <File>
+        <Name>inboxdrivercheck.exe</Name>
+        <CRC>1FD733C1B64A4B63EA85260398132018DD243E3FF46E55E608739A93C66D8A99</CRC>
+        <Size>130432</Size>
+      </File>
+      <File>
+        <Name>getw10ver8.exe</Name>
+        <CRC>AE280D3FFF1254734269CE10AA957317A31021FED43257EFABC0471407672888</CRC>
+        <Size>159704</Size>
+      </File>
+    </External>
+  </Files>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>99zrkNVEBviEQLN5C2CPtdL284k=</DigestValue></Reference></SignedInfo><SignatureValue>HtW/4yiTAQnE+LC/ku273uLMddElMFC4gckJWYKTmetu7ueIqWR0+5BJEl5ZAIL2VDlD4cfHEWmn9w1UcWlqO3r3qUyj0WnSxT/pldhPqR+MPCGO+cAIqvkGMhuguGkcB/swmDfcaS1ddm5gApBpYOz7oxeh6JMG5dwO5nRsKGvvF+H8tK4Fh9W2ju8svXYEqJjKrv3QRQP5WMPx18F44CbpBvD6Gsk8GnHfS2i3eTolkrsZCZV28lyBH+wKsxjmFPSNT9bNF/UmLPQbQoP0SaOUGue2+FGDVIRTgAUGQNI7GRVDADcYuuPdzTKIop8y0yoUT6EUcP9mRzlqPCLw2Q==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIEuzCCA6OgAwIBAgIQb2kXmnlKNV5fXI8hEqScSjANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMCVVMxHTAbBgNVBAoTFFN5bWFudGVjIENvcnBvcmF0aW9uMR8wHQYDVQQLExZTeW1hbnRlYyBUcnVzdCBOZXR3b3JrMTUwMwYDVQQDEyxTeW1hbnRlYyBDbGFzcyAzIFNIQTI1NiBDb2RlIFNpZ25pbmcgQ0EgLSBHMjAeFw0xOTEyMTcwMDAwMDBaFw0yMTAxMDYyMzU5NTlaMGwxCzAJBgNVBAYTAlVTMRcwFQYDVQQIDA5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEBwwLTW9ycmlzdmlsbGUxDzANBgNVBAoMBkxlbm92bzEMMAoGA1UECwwDRzA5MQ8wDQYDVQQDDAZMZW5vdm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc2aYkhMvAp4TUhVulTSK3yp4DcqxykQK66znB6LL41MwBdKoeFwrqFyyGYd++mCtOMz+GRGtkq7dwwcjcmrc8kAoVKcf27flVt1QeZYmmG+aRIaqxTT172CZgbhQzZpA6+Wi/qS908x9PvaYs/vjx/TPgaUjybZaQJnBFdbqSnUSqlm8SLdavgQ/BaRKrAGi8zvpXxLu6Yp1hv6AcQZS4uT0heZyp7nCcJ42SzMa8JQzaWfEQoliV9dJ7XCv9P6i9XgvTo3O5wA5oTCF3z5D2ZMPBakOgKeU4+Eetn2NVE/CrdeL9xS7xfhVCfSNTWhCnDCpmMgOzdib1SGJa7RV5AgMBAAGjggE+MIIBOjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzBhBgNVHSAEWjBYMFYGBmeBDAEEATBMMCMGCCsGAQUFBwIBFhdodHRwczovL2Quc3ltY2IuY29tL2NwczAlBggrBgEFBQcCAjAZDBdodHRwczovL2Quc3ltY2IuY29tL3JwYTAfBgNVHSMEGDAWgBTUwAYiSes5S92T4lyhuEd2CXIDWDArBgNVHR8EJDAiMCCgHqAchhpodHRwOi8vcmIuc3ltY2IuY29tL3JiLmNybDBXBggrBgEFBQcBAQRLMEkwHwYIKwYBBQUHMAGGE2h0dHA6Ly9yYi5zeW1jZC5jb20wJgYIKwYBBQUHMAKGGmh0dHA6Ly9yYi5zeW1jYi5jb20vcmIuY3J0MA0GCSqGSIb3DQEBCwUAA4IBAQAM+tVQQJR6yeYvnrkgzsK8uR1/73V9HGh6RbAufkOm2S0WHDm+n73XT4EqunugcImF/hPBkCz/JrmvIc+5k4dQowoUXcM19e4xu9ysu5/ktkTZb1hElmo3I9o7YezGTn3EPF5B6No1ToTmA6+O7wubwEH4GGpLhTZKSXoL8zEaz3pLntKvtb2zn4Xyr2YgPLPkWD30tgRF/OCp7y4vidAv9xsmIi1HKtawWzGQMqXuaEQwBmhJxAigRY61jwpLJGye7Ng/MAOapLuBwyXK55xxliGoEgBt76oAum3qnlSXdcF49k1rjXcPp2k65vfjxpPdL1botySPF7QlyTgwcLx6</X509Certificate></X509Data></KeyInfo></Signature></Package>

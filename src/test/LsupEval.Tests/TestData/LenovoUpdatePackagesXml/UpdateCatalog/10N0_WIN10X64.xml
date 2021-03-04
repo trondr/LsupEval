@@ -1,21 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><packages count="26">
   <package>
-    <location>https://download.lenovo.com/consumer/desktop/u3vdobkus14_2_.xml</location>
-    <category>Display and Video Graphics</category>
-    <oslangs></oslangs>
-    <checksum type="sha256">b5596d91c013e0f2d22a4796e770860cc29b7c74d381e13c597039dc114db731</checksum>
-  </package>
-  <package>
     <location>https://download.lenovo.com/consumer/desktop/u1rau88us17_2_.xml</location>
     <category>Storage</category>
     <oslangs></oslangs>
     <checksum type="sha256">3c97eba799b6e2872dcdc03dec5d8ddde2ab72189e8c31ef552f7b97ed2e7728</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m1ajy4busa_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/m1ajy4dusa_2_.xml</location>
     <category>BIOS UEFI</category>
     <oslangs></oslangs>
-    <checksum type="sha256">24eb119b7ddc64fd9af31b5844c436f9a73669a22af0736895b742538af340fb</checksum>
+    <checksum type="sha256">ddaccb0f5b215ac17e34550b57d3fff47a3cadf42136c56a5cc8beea5a7df88c</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1box07us17_2_.xml</location>
@@ -72,16 +66,22 @@
     <checksum type="sha256">2a44bc7658a8cdbac75a7aae7fec1a76e8d84f7251cd1bbbef0d2786a2c6b541</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt48us14_2_.xml</location>
-    <category>Chipset</category>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u8amt62us14_2_.xml</location>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
-    <checksum type="sha256">2651a0e1619bed2b67140b8a229120665f117323e883d697e5afb46f9c32df9c</checksum>
+    <checksum type="sha256">d9f055856a69636d675e0e2fdab0571be06230afdb55bdc88526e6ea56d13a85</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/consumer/desktop/u4blt07us14_2_.xml</location>
     <category>Bluetooth and Modem</category>
     <oslangs></oslangs>
     <checksum type="sha256">150a4e92d3986085e052fd37b2c65cab9cf9131c1ae30ef1c685cd322c16d45e</checksum>
+  </package>
+  <package>
+    <location>https://download.lenovo.com/consumer/desktop/fwnva40w_2_.xml</location>
+    <category>Storage</category>
+    <oslangs></oslangs>
+    <checksum type="sha256">1500752370b4ec9cce75a19de396a440b0f7274b717c31e80a5991664efef8d7</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/u3etn02w_w10_2_.xml</location>
@@ -120,22 +120,22 @@
     <checksum type="sha256">ac25e6f5e89f933ab9fae3e4c633fb0eb7adb0fb45e413211303b3b4e09f3e92</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1acp10us17_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k1acp15us17_2_.xml</location>
     <category>Software and Utilities</category>
     <oslangs></oslangs>
-    <checksum type="sha256">dbb6967e85aa71d2dfeec9bcab4897036d1eb611bcd76a8d6014dc1b047cd025</checksum>
+    <checksum type="sha256">f45d7d8cb59d579b227da1efbcad0d8b5af9b32cb8300dd12a99be8524286527</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2chp38us14_2_.xml</location>
-    <category>Chipset</category>
+    <category>Motherboard Devices core chipset onboard video PCIe switches</category>
     <oslangs></oslangs>
     <checksum type="sha256">8f1fad73936ddeb125f1478c2a683db8965ae32c82e2ee696d60c34a6b4a3f14</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/desktop/u2etn24us14_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2etn29us14_2_.xml</location>
     <category>Networking LAN Ethernet</category>
     <oslangs></oslangs>
-    <checksum type="sha256">314757b9e6b56c0554f2b244d379c56813396d6fea8771c51374e6092dfad435</checksum>
+    <checksum type="sha256">a2f829c42469d32c8a163604179c2cf63176452e6c86e6109d2d69221388a218</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/u2wlg0eus14_2_.xml</location>
@@ -144,10 +144,10 @@
     <checksum type="sha256">f9164489883a8bc07a1b692c67f66ad2fdc3219a356de78056eeb1978bfa7a06</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/desktop/u3vdoc9us14_e_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/desktop/u3vdod5us14_e_2_.xml</location>
     <category>Display and Video Graphics</category>
     <oslangs></oslangs>
-    <checksum type="sha256">108267161a59398d56eaa6f00ca1680a9f148581778282f205d1dabf0c6dbe32</checksum>
+    <checksum type="sha256">235ff2a2786852260b93416eb8c082d2824dff0261fd5a7005c490a356c2991d</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/mobiles/suutspatchww01_2_.xml</location>

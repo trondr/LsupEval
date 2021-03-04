@@ -24,10 +24,10 @@
     <checksum type="sha256">4942581aab0b1277c0d3150aedef8803ba0a11e3e2300e82c227a8e4ae867204</checksum>
   </package>
   <package>
-    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/fwjyb1usa_2_.xml</location>
+    <location>https://download.lenovo.com/pccbbs/thinkcentre_bios/fwjyb5usa_2_.xml</location>
     <category>BIOS UEFI</category>
     <oslangs></oslangs>
-    <checksum type="sha256">e9018474688adae1a96804712dca23b43eaedc59664f791e0162ea0c50730ae0</checksum>
+    <checksum type="sha256">d55d2992e388e1db7723ac201a3345ee74c4a70b14625b30c23e91ec16faf0b1</checksum>
   </package>
   <package>
     <location>https://download.lenovo.com/pccbbs/thinkcentre_drivers/k2wlg14us14_2_.xml</location>
