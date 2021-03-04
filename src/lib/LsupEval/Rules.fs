@@ -16,12 +16,11 @@ module Rules =
     open LsupEval.Coreq
     open LsupEval.LsupData
     open MBrace.FsPickler
+    open System.Runtime.InteropServices
 
     let logger = Logging.getLoggerByName "Rules"
 
-
-
-    //This function is expensive as it takes approx 45 seconds to run. Consider implementing a caching mechanism in front of this function.
+    ///Get system information. Note! This function takes approx 45 seconds to run. Use the cached version to increase performance: getCurrentSystemInformation'()
     let getCurrentSystemInformation() =
         result{
             let! biosVersion = Bios.getCurrentBiosVersion()        
@@ -45,23 +44,60 @@ module Rules =
                 }
         }
 
+    [<DllImport("kernel32.dll")>]
+    extern uint64 GetTickCount64();
+
+    ///Get time span since system was last rebooted
+    let getSystemUptime() =
+        let millisecondsSinceLastRestart = int64(GetTickCount64());
+        let ticksSinceLastRestart = millisecondsSinceLastRestart * TimeSpan.TicksPerMillisecond;
+        new TimeSpan(ticksSinceLastRestart);
+    
+    ///Get time span since file was last modified.
+    let getFileUptime fileName = 
+        if(fileExists fileName) then
+            System.DateTime.Now - System.IO.File.GetLastWriteTime(fileName)
+        else
+            new TimeSpan(0L);
+
+    ///Configure system information cache file. Clear cache after each system restart.
+    let internal configureSystemInformationCacheFile () =
+        let cacheFile = System.IO.Path.Combine(System.Environment.GetEnvironmentVariable("TEMP"),"Lsup-SystemInformation-73cba29c-207e-4527-9cdd-c7605f7877af.xml")        
+        let cacheFileUptime = getFileUptime(cacheFile)
+        let systemUptime = getSystemUptime()
+        if(cacheFileUptime > systemUptime && (fileExists cacheFile)) then
+            deleteFile cacheFile
+        cacheFile
+
+    ///Load cached information or call orginal information loader on cache miss.
+    let getAndUpdateInformationCache<'T> (cacheFile:string) (onCacheMiss : unit->Result<'T,Exception>) : Result<'T,Exception> =
+        let pickle = MBrace.FsPickler.FsPickler.CreateXmlSerializer(indent = true)
+        let t =
+            try
+                use sr = new System.IO.StreamReader(cacheFile)
+                logger.Info(sprintf "Loading cached information...")
+                Result.Ok (pickle.Deserialize<'T>(sr))
+            with
+            |ex -> 
+                logger.Info(sprintf "Unable to load cached information due to %s. Calling expensive information loader." ex.Message)
+                onCacheMiss()
+        
+        match(t)with
+        |Result.Ok tr -> 
+            logger.Info(sprintf "Saving cached information...")
+            use sw = new System.IO.StreamWriter(cacheFile)
+            pickle.Serialize<'T>(sw,tr)
+        |Result.Error ex ->
+            logger.Info(sprintf "Unable to load cached information or get orginal information due to %s." ex.Message)
+            ()
+        t
+    
+    ///Get the current system information, if a cached version exists use it.
     let getCurrentSystemInformation' () =
         result{
-            let cachePath = "c:\\temp\\systeminformation.xml"
-            let pickle = MBrace.FsPickler.FsPickler.CreateXmlSerializer(indent = true)
-            //let pickle = MBrace.FsPickler.FsPickler.CreateBinarySerializer()
+            let cachePath = configureSystemInformationCacheFile ()                        
             let! systemInformation =
-                if(File.fileExists cachePath) then
-                    use sr = new System.IO.StreamReader(cachePath)
-                    Result.Ok (pickle.Deserialize<SystemInformation>(sr))
-                else
-                    let sysInfoResult = getCurrentSystemInformation()
-                    match sysInfoResult with
-                    |Error _ -> sysInfoResult
-                    |Ok info ->
-                        use sw = new System.IO.StreamWriter(cachePath)
-                        pickle.Serialize<SystemInformation>(sw,info)
-                        sysInfoResult                    
+                getAndUpdateInformationCache cachePath getCurrentSystemInformation                                    
             return systemInformation
         }
 

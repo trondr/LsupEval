@@ -41,6 +41,9 @@ module File =
     let fileExists filePath =
         System.IO.File.Exists(filePath)
 
+    let deleteFile filePath =
+        System.IO.File.Delete(filePath)
+
     let getFilesFromFileExistPattern (fileExistsElement:FileExistsElement) =
         let filePath = resolveFilePath fileExistsElement.FilePath
         {
