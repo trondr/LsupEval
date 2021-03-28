@@ -58,7 +58,7 @@ module File =
         let filePath = resolveFilePath fileExistsElement.FilePath
         let isMatch = 
             (isFilePathMatch filePath file.FilePath) && file.Exists            
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing file exist status: '%A' with file exists pattern '%A'. Return: %b" file fileExistsElement isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing file exist status: '%A' with file exists pattern '%A'. Return: %b" file fileExistsElement isMatch)
         isMatch
 
     let getFileVersion filePath =
@@ -112,7 +112,7 @@ module File =
         let isSameFile = lazy (isFilePathMatch filePathPattern fileVersion.FileStatus.FilePath)        
         let isVersionMatch = lazy (LsupEval.Version.isVersionPatternMatch fileVersion.Version fileversionPattern.VersionPattern)
         let isMatch = fileExists.Force() && isSameFile.Force() && isVersionMatch.Force()
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing file version: '%A' with file version pattern '%A'. Return: %b" fileVersion fileversionPattern isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing file version: '%A' with file version pattern '%A'. Return: %b" fileVersion fileversionPattern isMatch)
         isMatch
 
         

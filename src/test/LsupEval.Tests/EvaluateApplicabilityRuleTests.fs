@@ -41,7 +41,7 @@ module EvaluateApplicabilityRuleTests =
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
                         let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder (Some (lsuPackages|>Seq.toArray)) detectionRule 
-                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating dependencies: '%s'. Return: %b" testData.FileName isMatch))|>ignore))
+                        logger.Info(sprintf "Evaluating dependencies: '%s'. Return: %b" testData.FileName isMatch)
                         isMatch
                     |None -> false
                 return isMatch
@@ -67,7 +67,7 @@ module EvaluateApplicabilityRuleTests =
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
                         let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder None detectionRule
-                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating detect install: '%s'. Return: %b" testData.FileName isMatch))|>ignore))
+                        logger.Info(sprintf "Evaluating detect install: '%s'. Return: %b" testData.FileName isMatch)
                         isMatch
                     |None -> false
                 return isMatch

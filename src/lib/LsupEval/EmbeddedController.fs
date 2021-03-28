@@ -15,7 +15,7 @@ module EmbeddedController =
             sprintf "%i.%i" majorVersion minorVersion
         with
         |ex -> 
-            logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
+            if(logger.IsDebugEnabled) then logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
             reraise()
 
     let getCurrentEmbeddedControllerVersion () =        
@@ -45,7 +45,7 @@ module EmbeddedController =
                 lsupVersionPatterns
                 |>Seq.filter(fun vp -> 
                         let isMatch = isVersionPatternMatch lsupVersion vp
-                        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing embedded controller version: '%A' with embedded controller pattern '%A'. Return: %b" systemInfoEmbeddedControllerVersion vp isMatch))|>ignore))
+                        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing embedded controller version: '%A' with embedded controller pattern '%A'. Return: %b" systemInfoEmbeddedControllerVersion vp isMatch)
                         isMatch
                     )
                 |>Seq.tryHead|>toBoolean

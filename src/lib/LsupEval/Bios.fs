@@ -20,7 +20,7 @@ module Bios =
             bios.Versions 
             |> Seq.filter (fun s -> 
                     let isMatch = (toRegEx s).IsMatch(biosVersion)
-                    logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing bios version: '%s' with bios level '%s'. Return: %b" biosVersion s isMatch))|>ignore))
+                    if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing bios version: '%s' with bios level '%s'. Return: %b" biosVersion s isMatch)
                     isMatch
                 ) |>Seq.tryHead
         match v with

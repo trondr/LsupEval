@@ -104,7 +104,7 @@ module Driver =
             }
         with
         |ex -> 
-            logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
+            if(logger.IsDebugEnabled) then logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
             None
 
     let getPnpDeviceProperties () =
@@ -152,7 +152,7 @@ module Driver =
             }
         with
         |ex -> 
-            logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
+            if(logger.IsDebugEnabled) then logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
             None
 
     let getPnpDevices() =
@@ -323,7 +323,7 @@ module Driver =
             |None -> true
             |Some date ->         
                 (absoluteDate hardwareInfoDriverDate) <= (absoluteDate date)
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver date: '%A' with driver date pattern '%A'. Return: %b" (Some hardwareInfoDriverDate) hardwareIdElementDriverDate isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing driver date: '%A' with driver date pattern '%A'. Return: %b" (Some hardwareInfoDriverDate) hardwareIdElementDriverDate isMatch)
         isMatch
 
     let isDriverVersionMatch currentDriverVersion newDriverVersion =
@@ -338,7 +338,7 @@ module Driver =
             |Result.Error ex -> 
                 logger.Error(sprintf "Failed to match version '%s' with pattern '%s'." currentDriverVersion newDriverVersion)
                 false
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver version: '%A' with driver version pattern '%A'. Return: %b" currentDriverVersion newDriverVersion isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing driver version: '%A' with driver version pattern '%A'. Return: %b" currentDriverVersion newDriverVersion isMatch)
         isMatch
 
 
@@ -360,7 +360,7 @@ module Driver =
             |LevelElement l -> l            
         let versionIsMatch = isDriverVersionMatch (cv hardwareInfo.Version) (nv driverElement.Version)
         let isMatch = hardwareIdIsMatch && dateIsMatch && versionIsMatch
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware: '%A' with hardware pattern '%A'. (HardwareIdIsMatch=%b && DateIsMatch=%b && VersionIsMatch=%b) Return: %b" hardwareInfo driverElement hardwareIdIsMatch dateIsMatch versionIsMatch isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing hardware: '%A' with hardware pattern '%A'. (HardwareIdIsMatch=%b && DateIsMatch=%b && VersionIsMatch=%b) Return: %b" hardwareInfo driverElement hardwareIdIsMatch dateIsMatch versionIsMatch isMatch)
         isMatch
 
     let isDriverFileMatch (patternFile:FileElement) (infoFile:FileInfo) =
@@ -390,7 +390,7 @@ module Driver =
                     |>Seq.choose id
                     |>Seq.filter (fun h -> isHardwareMatch hw h)
                     |>Seq.tryHead |> toBoolean
-                logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" installedDrivers hw isMatch))|>ignore))
+                if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing hardware id version: '%A' with driver pattern '%A'. Return: %b" installedDrivers hw isMatch)
                 isMatch            
             |FileElement fileElement -> 
                 let isMatch =
@@ -403,7 +403,7 @@ module Driver =
                     |>Seq.choose id
                     |>Seq.filter (fun file -> (isDriverFileMatch fileElement file))
                     |>Seq.tryHead |> toBoolean
-                logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing driver file version: '%A' with driver file pattern '%A'. Return: %b" installedDrivers fileElement isMatch))|>ignore))
+                if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing driver file version: '%A' with driver file pattern '%A'. Return: %b" installedDrivers fileElement isMatch)
                 isMatch            
             |ServiceNameElement s ->
                 raise (new NotImplementedException("Evaluation of ServiceNameElement"))

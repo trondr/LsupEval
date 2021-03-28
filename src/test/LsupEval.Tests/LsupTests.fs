@@ -1327,7 +1327,7 @@ module LsupTest =
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
                         let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder (Some lsuPackages) detectionRule 
-                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating dependencies: '%s'. Return: %b" update3.Name isMatch))|>ignore))
+                        logger.Info(sprintf "Evaluating dependencies: '%s'. Return: %b" update3.Name isMatch)
                         isMatch
                     |None -> false
                 return isMatch
@@ -1389,7 +1389,7 @@ module LsupTest =
                     |Some d ->                    
                         let detectionRule = LsupEval.Lsup.lsupXmlToApplicabilityRules logger d
                         let isMatch = LsupEval.Rules.evaluateApplicabilityRule logger sysInfo UpdatesTestData.ExternalFilesFolder (Some lsuPackages) detectionRule 
-                        logger.Info(new Msg(fun m -> m.Invoke( (sprintf "Evaluating dependencies: '%s'. Return: %b" update3.Name isMatch))|>ignore))
+                        logger.Info(sprintf "Evaluating dependencies: '%s'. Return: %b" update3.Name isMatch)
                         isMatch
                     |None -> false
                 return isMatch

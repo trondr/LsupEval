@@ -59,5 +59,5 @@ module ExternalDetection =
             |> Array.filter(fun c -> rc = c) //Check if return code is in the list of valid return codes.
             |> Array.tryHead //If valid return code was found Some return code is returned, otherwise None
             |> toBoolean //If Some -> true, if None -> false
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing return codes: '%A' with driver external detection return code '%A'. Return: %b" returnCodes rc isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing return codes: '%A' with driver external detection return code '%A'. Return: %b" returnCodes rc isMatch)
         isMatch

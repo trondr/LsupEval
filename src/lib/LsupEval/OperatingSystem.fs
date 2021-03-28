@@ -60,7 +60,7 @@ module OperatingSystem =
             os.OsArray
             |> Seq.filter (fun s -> 
                     let isMatch = (toRegEx s).IsMatch(operatingSystem)
-                    logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing operating system: '%s' with os level '%s'. Return: %b" operatingSystem s isMatch))|>ignore))
+                    if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing operating system: '%s' with os level '%s'. Return: %b" operatingSystem s isMatch)
                     isMatch
                 ) |>Seq.tryHead
         match v with
@@ -74,7 +74,7 @@ module OperatingSystem =
             osLang            
         with
         |ex -> 
-            logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
+            if(logger.IsDebugEnabled) then logger.Debug(sprintf "None: '%A' %s" psObject (getAccumulatedExceptionMessages ex))
             reraise()
 
     let getCurrentOsLanguage() =
@@ -96,7 +96,7 @@ module OperatingSystem =
     let isLanguageMatch (languagePattern:LanguagePattern) languageCode =
         let regEx = toRegEx languagePattern.LanguageCode
         let isMatch = regEx.IsMatch(languageCode)
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing language code: '%s' with language pattern '%s'. Return: %b" languageCode languagePattern.LanguageCode isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing language code: '%s' with language pattern '%s'. Return: %b" languageCode languagePattern.LanguageCode isMatch)
         isMatch
 
     let isOsLanguageMatch logger (osLangPatterns:LanguagePattern[]) osLang =

@@ -17,7 +17,7 @@ module Cpu =
 
     let isCpuAddressWidthMatch (logger:Common.Logging.ILog) (cpuAddressWidth:CpuAddressWidth) (currentCpuAddressWidth) =
         let isMatch = cpuAddressWidth = currentCpuAddressWidth        
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing cpu address width '%A' with required cpu address width '%A'. Return: %b" currentCpuAddressWidth cpuAddressWidth isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing cpu address width '%A' with required cpu address width '%A'. Return: %b" currentCpuAddressWidth cpuAddressWidth isMatch)
         isMatch
 
         

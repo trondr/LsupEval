@@ -32,7 +32,7 @@ module PnPId =
             pnpIds
             |>Array.filter(fun id -> pattern.IsMatch(id))
             |>Array.tryHead |> toBoolean
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Comparing pnp ids: '%A' with pnp id pattern '%A'. Return: %b" pnpIds pnPIdPattern isMatch))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Comparing pnp ids: '%A' with pnp id pattern '%A'. Return: %b" pnpIds pnPIdPattern isMatch)
         isMatch
         
 

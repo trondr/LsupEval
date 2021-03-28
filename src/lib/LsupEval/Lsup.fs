@@ -397,7 +397,7 @@ module Lsup =
         let normalizedApplicabilityXml = toValidApplicabilityRule applicabilityXml
         use xmlReader = new XmlTextReader(normalizedApplicabilityXml,XmlNodeType.Element,xmlParserContext)
         let xElement = XElement.Load(xmlReader)
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Processing ApplicabilityRule element: %s" xElement.Name.LocalName))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Processing ApplicabilityRule element: %s" xElement.Name.LocalName)
         let applicabilityRules =
             match xElement.Name.LocalName with
             |"_Bios" -> (toBios xElement)
@@ -433,7 +433,7 @@ module Lsup =
             |"Not" -> 
                 ApplicabilityRule.Not (lsupXmlToApplicabilityRules logger ((xElement.Descendants()|>Seq.head).ToString()))
             |_ -> raise (new NotSupportedException(sprintf "Applicability rule for '%s' is not implemented." xElement.Name.LocalName))
-        logger.Debug(new Msg(fun m -> m.Invoke( (sprintf "Lsup converted to ApplicabilityRule: %A" applicabilityRules))|>ignore))
+        if(logger.IsDebugEnabled) then logger.Debug(sprintf "Lsup converted to ApplicabilityRule: %A" applicabilityRules)
         applicabilityRules
 
     let loadLsuPackageFromString xmlString : Result<LsuPackage,Exception> =
